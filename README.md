@@ -1,8 +1,8 @@
-# @airindex/ui
+# @airindex-app/ui
 
 > A React component library styled with Stitches, designed specifically for AirIndex's internal projects and design system.
 
-[![npm version](https://img.shields.io/npm/v/@airindex/ui.svg)](https://www.npmjs.com/package/@airindex/ui)
+[![npm version](https://img.shields.io/npm/v/@airindex-app/ui.svg)](https://www.npmjs.com/package/@airindex-app/ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ⚠️ Important Notice
@@ -28,13 +28,13 @@ For general-purpose React component libraries, consider [Chakra UI](https://chak
 
 ```bash
 # Using pnpm (recommended)
-pnpm add @airindex/ui
+pnpm add @airindex-app/ui
 
 # Using npm
-npm install @airindex/ui
+npm install @airindex-app/ui
 
 # Using yarn
-yarn add @airindex/ui
+yarn add @airindex-app/ui
 ```
 
 ### Peer Dependencies
@@ -47,7 +47,7 @@ pnpm add react react-dom next
 ## Quick Start
 
 ```tsx
-import { Provider, Button, Text, Stack } from '@airindex/ui';
+import { Provider, Button, Text, Stack } from '@airindex-app/ui';
 
 function App() {
   return (
@@ -107,7 +107,7 @@ Detailed TypeScript interfaces, props, and examples are available in the [`docs/
 The library uses Stitches for styling with a comprehensive design system:
 
 ```tsx
-import { Provider } from '@airindex/ui';
+import { Provider } from '@airindex-app/ui';
 
 // Enable dark mode
 <Provider dark>

@@ -1,5 +1,5 @@
 {
-  "name": "@airindex/ui",
+  "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
   "version": "0.1.0",
   "author": "Jackson Dolman <mail@dolmios.com>",

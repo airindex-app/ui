@@ -1,8 +1,8 @@
-[**@airindex/ui v0.2.19**](../README.md)
+[**@airindex-app/ui v0.2.19**](../README.md)
 
 ***
 
-[@airindex/ui](../README.md) / types
+[@airindex-app/ui](../README.md) / types
 
 # types
 
