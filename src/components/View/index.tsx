@@ -1,31 +1,11 @@
 import type { JSX } from "react";
 
-import { useBreakpoints, Gradient, Logo, type IView } from "../../index";
+import { type IView } from "../../index";
 import { darkTheme } from "../../stitches.config";
 import { ViewStyled, ViewContainerStyled } from "./styles";
 
 function HeroBackground(): JSX.Element {
-  const { isPhone } = useBreakpoints();
-
-  return (
-    <>
-      <Gradient />
-      <Logo
-        css={{
-          left: "-100px",
-          opacity: 0.05,
-          pointerEvents: "none",
-          position: "absolute",
-          top: "50%",
-          transform: "translateY(-50%)",
-          userSelect: "none",
-          zIndex: 1.5,
-        }}
-        type="icon"
-        width={isPhone ? 750 : 900}
-      />
-    </>
-  );
+  return <div />;
 }
 
 export default function View({

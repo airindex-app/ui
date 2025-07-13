@@ -1,112 +1,109 @@
 import { keyframes, styled } from "../../stitches.config";
 
-const dashArrayValue = "2500";
-const strokeWidthValue = "30";
-const animationDuration = "10s";
+const animationDuration = "8s";
 
-const buildPath = keyframes({
+// House to square transformation and sliding animation
+const houseToSquareSlide = keyframes({
+  // 1. Start in center as house
   "0%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "2450",
+    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    transform: "translate(-50%, -50%)",
   },
-  "17.5%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
+  "10%": {
+    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    transform: "translate(-50%, -50%)",
   },
+
+  // 2. Transform to square IN CENTER (triangle edges fold out)
+  "15%": {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(-50%, -50%)",
+  },
+
+  // 3. Move to top left as square
   "20%": {
-    fillOpacity: 1,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(-100%, -100%)",
   },
-  "32.5%": {
-    fillOpacity: 1,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
+
+  // 4. Move to top right as square
+  "30%": {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(0%, -100%)",
   },
+
+  // 5. Move back to center as square
   "35%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(-50%, -50%)",
   },
-  "50%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "-1950",
-  },
-  "65%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
-  },
-  "67.5%": {
-    fillOpacity: 1,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
-  },
-  "80%": {
-    fillOpacity: 1,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
-  },
-  "82.5%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "0",
-  },
-  "100%": {
-    fillOpacity: 0,
-    strokeDasharray: dashArrayValue,
-    strokeDashoffset: "2450",
-  },
-});
 
-const colorCycle = keyframes({
-  "0%": {
-    color: "$purple",
+  // 6. Transform back to house IN CENTER
+  "40%": {
+    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    transform: "translate(-50%, -50%)",
   },
-  "25%": {
-    color: "$blue",
-  },
+
+  // 7. Hold as house in center
   "50%": {
-    color: "$yellow",
+    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    transform: "translate(-50%, -50%)",
   },
+
+  // 8. Transform to square IN CENTER
+  "55%": {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(-50%, -50%)",
+  },
+
+  // 9. Move to bottom right as square
+  "60%": {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(0%, 0%)",
+  },
+
+  // 10. Move to bottom left as square
+  "70%": {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(-100%, 0%)",
+  },
+
+  // 11. Move back to center as square
   "75%": {
-    color: "$orange",
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transform: "translate(-50%, -50%)",
   },
+
+  // 12. Transform back to house IN CENTER
+  "80%": {
+    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    transform: "translate(-50%, -50%)",
+  },
+
+  // 13. Hold as house before restart
   "100%": {
-    color: "$purple",
+    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    transform: "translate(-50%, -50%)",
   },
 });
 
-export const LoadingStyled = styled("span", {
-  "& svg": {
-    "& path": {
-      animation: `${buildPath} ${animationDuration} linear infinite`,
-      fill: "currentColor",
-      stroke: "currentColor",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: strokeWidthValue,
-      transition: "color 1.5s ease-in-out",
-    },
-    height: "100%",
-    width: "100%",
+export const LoadingStyled = styled("div", {
+  // Main animated element
+  "&::before": {
+    animation: `${houseToSquareSlide} ${animationDuration} cubic-bezier(0.45, 0, 0.55, 1) infinite`,
+    backgroundColor: "currentColor",
+    content: "",
+    height: "50%",
+    left: "50%",
+    position: "absolute",
+    top: "50%",
+    transformOrigin: "center",
+    width: "50%",
   },
+  backgroundColor: "$yellow",
   display: "inline-flex",
   height: "$medium",
   position: "relative",
-
-  variants: {
-    colored: {
-      true: {
-        "& svg path": {
-          animation: `${buildPath} ${animationDuration} linear infinite, ${colorCycle} 8s ease-in-out infinite`,
-        },
-      },
-    },
-  },
 
   width: "$medium",
 });

@@ -1,8 +1,8 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [stitches.types](../README.md) / ITheme
+[@airindex/ui](../../README.md) / [stitches.types](../README.md) / ITheme
 
 # Interface: ITheme
 
@@ -278,28 +278,6 @@ Medium radius
 > **small**: `string`
 
 Small radius
-
-***
-
-### shadows
-
-> **shadows**: `object`
-
-Defined in: stitches.types.ts:185
-
-Box shadow configurations
-
-#### large
-
-> **large**: `string`
-
-Large shadow
-
-#### small
-
-> **small**: `string`
-
-Small shadow
 
 ***
 

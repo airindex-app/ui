@@ -6,7 +6,6 @@ import { type IImage } from "../../index";
 import { ImageStyled } from "./styles";
 
 export default function Image({
-  borderRadius,
   css,
   fill,
   fillFit,
@@ -18,12 +17,6 @@ export default function Image({
   return (
     <ImageStyled
       css={{
-        ...(borderRadius && {
-          borderRadius: `$${borderRadius}`,
-          img: {
-            borderRadius: `$${borderRadius}`,
-          },
-        }),
         height: fillHeight,
         ...css,
       }}>

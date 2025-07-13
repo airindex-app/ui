@@ -1,14 +1,14 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ILogo
+[@airindex/ui](../../README.md) / [types](../README.md) / ILogo
 
 # Interface: ILogo
 
-Defined in: [types.ts:570](https://github.com/consolia-io/ui/blob/main/src/types.ts#L570)
+Defined in: [types.ts:570](https://github.com/airindex-app/ui/blob/main/src/types.ts#L570)
 
-Logo component props - displays the Consolia logo in various formats
+Logo component props - displays the AirIndex logo in various formats
 
 ## Example
 
@@ -22,7 +22,7 @@ Logo component props - displays the Consolia logo in various formats
 
 > `optional` **theme**: `"default"` \| `"orange"` \| `"purple"` \| `"yellow"` \| `"blue"` \| `"light"` \| `"dark"`
 
-Defined in: [types.ts:572](https://github.com/consolia-io/ui/blob/main/src/types.ts#L572)
+Defined in: [types.ts:572](https://github.com/airindex-app/ui/blob/main/src/types.ts#L572)
 
 Color from theme palette
 
@@ -32,7 +32,7 @@ Color from theme palette
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:574](https://github.com/consolia-io/ui/blob/main/src/types.ts#L574)
+Defined in: [types.ts:574](https://github.com/airindex-app/ui/blob/main/src/types.ts#L574)
 
 Custom CSS styles
 
@@ -42,7 +42,7 @@ Custom CSS styles
 
 > `optional` **hover**: `boolean`
 
-Defined in: [types.ts:576](https://github.com/consolia-io/ui/blob/main/src/types.ts#L576)
+Defined in: [types.ts:576](https://github.com/airindex-app/ui/blob/main/src/types.ts#L576)
 
 Whether to show hover effects
 
@@ -52,7 +52,7 @@ Whether to show hover effects
 
 > `optional` **outline**: `boolean`
 
-Defined in: [types.ts:578](https://github.com/consolia-io/ui/blob/main/src/types.ts#L578)
+Defined in: [types.ts:578](https://github.com/airindex-app/ui/blob/main/src/types.ts#L578)
 
 Whether to show outline version
 
@@ -62,7 +62,7 @@ Whether to show outline version
 
 > `optional` **type**: `"text"` \| `"icon"` \| `"full"`
 
-Defined in: [types.ts:580](https://github.com/consolia-io/ui/blob/main/src/types.ts#L580)
+Defined in: [types.ts:580](https://github.com/airindex-app/ui/blob/main/src/types.ts#L580)
 
 Logo variant to display
 
@@ -72,6 +72,6 @@ Logo variant to display
 
 > `optional` **width**: `number`
 
-Defined in: [types.ts:582](https://github.com/consolia-io/ui/blob/main/src/types.ts#L582)
+Defined in: [types.ts:582](https://github.com/airindex-app/ui/blob/main/src/types.ts#L582)
 
 Width of the logo in pixels

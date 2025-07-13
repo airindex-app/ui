@@ -11,7 +11,7 @@ import {
 
 import { TextSizes } from "../components/Text/styles";
 import { systemIcons } from "../icons";
-import { spacings, theme } from "../stitches.config";
+import { spacings } from "../stitches.config";
 
 /**
  * Avatar component props
@@ -72,7 +72,7 @@ export interface IBadge {
   /** Whether to render a smaller version of the badge */
   small?: boolean;
   /** Visual theme/color scheme for the badge */
-  theme?: "default" | "solid" | "orange" | "purple" | "yellow" | "blue";
+  theme?: "default" | "solid" | "yellow";
   /** Badge display variant - border adds left border, theme fills with color */
   variant?: "border" | "theme";
 }
@@ -135,18 +135,9 @@ export interface IBox {
   /** Whether to render a smaller version */
   small?: boolean;
   /** Visual theme/color scheme for the box */
-  theme?:
-    | "default"
-    | "fill"
-    | "orange"
-    | "purple"
-    | "yellow"
-    | "blue"
-    | "minimal"
-    | "solid"
-    | "gradient";
+  theme?: "default" | "fill" | "yellow" | "minimal" | "solid";
   /** Add colored left border */
-  border?: "default" | "orange" | "purple" | "yellow" | "blue" | "solid";
+  border?: "default" | "yellow" | "solid";
 }
 
 /**
@@ -447,8 +438,6 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
  * ```
  */
 export interface IImage extends ImageProps {
-  /** Border radius from theme values */
-  borderRadius?: keyof typeof theme.radii;
   /** Custom CSS styles */
   css?: CSS;
   /** Whether the image should fill its container */
@@ -625,29 +614,6 @@ export interface ILoadingOverlay extends ILoading {
 }
 
 /**
- * Logo component props - displays the Consolia logo in various formats
- *
- * @example
- * ```tsx
- * <Logo type="full" color="blue" width={120} hover />
- * ```
- */
-export interface ILogo {
-  /** Color from theme palette */
-  theme?: "default" | "light" | "dark" | "orange" | "purple" | "yellow" | "blue";
-  /** Custom CSS styles */
-  css?: CSS;
-  /** Whether to show hover effects */
-  hover?: boolean;
-  /** Whether to show outline version */
-  outline?: boolean;
-  /** Logo variant to display */
-  type?: "icon" | "full" | "text";
-  /** Width of the logo in pixels */
-  width?: number;
-}
-
-/**
  * Menu component props - dropdown menu with nested options
  *
  * @example
@@ -705,7 +671,7 @@ export interface INodes {
   /** Array of child nodes to display */
   nodes: Array<{
     children: ReactNode;
-    color?: "purple" | "orange" | "yellow" | "blue";
+    color?: "yellow";
   }>;
   /** Parent/root node element */
   parent: ReactNode;
@@ -998,7 +964,7 @@ export interface IText extends ComponentPropsWithRef<"p"> {
   /** Custom CSS styles */
   css?: CSS;
   /** Highlight color theme */
-  highlight?: "blue" | "orange" | "purple" | "yellow" | "default";
+  highlight?: "yellow" | "default";
   /** URL for link functionality */
   href?: string;
   /** Inline spacing around the text */

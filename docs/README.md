@@ -1,8 +1,8 @@
-**@consolia/ui v0.2.19**
+**@airindex/ui v0.2.19**
 
 ***
 
-# @consolia/ui v0.2.19
+# @airindex/ui v0.2.19
 
 ## Modules
 

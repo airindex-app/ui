@@ -3,45 +3,16 @@ import { styled, fadeOut } from "../../stitches.config";
 export const BadgeStyled = styled("span", {
   alignContent: "center !important",
   alignItems: "center !important",
-  backgroundColor: "$background",
+  backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$small",
-  boxShadow: "$small",
   color: "$text",
   compoundVariants: [
     {
       css: {
-        backgroundColor: "$background",
-        borderColor: "$blue",
-        borderLeftWidth: "5px",
-      },
-      theme: "blue",
-      variant: "border",
-    },
-    {
-      css: {
-        backgroundColor: "$background",
+        backgroundColor: "$surface",
         borderColor: "$border",
       },
       theme: "default",
-      variant: "border",
-    },
-    {
-      css: {
-        backgroundColor: "$background",
-        borderColor: "$orange",
-        borderLeftWidth: "5px",
-      },
-      theme: "orange",
-      variant: "border",
-    },
-    {
-      css: {
-        backgroundColor: "$background",
-        borderColor: "$purple",
-        borderLeftWidth: "5px",
-      },
-      theme: "purple",
       variant: "border",
     },
     {
@@ -55,7 +26,7 @@ export const BadgeStyled = styled("span", {
     },
     {
       css: {
-        backgroundColor: "$background",
+        backgroundColor: "$surface",
         borderColor: "$yellow",
         borderLeftWidth: "5px",
       },
@@ -64,38 +35,11 @@ export const BadgeStyled = styled("span", {
     },
     {
       css: {
-        backgroundColor: "$blue",
-        borderColor: "$blue",
-        color: "$text",
-      },
-      theme: "blue",
-      variant: "theme",
-    },
-    {
-      css: {
-        backgroundColor: "$background",
+        backgroundColor: "$surface",
         borderColor: "$border",
         color: "$text",
       },
       theme: "default",
-      variant: "theme",
-    },
-    {
-      css: {
-        backgroundColor: "$orange",
-        borderColor: "$orange",
-        color: "$text",
-      },
-      theme: "orange",
-      variant: "theme",
-    },
-    {
-      css: {
-        backgroundColor: "$purple",
-        borderColor: "$purple",
-        color: "$text",
-      },
-      theme: "purple",
       variant: "theme",
     },
     {
@@ -118,6 +62,7 @@ export const BadgeStyled = styled("span", {
     },
   ],
   display: "inline-flex",
+  fontFamily: "$heading",
   fontSize: "$small",
   fontWeight: "bold",
   justifyContent: "center",
@@ -161,24 +106,9 @@ export const BadgeStyled = styled("span", {
       },
     },
     theme: {
-      blue: {
-        backgroundColor: "$background",
-        borderColor: "$blue",
-        borderLeftWidth: "5px",
-      },
       default: {
-        backgroundColor: "$background",
+        backgroundColor: "$surface",
         borderColor: "$border",
-      },
-      orange: {
-        backgroundColor: "$background",
-        borderColor: "$orange",
-        borderLeftWidth: "5px",
-      },
-      purple: {
-        backgroundColor: "$background",
-        borderColor: "$purple",
-        borderLeftWidth: "5px",
       },
       solid: {
         backgroundColor: "$text",
@@ -186,7 +116,7 @@ export const BadgeStyled = styled("span", {
         color: "$background",
       },
       yellow: {
-        backgroundColor: "$background",
+        backgroundColor: "$surface",
         borderColor: "$yellow",
         borderLeftWidth: "5px",
       },

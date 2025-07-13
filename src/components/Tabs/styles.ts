@@ -15,7 +15,6 @@ export const TabsStyled = styled("div", {
   background: "$surface",
   border: "1px solid $borderLight",
   borderRadius: "$medium",
-  boxShadow: "$small",
   display: "flex",
   flexWrap: "nowrap",
   gap: "$smallest",
@@ -41,14 +40,12 @@ export const TabStyled = styled(Button, {
     selected: {
       false: {
         backgroundColor: "transparent",
-        boxShadow: "none",
       },
       true: {
         "&:hover": {
-          backgroundColor: "$background",
+          backgroundColor: "$surface",
         },
-        backgroundColor: "$background",
-        boxShadow: "$small",
+        backgroundColor: "$surface",
         color: "$text",
       },
     },

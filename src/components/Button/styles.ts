@@ -13,10 +13,8 @@ export const ButtonStyled = styled("button", {
   alignContent: "center",
   alignItems: "center",
   appearance: "none",
-  backgroundColor: "$background",
+  backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$large",
-  boxShadow: "$small",
   color: "$text",
   cursor: "pointer",
   display: "inline-flex",
@@ -68,18 +66,15 @@ export const ButtonStyled = styled("button", {
         "&:not(:disabled):hover": {
           backgroundColor: "$surfaceHover",
           borderColor: "$border",
-          boxShadow: "$large",
         },
       },
       minimal: {
         "&:not(:disabled):hover": {
           backgroundColor: "$surfaceHover",
           borderColor: "$border",
-          boxShadow: "$large",
         },
         backgroundColor: "transparent",
         borderColor: "transparent",
-        boxShadow: "none",
       },
       solid: {
         "&:not(:disabled):hover": {

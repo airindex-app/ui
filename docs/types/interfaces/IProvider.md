@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IProvider
+[@airindex/ui](../../README.md) / [types](../README.md) / IProvider
 
 # Interface: IProvider
 
-Defined in: [types.ts:693](https://github.com/consolia-io/ui/blob/main/src/types.ts#L693)
+Defined in: [types.ts:693](https://github.com/airindex-app/ui/blob/main/src/types.ts#L693)
 
 Provider component props - theme and context provider for the UI library
 
@@ -24,7 +24,7 @@ Provider component props - theme and context provider for the UI library
 
 > **children**: `ReactNode`
 
-Defined in: [types.ts:695](https://github.com/consolia-io/ui/blob/main/src/types.ts#L695)
+Defined in: [types.ts:695](https://github.com/airindex-app/ui/blob/main/src/types.ts#L695)
 
 Application content
 
@@ -34,7 +34,7 @@ Application content
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:697](https://github.com/consolia-io/ui/blob/main/src/types.ts#L697)
+Defined in: [types.ts:697](https://github.com/airindex-app/ui/blob/main/src/types.ts#L697)
 
 Custom CSS styles
 
@@ -44,6 +44,6 @@ Custom CSS styles
 
 > `optional` **dark**: `boolean`
 
-Defined in: [types.ts:699](https://github.com/consolia-io/ui/blob/main/src/types.ts#L699)
+Defined in: [types.ts:699](https://github.com/airindex-app/ui/blob/main/src/types.ts#L699)
 
 Whether to use dark theme

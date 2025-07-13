@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ITabs
+[@airindex/ui](../../README.md) / [types](../README.md) / ITabs
 
 # Interface: ITabs
 
-Defined in: [types.ts:1101](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1101)
+Defined in: [types.ts:1101](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1101)
 
 Tabs component props - tabbed interface for switching between content panels
 
@@ -29,7 +29,7 @@ Tabs component props - tabbed interface for switching between content panels
 
 > `optional` **initial**: `string`
 
-Defined in: [types.ts:1103](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1103)
+Defined in: [types.ts:1103](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1103)
 
 Initially selected tab value
 
@@ -39,7 +39,7 @@ Initially selected tab value
 
 > `optional` **small**: `boolean`
 
-Defined in: [types.ts:1105](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1105)
+Defined in: [types.ts:1105](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1105)
 
 Whether to use small tabs
 
@@ -49,7 +49,7 @@ Whether to use small tabs
 
 > `optional` **onSelection**: (`value`) => `void`
 
-Defined in: [types.ts:1107](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1107)
+Defined in: [types.ts:1107](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1107)
 
 Callback when tab is selected
 
@@ -69,7 +69,7 @@ Callback when tab is selected
 
 > **options**: `object`[]
 
-Defined in: [types.ts:1109](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1109)
+Defined in: [types.ts:1109](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1109)
 
 Array of tab options
 
@@ -91,6 +91,6 @@ Array of tab options
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:1115](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1115)
+Defined in: [types.ts:1115](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1115)
 
 Custom CSS styles

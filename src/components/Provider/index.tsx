@@ -7,7 +7,7 @@ import Portal from "./ProviderPortal";
 import { ProviderStyled, providerReset } from "./styles";
 import { ToastController } from "./ToastController";
 
-const tag = `Consolia UI v${packageJson.version}`;
+const tag = `AirIndex UI v${packageJson.version}`;
 
 export default function Provider({ children, css, dark }: IProvider): JSX.Element {
   const isDarkMode = Boolean(dark);

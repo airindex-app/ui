@@ -13,7 +13,6 @@ import FieldDemo from "./demos/Field";
 import IconDemo from "./demos/Icon";
 import InputDemo from "./demos/Input";
 import LoadingDemo from "./demos/Loading";
-import LogoDemo from "./demos/Logo";
 import MapsDemo from "./demos/Maps";
 import MenuDemo from "./demos/Menu";
 import ModalDemo from "./demos/Modal";
@@ -46,7 +45,6 @@ const DEMOS = {
   Icon: IconDemo,
   Input: InputDemo,
   Loading: LoadingDemo,
-  Logo: LogoDemo,
   Maps: MapsDemo,
   Menu: MenuDemo,
   Modal: ModalDemo,
@@ -99,7 +97,7 @@ export function App(): JSX.Element {
             onClick={() => {
               setSelectedDemo("avatar");
             }}>
-            <C.Logo hover width={150} />
+            <C.Text as="h2">UI Library</C.Text>
           </C.Stack>
           <C.Select
             initial={selectedDemo}

@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ISelectMulti
+[@airindex/ui](../../README.md) / [types](../README.md) / ISelectMulti
 
 # Interface: ISelectMulti
 
-Defined in: [types.ts:777](https://github.com/consolia-io/ui/blob/main/src/types.ts#L777)
+Defined in: [types.ts:777](https://github.com/airindex-app/ui/blob/main/src/types.ts#L777)
 
 SelectMulti component props - multi-selection dropdown with limit and reset options
 
@@ -36,7 +36,7 @@ SelectMulti component props - multi-selection dropdown with limit and reset opti
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:721](https://github.com/consolia-io/ui/blob/main/src/types.ts#L721)
+Defined in: [types.ts:721](https://github.com/airindex-app/ui/blob/main/src/types.ts#L721)
 
 Custom CSS styles
 
@@ -50,7 +50,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [types.ts:723](https://github.com/consolia-io/ui/blob/main/src/types.ts#L723)
+Defined in: [types.ts:723](https://github.com/airindex-app/ui/blob/main/src/types.ts#L723)
 
 Whether the select is disabled
 
@@ -64,7 +64,7 @@ Whether the select is disabled
 
 > `optional` **filter**: `boolean`
 
-Defined in: [types.ts:725](https://github.com/consolia-io/ui/blob/main/src/types.ts#L725)
+Defined in: [types.ts:725](https://github.com/airindex-app/ui/blob/main/src/types.ts#L725)
 
 Whether to show a filter/search input
 
@@ -78,7 +78,7 @@ Whether to show a filter/search input
 
 > `optional` **height**: `string` \| `number`
 
-Defined in: [types.ts:727](https://github.com/consolia-io/ui/blob/main/src/types.ts#L727)
+Defined in: [types.ts:727](https://github.com/airindex-app/ui/blob/main/src/types.ts#L727)
 
 Height of the dropdown
 
@@ -92,7 +92,7 @@ Height of the dropdown
 
 > `optional` **horizontal**: `"left"` \| `"right"` \| `"center"`
 
-Defined in: [types.ts:729](https://github.com/consolia-io/ui/blob/main/src/types.ts#L729)
+Defined in: [types.ts:729](https://github.com/airindex-app/ui/blob/main/src/types.ts#L729)
 
 Horizontal alignment of the dropdown
 
@@ -106,7 +106,7 @@ Horizontal alignment of the dropdown
 
 > `optional` **label**: `string`
 
-Defined in: [types.ts:733](https://github.com/consolia-io/ui/blob/main/src/types.ts#L733)
+Defined in: [types.ts:733](https://github.com/airindex-app/ui/blob/main/src/types.ts#L733)
 
 Label for the select component
 
@@ -120,7 +120,7 @@ Label for the select component
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:737](https://github.com/consolia-io/ui/blob/main/src/types.ts#L737)
+Defined in: [types.ts:737](https://github.com/airindex-app/ui/blob/main/src/types.ts#L737)
 
 Whether to show a loading state
 
@@ -134,7 +134,7 @@ Whether to show a loading state
 
 > **options**: `object`[]
 
-Defined in: [types.ts:741](https://github.com/consolia-io/ui/blob/main/src/types.ts#L741)
+Defined in: [types.ts:741](https://github.com/airindex-app/ui/blob/main/src/types.ts#L741)
 
 Array of selectable options
 
@@ -164,7 +164,7 @@ Array of selectable options
 
 > **trigger**: `ReactNode`
 
-Defined in: [types.ts:748](https://github.com/consolia-io/ui/blob/main/src/types.ts#L748)
+Defined in: [types.ts:748](https://github.com/airindex-app/ui/blob/main/src/types.ts#L748)
 
 Element that triggers the dropdown
 
@@ -178,7 +178,7 @@ Element that triggers the dropdown
 
 > `optional` **triggerCSS**: `CSS`
 
-Defined in: [types.ts:750](https://github.com/consolia-io/ui/blob/main/src/types.ts#L750)
+Defined in: [types.ts:750](https://github.com/airindex-app/ui/blob/main/src/types.ts#L750)
 
 Custom CSS styles for the trigger
 
@@ -192,7 +192,7 @@ Custom CSS styles for the trigger
 
 > `optional` **vertical**: `"bottom"` \| `"top"`
 
-Defined in: [types.ts:752](https://github.com/consolia-io/ui/blob/main/src/types.ts#L752)
+Defined in: [types.ts:752](https://github.com/airindex-app/ui/blob/main/src/types.ts#L752)
 
 Vertical positioning of the dropdown
 
@@ -206,7 +206,7 @@ Vertical positioning of the dropdown
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [types.ts:754](https://github.com/consolia-io/ui/blob/main/src/types.ts#L754)
+Defined in: [types.ts:754](https://github.com/airindex-app/ui/blob/main/src/types.ts#L754)
 
 Width of the dropdown
 
@@ -220,7 +220,7 @@ Width of the dropdown
 
 > `optional` **wrapperCSS**: `CSS`
 
-Defined in: [types.ts:756](https://github.com/consolia-io/ui/blob/main/src/types.ts#L756)
+Defined in: [types.ts:756](https://github.com/airindex-app/ui/blob/main/src/types.ts#L756)
 
 Custom CSS styles for the dropdown wrapper
 
@@ -234,7 +234,7 @@ Custom CSS styles for the dropdown wrapper
 
 > `optional` **initial**: `object`[]
 
-Defined in: [types.ts:779](https://github.com/consolia-io/ui/blob/main/src/types.ts#L779)
+Defined in: [types.ts:779](https://github.com/airindex-app/ui/blob/main/src/types.ts#L779)
 
 Initially selected options
 
@@ -252,7 +252,7 @@ Initially selected options
 
 > `optional` **limit**: `number`
 
-Defined in: [types.ts:781](https://github.com/consolia-io/ui/blob/main/src/types.ts#L781)
+Defined in: [types.ts:781](https://github.com/airindex-app/ui/blob/main/src/types.ts#L781)
 
 Maximum number of selections allowed
 
@@ -262,7 +262,7 @@ Maximum number of selections allowed
 
 > `optional` **onSelection**: (`value`) => `void`
 
-Defined in: [types.ts:783](https://github.com/consolia-io/ui/blob/main/src/types.ts#L783)
+Defined in: [types.ts:783](https://github.com/airindex-app/ui/blob/main/src/types.ts#L783)
 
 Callback when selections change
 
@@ -282,6 +282,6 @@ Callback when selections change
 
 > `optional` **reset**: `boolean`
 
-Defined in: [types.ts:785](https://github.com/consolia-io/ui/blob/main/src/types.ts#L785)
+Defined in: [types.ts:785](https://github.com/airindex-app/ui/blob/main/src/types.ts#L785)
 
 Whether to show a reset/clear all button

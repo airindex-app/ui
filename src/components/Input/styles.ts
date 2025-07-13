@@ -2,7 +2,6 @@ import { styled } from "../../stitches.config";
 
 const interactiveStyles = {
   borderColor: "$text",
-  boxShadow: "$small",
 };
 
 export const InputStyled = styled("div", {
@@ -24,8 +23,8 @@ export const InputCoreStyled = styled("div", {
   "&:hover": interactiveStyles,
   alignContent: "center",
   alignSelf: "center",
+  backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
   display: "flex",
   justifyContent: "center",
   transition: "$default",

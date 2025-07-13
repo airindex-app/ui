@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IStack
+[@airindex/ui](../../README.md) / [types](../README.md) / IStack
 
 # Interface: IStack
 
-Defined in: [types.ts:807](https://github.com/consolia-io/ui/blob/main/src/types.ts#L807)
+Defined in: [types.ts:807](https://github.com/airindex-app/ui/blob/main/src/types.ts#L807)
 
 Stack component props - responsive layout container with flexible spacing and alignment
 
@@ -33,7 +33,7 @@ Stack component props - responsive layout container with flexible spacing and al
 
 > `optional` **align**: `TextAlign`
 
-Defined in: [types.ts:809](https://github.com/consolia-io/ui/blob/main/src/types.ts#L809)
+Defined in: [types.ts:809](https://github.com/airindex-app/ui/blob/main/src/types.ts#L809)
 
 Text alignment within the stack
 
@@ -43,7 +43,7 @@ Text alignment within the stack
 
 > `optional` **as**: keyof IntrinsicElements
 
-Defined in: [types.ts:811](https://github.com/consolia-io/ui/blob/main/src/types.ts#L811)
+Defined in: [types.ts:811](https://github.com/airindex-app/ui/blob/main/src/types.ts#L811)
 
 HTML element type to render as
 
@@ -53,7 +53,7 @@ HTML element type to render as
 
 > `optional` **bottom**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:813](https://github.com/consolia-io/ui/blob/main/src/types.ts#L813)
+Defined in: [types.ts:813](https://github.com/airindex-app/ui/blob/main/src/types.ts#L813)
 
 Bottom margin/spacing
 
@@ -63,7 +63,7 @@ Bottom margin/spacing
 
 > `optional` **children**: `ReactNode`
 
-Defined in: [types.ts:815](https://github.com/consolia-io/ui/blob/main/src/types.ts#L815)
+Defined in: [types.ts:815](https://github.com/airindex-app/ui/blob/main/src/types.ts#L815)
 
 Content to display in the stack
 
@@ -73,7 +73,7 @@ Content to display in the stack
 
 > `optional` **className**: `string`
 
-Defined in: [types.ts:817](https://github.com/consolia-io/ui/blob/main/src/types.ts#L817)
+Defined in: [types.ts:817](https://github.com/airindex-app/ui/blob/main/src/types.ts#L817)
 
 CSS class name
 
@@ -83,7 +83,7 @@ CSS class name
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:819](https://github.com/consolia-io/ui/blob/main/src/types.ts#L819)
+Defined in: [types.ts:819](https://github.com/airindex-app/ui/blob/main/src/types.ts#L819)
 
 Custom CSS styles
 
@@ -93,7 +93,7 @@ Custom CSS styles
 
 > `optional` **direction**: `"row"` \| `"column"`
 
-Defined in: [types.ts:821](https://github.com/consolia-io/ui/blob/main/src/types.ts#L821)
+Defined in: [types.ts:821](https://github.com/airindex-app/ui/blob/main/src/types.ts#L821)
 
 Direction of the flex layout
 
@@ -103,7 +103,7 @@ Direction of the flex layout
 
 > `optional` **inline**: `boolean`
 
-Defined in: [types.ts:823](https://github.com/consolia-io/ui/blob/main/src/types.ts#L823)
+Defined in: [types.ts:823](https://github.com/airindex-app/ui/blob/main/src/types.ts#L823)
 
 Whether to remove text margins and align items
 
@@ -113,7 +113,7 @@ Whether to remove text margins and align items
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [types.ts:825](https://github.com/consolia-io/ui/blob/main/src/types.ts#L825)
+Defined in: [types.ts:825](https://github.com/airindex-app/ui/blob/main/src/types.ts#L825)
 
 Whether to use minimal styling
 
@@ -123,7 +123,7 @@ Whether to use minimal styling
 
 > `optional` **onClick**: () => `void`
 
-Defined in: [types.ts:827](https://github.com/consolia-io/ui/blob/main/src/types.ts#L827)
+Defined in: [types.ts:827](https://github.com/airindex-app/ui/blob/main/src/types.ts#L827)
 
 Click handler for the stack
 
@@ -137,7 +137,7 @@ Click handler for the stack
 
 > `optional` **top**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:829](https://github.com/consolia-io/ui/blob/main/src/types.ts#L829)
+Defined in: [types.ts:829](https://github.com/airindex-app/ui/blob/main/src/types.ts#L829)
 
 Top margin/spacing
 
@@ -147,7 +147,7 @@ Top margin/spacing
 
 > `optional` **width**: `number`
 
-Defined in: [types.ts:831](https://github.com/consolia-io/ui/blob/main/src/types.ts#L831)
+Defined in: [types.ts:831](https://github.com/airindex-app/ui/blob/main/src/types.ts#L831)
 
 Default width percentage
 
@@ -157,7 +157,7 @@ Default width percentage
 
 > `optional` **widthResponsive**: `object`
 
-Defined in: [types.ts:833](https://github.com/consolia-io/ui/blob/main/src/types.ts#L833)
+Defined in: [types.ts:833](https://github.com/airindex-app/ui/blob/main/src/types.ts#L833)
 
 Responsive width percentages
 
@@ -187,7 +187,7 @@ Responsive width percentages
 
 > `optional` **justify**: `JustifyContent`
 
-Defined in: [types.ts:841](https://github.com/consolia-io/ui/blob/main/src/types.ts#L841)
+Defined in: [types.ts:841](https://github.com/airindex-app/ui/blob/main/src/types.ts#L841)
 
 Main axis alignment
 
@@ -197,7 +197,7 @@ Main axis alignment
 
 > `optional` **gap**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:843](https://github.com/consolia-io/ui/blob/main/src/types.ts#L843)
+Defined in: [types.ts:843](https://github.com/airindex-app/ui/blob/main/src/types.ts#L843)
 
 Gap between items
 
@@ -207,7 +207,7 @@ Gap between items
 
 > `optional` **wrap**: `boolean`
 
-Defined in: [types.ts:845](https://github.com/consolia-io/ui/blob/main/src/types.ts#L845)
+Defined in: [types.ts:845](https://github.com/airindex-app/ui/blob/main/src/types.ts#L845)
 
 Whether to wrap items
 
@@ -217,7 +217,7 @@ Whether to wrap items
 
 > `optional` **id**: `string`
 
-Defined in: [types.ts:847](https://github.com/consolia-io/ui/blob/main/src/types.ts#L847)
+Defined in: [types.ts:847](https://github.com/airindex-app/ui/blob/main/src/types.ts#L847)
 
 HTML id attribute
 
@@ -227,7 +227,7 @@ HTML id attribute
 
 > `optional` **inverted**: `boolean`
 
-Defined in: [types.ts:849](https://github.com/consolia-io/ui/blob/main/src/types.ts#L849)
+Defined in: [types.ts:849](https://github.com/airindex-app/ui/blob/main/src/types.ts#L849)
 
 Whether to use dark theme
 
@@ -237,7 +237,7 @@ Whether to use dark theme
 
 > `optional` **alignItems**: `AlignItems`
 
-Defined in: [types.ts:851](https://github.com/consolia-io/ui/blob/main/src/types.ts#L851)
+Defined in: [types.ts:851](https://github.com/airindex-app/ui/blob/main/src/types.ts#L851)
 
 Cross-axis alignment
 
@@ -247,7 +247,7 @@ Cross-axis alignment
 
 > `optional` **alignContent**: `AlignContent`
 
-Defined in: [types.ts:853](https://github.com/consolia-io/ui/blob/main/src/types.ts#L853)
+Defined in: [types.ts:853](https://github.com/airindex-app/ui/blob/main/src/types.ts#L853)
 
 Content alignment
 
@@ -257,7 +257,7 @@ Content alignment
 
 > `optional` **basis**: `FlexBasis`
 
-Defined in: [types.ts:855](https://github.com/consolia-io/ui/blob/main/src/types.ts#L855)
+Defined in: [types.ts:855](https://github.com/airindex-app/ui/blob/main/src/types.ts#L855)
 
 Flex basis
 
@@ -267,7 +267,7 @@ Flex basis
 
 > `optional` **grow**: `OnlyStringNumeric`
 
-Defined in: [types.ts:857](https://github.com/consolia-io/ui/blob/main/src/types.ts#L857)
+Defined in: [types.ts:857](https://github.com/airindex-app/ui/blob/main/src/types.ts#L857)
 
 Flex grow
 
@@ -277,7 +277,7 @@ Flex grow
 
 > `optional` **shrink**: `OnlyNumber`
 
-Defined in: [types.ts:859](https://github.com/consolia-io/ui/blob/main/src/types.ts#L859)
+Defined in: [types.ts:859](https://github.com/airindex-app/ui/blob/main/src/types.ts#L859)
 
 Flex shrink
 
@@ -287,6 +287,6 @@ Flex shrink
 
 > `optional` **order**: `OnlyNumber`
 
-Defined in: [types.ts:861](https://github.com/consolia-io/ui/blob/main/src/types.ts#L861)
+Defined in: [types.ts:861](https://github.com/airindex-app/ui/blob/main/src/types.ts#L861)
 
 Flex order

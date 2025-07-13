@@ -1,14 +1,12 @@
 import { styled } from "../../stitches.config";
 
 const highlight = {
-  borderRadius: "$small",
   padding: "calc($smallest / 2) $smaller",
 };
 
 const link = {
   "&:hover": {
     backgroundColor: "$surface",
-    borderRadius: "$small",
   },
   borderBottom: "1px solid $border",
   color: "$text",
@@ -26,36 +24,42 @@ export const TextSizes = {
     marginBottom: 0,
   },
   h1: {
+    fontFamily: "$heading",
     fontSize: "$h1",
     fontWeight: "bold",
     lineHeight: "$small",
     marginBottom: "$medium",
   },
   h2: {
+    fontFamily: "$heading",
     fontSize: "$h2",
     fontWeight: "bold",
     lineHeight: "$small",
     marginBottom: "$medium",
   },
   h3: {
+    fontFamily: "$heading",
     fontSize: "$h3",
     fontWeight: "bold",
     lineHeight: "$small",
     marginBottom: "$medium",
   },
   h4: {
+    fontFamily: "$heading",
     fontSize: "$h4",
     fontWeight: "bold",
     lineHeight: "$small",
     marginBottom: "$medium",
   },
   h5: {
+    fontFamily: "$heading",
     fontSize: "$h5",
     fontWeight: "bold",
     lineHeight: "$default",
     marginBottom: "$small",
   },
   h6: {
+    fontFamily: "$heading",
     fontSize: "$h6",
     fontWeight: "bold",
     lineHeight: "$default",
@@ -64,6 +68,7 @@ export const TextSizes = {
   label: {
     color: "$text",
     display: "block",
+    fontFamily: "$heading",
     fontSize: "$small",
     fontWeight: "bold",
     lineHeight: "$default",
@@ -109,6 +114,7 @@ export const TextSizes = {
     lineHeight: "inherit",
   },
   strong: {
+    fontFamily: "$heading",
     fontSize: "inherit",
     fontWeight: "bold",
     lineHeight: "inherit",
@@ -130,21 +136,9 @@ export const TextStyled = styled("div", {
       true: mutedStyles,
     },
     highlight: {
-      blue: {
-        ...highlight,
-        backgroundColor: "$blue",
-      },
       default: {
         ...highlight,
         backgroundColor: "$surface",
-      },
-      orange: {
-        ...highlight,
-        backgroundColor: "$orange",
-      },
-      purple: {
-        ...highlight,
-        backgroundColor: "$purple",
       },
       yellow: {
         ...highlight,

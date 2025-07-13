@@ -44,7 +44,7 @@ try {
     'Input': 'Single-line form input with validation and actions',
     'Loading': 'Animated loading spinner with customizable appearance',
     'LoadingOverlay': 'Full-screen loading overlay with message display',
-    'Logo': 'Consolia brand logo in various formats and styles',
+    'Logo': 'AirIndex brand logo in various formats and styles',
     'Menu': 'Dropdown menu with nested options and keyboard navigation',
     'Modal': 'Centered overlay dialog for important interactions',
     'Nodes': 'Hierarchical node tree visualization with connecting lines',

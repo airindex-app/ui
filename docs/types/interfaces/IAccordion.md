@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IAccordion
+[@airindex/ui](../../README.md) / [types](../README.md) / IAccordion
 
 # Interface: IAccordion
 
-Defined in: [types.ts:1143](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1143)
+Defined in: [types.ts:1143](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1143)
 
 Accordion component props - collapsible content sections with optional multiple expansion
 
@@ -39,7 +39,7 @@ Accordion component props - collapsible content sections with optional multiple 
 
 > `optional` **allowMultiple**: `boolean`
 
-Defined in: [types.ts:1145](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1145)
+Defined in: [types.ts:1145](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1145)
 
 Whether multiple sections can be open simultaneously
 
@@ -49,7 +49,7 @@ Whether multiple sections can be open simultaneously
 
 > `optional` **initial**: `string`
 
-Defined in: [types.ts:1147](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1147)
+Defined in: [types.ts:1147](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1147)
 
 Initially opened section value
 
@@ -59,7 +59,7 @@ Initially opened section value
 
 > `optional` **onToggle**: (`value`, `isOpen`) => `void`
 
-Defined in: [types.ts:1149](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1149)
+Defined in: [types.ts:1149](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1149)
 
 Callback when section is toggled
 
@@ -83,7 +83,7 @@ Callback when section is toggled
 
 > **options**: `object`[]
 
-Defined in: [types.ts:1151](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1151)
+Defined in: [types.ts:1151](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1151)
 
 Array of accordion sections
 
@@ -113,6 +113,6 @@ Array of accordion sections
 
 > `optional` **mode**: `"grid"` \| `"list"`
 
-Defined in: [types.ts:1159](https://github.com/consolia-io/ui/blob/main/src/types.ts#L1159)
+Defined in: [types.ts:1159](https://github.com/airindex-app/ui/blob/main/src/types.ts#L1159)
 
 Display mode: 'list' (default) or 'grid'

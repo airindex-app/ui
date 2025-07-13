@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ILoadingOverlay
+[@airindex/ui](../../README.md) / [types](../README.md) / ILoadingOverlay
 
 # Interface: ILoadingOverlay
 
-Defined in: [types.ts:557](https://github.com/consolia-io/ui/blob/main/src/types.ts#L557)
+Defined in: [types.ts:557](https://github.com/airindex-app/ui/blob/main/src/types.ts#L557)
 
 LoadingOverlay component props - full-screen loading overlay with message
 
@@ -26,7 +26,7 @@ LoadingOverlay component props - full-screen loading overlay with message
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:542](https://github.com/consolia-io/ui/blob/main/src/types.ts#L542)
+Defined in: [types.ts:542](https://github.com/airindex-app/ui/blob/main/src/types.ts#L542)
 
 Custom CSS styles
 
@@ -40,7 +40,7 @@ Custom CSS styles
 
 > `optional` **stroke**: `string`
 
-Defined in: [types.ts:544](https://github.com/consolia-io/ui/blob/main/src/types.ts#L544)
+Defined in: [types.ts:544](https://github.com/airindex-app/ui/blob/main/src/types.ts#L544)
 
 Color of the loading spinner stroke
 
@@ -54,7 +54,7 @@ Color of the loading spinner stroke
 
 > `optional` **theme**: `"default"` \| `"colored"`
 
-Defined in: [types.ts:546](https://github.com/consolia-io/ui/blob/main/src/types.ts#L546)
+Defined in: [types.ts:546](https://github.com/airindex-app/ui/blob/main/src/types.ts#L546)
 
 Visual theme for the loading spinner
 
@@ -68,6 +68,6 @@ Visual theme for the loading spinner
 
 > **title**: `string`
 
-Defined in: [types.ts:559](https://github.com/consolia-io/ui/blob/main/src/types.ts#L559)
+Defined in: [types.ts:559](https://github.com/airindex-app/ui/blob/main/src/types.ts#L559)
 
 Title/message to display with the loading spinner

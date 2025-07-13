@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IImage
+[@airindex/ui](../../README.md) / [types](../README.md) / IImage
 
 # Interface: IImage
 
-Defined in: [types.ts:459](https://github.com/consolia-io/ui/blob/main/src/types.ts#L459)
+Defined in: [types.ts:459](https://github.com/airindex-app/ui/blob/main/src/types.ts#L459)
 
 Image component props - enhanced Next.js Image with additional styling options
 
@@ -32,7 +32,7 @@ Image component props - enhanced Next.js Image with additional styling options
 
 > `optional` **borderRadius**: `"large"` \| `"medium"` \| `"small"`
 
-Defined in: [types.ts:461](https://github.com/consolia-io/ui/blob/main/src/types.ts#L461)
+Defined in: [types.ts:461](https://github.com/airindex-app/ui/blob/main/src/types.ts#L461)
 
 Border radius from theme values
 
@@ -42,7 +42,7 @@ Border radius from theme values
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:463](https://github.com/consolia-io/ui/blob/main/src/types.ts#L463)
+Defined in: [types.ts:463](https://github.com/airindex-app/ui/blob/main/src/types.ts#L463)
 
 Custom CSS styles
 
@@ -52,7 +52,7 @@ Custom CSS styles
 
 > `optional` **fill**: `boolean`
 
-Defined in: [types.ts:465](https://github.com/consolia-io/ui/blob/main/src/types.ts#L465)
+Defined in: [types.ts:465](https://github.com/airindex-app/ui/blob/main/src/types.ts#L465)
 
 Whether the image should fill its container
 
@@ -66,7 +66,7 @@ Whether the image should fill its container
 
 > `optional` **fillFit**: `ObjectFit`
 
-Defined in: [types.ts:467](https://github.com/consolia-io/ui/blob/main/src/types.ts#L467)
+Defined in: [types.ts:467](https://github.com/airindex-app/ui/blob/main/src/types.ts#L467)
 
 How the image should fit when using fill
 
@@ -76,7 +76,7 @@ How the image should fit when using fill
 
 > `optional` **fillHeight**: `string` \| `number`
 
-Defined in: [types.ts:469](https://github.com/consolia-io/ui/blob/main/src/types.ts#L469)
+Defined in: [types.ts:469](https://github.com/airindex-app/ui/blob/main/src/types.ts#L469)
 
 Height when using fill mode
 
@@ -86,6 +86,6 @@ Height when using fill mode
 
 > `optional` **fillPosition**: `Position`
 
-Defined in: [types.ts:471](https://github.com/consolia-io/ui/blob/main/src/types.ts#L471)
+Defined in: [types.ts:471](https://github.com/airindex-app/ui/blob/main/src/types.ts#L471)
 
 Position of the image when using fill

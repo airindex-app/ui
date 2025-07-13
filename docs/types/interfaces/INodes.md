@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / INodes
+[@airindex/ui](../../README.md) / [types](../README.md) / INodes
 
 # Interface: INodes
 
-Defined in: [types.ts:639](https://github.com/consolia-io/ui/blob/main/src/types.ts#L639)
+Defined in: [types.ts:639](https://github.com/airindex-app/ui/blob/main/src/types.ts#L639)
 
 Nodes component props - hierarchical node tree visualization
 
@@ -29,7 +29,7 @@ Nodes component props - hierarchical node tree visualization
 
 > **nodes**: `object`[]
 
-Defined in: [types.ts:641](https://github.com/consolia-io/ui/blob/main/src/types.ts#L641)
+Defined in: [types.ts:641](https://github.com/airindex-app/ui/blob/main/src/types.ts#L641)
 
 Array of child nodes to display
 
@@ -47,7 +47,7 @@ Array of child nodes to display
 
 > **parent**: `ReactNode`
 
-Defined in: [types.ts:646](https://github.com/consolia-io/ui/blob/main/src/types.ts#L646)
+Defined in: [types.ts:646](https://github.com/airindex-app/ui/blob/main/src/types.ts#L646)
 
 Parent/root node element
 
@@ -57,6 +57,6 @@ Parent/root node element
 
 > `optional` **height**: `number`
 
-Defined in: [types.ts:648](https://github.com/consolia-io/ui/blob/main/src/types.ts#L648)
+Defined in: [types.ts:648](https://github.com/airindex-app/ui/blob/main/src/types.ts#L648)
 
 Height of the nodes container in pixels

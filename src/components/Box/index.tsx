@@ -1,7 +1,6 @@
 import { useState, type JSX } from "react";
 
 import { Button, Image, Loading, Icon, type IBox } from "../../index";
-import Gradient from "../Gradient";
 import {
   BoxExitStyled,
   BoxExpanderTrigger,
@@ -71,7 +70,6 @@ export default function Box({
       target={cta ? "_blank" : undefined}
       theme={theme || "default"}
       onClick={onClick}>
-      {theme === "gradient" && <Gradient />}
       {loading && (
         <BoxLoadingStyled>
           <Loading />
@@ -85,10 +83,7 @@ export default function Box({
               <Image
                 alt={imageAlt || ""}
                 css={{
-                  img: {
-                    borderTopLeftRadius: "$medium !important",
-                    borderTopRightRadius: "$medium !important",
-                  },
+                  img: {},
                 }}
                 fill
                 fillFit={imageFit}
@@ -102,10 +97,7 @@ export default function Box({
             <Image
               alt={imageAlt || ""}
               css={{
-                img: {
-                  borderTopLeftRadius: "$medium !important",
-                  borderTopRightRadius: "$medium !important",
-                },
+                img: {},
               }}
               fill
               fillFit={imageFit}

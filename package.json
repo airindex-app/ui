@@ -1,7 +1,7 @@
 {
-  "name": "@consolia/ui",
-  "description": "Consolia's internal component library, built with React, Next.js, and Stitches.",
-  "version": "0.4.1",
+  "name": "@airindex/ui",
+  "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
+  "version": "0.1.0",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -15,7 +15,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/consolia-io/ui/issues"
+    "url": "https://github.com/airindex-app/ui/issues"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.7.2",
@@ -35,7 +35,7 @@
     "@types/node": "^22.16.3",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "eslint": "^9.30.1",
+    "eslint": "^9.31.0",
     "eslint-config-dolmios": "^2.0.9",
     "next": "^15.3.5",
     "parcel": "^2.15.4",
@@ -53,7 +53,7 @@
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/consolia-io/ui",
+  "homepage": "https://github.com/airindex-app/ui",
   "keywords": [
     "component",
     "components",
@@ -82,7 +82,7 @@
   "prettier": "eslint-config-dolmios/configs/prettier",
   "repository": {
     "type": "git",
-    "url": "git://github.com/consolia-io/ui.git"
+    "url": "git://github.com/airindex-app/ui.git"
   },
   "scripts": {
     "build": "pnpm tidy && pnpm docs && pnpm prebuild && parcel build src/index.ts --dist-dir dist",

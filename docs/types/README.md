@@ -1,8 +1,8 @@
-[**@consolia/ui v0.2.19**](../README.md)
+[**@airindex/ui v0.2.19**](../README.md)
 
 ***
 
-[@consolia/ui](../README.md) / types
+[@airindex/ui](../README.md) / types
 
 # types
 

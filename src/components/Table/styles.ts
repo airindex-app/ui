@@ -30,7 +30,6 @@ const rowHoverBase = {
 export const TableStitches = styled("div", {
   backgroundColor: "$background",
   border: "1px solid $border",
-  borderRadius: "$medium",
   overflow: "hidden",
   phone: {
     backgroundColor: "transparent",

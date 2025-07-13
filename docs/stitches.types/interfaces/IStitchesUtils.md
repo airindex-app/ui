@@ -1,8 +1,8 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [stitches.types](../README.md) / IStitchesUtils
+[@airindex/ui](../../README.md) / [stitches.types](../README.md) / IStitchesUtils
 
 # Interface: IStitchesUtils
 

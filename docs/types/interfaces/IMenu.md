@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IMenu
+[@airindex/ui](../../README.md) / [types](../README.md) / IMenu
 
 # Interface: IMenu
 
-Defined in: [types.ts:600](https://github.com/consolia-io/ui/blob/main/src/types.ts#L600)
+Defined in: [types.ts:600](https://github.com/airindex-app/ui/blob/main/src/types.ts#L600)
 
 Menu component props - dropdown menu with nested options
 
@@ -29,7 +29,7 @@ Menu component props - dropdown menu with nested options
 
 > `optional` **children**: `ReactNode`
 
-Defined in: [types.ts:602](https://github.com/consolia-io/ui/blob/main/src/types.ts#L602)
+Defined in: [types.ts:602](https://github.com/airindex-app/ui/blob/main/src/types.ts#L602)
 
 Additional content to render in the menu
 
@@ -39,7 +39,7 @@ Additional content to render in the menu
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:604](https://github.com/consolia-io/ui/blob/main/src/types.ts#L604)
+Defined in: [types.ts:604](https://github.com/airindex-app/ui/blob/main/src/types.ts#L604)
 
 Custom CSS styles
 
@@ -49,7 +49,7 @@ Custom CSS styles
 
 > `optional` **initial**: `string`
 
-Defined in: [types.ts:606](https://github.com/consolia-io/ui/blob/main/src/types.ts#L606)
+Defined in: [types.ts:606](https://github.com/airindex-app/ui/blob/main/src/types.ts#L606)
 
 Initially selected option value
 
@@ -59,7 +59,7 @@ Initially selected option value
 
 > `optional` **onSelection**: (`value`, `label`) => `void`
 
-Defined in: [types.ts:608](https://github.com/consolia-io/ui/blob/main/src/types.ts#L608)
+Defined in: [types.ts:608](https://github.com/airindex-app/ui/blob/main/src/types.ts#L608)
 
 Callback when menu option is selected
 
@@ -83,7 +83,7 @@ Callback when menu option is selected
 
 > **options**: `object`[]
 
-Defined in: [types.ts:610](https://github.com/consolia-io/ui/blob/main/src/types.ts#L610)
+Defined in: [types.ts:610](https://github.com/airindex-app/ui/blob/main/src/types.ts#L610)
 
 Array of menu options with optional sub-menus
 
@@ -109,6 +109,6 @@ Array of menu options with optional sub-menus
 
 > **trigger**: `ReactNode`
 
-Defined in: [types.ts:621](https://github.com/consolia-io/ui/blob/main/src/types.ts#L621)
+Defined in: [types.ts:621](https://github.com/airindex-app/ui/blob/main/src/types.ts#L621)
 
 Element that triggers the menu

@@ -80,12 +80,6 @@ export type TThemeConfig = {
   colors: Record<
     | "background"
     | "text"
-    | "blue"
-    | "blueLight"
-    | "orange"
-    | "orangeLight"
-    | "purple"
-    | "purpleLight"
     | "yellow"
     | "yellowLight"
     | "border"
@@ -99,6 +93,7 @@ export type TThemeConfig = {
   /** Font family configuration */
   fonts: {
     default: string;
+    heading: string;
   };
   /** Font size scale with responsive clamp values */
   fontSizes: Record<
@@ -115,13 +110,7 @@ export type TThemeConfig = {
     default: number;
     light: number;
   };
-  /** Border radius values */
-  radii: Record<"small" | "medium" | "large", string>;
-  /** Box shadow configurations */
-  shadows: {
-    large: string;
-    small: string;
-  };
+
   /** Size scale (same as spacings) */
   sizes: TSpacingConfig;
   /** Space scale (same as spacings) */

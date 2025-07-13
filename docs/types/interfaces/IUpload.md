@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IUpload
+[@airindex/ui](../../README.md) / [types](../README.md) / IUpload
 
 # Interface: IUpload\<T\>
 
-Defined in: [types.ts:973](https://github.com/consolia-io/ui/blob/main/src/types.ts#L973)
+Defined in: [types.ts:973](https://github.com/airindex-app/ui/blob/main/src/types.ts#L973)
 
 Upload component props - file upload with drag & drop, validation, and multiple file support
 
@@ -36,7 +36,7 @@ Upload component props - file upload with drag & drop, validation, and multiple 
 
 > `optional` **accept**: `string`
 
-Defined in: [types.ts:975](https://github.com/consolia-io/ui/blob/main/src/types.ts#L975)
+Defined in: [types.ts:975](https://github.com/airindex-app/ui/blob/main/src/types.ts#L975)
 
 File type restrictions (MIME types)
 
@@ -46,7 +46,7 @@ File type restrictions (MIME types)
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:977](https://github.com/consolia-io/ui/blob/main/src/types.ts#L977)
+Defined in: [types.ts:977](https://github.com/airindex-app/ui/blob/main/src/types.ts#L977)
 
 Custom CSS styles
 
@@ -56,7 +56,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [types.ts:979](https://github.com/consolia-io/ui/blob/main/src/types.ts#L979)
+Defined in: [types.ts:979](https://github.com/airindex-app/ui/blob/main/src/types.ts#L979)
 
 Whether the upload is disabled
 
@@ -66,7 +66,7 @@ Whether the upload is disabled
 
 > `optional` **error**: `boolean`
 
-Defined in: [types.ts:981](https://github.com/consolia-io/ui/blob/main/src/types.ts#L981)
+Defined in: [types.ts:981](https://github.com/airindex-app/ui/blob/main/src/types.ts#L981)
 
 Whether the upload is in an error state
 
@@ -76,7 +76,7 @@ Whether the upload is in an error state
 
 > `optional` **errorMessage**: `string`
 
-Defined in: [types.ts:983](https://github.com/consolia-io/ui/blob/main/src/types.ts#L983)
+Defined in: [types.ts:983](https://github.com/airindex-app/ui/blob/main/src/types.ts#L983)
 
 Error message to display
 
@@ -86,7 +86,7 @@ Error message to display
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:985](https://github.com/consolia-io/ui/blob/main/src/types.ts#L985)
+Defined in: [types.ts:985](https://github.com/airindex-app/ui/blob/main/src/types.ts#L985)
 
 Whether to show a loading state
 
@@ -96,7 +96,7 @@ Whether to show a loading state
 
 > `optional` **maxFiles**: `number`
 
-Defined in: [types.ts:987](https://github.com/consolia-io/ui/blob/main/src/types.ts#L987)
+Defined in: [types.ts:987](https://github.com/airindex-app/ui/blob/main/src/types.ts#L987)
 
 Maximum number of files (for multiple uploads)
 
@@ -106,7 +106,7 @@ Maximum number of files (for multiple uploads)
 
 > `optional` **maxSize**: `number`
 
-Defined in: [types.ts:989](https://github.com/consolia-io/ui/blob/main/src/types.ts#L989)
+Defined in: [types.ts:989](https://github.com/airindex-app/ui/blob/main/src/types.ts#L989)
 
 Maximum file size in bytes
 
@@ -116,7 +116,7 @@ Maximum file size in bytes
 
 > `optional` **multiple**: `T`
 
-Defined in: [types.ts:991](https://github.com/consolia-io/ui/blob/main/src/types.ts#L991)
+Defined in: [types.ts:991](https://github.com/airindex-app/ui/blob/main/src/types.ts#L991)
 
 Whether to allow multiple file selection
 
@@ -126,7 +126,7 @@ Whether to allow multiple file selection
 
 > **onUpload**: `T` *extends* `true` ? (`files`) => `void` : (`file`) => `void`
 
-Defined in: [types.ts:993](https://github.com/consolia-io/ui/blob/main/src/types.ts#L993)
+Defined in: [types.ts:993](https://github.com/airindex-app/ui/blob/main/src/types.ts#L993)
 
 Callback when files are uploaded
 
@@ -136,7 +136,7 @@ Callback when files are uploaded
 
 > `optional` **success**: `boolean`
 
-Defined in: [types.ts:995](https://github.com/consolia-io/ui/blob/main/src/types.ts#L995)
+Defined in: [types.ts:995](https://github.com/airindex-app/ui/blob/main/src/types.ts#L995)
 
 Whether the upload is in a success state
 
@@ -146,7 +146,7 @@ Whether the upload is in a success state
 
 > `optional` **successMessage**: `string`
 
-Defined in: [types.ts:997](https://github.com/consolia-io/ui/blob/main/src/types.ts#L997)
+Defined in: [types.ts:997](https://github.com/airindex-app/ui/blob/main/src/types.ts#L997)
 
 Success message to display
 
@@ -156,6 +156,6 @@ Success message to display
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [types.ts:999](https://github.com/consolia-io/ui/blob/main/src/types.ts#L999)
+Defined in: [types.ts:999](https://github.com/airindex-app/ui/blob/main/src/types.ts#L999)
 
 Width of the upload component

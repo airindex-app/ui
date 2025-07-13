@@ -1,15 +1,15 @@
-# @consolia/ui
+# @airindex/ui
 
-> A React component library styled with Stitches, designed specifically for Consolia's internal projects and design system.
+> A React component library styled with Stitches, designed specifically for AirIndex's internal projects and design system.
 
-[![npm version](https://img.shields.io/npm/v/@consolia/ui.svg)](https://www.npmjs.com/package/@consolia/ui)
+[![npm version](https://img.shields.io/npm/v/@airindex/ui.svg)](https://www.npmjs.com/package/@airindex/ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ⚠️ Important Notice
 
-**This library is built specifically for Consolia's design system and internal use cases.** While it's open-sourced for transparency and potential inspiration, it's **not intended as a general-purpose component library** for public consumption. 
+**This library is built specifically for AirIndex's design system and internal use cases.** While it's open-sourced for transparency and potential inspiration, it's **not intended as a general-purpose component library** for public consumption. 
 
-- ✅ **Use if**: You're working on Consolia projects or want to study the implementation
+- ✅ **Use if**: You're working on AirIndex projects or want to study the implementation
 - ❌ **Consider alternatives if**: You need a general-purpose UI library for your own projects
 
 For general-purpose React component libraries, consider [Chakra UI](https://chakra-ui.com/), [Mantine](https://mantine.dev/), [Ant Design](https://ant.design/), or [Material-UI](https://mui.com/) instead.
@@ -28,13 +28,13 @@ For general-purpose React component libraries, consider [Chakra UI](https://chak
 
 ```bash
 # Using pnpm (recommended)
-pnpm add @consolia/ui
+pnpm add @airindex/ui
 
 # Using npm
-npm install @consolia/ui
+npm install @airindex/ui
 
 # Using yarn
-yarn add @consolia/ui
+yarn add @airindex/ui
 ```
 
 ### Peer Dependencies
@@ -47,13 +47,13 @@ pnpm add react react-dom next
 ## Quick Start
 
 ```tsx
-import { Provider, Button, Text, Stack } from '@consolia/ui';
+import { Provider, Button, Text, Stack } from '@airindex/ui';
 
 function App() {
   return (
     <Provider>
       <Stack direction="column" align="center" css={{ padding: '$large' }}>
-        <Text as="h1">Welcome to Consolia UI</Text>
+        <Text as="h1">Welcome to AirIndex UI</Text>
         <Button theme="solid" onClick={() => alert('Hello!')}>
           Get Started
         </Button>
@@ -107,7 +107,7 @@ Detailed TypeScript interfaces, props, and examples are available in the [`docs/
 The library uses Stitches for styling with a comprehensive design system:
 
 ```tsx
-import { Provider } from '@consolia/ui';
+import { Provider } from '@airindex/ui';
 
 // Enable dark mode
 <Provider dark>
@@ -164,8 +164,8 @@ This library is built on top of excellent open source projects:
 
 ## License
 
-[MIT](./LICENSE.md) © [Consolia](https://github.com/consolia-io)
+[MIT](./LICENSE.md) © [AirIndex](https://github.com/airindex-app)
 
 ---
 
-Built with love by [dolmios](https://github.com/dolmios) for [Consolia](https://github.com/consolia-io)
+Built with love by [dolmios](https://github.com/dolmios) for [AirIndex](https://github.com/airindex-app)

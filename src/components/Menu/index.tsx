@@ -2,7 +2,6 @@ import { useRef, useState, type JSX } from "react";
 
 import {
   Button,
-  Logo,
   Portal,
   useEventListener,
   useOutsideClick,
@@ -103,8 +102,6 @@ export default function Menu({
           <MenuOverlayStyled animation={isOpen}>
             <MenuGroupStyled ref={ref} animation={isOpen}>
               <MenuHeaderStyled>
-                <Logo />
-
                 <Button icon={<Icon system="XCircleIcon" />} small onClick={() => handleClose()}>
                   Close
                 </Button>

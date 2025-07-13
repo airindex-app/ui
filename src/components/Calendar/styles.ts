@@ -14,7 +14,6 @@ const calendarButtonBase = {
   borderBottom: "1px solid $borderLight",
   borderRadius: 0,
   borderRight: "1px solid $borderLight",
-  boxShadow: "none",
   color: "$text",
   cursor: "pointer",
   display: "flex",
@@ -111,6 +110,7 @@ export const CalendarDayStyled = styled(Button, {
       true: {
         backgroundColor: "$surface",
         color: "$text",
+        fontFamily: "$heading",
         fontWeight: "bold",
       },
     },
@@ -119,7 +119,7 @@ export const CalendarDayStyled = styled(Button, {
 
 export const CalendarFooterStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$background",
+  backgroundColor: "$surface",
   borderTop: "1px solid $borderLight",
   bottom: 0,
   display: "flex",
@@ -156,6 +156,7 @@ export const CalendarMonthStyled = styled(Button, {
       true: {
         backgroundColor: "$surface",
         color: "$text",
+        fontFamily: "$heading",
         fontWeight: "bold",
       },
     },

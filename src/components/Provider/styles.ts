@@ -27,8 +27,6 @@ export const ToastStyled = styled("div", {
   width: "fit-content",
 });
 
-const baseFontURL = "https://cosmogroup.io/fonts";
-
 // Shared disabled state
 const disabledStyles = {
   cursor: "not-allowed",
@@ -47,22 +45,8 @@ export const providerReset = globalCss({
     color: theme.colors.background,
   },
 
-  "@font-face": [
-    {
-      fontDisplay: "swap",
-      fontFamily: "Untitled Sans",
-      fontStyle: "normal",
-      fontWeight: "normal",
-      src: `url(${baseFontURL}/untitled-sans-web-regular.woff2) format('woff2')`,
-    },
-    {
-      fontDisplay: "swap",
-      fontFamily: "Untitled Sans",
-      fontStyle: "normal",
-      fontWeight: "bold",
-      src: `url(${baseFontURL}/untitled-sans-web-medium.woff2) format('woff2')`,
-    },
-  ],
+  "@import":
+    "url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Inter:wght@400&display=swap')",
 
   "a, a:visited, a:active, a:hover": {
     color: "inherit",

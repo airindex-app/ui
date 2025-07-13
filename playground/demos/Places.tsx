@@ -117,7 +117,6 @@ export default function PlacesDemo() {
             }}
             dropdownCSS={{
               borderColor: "$blue",
-              boxShadow: "0 4px 20px rgba(0, 100, 255, 0.15)",
             }}
             name="styled-places"
             placeholder="Styled places search..."

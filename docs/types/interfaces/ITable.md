@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ITable
+[@airindex/ui](../../README.md) / [types](../README.md) / ITable
 
 # Interface: ITable
 
-Defined in: [types.ts:882](https://github.com/consolia-io/ui/blob/main/src/types.ts#L882)
+Defined in: [types.ts:882](https://github.com/airindex-app/ui/blob/main/src/types.ts#L882)
 
 Table component props - data table with sorting, pagination, and nested rows
 
@@ -32,7 +32,7 @@ Table component props - data table with sorting, pagination, and nested rows
 
 > **columns**: `object`[]
 
-Defined in: [types.ts:884](https://github.com/consolia-io/ui/blob/main/src/types.ts#L884)
+Defined in: [types.ts:884](https://github.com/airindex-app/ui/blob/main/src/types.ts#L884)
 
 Column definitions with keys, labels, and options
 
@@ -62,7 +62,7 @@ Column definitions with keys, labels, and options
 
 > **rows**: `object`[]
 
-Defined in: [types.ts:892](https://github.com/consolia-io/ui/blob/main/src/types.ts#L892)
+Defined in: [types.ts:892](https://github.com/airindex-app/ui/blob/main/src/types.ts#L892)
 
 Row data with cells mapped to column keys
 
@@ -84,7 +84,7 @@ Row data with cells mapped to column keys
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:901](https://github.com/consolia-io/ui/blob/main/src/types.ts#L901)
+Defined in: [types.ts:901](https://github.com/airindex-app/ui/blob/main/src/types.ts#L901)
 
 Custom CSS styles
 
@@ -94,7 +94,7 @@ Custom CSS styles
 
 > `optional` **error**: `string`
 
-Defined in: [types.ts:903](https://github.com/consolia-io/ui/blob/main/src/types.ts#L903)
+Defined in: [types.ts:903](https://github.com/airindex-app/ui/blob/main/src/types.ts#L903)
 
 Error message to display
 
@@ -104,7 +104,7 @@ Error message to display
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:905](https://github.com/consolia-io/ui/blob/main/src/types.ts#L905)
+Defined in: [types.ts:905](https://github.com/airindex-app/ui/blob/main/src/types.ts#L905)
 
 Whether the table is in a loading state
 
@@ -114,7 +114,7 @@ Whether the table is in a loading state
 
 > `optional` **pagination**: `boolean`
 
-Defined in: [types.ts:907](https://github.com/consolia-io/ui/blob/main/src/types.ts#L907)
+Defined in: [types.ts:907](https://github.com/airindex-app/ui/blob/main/src/types.ts#L907)
 
 Whether to show pagination controls
 
@@ -124,6 +124,6 @@ Whether to show pagination controls
 
 > `optional` **kbd**: `boolean`
 
-Defined in: [types.ts:909](https://github.com/consolia-io/ui/blob/main/src/types.ts#L909)
+Defined in: [types.ts:909](https://github.com/airindex-app/ui/blob/main/src/types.ts#L909)
 
 Whether to enable keyboard navigation

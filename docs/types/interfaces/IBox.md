@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IBox
+[@airindex/ui](../../README.md) / [types](../README.md) / IBox
 
 # Interface: IBox
 
-Defined in: [types.ts:106](https://github.com/consolia-io/ui/blob/main/src/types.ts#L106)
+Defined in: [types.ts:106](https://github.com/airindex-app/ui/blob/main/src/types.ts#L106)
 
 Box component props - versatile container with optional image, header, and footer
 
@@ -30,7 +30,7 @@ Box component props - versatile container with optional image, header, and foote
 
 > **children**: `ReactNode`
 
-Defined in: [types.ts:108](https://github.com/consolia-io/ui/blob/main/src/types.ts#L108)
+Defined in: [types.ts:108](https://github.com/airindex-app/ui/blob/main/src/types.ts#L108)
 
 Content to display inside the box
 
@@ -40,7 +40,7 @@ Content to display inside the box
 
 > `optional` **closable**: `boolean`
 
-Defined in: [types.ts:110](https://github.com/consolia-io/ui/blob/main/src/types.ts#L110)
+Defined in: [types.ts:110](https://github.com/airindex-app/ui/blob/main/src/types.ts#L110)
 
 Whether the box can be closed/dismissed
 
@@ -50,7 +50,7 @@ Whether the box can be closed/dismissed
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:112](https://github.com/consolia-io/ui/blob/main/src/types.ts#L112)
+Defined in: [types.ts:112](https://github.com/airindex-app/ui/blob/main/src/types.ts#L112)
 
 Custom CSS styles
 
@@ -60,7 +60,7 @@ Custom CSS styles
 
 > `optional` **cta**: `string`
 
-Defined in: [types.ts:114](https://github.com/consolia-io/ui/blob/main/src/types.ts#L114)
+Defined in: [types.ts:114](https://github.com/airindex-app/ui/blob/main/src/types.ts#L114)
 
 Call-to-action text for the box
 
@@ -70,7 +70,7 @@ Call-to-action text for the box
 
 > `optional` **expandable**: `boolean`
 
-Defined in: [types.ts:116](https://github.com/consolia-io/ui/blob/main/src/types.ts#L116)
+Defined in: [types.ts:116](https://github.com/airindex-app/ui/blob/main/src/types.ts#L116)
 
 Whether the box can be expanded/collapsed
 
@@ -80,7 +80,7 @@ Whether the box can be expanded/collapsed
 
 > `optional` **expandableHeight**: `number`
 
-Defined in: [types.ts:118](https://github.com/consolia-io/ui/blob/main/src/types.ts#L118)
+Defined in: [types.ts:118](https://github.com/airindex-app/ui/blob/main/src/types.ts#L118)
 
 Height when expanded in pixels
 
@@ -90,7 +90,7 @@ Height when expanded in pixels
 
 > `optional` **footer**: `ReactNode`
 
-Defined in: [types.ts:120](https://github.com/consolia-io/ui/blob/main/src/types.ts#L120)
+Defined in: [types.ts:120](https://github.com/airindex-app/ui/blob/main/src/types.ts#L120)
 
 Footer content to display at the bottom
 
@@ -100,7 +100,7 @@ Footer content to display at the bottom
 
 > `optional` **header**: `ReactNode`
 
-Defined in: [types.ts:122](https://github.com/consolia-io/ui/blob/main/src/types.ts#L122)
+Defined in: [types.ts:122](https://github.com/airindex-app/ui/blob/main/src/types.ts#L122)
 
 Header content to display at the top
 
@@ -110,7 +110,7 @@ Header content to display at the top
 
 > `optional` **image**: `string`
 
-Defined in: [types.ts:124](https://github.com/consolia-io/ui/blob/main/src/types.ts#L124)
+Defined in: [types.ts:124](https://github.com/airindex-app/ui/blob/main/src/types.ts#L124)
 
 Image URL to display in the box
 
@@ -120,7 +120,7 @@ Image URL to display in the box
 
 > `optional` **imageAlt**: `string`
 
-Defined in: [types.ts:126](https://github.com/consolia-io/ui/blob/main/src/types.ts#L126)
+Defined in: [types.ts:126](https://github.com/airindex-app/ui/blob/main/src/types.ts#L126)
 
 Alt text for the image
 
@@ -130,7 +130,7 @@ Alt text for the image
 
 > `optional` **imageCTA**: `string`
 
-Defined in: [types.ts:128](https://github.com/consolia-io/ui/blob/main/src/types.ts#L128)
+Defined in: [types.ts:128](https://github.com/airindex-app/ui/blob/main/src/types.ts#L128)
 
 Call-to-action text for the image
 
@@ -140,7 +140,7 @@ Call-to-action text for the image
 
 > `optional` **imageFit**: `ObjectFit`
 
-Defined in: [types.ts:130](https://github.com/consolia-io/ui/blob/main/src/types.ts#L130)
+Defined in: [types.ts:130](https://github.com/airindex-app/ui/blob/main/src/types.ts#L130)
 
 How the image should fit within its container
 
@@ -150,7 +150,7 @@ How the image should fit within its container
 
 > `optional` **imageHeight**: `string`
 
-Defined in: [types.ts:132](https://github.com/consolia-io/ui/blob/main/src/types.ts#L132)
+Defined in: [types.ts:132](https://github.com/airindex-app/ui/blob/main/src/types.ts#L132)
 
 Height of the image
 
@@ -160,7 +160,7 @@ Height of the image
 
 > `optional` **imagePosition**: `Position`
 
-Defined in: [types.ts:134](https://github.com/consolia-io/ui/blob/main/src/types.ts#L134)
+Defined in: [types.ts:134](https://github.com/airindex-app/ui/blob/main/src/types.ts#L134)
 
 Position of the image within its container
 
@@ -170,7 +170,7 @@ Position of the image within its container
 
 > `optional` **imageSizes**: `string`
 
-Defined in: [types.ts:136](https://github.com/consolia-io/ui/blob/main/src/types.ts#L136)
+Defined in: [types.ts:136](https://github.com/airindex-app/ui/blob/main/src/types.ts#L136)
 
 Responsive image sizes
 
@@ -180,7 +180,7 @@ Responsive image sizes
 
 > `optional` **imageTarget**: `"_blank"` \| `"_self"`
 
-Defined in: [types.ts:138](https://github.com/consolia-io/ui/blob/main/src/types.ts#L138)
+Defined in: [types.ts:138](https://github.com/airindex-app/ui/blob/main/src/types.ts#L138)
 
 Target for image link
 
@@ -190,7 +190,7 @@ Target for image link
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:140](https://github.com/consolia-io/ui/blob/main/src/types.ts#L140)
+Defined in: [types.ts:140](https://github.com/airindex-app/ui/blob/main/src/types.ts#L140)
 
 Whether to show a loading state
 
@@ -200,7 +200,7 @@ Whether to show a loading state
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [types.ts:142](https://github.com/consolia-io/ui/blob/main/src/types.ts#L142)
+Defined in: [types.ts:142](https://github.com/airindex-app/ui/blob/main/src/types.ts#L142)
 
 Whether to render with minimal styling
 
@@ -210,7 +210,7 @@ Whether to render with minimal styling
 
 > `optional` **onClick**: `MouseEventHandler`\<`HTMLDivElement`\>
 
-Defined in: [types.ts:144](https://github.com/consolia-io/ui/blob/main/src/types.ts#L144)
+Defined in: [types.ts:144](https://github.com/airindex-app/ui/blob/main/src/types.ts#L144)
 
 Click handler for the box
 
@@ -220,7 +220,7 @@ Click handler for the box
 
 > `optional` **small**: `boolean`
 
-Defined in: [types.ts:146](https://github.com/consolia-io/ui/blob/main/src/types.ts#L146)
+Defined in: [types.ts:146](https://github.com/airindex-app/ui/blob/main/src/types.ts#L146)
 
 Whether to render a smaller version
 
@@ -230,7 +230,7 @@ Whether to render a smaller version
 
 > `optional` **theme**: `"fill"` \| `"default"` \| `"solid"` \| `"orange"` \| `"purple"` \| `"yellow"` \| `"blue"` \| `"minimal"` \| `"gradient"`
 
-Defined in: [types.ts:148](https://github.com/consolia-io/ui/blob/main/src/types.ts#L148)
+Defined in: [types.ts:148](https://github.com/airindex-app/ui/blob/main/src/types.ts#L148)
 
 Visual theme/color scheme for the box
 
@@ -240,6 +240,6 @@ Visual theme/color scheme for the box
 
 > `optional` **border**: `"default"` \| `"solid"` \| `"orange"` \| `"purple"` \| `"yellow"` \| `"blue"`
 
-Defined in: [types.ts:159](https://github.com/consolia-io/ui/blob/main/src/types.ts#L159)
+Defined in: [types.ts:159](https://github.com/airindex-app/ui/blob/main/src/types.ts#L159)
 
 Add colored left border

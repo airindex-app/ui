@@ -25,13 +25,11 @@ export default function BoxDemo(): JSX.Element {
         <C.Text as="h4">Themes (Filled)</C.Text>
       }>
         <C.Stack>
-          <C.Box theme="blue">Blue Theme</C.Box>
-          <C.Box theme="purple">Purple Theme</C.Box>
-          <C.Box theme="orange">Orange Theme</C.Box>
-          <C.Box theme="yellow">Yellow Theme</C.Box>
-          <C.Box theme="solid">Solid Theme</C.Box>
+          <C.Box theme="default">Default Theme</C.Box>
           <C.Box theme="fill">Fill Theme</C.Box>
-          <C.Box theme="gradient"><C.Logo /></C.Box>
+          <C.Box theme="yellow">Yellow Theme</C.Box>
+          <C.Box theme="minimal">Minimal Theme</C.Box>
+          <C.Box theme="solid">Solid Theme</C.Box>
         </C.Stack>
       </C.Box>
 
@@ -40,9 +38,8 @@ export default function BoxDemo(): JSX.Element {
         <C.Text as="h4">Borders (Left Border)</C.Text>
       }>
         <C.Stack>
-          <C.Box border="blue">Blue Border</C.Box>
-          <C.Box border="purple">Purple Border</C.Box>
-          <C.Box border="orange">Orange Border</C.Box>
+          <C.Box border="default">Default Border</C.Box>
+          <C.Box border="yellow">Yellow Border</C.Box>
           <C.Box border="solid">Solid Border</C.Box>
         </C.Stack>
       </C.Box>
@@ -55,7 +52,7 @@ export default function BoxDemo(): JSX.Element {
           <C.Box header="Simple Header">
             Content with header
           </C.Box>
-          <C.Box header={<C.Badge theme="blue">Status</C.Badge>}>
+          <C.Box header={<C.Badge theme="yellow">Status</C.Badge>}>
             Complex header
           </C.Box>
         </C.Stack>
@@ -108,27 +105,27 @@ export default function BoxDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Stack css={{ gap: "$small" }} direction="row">
-            <C.Box css={{ flex: 1 }} theme="blue">
-              <C.Text as="strong">Theme Blue</C.Text>
+            <C.Box css={{ flex: 1 }} theme="yellow">
+              <C.Text as="strong">Theme Yellow</C.Text>
               <C.Text as="small">Filled background</C.Text>
             </C.Box>
-            <C.Box border="blue" css={{ flex: 1 }}>
-              <C.Text as="strong">Border Blue</C.Text>
+            <C.Box border="yellow" css={{ flex: 1 }}>
+              <C.Text as="strong">Border Yellow</C.Text>
               <C.Text as="small">Left border only</C.Text>
             </C.Box>
           </C.Stack>
           <C.Stack css={{ gap: "$small" }} direction="row">
             <C.Box 
               css={{ flex: 1 }} 
-              header="Purple Theme"
-              theme="purple"
+              header="Solid Theme"
+              theme="solid"
             >
               With header
             </C.Box>
             <C.Box 
-              border="purple" 
+              border="solid" 
               css={{ flex: 1 }}
-              header="Purple Border"
+              header="Solid Border"
             >
               With header
             </C.Box>
@@ -144,12 +141,12 @@ export default function BoxDemo(): JSX.Element {
           <C.Box 
             closable
             small
-            theme="gradient"
+            theme="yellow"
           >
-            <C.Logo theme="light" />
+            Closable gradient box
           </C.Box>
           <C.Box 
-            border="orange"
+            border="yellow"
             footer={<C.Button small>Update</C.Button>}
             header="Settings"
           >

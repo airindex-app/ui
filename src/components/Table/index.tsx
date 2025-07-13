@@ -134,7 +134,7 @@ export default function Table({
   const renderErrorState = useCallback((): JSX.Element => {
     return (
       <Stack css={{ alignItems: "center", gap: "$small" }}>
-        <Badge icon={<Icon system="WarningCircleIcon" />} theme="orange">
+        <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
           {error}
         </Badge>
       </Stack>

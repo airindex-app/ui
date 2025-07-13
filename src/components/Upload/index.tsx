@@ -151,14 +151,14 @@ export default function Upload<T extends boolean>({
           {hasError && (
             <Badge
               icon={!errorMessage ? <Icon system="WarningCircleIcon" /> : undefined}
-              theme="orange">
+              theme="yellow">
               {errorMessage || "Upload error"}
             </Badge>
           )}
           {success && (
             <Badge
               icon={!successMessage ? <Icon system="CheckCircleIcon" /> : undefined}
-              theme="blue">
+              theme="yellow">
               {successMessage || "Upload successful"}
             </Badge>
           )}

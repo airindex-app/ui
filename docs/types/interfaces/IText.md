@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IText
+[@airindex/ui](../../README.md) / [types](../README.md) / IText
 
 # Interface: IText
 
-Defined in: [types.ts:922](https://github.com/consolia-io/ui/blob/main/src/types.ts#L922)
+Defined in: [types.ts:922](https://github.com/airindex-app/ui/blob/main/src/types.ts#L922)
 
 Text component props - versatile text element with styling and link options
 
@@ -28,7 +28,7 @@ Text component props - versatile text element with styling and link options
 
 > `optional` **accent**: `boolean`
 
-Defined in: [types.ts:924](https://github.com/consolia-io/ui/blob/main/src/types.ts#L924)
+Defined in: [types.ts:924](https://github.com/airindex-app/ui/blob/main/src/types.ts#L924)
 
 Whether to use accent styling
 
@@ -38,7 +38,7 @@ Whether to use accent styling
 
 > `optional` **as**: `"small"` \| `"a"` \| `"h1"` \| `"h2"` \| `"h3"` \| `"h4"` \| `"h5"` \| `"h6"` \| `"label"` \| `"li"` \| `"ol"` \| `"p"` \| `"span"` \| `"strong"` \| `"ul"` \| `"micro"`
 
-Defined in: [types.ts:926](https://github.com/consolia-io/ui/blob/main/src/types.ts#L926)
+Defined in: [types.ts:926](https://github.com/airindex-app/ui/blob/main/src/types.ts#L926)
 
 HTML element type and text size
 
@@ -48,7 +48,7 @@ HTML element type and text size
 
 > `optional` **balanced**: `boolean`
 
-Defined in: [types.ts:928](https://github.com/consolia-io/ui/blob/main/src/types.ts#L928)
+Defined in: [types.ts:928](https://github.com/airindex-app/ui/blob/main/src/types.ts#L928)
 
 Whether to use balanced text wrapping
 
@@ -58,7 +58,7 @@ Whether to use balanced text wrapping
 
 > `optional` **bottom**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:930](https://github.com/consolia-io/ui/blob/main/src/types.ts#L930)
+Defined in: [types.ts:930](https://github.com/airindex-app/ui/blob/main/src/types.ts#L930)
 
 Bottom margin/spacing
 
@@ -68,7 +68,7 @@ Bottom margin/spacing
 
 > **children**: `ReactNode`
 
-Defined in: [types.ts:932](https://github.com/consolia-io/ui/blob/main/src/types.ts#L932)
+Defined in: [types.ts:932](https://github.com/airindex-app/ui/blob/main/src/types.ts#L932)
 
 Text content
 
@@ -82,7 +82,7 @@ Text content
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:934](https://github.com/consolia-io/ui/blob/main/src/types.ts#L934)
+Defined in: [types.ts:934](https://github.com/airindex-app/ui/blob/main/src/types.ts#L934)
 
 Custom CSS styles
 
@@ -92,7 +92,7 @@ Custom CSS styles
 
 > `optional` **highlight**: `"default"` \| `"orange"` \| `"purple"` \| `"yellow"` \| `"blue"`
 
-Defined in: [types.ts:936](https://github.com/consolia-io/ui/blob/main/src/types.ts#L936)
+Defined in: [types.ts:936](https://github.com/airindex-app/ui/blob/main/src/types.ts#L936)
 
 Highlight color theme
 
@@ -102,7 +102,7 @@ Highlight color theme
 
 > `optional` **href**: `string`
 
-Defined in: [types.ts:938](https://github.com/consolia-io/ui/blob/main/src/types.ts#L938)
+Defined in: [types.ts:938](https://github.com/airindex-app/ui/blob/main/src/types.ts#L938)
 
 URL for link functionality
 
@@ -112,7 +112,7 @@ URL for link functionality
 
 > `optional` **inline**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:940](https://github.com/consolia-io/ui/blob/main/src/types.ts#L940)
+Defined in: [types.ts:940](https://github.com/airindex-app/ui/blob/main/src/types.ts#L940)
 
 Inline spacing around the text
 
@@ -122,7 +122,7 @@ Inline spacing around the text
 
 > `optional` **link**: `"default"` \| `"minimal"`
 
-Defined in: [types.ts:942](https://github.com/consolia-io/ui/blob/main/src/types.ts#L942)
+Defined in: [types.ts:942](https://github.com/airindex-app/ui/blob/main/src/types.ts#L942)
 
 Link styling variant
 
@@ -132,7 +132,7 @@ Link styling variant
 
 > `optional` **muted**: `boolean`
 
-Defined in: [types.ts:944](https://github.com/consolia-io/ui/blob/main/src/types.ts#L944)
+Defined in: [types.ts:944](https://github.com/airindex-app/ui/blob/main/src/types.ts#L944)
 
 Whether to use muted styling with default opacity
 
@@ -142,7 +142,7 @@ Whether to use muted styling with default opacity
 
 > `optional` **override**: `"small"` \| `"a"` \| `"h1"` \| `"h2"` \| `"h3"` \| `"h4"` \| `"h5"` \| `"h6"` \| `"label"` \| `"li"` \| `"ol"` \| `"p"` \| `"span"` \| `"strong"` \| `"ul"` \| `"micro"`
 
-Defined in: [types.ts:946](https://github.com/consolia-io/ui/blob/main/src/types.ts#L946)
+Defined in: [types.ts:946](https://github.com/airindex-app/ui/blob/main/src/types.ts#L946)
 
 Override the default size from 'as' prop
 
@@ -152,7 +152,7 @@ Override the default size from 'as' prop
 
 > `optional` **rel**: `string`
 
-Defined in: [types.ts:948](https://github.com/consolia-io/ui/blob/main/src/types.ts#L948)
+Defined in: [types.ts:948](https://github.com/airindex-app/ui/blob/main/src/types.ts#L948)
 
 Relationship attribute for links
 
@@ -166,7 +166,7 @@ Relationship attribute for links
 
 > `optional` **target**: `"_blank"` \| `"_self"`
 
-Defined in: [types.ts:950](https://github.com/consolia-io/ui/blob/main/src/types.ts#L950)
+Defined in: [types.ts:950](https://github.com/airindex-app/ui/blob/main/src/types.ts#L950)
 
 Link target
 
@@ -176,7 +176,7 @@ Link target
 
 > `optional` **top**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:952](https://github.com/consolia-io/ui/blob/main/src/types.ts#L952)
+Defined in: [types.ts:952](https://github.com/airindex-app/ui/blob/main/src/types.ts#L952)
 
 Top margin/spacing
 
@@ -186,6 +186,6 @@ Top margin/spacing
 
 > `optional` **truncate**: `1` \| `2` \| `3` \| `4`
 
-Defined in: [types.ts:954](https://github.com/consolia-io/ui/blob/main/src/types.ts#L954)
+Defined in: [types.ts:954](https://github.com/airindex-app/ui/blob/main/src/types.ts#L954)
 
 Number of lines to truncate text to (1-4)

@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ICalendar
+[@airindex/ui](../../README.md) / [types](../README.md) / ICalendar
 
 # Interface: ICalendar
 
-Defined in: [types.ts:206](https://github.com/consolia-io/ui/blob/main/src/types.ts#L206)
+Defined in: [types.ts:206](https://github.com/airindex-app/ui/blob/main/src/types.ts#L206)
 
 Calendar component props - date picker with range and single selection modes
 
@@ -27,7 +27,7 @@ Calendar component props - date picker with range and single selection modes
 
 > `optional` **blockedDates**: `string`[]
 
-Defined in: [types.ts:208](https://github.com/consolia-io/ui/blob/main/src/types.ts#L208)
+Defined in: [types.ts:208](https://github.com/airindex-app/ui/blob/main/src/types.ts#L208)
 
 Array of date strings that should be disabled/blocked
 
@@ -37,7 +37,7 @@ Array of date strings that should be disabled/blocked
 
 > `optional` **description**: `string`
 
-Defined in: [types.ts:210](https://github.com/consolia-io/ui/blob/main/src/types.ts#L210)
+Defined in: [types.ts:210](https://github.com/airindex-app/ui/blob/main/src/types.ts#L210)
 
 Description text to display below the calendar
 
@@ -47,7 +47,7 @@ Description text to display below the calendar
 
 > `optional` **endDate**: `string`
 
-Defined in: [types.ts:212](https://github.com/consolia-io/ui/blob/main/src/types.ts#L212)
+Defined in: [types.ts:212](https://github.com/airindex-app/ui/blob/main/src/types.ts#L212)
 
 End date for range selection (ISO string)
 
@@ -57,7 +57,7 @@ End date for range selection (ISO string)
 
 > `optional` **maxDate**: `string`
 
-Defined in: [types.ts:214](https://github.com/consolia-io/ui/blob/main/src/types.ts#L214)
+Defined in: [types.ts:214](https://github.com/airindex-app/ui/blob/main/src/types.ts#L214)
 
 Maximum selectable date (ISO string)
 
@@ -67,7 +67,7 @@ Maximum selectable date (ISO string)
 
 > `optional` **maxLength**: `number`
 
-Defined in: [types.ts:216](https://github.com/consolia-io/ui/blob/main/src/types.ts#L216)
+Defined in: [types.ts:216](https://github.com/airindex-app/ui/blob/main/src/types.ts#L216)
 
 Maximum number of days that can be selected in range mode
 
@@ -77,7 +77,7 @@ Maximum number of days that can be selected in range mode
 
 > `optional` **minDate**: `string`
 
-Defined in: [types.ts:218](https://github.com/consolia-io/ui/blob/main/src/types.ts#L218)
+Defined in: [types.ts:218](https://github.com/airindex-app/ui/blob/main/src/types.ts#L218)
 
 Minimum selectable date (ISO string)
 
@@ -87,7 +87,7 @@ Minimum selectable date (ISO string)
 
 > `optional` **minLength**: `number`
 
-Defined in: [types.ts:220](https://github.com/consolia-io/ui/blob/main/src/types.ts#L220)
+Defined in: [types.ts:220](https://github.com/airindex-app/ui/blob/main/src/types.ts#L220)
 
 Minimum number of days that must be selected in range mode
 
@@ -97,7 +97,7 @@ Minimum number of days that must be selected in range mode
 
 > `optional` **mode**: `"range"` \| `"single"`
 
-Defined in: [types.ts:222](https://github.com/consolia-io/ui/blob/main/src/types.ts#L222)
+Defined in: [types.ts:222](https://github.com/airindex-app/ui/blob/main/src/types.ts#L222)
 
 Calendar selection mode
 
@@ -107,7 +107,7 @@ Calendar selection mode
 
 > **onSelection**: (`dates`) => `void`
 
-Defined in: [types.ts:224](https://github.com/consolia-io/ui/blob/main/src/types.ts#L224)
+Defined in: [types.ts:224](https://github.com/airindex-app/ui/blob/main/src/types.ts#L224)
 
 Callback when dates are selected
 
@@ -133,7 +133,7 @@ Callback when dates are selected
 
 > `optional` **onViewChange**: (`dates`) => `void`
 
-Defined in: [types.ts:226](https://github.com/consolia-io/ui/blob/main/src/types.ts#L226)
+Defined in: [types.ts:226](https://github.com/airindex-app/ui/blob/main/src/types.ts#L226)
 
 Callback when the calendar view changes
 
@@ -159,7 +159,7 @@ Callback when the calendar view changes
 
 > `optional` **startDate**: `string`
 
-Defined in: [types.ts:228](https://github.com/consolia-io/ui/blob/main/src/types.ts#L228)
+Defined in: [types.ts:228](https://github.com/airindex-app/ui/blob/main/src/types.ts#L228)
 
 Start date for range selection (ISO string)
 
@@ -169,6 +169,6 @@ Start date for range selection (ISO string)
 
 > `optional` **viewDate**: `string`
 
-Defined in: [types.ts:230](https://github.com/consolia-io/ui/blob/main/src/types.ts#L230)
+Defined in: [types.ts:230](https://github.com/airindex-app/ui/blob/main/src/types.ts#L230)
 
 Currently viewed date (ISO string)

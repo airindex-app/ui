@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / ICalendarMonths
+[@airindex/ui](../../README.md) / [types](../README.md) / ICalendarMonths
 
 # Interface: ICalendarMonths
 
-Defined in: [types.ts:246](https://github.com/consolia-io/ui/blob/main/src/types.ts#L246)
+Defined in: [types.ts:246](https://github.com/airindex-app/ui/blob/main/src/types.ts#L246)
 
 CalendarMonths component props - month/year picker interface
 
@@ -27,7 +27,7 @@ CalendarMonths component props - month/year picker interface
 
 > `optional` **maxDate**: `string`
 
-Defined in: [types.ts:248](https://github.com/consolia-io/ui/blob/main/src/types.ts#L248)
+Defined in: [types.ts:248](https://github.com/airindex-app/ui/blob/main/src/types.ts#L248)
 
 Maximum selectable date (ISO string)
 
@@ -37,7 +37,7 @@ Maximum selectable date (ISO string)
 
 > `optional` **minDate**: `string`
 
-Defined in: [types.ts:250](https://github.com/consolia-io/ui/blob/main/src/types.ts#L250)
+Defined in: [types.ts:250](https://github.com/airindex-app/ui/blob/main/src/types.ts#L250)
 
 Minimum selectable date (ISO string)
 
@@ -47,7 +47,7 @@ Minimum selectable date (ISO string)
 
 > **onSelection**: (`date`) => `void`
 
-Defined in: [types.ts:252](https://github.com/consolia-io/ui/blob/main/src/types.ts#L252)
+Defined in: [types.ts:252](https://github.com/airindex-app/ui/blob/main/src/types.ts#L252)
 
 Callback when a month/year is selected
 
@@ -67,7 +67,7 @@ Callback when a month/year is selected
 
 > `optional` **selectedDate**: `string`
 
-Defined in: [types.ts:254](https://github.com/consolia-io/ui/blob/main/src/types.ts#L254)
+Defined in: [types.ts:254](https://github.com/airindex-app/ui/blob/main/src/types.ts#L254)
 
 Currently selected date (ISO string)
 
@@ -77,6 +77,6 @@ Currently selected date (ISO string)
 
 > `optional` **viewDate**: `string`
 
-Defined in: [types.ts:256](https://github.com/consolia-io/ui/blob/main/src/types.ts#L256)
+Defined in: [types.ts:256](https://github.com/airindex-app/ui/blob/main/src/types.ts#L256)
 
 Currently viewed date for navigation (ISO string)

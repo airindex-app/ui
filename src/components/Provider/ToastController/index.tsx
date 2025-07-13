@@ -32,15 +32,9 @@ export function ToastController({
     }
   };
 
-  const getToastTheme = (type: Toast["type"]): "orange" | "blue" | "purple" => {
-    switch (type) {
-      case "error":
-        return "orange";
-      case "success":
-        return "blue";
-      default:
-        return "purple";
-    }
+  const getToastTheme = (): "yellow" => {
+    // Always return yellow for all toast types
+    return "yellow";
   };
 
   const handleToastClick = (id: string): void => {
@@ -48,7 +42,7 @@ export function ToastController({
   };
 
   const renderToast = (t: Toast): JSX.Element => {
-    const theme = getToastTheme(t.type);
+    const theme = getToastTheme();
     const message = prepareMessage(t.message);
 
     return (
@@ -77,7 +71,6 @@ export function ToastController({
         duration: toastOptions?.duration || DEFAULT_DURATION,
         style: {
           background: "transparent",
-          boxShadow: "none",
           padding: 0,
         },
         ...toastOptions,

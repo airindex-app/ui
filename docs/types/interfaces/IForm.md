@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IForm
+[@airindex/ui](../../README.md) / [types](../README.md) / IForm
 
 # Interface: IForm
 
-Defined in: [types.ts:422](https://github.com/consolia-io/ui/blob/main/src/types.ts#L422)
+Defined in: [types.ts:422](https://github.com/airindex-app/ui/blob/main/src/types.ts#L422)
 
 Form component props - form wrapper with validation and submission handling
 
@@ -34,7 +34,7 @@ Form component props - form wrapper with validation and submission handling
 
 > **children**: `ReactNode`
 
-Defined in: [types.ts:424](https://github.com/consolia-io/ui/blob/main/src/types.ts#L424)
+Defined in: [types.ts:424](https://github.com/airindex-app/ui/blob/main/src/types.ts#L424)
 
 Form content and input elements
 
@@ -48,7 +48,7 @@ Form content and input elements
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:426](https://github.com/consolia-io/ui/blob/main/src/types.ts#L426)
+Defined in: [types.ts:426](https://github.com/airindex-app/ui/blob/main/src/types.ts#L426)
 
 Custom CSS styles
 
@@ -58,7 +58,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [types.ts:428](https://github.com/consolia-io/ui/blob/main/src/types.ts#L428)
+Defined in: [types.ts:428](https://github.com/airindex-app/ui/blob/main/src/types.ts#L428)
 
 Whether the form is disabled
 
@@ -68,7 +68,7 @@ Whether the form is disabled
 
 > `optional` **id**: `string`
 
-Defined in: [types.ts:430](https://github.com/consolia-io/ui/blob/main/src/types.ts#L430)
+Defined in: [types.ts:430](https://github.com/airindex-app/ui/blob/main/src/types.ts#L430)
 
 HTML id attribute for the form
 
@@ -82,7 +82,7 @@ HTML id attribute for the form
 
 > `optional` **listen**: `boolean`
 
-Defined in: [types.ts:432](https://github.com/consolia-io/ui/blob/main/src/types.ts#L432)
+Defined in: [types.ts:432](https://github.com/airindex-app/ui/blob/main/src/types.ts#L432)
 
 Whether to listen for form validation events
 
@@ -92,7 +92,7 @@ Whether to listen for form validation events
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:434](https://github.com/consolia-io/ui/blob/main/src/types.ts#L434)
+Defined in: [types.ts:434](https://github.com/airindex-app/ui/blob/main/src/types.ts#L434)
 
 Whether the form is in a loading/submitting state
 
@@ -102,7 +102,7 @@ Whether the form is in a loading/submitting state
 
 > **name**: `string`
 
-Defined in: [types.ts:436](https://github.com/consolia-io/ui/blob/main/src/types.ts#L436)
+Defined in: [types.ts:436](https://github.com/airindex-app/ui/blob/main/src/types.ts#L436)
 
 Name attribute for the form (required)
 
@@ -116,7 +116,7 @@ Name attribute for the form (required)
 
 > `optional` **submit**: `string`
 
-Defined in: [types.ts:438](https://github.com/consolia-io/ui/blob/main/src/types.ts#L438)
+Defined in: [types.ts:438](https://github.com/airindex-app/ui/blob/main/src/types.ts#L438)
 
 Text for the submit button
 
@@ -126,7 +126,7 @@ Text for the submit button
 
 > **submitFunction**: () => `unknown`
 
-Defined in: [types.ts:440](https://github.com/consolia-io/ui/blob/main/src/types.ts#L440)
+Defined in: [types.ts:440](https://github.com/airindex-app/ui/blob/main/src/types.ts#L440)
 
 Function to call when form is submitted
 
@@ -140,6 +140,6 @@ Function to call when form is submitted
 
 > `optional` **submitValid**: `boolean`
 
-Defined in: [types.ts:442](https://github.com/consolia-io/ui/blob/main/src/types.ts#L442)
+Defined in: [types.ts:442](https://github.com/airindex-app/ui/blob/main/src/types.ts#L442)
 
 Whether the form is valid and can be submitted

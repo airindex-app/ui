@@ -2,14 +2,13 @@ import { styled } from "../../stitches.config";
 
 const interactiveStyles = {
   borderColor: "$text",
-  boxShadow: "$small",
 };
 
 export const UploadStyled = styled("div", {
   "&:focus-within": interactiveStyles,
   "&:hover": interactiveStyles,
+  backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
   position: "relative",
   transition: "$default",
   variants: {
@@ -17,11 +16,9 @@ export const UploadStyled = styled("div", {
       true: {
         "&:focus-within": {
           borderColor: "$border",
-          boxShadow: "none",
         },
         "&:hover": {
           borderColor: "$border",
-          boxShadow: "none",
         },
         cursor: "not-allowed",
         opacity: "$light",
@@ -44,8 +41,6 @@ export const UploadInputStyled = styled("input", {
 export const UploadFooterStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$surfaceLight",
-  borderBottomLeftRadius: "$medium",
-  borderBottomRightRadius: "$medium",
   borderTop: "1px solid $borderLight",
   display: "flex",
   justifyContent: "space-between",

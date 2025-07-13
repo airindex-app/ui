@@ -2,7 +2,7 @@ import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 // Shared base for sticky elements in select
 const stickyBase = {
-  backgroundColor: "$background",
+  backgroundColor: "$surface",
   position: "sticky",
   top: 0,
   zIndex: "$select",
@@ -25,10 +25,9 @@ export const SelectGroupStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
-  backgroundColor: "$background",
+  backgroundColor: "$surface",
   border: "1px solid $border",
   borderRadius: "$medium",
-  boxShadow: "$large",
   lineBreak: "auto",
   overflowY: "auto",
   padding: "$smallest $smaller",
@@ -89,6 +88,7 @@ export const SelectItemStyled = styled("div", {
       true: {
         backgroundColor: "$surface",
         color: "$text",
+        fontFamily: "$heading",
         fontWeight: "bold",
       },
     },
@@ -106,6 +106,7 @@ export const SelectEmptyStyled = styled("div", {
 export const SelectLabelStyled = styled("div", {
   ...stickyBase,
   borderBottom: "1px solid $borderLight",
+  fontFamily: "$heading",
   fontWeight: "bold",
   padding: "$smaller $small $smallest $small",
 });

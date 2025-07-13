@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IButton
+[@airindex/ui](../../README.md) / [types](../README.md) / IButton
 
 # Interface: IButton
 
-Defined in: [types.ts:172](https://github.com/consolia-io/ui/blob/main/src/types.ts#L172)
+Defined in: [types.ts:172](https://github.com/airindex-app/ui/blob/main/src/types.ts#L172)
 
 Button component props - interactive element for user actions
 
@@ -28,7 +28,7 @@ Button component props - interactive element for user actions
 
 > `optional` **block**: `boolean`
 
-Defined in: [types.ts:174](https://github.com/consolia-io/ui/blob/main/src/types.ts#L174)
+Defined in: [types.ts:174](https://github.com/airindex-app/ui/blob/main/src/types.ts#L174)
 
 Whether the button should take full width
 
@@ -38,7 +38,7 @@ Whether the button should take full width
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:176](https://github.com/consolia-io/ui/blob/main/src/types.ts#L176)
+Defined in: [types.ts:176](https://github.com/airindex-app/ui/blob/main/src/types.ts#L176)
 
 Custom CSS styles
 
@@ -48,7 +48,7 @@ Custom CSS styles
 
 > `optional` **external**: `boolean`
 
-Defined in: [types.ts:178](https://github.com/consolia-io/ui/blob/main/src/types.ts#L178)
+Defined in: [types.ts:178](https://github.com/airindex-app/ui/blob/main/src/types.ts#L178)
 
 Whether the button links to an external URL
 
@@ -58,7 +58,7 @@ Whether the button links to an external URL
 
 > `optional` **icon**: `ReactNode`
 
-Defined in: [types.ts:180](https://github.com/consolia-io/ui/blob/main/src/types.ts#L180)
+Defined in: [types.ts:180](https://github.com/airindex-app/ui/blob/main/src/types.ts#L180)
 
 Icon to display alongside the button text
 
@@ -68,7 +68,7 @@ Icon to display alongside the button text
 
 > `optional` **iconPosition**: `"left"` \| `"right"`
 
-Defined in: [types.ts:182](https://github.com/consolia-io/ui/blob/main/src/types.ts#L182)
+Defined in: [types.ts:182](https://github.com/airindex-app/ui/blob/main/src/types.ts#L182)
 
 Position of the icon relative to the text
 
@@ -78,7 +78,7 @@ Position of the icon relative to the text
 
 > `optional` **inline**: `"auto"` \| `"large"` \| `"larger"` \| `"largest"` \| `"medium"` \| `"none"` \| `"small"` \| `"smaller"` \| `"smallest"`
 
-Defined in: [types.ts:184](https://github.com/consolia-io/ui/blob/main/src/types.ts#L184)
+Defined in: [types.ts:184](https://github.com/airindex-app/ui/blob/main/src/types.ts#L184)
 
 Inline spacing around the button
 
@@ -88,7 +88,7 @@ Inline spacing around the button
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:186](https://github.com/consolia-io/ui/blob/main/src/types.ts#L186)
+Defined in: [types.ts:186](https://github.com/airindex-app/ui/blob/main/src/types.ts#L186)
 
 Whether to show a loading state with spinner
 
@@ -98,7 +98,7 @@ Whether to show a loading state with spinner
 
 > `optional` **small**: `boolean`
 
-Defined in: [types.ts:188](https://github.com/consolia-io/ui/blob/main/src/types.ts#L188)
+Defined in: [types.ts:188](https://github.com/airindex-app/ui/blob/main/src/types.ts#L188)
 
 Whether to render a smaller version of the button
 
@@ -108,6 +108,6 @@ Whether to render a smaller version of the button
 
 > `optional` **theme**: `"default"` \| `"solid"` \| `"minimal"`
 
-Defined in: [types.ts:190](https://github.com/consolia-io/ui/blob/main/src/types.ts#L190)
+Defined in: [types.ts:190](https://github.com/airindex-app/ui/blob/main/src/types.ts#L190)
 
 Visual theme/style variant for the button

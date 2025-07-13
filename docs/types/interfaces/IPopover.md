@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IPopover
+[@airindex/ui](../../README.md) / [types](../README.md) / IPopover
 
 # Interface: IPopover
 
-Defined in: [types.ts:664](https://github.com/consolia-io/ui/blob/main/src/types.ts#L664)
+Defined in: [types.ts:664](https://github.com/airindex-app/ui/blob/main/src/types.ts#L664)
 
 Popover component props - floating content overlay
 
@@ -27,7 +27,7 @@ Popover component props - floating content overlay
 
 > **children**: `ReactNode`
 
-Defined in: [types.ts:666](https://github.com/consolia-io/ui/blob/main/src/types.ts#L666)
+Defined in: [types.ts:666](https://github.com/airindex-app/ui/blob/main/src/types.ts#L666)
 
 Content to display in the popover
 
@@ -37,7 +37,7 @@ Content to display in the popover
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:668](https://github.com/consolia-io/ui/blob/main/src/types.ts#L668)
+Defined in: [types.ts:668](https://github.com/airindex-app/ui/blob/main/src/types.ts#L668)
 
 Custom CSS styles
 
@@ -47,7 +47,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [types.ts:670](https://github.com/consolia-io/ui/blob/main/src/types.ts#L670)
+Defined in: [types.ts:670](https://github.com/airindex-app/ui/blob/main/src/types.ts#L670)
 
 Whether the popover trigger is disabled
 
@@ -57,7 +57,7 @@ Whether the popover trigger is disabled
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [types.ts:672](https://github.com/consolia-io/ui/blob/main/src/types.ts#L672)
+Defined in: [types.ts:672](https://github.com/airindex-app/ui/blob/main/src/types.ts#L672)
 
 Whether to use minimal styling
 
@@ -67,7 +67,7 @@ Whether to use minimal styling
 
 > `optional` **small**: `boolean`
 
-Defined in: [types.ts:674](https://github.com/consolia-io/ui/blob/main/src/types.ts#L674)
+Defined in: [types.ts:674](https://github.com/airindex-app/ui/blob/main/src/types.ts#L674)
 
 Whether to render a smaller popover
 
@@ -77,7 +77,7 @@ Whether to render a smaller popover
 
 > **trigger**: `ReactNode`
 
-Defined in: [types.ts:676](https://github.com/consolia-io/ui/blob/main/src/types.ts#L676)
+Defined in: [types.ts:676](https://github.com/airindex-app/ui/blob/main/src/types.ts#L676)
 
 Element that triggers the popover
 
@@ -87,7 +87,7 @@ Element that triggers the popover
 
 > `optional` **triggerCSS**: `CSS`
 
-Defined in: [types.ts:678](https://github.com/consolia-io/ui/blob/main/src/types.ts#L678)
+Defined in: [types.ts:678](https://github.com/airindex-app/ui/blob/main/src/types.ts#L678)
 
 Custom CSS styles for the trigger
 
@@ -97,6 +97,6 @@ Custom CSS styles for the trigger
 
 > `optional` **wrapperCSS**: `CSS`
 
-Defined in: [types.ts:680](https://github.com/consolia-io/ui/blob/main/src/types.ts#L680)
+Defined in: [types.ts:680](https://github.com/airindex-app/ui/blob/main/src/types.ts#L680)
 
 Custom CSS styles for the popover wrapper

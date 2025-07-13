@@ -2,10 +2,8 @@ import { fadeOut, styled } from "../../stitches.config";
 import { TextStyled } from "../Text/styles";
 
 export const BoxStyled = styled("article", {
-  backgroundColor: "$background",
+  backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
-  boxShadow: "$small",
   color: "$text",
   display: "block",
   height: "100%",
@@ -20,19 +18,7 @@ export const BoxStyled = styled("article", {
       },
     },
     border: {
-      blue: {
-        borderTopColor: "$blue",
-        borderTopWidth: "8px",
-      },
       default: {
-        borderTopWidth: "8px",
-      },
-      orange: {
-        borderTopColor: "$orange",
-        borderTopWidth: "8px",
-      },
-      purple: {
-        borderTopColor: "$purple",
         borderTopWidth: "8px",
       },
       solid: {
@@ -66,7 +52,6 @@ export const BoxStyled = styled("article", {
     hover: {
       true: {
         "&:hover": {
-          boxShadow: "$large",
           img: {
             transform: "scale(1.02)",
           },
@@ -95,38 +80,15 @@ export const BoxStyled = styled("article", {
       },
     },
     theme: {
-      blue: {
-        background: "$blueLight",
-      },
       default: {
-        backgroundColor: "$background",
+        backgroundColor: "$surface",
       },
       fill: {
         background: "$surface",
       },
-      gradient: {
-        [`${TextStyled}`]: {
-          color: "$background",
-        },
-        backgroundColor: "transparent",
-        color: "$background",
-        darkOnly: {
-          [`${TextStyled}`]: {
-            color: "$text",
-          },
-          border: "1px solid $border",
-          color: "$text",
-        },
-      },
       minimal: {
         backgroundColor: "transparent",
         border: "none",
-      },
-      orange: {
-        background: "$orangeLight",
-      },
-      purple: {
-        background: "$purpleLight",
       },
       solid: {
         [`${TextStyled}`]: {
@@ -147,8 +109,8 @@ export const BoxStyled = styled("article", {
 export const BoxHeaderStyled = styled("div", {
   backgroundColor: "$surfaceLight",
   borderBottom: "1px solid $borderLight",
-  boxShadow: "$small",
   color: "$text",
+  fontFamily: "$heading",
   fontWeight: "bold",
 
   variants: {
@@ -224,7 +186,6 @@ export const BoxExitStyled = styled("div", {
 export const BoxLoadingStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$background",
-  borderRadius: "$medium",
   display: "flex",
   inset: 0,
   justifyContent: "center",

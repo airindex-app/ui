@@ -1,12 +1,12 @@
-[**@consolia/ui v0.2.19**](../../README.md)
+[**@airindex/ui v0.2.19**](../../README.md)
 
 ***
 
-[@consolia/ui](../../README.md) / [types](../README.md) / IInput
+[@airindex/ui](../../README.md) / [types](../README.md) / IInput
 
 # Interface: IInput
 
-Defined in: [types.ts:489](https://github.com/consolia-io/ui/blob/main/src/types.ts#L489)
+Defined in: [types.ts:489](https://github.com/airindex-app/ui/blob/main/src/types.ts#L489)
 
 Input component props - form input field with validation and actions
 
@@ -33,7 +33,7 @@ Input component props - form input field with validation and actions
 
 > `optional` **copy**: `boolean`
 
-Defined in: [types.ts:491](https://github.com/consolia-io/ui/blob/main/src/types.ts#L491)
+Defined in: [types.ts:491](https://github.com/airindex-app/ui/blob/main/src/types.ts#L491)
 
 Whether to show a copy button for the input value
 
@@ -43,7 +43,7 @@ Whether to show a copy button for the input value
 
 > `optional` **css**: `CSS`
 
-Defined in: [types.ts:493](https://github.com/consolia-io/ui/blob/main/src/types.ts#L493)
+Defined in: [types.ts:493](https://github.com/airindex-app/ui/blob/main/src/types.ts#L493)
 
 Custom CSS styles
 
@@ -53,7 +53,7 @@ Custom CSS styles
 
 > `optional` **error**: `boolean`
 
-Defined in: [types.ts:495](https://github.com/consolia-io/ui/blob/main/src/types.ts#L495)
+Defined in: [types.ts:495](https://github.com/airindex-app/ui/blob/main/src/types.ts#L495)
 
 Whether the input is in an error state
 
@@ -63,7 +63,7 @@ Whether the input is in an error state
 
 > `optional` **errorMessage**: `string`
 
-Defined in: [types.ts:497](https://github.com/consolia-io/ui/blob/main/src/types.ts#L497)
+Defined in: [types.ts:497](https://github.com/airindex-app/ui/blob/main/src/types.ts#L497)
 
 Error message to display below the input
 
@@ -73,7 +73,7 @@ Error message to display below the input
 
 > `optional` **id**: `string`
 
-Defined in: [types.ts:499](https://github.com/consolia-io/ui/blob/main/src/types.ts#L499)
+Defined in: [types.ts:499](https://github.com/airindex-app/ui/blob/main/src/types.ts#L499)
 
 HTML id attribute for the input
 
@@ -87,7 +87,7 @@ HTML id attribute for the input
 
 > `optional` **listen**: `boolean`
 
-Defined in: [types.ts:501](https://github.com/consolia-io/ui/blob/main/src/types.ts#L501)
+Defined in: [types.ts:501](https://github.com/airindex-app/ui/blob/main/src/types.ts#L501)
 
 Whether to listen for form validation events
 
@@ -97,7 +97,7 @@ Whether to listen for form validation events
 
 > `optional` **loading**: `boolean`
 
-Defined in: [types.ts:503](https://github.com/consolia-io/ui/blob/main/src/types.ts#L503)
+Defined in: [types.ts:503](https://github.com/airindex-app/ui/blob/main/src/types.ts#L503)
 
 Whether to show a loading state
 
@@ -107,7 +107,7 @@ Whether to show a loading state
 
 > `optional` **mustRef**: `RefObject`\<`null` \| `HTMLInputElement`\>
 
-Defined in: [types.ts:505](https://github.com/consolia-io/ui/blob/main/src/types.ts#L505)
+Defined in: [types.ts:505](https://github.com/airindex-app/ui/blob/main/src/types.ts#L505)
 
 Ref object to access the input element directly
 
@@ -117,7 +117,7 @@ Ref object to access the input element directly
 
 > **name**: `string`
 
-Defined in: [types.ts:507](https://github.com/consolia-io/ui/blob/main/src/types.ts#L507)
+Defined in: [types.ts:507](https://github.com/airindex-app/ui/blob/main/src/types.ts#L507)
 
 Name attribute for the input (required)
 
@@ -131,7 +131,7 @@ Name attribute for the input (required)
 
 > `optional` **reset**: `boolean`
 
-Defined in: [types.ts:509](https://github.com/consolia-io/ui/blob/main/src/types.ts#L509)
+Defined in: [types.ts:509](https://github.com/airindex-app/ui/blob/main/src/types.ts#L509)
 
 Whether to show a reset button
 
@@ -141,7 +141,7 @@ Whether to show a reset button
 
 > `optional` **resetFunction**: () => `void`
 
-Defined in: [types.ts:511](https://github.com/consolia-io/ui/blob/main/src/types.ts#L511)
+Defined in: [types.ts:511](https://github.com/airindex-app/ui/blob/main/src/types.ts#L511)
 
 Function to call when reset button is clicked
 
@@ -155,7 +155,7 @@ Function to call when reset button is clicked
 
 > `optional` **reveal**: `boolean`
 
-Defined in: [types.ts:513](https://github.com/consolia-io/ui/blob/main/src/types.ts#L513)
+Defined in: [types.ts:513](https://github.com/airindex-app/ui/blob/main/src/types.ts#L513)
 
 Whether to show/hide toggle for password inputs
 
@@ -165,7 +165,7 @@ Whether to show/hide toggle for password inputs
 
 > `optional` **submit**: `string`
 
-Defined in: [types.ts:515](https://github.com/consolia-io/ui/blob/main/src/types.ts#L515)
+Defined in: [types.ts:515](https://github.com/airindex-app/ui/blob/main/src/types.ts#L515)
 
 Text for the submit button
 
@@ -175,7 +175,7 @@ Text for the submit button
 
 > `optional` **submitFunction**: (`value`) => `unknown`
 
-Defined in: [types.ts:517](https://github.com/consolia-io/ui/blob/main/src/types.ts#L517)
+Defined in: [types.ts:517](https://github.com/airindex-app/ui/blob/main/src/types.ts#L517)
 
 Function to call when submit action is triggered
 
@@ -195,7 +195,7 @@ Function to call when submit action is triggered
 
 > `optional` **submitValid**: (`value`) => `boolean`
 
-Defined in: [types.ts:519](https://github.com/consolia-io/ui/blob/main/src/types.ts#L519)
+Defined in: [types.ts:519](https://github.com/airindex-app/ui/blob/main/src/types.ts#L519)
 
 Function to validate input value before submit
 
@@ -215,7 +215,7 @@ Function to validate input value before submit
 
 > `optional` **success**: `boolean`
 
-Defined in: [types.ts:521](https://github.com/consolia-io/ui/blob/main/src/types.ts#L521)
+Defined in: [types.ts:521](https://github.com/airindex-app/ui/blob/main/src/types.ts#L521)
 
 Whether the input is in a success state
 
@@ -225,7 +225,7 @@ Whether the input is in a success state
 
 > `optional` **successMessage**: `string`
 
-Defined in: [types.ts:523](https://github.com/consolia-io/ui/blob/main/src/types.ts#L523)
+Defined in: [types.ts:523](https://github.com/airindex-app/ui/blob/main/src/types.ts#L523)
 
 Success message to display below the input
 
@@ -235,7 +235,7 @@ Success message to display below the input
 
 > `optional` **warning**: `boolean`
 
-Defined in: [types.ts:525](https://github.com/consolia-io/ui/blob/main/src/types.ts#L525)
+Defined in: [types.ts:525](https://github.com/airindex-app/ui/blob/main/src/types.ts#L525)
 
 Whether the input is in a warning state
 
@@ -245,7 +245,7 @@ Whether the input is in a warning state
 
 > `optional` **warningMessage**: `string`
 
-Defined in: [types.ts:527](https://github.com/consolia-io/ui/blob/main/src/types.ts#L527)
+Defined in: [types.ts:527](https://github.com/airindex-app/ui/blob/main/src/types.ts#L527)
 
 Warning message to display below the input
 
@@ -255,7 +255,7 @@ Warning message to display below the input
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [types.ts:529](https://github.com/consolia-io/ui/blob/main/src/types.ts#L529)
+Defined in: [types.ts:529](https://github.com/airindex-app/ui/blob/main/src/types.ts#L529)
 
 Width of the input field
 

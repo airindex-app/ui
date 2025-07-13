@@ -190,14 +190,14 @@ export default function Input({
           {error && (
             <Badge
               icon={!errorMessage ? <Icon system="WarningCircleIcon" /> : undefined}
-              theme="orange">
+              theme="yellow">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
             <Badge
               icon={!successMessage ? <Icon system="CheckCircleIcon" /> : undefined}
-              theme="blue">
+              theme="yellow">
               {successMessage || "Success"}
             </Badge>
           )}

@@ -2,7 +2,6 @@ import { styled } from "../../stitches.config";
 
 const interactiveStyles = {
   borderColor: "$text",
-  boxShadow: "$small",
 };
 
 export const FieldStyled = styled("div", {
@@ -22,8 +21,8 @@ export const FieldStyled = styled("div", {
 export const FieldCoreStyled = styled("div", {
   "&:focus-within": interactiveStyles,
   "&:hover": interactiveStyles,
+  backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
   display: "flex",
   flexDirection: "column",
   transition: "$default",

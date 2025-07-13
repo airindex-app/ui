@@ -42,25 +42,20 @@ export const spacings: TSpacingConfig = {
 
 const defaultTheme: TThemeConfig = {
   colors: {
-    background: "#FFFFFF",
-    blue: "#8fbdd8",
-    blueLight: "#ddebf3",
-    border: "rgba(150, 120, 180, 0.25)",
-    borderLight: "rgba(150, 120, 180, 0.18)",
-    orange: "#ecb489",
-    orangeLight: "#fae1ce",
+    background: "#f6f6f4",
+    border: "rgba(160, 160, 155, 0.3)",
+    borderLight: "rgba(160, 160, 155, 0.15)",
     overlay: "rgba(15, 8, 18, 0.2)",
-    purple: "#a79bd0",
-    purpleLight: "#E4E1F1",
-    surface: "rgba(150, 120, 180, 0.12)",
-    surfaceHover: "rgba(150, 120, 180, 0.18)",
-    surfaceLight: "rgba(150, 120, 180, 0.08)",
-    text: "#170e1f",
-    yellow: "#ffd37a",
-    yellowLight: "#fff3d8",
+    surface: "#FFFFFF",
+    surfaceHover: "rgba(160, 160, 155, 0.15)",
+    surfaceLight: "rgba(160, 160, 155, 0.065)",
+    text: "#141415",
+    yellow: "#ffcd1a",
+    yellowLight: "rgba(255, 205, 26, 0.188)",
   },
   fonts: {
-    default: "Untitled Sans, apple-system, sans-serif",
+    default: "Inter, apple-system, sans-serif",
+    heading: "Archivo, apple-system, sans-serif",
   },
   fontSizes: {
     default: "clamp(0.9375rem, 0.875rem + 0.5vw, 1.125rem)",
@@ -81,15 +76,7 @@ const defaultTheme: TThemeConfig = {
     default: 0.75,
     light: 0.55,
   },
-  radii: {
-    large: "24px",
-    medium: "8px",
-    small: "2.5px",
-  },
-  shadows: {
-    large: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-    small: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-  },
+
   sizes: spacings,
   space: spacings,
   transitions: {
@@ -108,26 +95,16 @@ const defaultTheme: TThemeConfig = {
 
 const darkThemeConfig: Partial<TThemeConfig> = {
   colors: {
-    background: "#170e1f",
-    blue: "#8fbdd8",
-    blueLight: "#072035",
-    border: "rgba(255, 255, 255, 0.20)",
-    borderLight: "rgba(255, 255, 255, 0.12)",
-    orange: "#ecb489",
-    orangeLight: "#441405",
-    overlay: "rgba(255, 255, 255, 0.15)",
-    purple: "#a79bd0",
-    purpleLight: "#1e162e",
-    surface: "rgba(245, 243, 255, 0.12)",
-    surfaceHover: "rgba(245, 243, 255, 0.18)",
-    surfaceLight: "rgba(245, 243, 255, 0.08)",
+    background: "#161616",
+    border: "rgba(250, 250, 245, 0.12)",
+    borderLight: "rgba(250, 250, 245, 0.08)",
+    overlay: "rgba(250, 250, 245, 0.18)",
+    surface: "#202020",
+    surfaceHover: "rgba(250, 250, 245, 0.10)",
+    surfaceLight: "rgba(250, 250, 245, 0.03)",
     text: "#FFFFFF",
-    yellow: "#ffd37a",
+    yellow: "#FFB31A",
     yellowLight: "#383305",
-  },
-  shadows: {
-    large: "0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -1px rgba(0, 0, 0, 0.15)",
-    small: "0 1px 2px 0 rgba(0, 0, 0, 0.25)",
   },
 };
 
