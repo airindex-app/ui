@@ -54,7 +54,7 @@ const defaultTheme: TThemeConfig = {
     yellowLight: "rgba(255, 205, 26, 0.188)",
   },
   fonts: {
-    default: "Inter, apple-system, sans-serif",
+    default: "DM Sans, apple-system, sans-serif",
     heading: "Archivo, apple-system, sans-serif",
   },
   fontSizes: {

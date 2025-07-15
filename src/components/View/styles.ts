@@ -11,13 +11,6 @@ export const ViewStyled = styled("section", {
   },
   position: "relative",
   variants: {
-    hero: {
-      true: {
-        backgroundColor: "transparent",
-        overflow: "hidden",
-        position: "relative",
-      },
-    },
     inverted: {
       true: {
         backgroundColor: "$background",
@@ -46,11 +39,11 @@ export const ViewContainerStyled = styled("div", {
       },
       true: {
         desktopX: {
-          maxWidth: "2000px",
+          maxWidth: "2400px",
         },
         margin: "0 auto",
         wide: {
-          maxWidth: "2400px",
+          maxWidth: "2800px",
         },
         width: "98%",
       },
@@ -61,7 +54,7 @@ export const ViewContainerStyled = styled("div", {
       },
       true: {
         desktopX: {
-          maxWidth: "1800px",
+          maxWidth: "1900px",
         },
         margin: "0 auto",
         wide: {

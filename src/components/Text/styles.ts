@@ -135,6 +135,14 @@ export const TextStyled = styled("div", {
     accent: {
       true: mutedStyles,
     },
+    hero: {
+      true: {
+        color: "$text",
+        mask: "linear-gradient(to bottom, black 0%, black 20%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.35) 100%)",
+        WebkitMask:
+          "linear-gradient(to bottom, black 0%, black 20%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.35) 100%)",
+      },
+    },
     highlight: {
       default: {
         ...highlight,

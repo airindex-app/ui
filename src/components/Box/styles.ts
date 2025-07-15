@@ -110,8 +110,8 @@ export const BoxHeaderStyled = styled("div", {
   backgroundColor: "$surfaceLight",
   borderBottom: "1px solid $borderLight",
   color: "$text",
-  fontFamily: "$heading",
-  fontWeight: "bold",
+  fontFamily: "$default",
+  fontWeight: 600,
 
   variants: {
     padding: {

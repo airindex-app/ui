@@ -172,72 +172,6 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
 }
 
 /**
- * Calendar component props - date picker with range and single selection modes
- *
- * @example
- * ```tsx
- * <Calendar
- *   mode="range"
- *   minDate="2024-01-01"
- *   maxDate="2024-12-31"
- *   onSelection={({ startDate, endDate }) => console.log(startDate, endDate)}
- * />
- * ```
- */
-export interface ICalendar {
-  /** Array of date strings that should be disabled/blocked */
-  blockedDates?: string[];
-  /** Description text to display below the calendar */
-  description?: string;
-  /** End date for range selection (ISO string) */
-  endDate?: string;
-  /** Maximum selectable date (ISO string) */
-  maxDate?: string;
-  /** Maximum number of days that can be selected in range mode */
-  maxLength?: number;
-  /** Minimum selectable date (ISO string) */
-  minDate?: string;
-  /** Minimum number of days that must be selected in range mode */
-  minLength?: number;
-  /** Calendar selection mode */
-  mode?: "range" | "single";
-  /** Callback when dates are selected */
-  onSelection: (dates: { endDate: string; startDate: string }) => void;
-  /** Callback when the calendar view changes */
-  onViewChange?: (dates: { endDate: string; startDate: string }) => void;
-  /** Start date for range selection (ISO string) */
-  startDate?: string;
-  /** Currently viewed date (ISO string) */
-  viewDate?: string;
-}
-
-/**
- * CalendarMonths component props - month/year picker interface
- *
- * @example
- * ```tsx
- * <CalendarMonths
- *   selectedDate="2024-06-01"
- *   onSelection={(date) => console.log('Selected:', date)}
- *   minDate="2020-01-01"
- *   maxDate="2030-12-31"
- * />
- * ```
- */
-export interface ICalendarMonths {
-  /** Maximum selectable date (ISO string) */
-  maxDate?: string;
-  /** Minimum selectable date (ISO string) */
-  minDate?: string;
-  /** Callback when a month/year is selected */
-  onSelection: (date: string) => void;
-  /** Currently selected date (ISO string) */
-  selectedDate?: string;
-  /** Currently viewed date for navigation (ISO string) */
-  viewDate?: string;
-}
-
-/**
  * Drawer component props - slide-out panel that overlays content
  *
  * @example
@@ -653,33 +587,6 @@ export interface IMenu {
 }
 
 /**
- * Nodes component props - hierarchical node tree visualization
- *
- * @example
- * ```tsx
- * <Nodes
- *   parent={<Text>Root Node</Text>}
- *   nodes={[
- *     { children: <Text>Child 1</Text>, color: "blue" },
- *     { children: <Text>Child 2</Text>, color: "purple" }
- *   ]}
- *   height={300}
- * />
- * ```
- */
-export interface INodes {
-  /** Array of child nodes to display */
-  nodes: Array<{
-    children: ReactNode;
-    color?: "yellow";
-  }>;
-  /** Parent/root node element */
-  parent: ReactNode;
-  /** Height of the nodes container in pixels */
-  height?: number;
-}
-
-/**
  * Popover component props - floating content overlay
  *
  * @example
@@ -963,6 +870,8 @@ export interface IText extends ComponentPropsWithRef<"p"> {
   children: ReactNode;
   /** Custom CSS styles */
   css?: CSS;
+  /** Whether to apply hero gradient styling */
+  hero?: boolean;
   /** Highlight color theme */
   highlight?: "yellow" | "default";
   /** URL for link functionality */
@@ -983,51 +892,6 @@ export interface IText extends ComponentPropsWithRef<"p"> {
   top?: keyof typeof spacings;
   /** Number of lines to truncate text to (1-4) */
   truncate?: 1 | 2 | 3 | 4;
-}
-
-/**
- * Upload component props - file upload with drag & drop, validation, and multiple file support
- *
- * @example
- * ```tsx
- * <Upload
- *   multiple={true}
- *   accept="image/*"
- *   maxFiles={5}
- *   maxSize={5000000}
- *   onUpload={(files) => console.log('Uploaded:', files)}
- *   error={hasError}
- *   errorMessage="Please select valid images"
- * />
- * ```
- */
-export interface IUpload<T extends boolean> {
-  /** File type restrictions (MIME types) */
-  accept?: string;
-  /** Custom CSS styles */
-  css?: CSS;
-  /** Whether the upload is disabled */
-  disabled?: boolean;
-  /** Whether the upload is in an error state */
-  error?: boolean;
-  /** Error message to display */
-  errorMessage?: string;
-  /** Whether to show a loading state */
-  loading?: boolean;
-  /** Maximum number of files (for multiple uploads) */
-  maxFiles?: number;
-  /** Maximum file size in bytes */
-  maxSize?: number;
-  /** Whether to allow multiple file selection */
-  multiple?: T;
-  /** Callback when files are uploaded */
-  onUpload: T extends true ? (files: FileList) => void : (file: File) => void;
-  /** Whether the upload is in a success state */
-  success?: boolean;
-  /** Success message to display */
-  successMessage?: string;
-  /** Width of the upload component */
-  width?: number | string;
 }
 
 /**
@@ -1067,11 +931,11 @@ export interface IToast {
 }
 
 /**
- * View component props - main layout container with optional hero styling
+ * View component props - main layout container
  *
  * @example
  * ```tsx
- * <View hero container top="large" bottom="large">
+ * <View container top="large" bottom="large">
  *   <Text as="h1">Welcome to our app</Text>
  * </View>
  * ```
@@ -1089,8 +953,6 @@ export interface IView {
   container?: boolean;
   /** Custom CSS styles */
   css?: CSS;
-  /** Whether to use hero section styling */
-  hero?: boolean;
   /** HTML id attribute */
   id?: string;
   /** Whether to invert colors */

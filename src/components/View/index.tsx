@@ -4,10 +4,6 @@ import { type IView } from "../../index";
 import { darkTheme } from "../../stitches.config";
 import { ViewStyled, ViewContainerStyled } from "./styles";
 
-function HeroBackground(): JSX.Element {
-  return <div />;
-}
-
 export default function View({
   app,
   as,
@@ -15,7 +11,6 @@ export default function View({
   children,
   container,
   css,
-  hero,
   id,
   inverted,
   noPrint,
@@ -36,11 +31,9 @@ export default function View({
         }),
         ...css,
       }}
-      hero={hero}
       id={`view-${id}`}
       inverted={inverted}
       noPrint={noPrint}>
-      {hero && <HeroBackground />}
       <ViewContainerStyled app={app} container={container}>
         {children}
       </ViewContainerStyled>

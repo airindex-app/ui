@@ -9,6 +9,18 @@ export default function TextDemo(): JSX.Element {
       gap: "$large",
       gridTemplateColumns: "repeat(3, 1fr)" 
     }}>
+      {/* Hero Gradient Text */}
+      <C.Box header={
+        <C.Text as="h4">Hero Gradient Text</C.Text>
+      }>
+        <C.Stack css={{ gap: "$small" }}>
+          <C.Text hero as="h1">Hero Heading 1</C.Text>
+          <C.Text hero as="h2">Hero Heading 2</C.Text>
+          <C.Text hero as="h3">Hero Heading 3</C.Text>
+          <C.Text hero as="p">Hero paragraph text with beautiful gradient</C.Text>
+        </C.Stack>
+      </C.Box>
+
       {/* Element Types */}
       <C.Box header={
         <C.Text as="h4">Element Types</C.Text>
@@ -32,10 +44,8 @@ export default function TextDemo(): JSX.Element {
       }>
         <C.Stack css={{ gap: "$small" }}>
           <C.Text highlight="default">Default highlight</C.Text>
-          <C.Text highlight="blue">Blue highlight</C.Text>
-          <C.Text highlight="purple">Purple highlight</C.Text>
-          <C.Text highlight="orange">Orange highlight</C.Text>
           <C.Text highlight="yellow">Yellow highlight</C.Text>
+          <C.Text as="p">Regular text for comparison</C.Text>
         </C.Stack>
       </C.Box>
 

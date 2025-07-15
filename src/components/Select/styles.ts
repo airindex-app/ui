@@ -88,8 +88,8 @@ export const SelectItemStyled = styled("div", {
       true: {
         backgroundColor: "$surface",
         color: "$text",
-        fontFamily: "$heading",
-        fontWeight: "bold",
+        fontFamily: "$default",
+        fontWeight: 600,
       },
     },
   },
@@ -106,8 +106,8 @@ export const SelectEmptyStyled = styled("div", {
 export const SelectLabelStyled = styled("div", {
   ...stickyBase,
   borderBottom: "1px solid $borderLight",
-  fontFamily: "$heading",
-  fontWeight: "bold",
+  fontFamily: "$default",
+  fontWeight: 600,
   padding: "$smaller $small $smallest $small",
 });
 

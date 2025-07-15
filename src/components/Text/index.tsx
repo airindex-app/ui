@@ -11,6 +11,7 @@ export default function Text({
   bottom,
   children,
   css,
+  hero,
   highlight,
   href,
   inline,
@@ -48,6 +49,7 @@ export default function Text({
         }),
         ...css,
       }}
+      hero={hero}
       highlight={highlight}
       href={isAnchor ? href : undefined}
       inline={shouldShowInline ? true : false}

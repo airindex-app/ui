@@ -46,7 +46,7 @@ export const providerReset = globalCss({
   },
 
   "@import":
-    "url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Inter:wght@400&display=swap')",
+    "url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=DM+Sans:wght@400;600&display=swap')",
 
   "a, a:visited, a:active, a:hover": {
     color: "inherit",
@@ -67,6 +67,7 @@ export const providerReset = globalCss({
     fontOpticalSizing: "auto",
     fontSize: theme.fontSizes.default,
     fontWeight: "normal",
+    letterSpacing: "0.015em",
     lineHeight: theme.lineHeights.default,
     margin: 0,
     minHeight: "100vh",

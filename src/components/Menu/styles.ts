@@ -99,8 +99,8 @@ export const MenuItemStyled = styled("div", {
     selected: {
       true: {
         backgroundColor: "$surface",
-        fontFamily: "$heading",
-        fontWeight: "bold",
+        fontFamily: "$default",
+        fontWeight: 600,
       },
     },
   },
@@ -136,8 +136,8 @@ export const MenuSubItemStyled = styled("div", {
       },
       true: {
         backgroundColor: "$surface",
-        fontFamily: "$heading",
-        fontWeight: "bold",
+        fontFamily: "$default",
+        fontWeight: 600,
       },
     },
   },
@@ -179,8 +179,8 @@ export const MenuHeaderStyled = styled("div", {
   borderBottom: "1px solid $borderLight",
   borderRadius: "$large $large 0 0",
   display: "flex",
-  fontFamily: "$heading",
-  fontWeight: "bold",
+  fontFamily: "$default",
+  fontWeight: 600,
   justifyContent: "space-between",
   margin: "-$small -$small $small -$small",
   padding: "$medium",

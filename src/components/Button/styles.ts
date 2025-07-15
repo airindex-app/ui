@@ -20,7 +20,7 @@ export const ButtonStyled = styled("button", {
   display: "inline-flex",
   fontFamily: "$default",
   fontSize: "$default",
-  fontWeight: "bold",
+  fontWeight: 600,
   justifyContent: "center",
   letterSpacing: "-0.02em",
   lineHeight: "$default",

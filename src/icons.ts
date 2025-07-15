@@ -19,8 +19,6 @@ export const systemIcons = [
   "SortAscendingIcon",
   "SortDescendingIcon",
   "SunIcon",
-  "UploadIcon",
-  "UploadSimpleIcon",
   "WarningCircleIcon",
   "XCircleIcon",
 ];

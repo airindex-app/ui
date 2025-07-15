@@ -1,9 +1,8 @@
 import { fadeIn, fadeOut, styled } from "../../stitches.config";
 
 export const PlacesStyled = styled("div", {
-  display: "inline-block",
+  display: "block",
   position: "relative",
-  verticalAlign: "middle",
   width: "100%",
 });
 

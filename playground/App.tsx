@@ -6,7 +6,6 @@ import AvatarDemo from "./demos/Avatar";
 import BadgeDemo from "./demos/Badge";
 import BoxDemo from "./demos/Box";
 import ButtonDemo from "./demos/Button";
-import CalendarDemo from "./demos/Calendar";
 import DividerDemo from "./demos/Divider";
 import DrawerDemo from "./demos/Drawer";
 import FieldDemo from "./demos/Field";
@@ -16,7 +15,6 @@ import LoadingDemo from "./demos/Loading";
 import MapsDemo from "./demos/Maps";
 import MenuDemo from "./demos/Menu";
 import ModalDemo from "./demos/Modal";
-import NodesDemo from "./demos/Nodes";
 import PlacesDemo from "./demos/Places";
 import PopoverDemo from "./demos/Popover";
 import SelectDemo from "./demos/Select";
@@ -25,7 +23,6 @@ import TableDemo from "./demos/Table";
 import TabsDemo from "./demos/Tabs";
 import TextDemo from "./demos/Text";
 import ToastDemo from "./demos/Toast";
-import UploadDemo from "./demos/Upload";
 import UtilsDemo from "./demos/Utils";
 import ViewDemo from "./demos/View";
 
@@ -38,7 +35,6 @@ const DEMOS = {
   Badge: BadgeDemo,
   Box: BoxDemo,
   Button: ButtonDemo,
-  Calendar: CalendarDemo,
   Divider: DividerDemo,
   Drawer: DrawerDemo,
   Field: FieldDemo,
@@ -48,7 +44,6 @@ const DEMOS = {
   Maps: MapsDemo,
   Menu: MenuDemo,
   Modal: ModalDemo,
-  Nodes: NodesDemo,
   Places: PlacesDemo,
   Popover: PopoverDemo,
   Select: SelectDemo,
@@ -57,7 +52,6 @@ const DEMOS = {
   Tabs: TabsDemo,
   Text: TextDemo,
   Toast: ToastDemo,
-  Upload: UploadDemo,
   Utils: UtilsDemo,
   View: ViewDemo,
 };
@@ -115,7 +109,7 @@ export function App(): JSX.Element {
           <C.ProviderToggle />
         </C.Stack>
       </C.View>
-      <C.View bottom="largest" hero inverted top="largest">
+      <C.View bottom="largest" inverted top="largest">
         <C.Stack align="center">
           <C.Text as="h1">
             {DEMO_OPTIONS.find((opt) => opt.value === selectedDemo)?.label || "Select Component"}

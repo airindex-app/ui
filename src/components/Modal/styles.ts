@@ -93,8 +93,8 @@ export const ModalHeaderStyled = styled("div", {
   borderBottom: "1px solid $borderLight",
   borderRadius: "$large $large 0 0",
   display: "flex",
-  fontFamily: "$heading",
-  fontWeight: "bold",
+  fontFamily: "$default",
+  fontWeight: 600,
   justifyContent: "space-between",
   padding: "$medium",
 });
