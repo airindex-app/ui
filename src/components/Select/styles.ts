@@ -27,7 +27,6 @@ export const SelectGroupStyled = styled("div", {
   },
   backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
   lineBreak: "auto",
   overflowY: "auto",
   padding: "$smallest $smaller",
@@ -58,8 +57,10 @@ export const SelectItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
+  "&:not(:last-child)": {
+    borderBottom: "1px solid $borderLight",
+  },
   alignItems: "center",
-  borderRadius: "$medium",
   cursor: "pointer",
   display: "flex",
   gap: "$small",
@@ -76,7 +77,7 @@ export const SelectItemStyled = styled("div", {
     },
     last: {
       true: {
-        borderTop: "1px solid $borderLight",
+        borderTop: "1px solid $border",
         marginTop: "$small",
         paddingTop: "$small",
       },
@@ -105,7 +106,7 @@ export const SelectEmptyStyled = styled("div", {
 
 export const SelectLabelStyled = styled("div", {
   ...stickyBase,
-  borderBottom: "1px solid $borderLight",
+  borderBottom: "1px solid $border",
   fontFamily: "$default",
   fontWeight: 600,
   padding: "$smaller $small $smallest $small",

@@ -33,7 +33,6 @@ export const AccordionButtonStyled = styled(Button, {
     flexShrink: 0,
   },
   alignItems: "center",
-  borderRadius: "$medium",
   justifyContent: "space-between",
   padding: "$smaller $small",
   textAlign: "left",
@@ -43,8 +42,6 @@ export const AccordionButtonStyled = styled(Button, {
       true: {
         backgroundColor: "$surface",
         borderBottom: "none",
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 0,
       },
     },
     large: {

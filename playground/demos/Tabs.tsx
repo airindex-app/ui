@@ -72,7 +72,6 @@ export default function TabsDemo(): JSX.Element {
           <C.Text accent>Try scrolling horizontally through the tabs below (no visible scrollbars)</C.Text>
           <C.Box css={{ 
             border: "1px dashed $borderLight",
-            borderRadius: "$medium",
             maxWidth: "400px", // Constrain container to force overflow
             padding: "$small"
           }}>

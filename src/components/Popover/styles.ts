@@ -19,7 +19,6 @@ export const PopoverContentStyled = styled("div", {
   },
   backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
   overflowY: "auto",
   padding: "$small $medium",
   pointerEvents: "auto",

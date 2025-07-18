@@ -27,7 +27,6 @@ const dialogContainerBase = {
     display: "none",
   },
   backgroundColor: "$surface",
-  borderRadius: "$large",
   left: "50%",
   maxHeight: "80vh",
   minHeight: "auto",
@@ -83,15 +82,17 @@ export const MenuItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
+  "&:not(:last-child)": {
+    borderBottom: "1px solid $borderLight",
+  },
   alignItems: "center",
-  borderRadius: "$medium",
   color: "$text",
   cursor: "pointer",
   display: "flex",
   fontSize: "$default",
   justifyContent: "space-between",
-  margin: "$smallest 0",
-  padding: "$small $medium",
+  margin: "$smallest $smaller",
+  padding: "$smaller $small",
   textAlign: "left",
   transition: "$default",
   userSelect: "none",
@@ -106,69 +107,32 @@ export const MenuItemStyled = styled("div", {
   },
 });
 
-export const MenuSubGroupStyled = styled("div", {
-  display: "block",
-  margin: "$smallest 0",
-  padding: "0",
-});
-
-export const MenuSubItemStyled = styled("div", {
-  "&:hover": {
-    backgroundColor: "$surfaceHover",
-  },
-  alignItems: "center",
-  backgroundColor: "$surfaceLight",
-  borderRadius: "$medium",
-  color: "$text",
-  cursor: "pointer",
-  display: "flex",
-  fontSize: "$small",
-  gap: "$small",
-  margin: "0",
-  padding: "$smaller $medium $smaller $large",
-  transition: "$default",
-  userSelect: "none",
-  variants: {
-    selected: {
-      false: {
-        backgroundColor: "$surfaceLight",
-        fontWeight: 400,
-      },
-      true: {
-        backgroundColor: "$surface",
-        fontFamily: "$default",
-        fontWeight: 600,
-      },
-    },
-  },
-});
-
 export const MenuItemContentStyled = styled("div", {
   alignItems: "center",
   display: "flex",
-  gap: "$medium",
+  gap: "$small",
+  justifyContent: "space-between",
+  width: "100%",
 });
 
-export const MenuIconStyled = styled("div", {
-  "&:hover": {
-    opacity: 1,
-  },
-  color: "$text",
-  display: "inline-flex",
-  opacity: "$light",
-  transition: "$default",
+export const MenuItemIconStyled = styled("div", {
+  alignItems: "center",
+  display: "flex",
+  justifyContent: "center",
   variants: {
-    open: {
-      true: {
-        opacity: 1,
-        transform: "rotate(180deg)",
+    align: {
+      left: {
+        order: -1,
+      },
+      right: {
+        order: 1,
       },
     },
   },
 });
 
 export const MenuContentStyled = styled("div", {
-  borderTop: "1px solid $borderLight",
+  borderTop: "1px solid $border",
   display: "block",
   padding: "$medium",
 });
@@ -176,8 +140,7 @@ export const MenuContentStyled = styled("div", {
 export const MenuHeaderStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$surface",
-  borderBottom: "1px solid $borderLight",
-  borderRadius: "$large $large 0 0",
+  borderBottom: "1px solid $border",
   display: "flex",
   fontFamily: "$default",
   fontWeight: 600,

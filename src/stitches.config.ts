@@ -47,11 +47,11 @@ const defaultTheme: TThemeConfig = {
     borderLight: "rgba(160, 160, 155, 0.15)",
     overlay: "rgba(15, 8, 18, 0.2)",
     surface: "#FFFFFF",
-    surfaceHover: "rgba(160, 160, 155, 0.15)",
-    surfaceLight: "rgba(160, 160, 155, 0.065)",
+    surfaceHover: "rgba(160, 160, 155, 0.16)",
+    surfaceLight: "rgba(160, 160, 155, 0.08)",
     text: "#141415",
     yellow: "#ffcd1a",
-    yellowLight: "rgba(255, 205, 26, 0.188)",
+    yellowLight: "#FFE792",
   },
   fonts: {
     default: "DM Sans, apple-system, sans-serif",
@@ -103,7 +103,7 @@ const darkThemeConfig: Partial<TThemeConfig> = {
     surfaceHover: "rgba(250, 250, 245, 0.10)",
     surfaceLight: "rgba(250, 250, 245, 0.03)",
     text: "#FFFFFF",
-    yellow: "#FFB31A",
+    yellow: "#f6b024",
     yellowLight: "#383305",
   },
 };

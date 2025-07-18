@@ -30,6 +30,8 @@ export interface IAvatar {
   css?: CSS;
   /** Fallback text to display when image is not available */
   fallback: string;
+  /** Whether to make the avatar round/circular */
+  round?: boolean;
   /** Source URL for the avatar image */
   src?: string;
   /** Width of the avatar in pixels */
@@ -168,7 +170,7 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
   /** Whether to render a smaller version of the button */
   small?: boolean;
   /** Visual theme/style variant for the button */
-  theme?: "default" | "solid" | "minimal";
+  theme?: "default" | "solid" | "minimal" | "yellow";
 }
 
 /**
@@ -367,7 +369,6 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
  *   alt="Hero image"
  *   fill
  *   fillFit="cover"
- *   borderRadius="medium"
  * />
  * ```
  */
@@ -528,10 +529,8 @@ export interface IMaps {
 export interface ILoading {
   /** Custom CSS styles */
   css?: CSS;
-  /** Color of the loading spinner stroke */
-  stroke?: string;
-  /** Visual theme for the loading spinner */
-  theme?: "default" | "colored";
+  /** Width of the loading component */
+  width?: number | string;
 }
 
 /**
@@ -539,7 +538,7 @@ export interface ILoading {
  *
  * @example
  * ```tsx
- * <LoadingOverlay title="Saving changes..." theme="colored" />
+ * <LoadingOverlay title="Saving changes..." />
  * ```
  */
 export interface ILoadingOverlay extends ILoading {
@@ -571,19 +570,21 @@ export interface IMenu {
   initial?: string;
   /** Callback when menu option is selected */
   onSelection?: (value: string, label: string) => void;
-  /** Array of menu options with optional sub-menus */
+  /** Array of menu options */
   options: Array<{
     icon?: ReactNode;
+    iconPosition?: "left" | "right";
     label: string;
-    sub?: Array<{
-      icon?: ReactNode;
-      label: string;
-      value: string;
-    }>;
     value: string;
   }>;
   /** Element that triggers the menu */
   trigger: ReactNode;
+  /** Custom CSS styles for the trigger */
+  triggerCSS?: CSS;
+  /** Custom CSS styles for the menu wrapper */
+  wrapperCSS?: CSS;
+  /** Logo to display in the menu header */
+  logo?: ReactNode;
 }
 
 /**

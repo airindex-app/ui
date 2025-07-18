@@ -13,6 +13,7 @@ export default function Avatar({
   colors,
   css,
   fallback,
+  round = false,
   src,
   width = 32,
 }: IAvatar): JSX.Element {
@@ -29,6 +30,7 @@ export default function Avatar({
         width: width,
         ...css,
       }}
+      round={round}
       theme={theme}>
       {src ? (
         <Image alt={alt || fallback} fill fillFit="cover" sizes={`${width}px`} src={src} />

@@ -78,6 +78,8 @@ export default function Stack({
   wrap,
   ...rest
 }: IStack): JSX.Element {
+  // Default minimal to true for row direction unless explicitly set to false
+  const effectiveMinimal = direction === "row" ? minimal !== false : minimal === true;
   const finalCSS: CSS = {
     ...(align && { textAlign: align }),
     ...(alignItems && { alignItems }),
@@ -104,7 +106,7 @@ export default function Stack({
       direction={direction}
       id={id}
       inline={inline}
-      minimal={minimal}
+      minimal={effectiveMinimal}
       onClick={onClick}
       {...rest}>
       {children}

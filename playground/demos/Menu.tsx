@@ -60,6 +60,9 @@ export default function MenuDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Menu
+            logo={
+              <C.Loading />
+            }
             options={basicOptions}
             trigger={<C.Button>Open Menu</C.Button>}
           />

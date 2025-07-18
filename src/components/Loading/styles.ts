@@ -6,11 +6,11 @@ const animationDuration = "8s";
 const houseToSquareSlide = keyframes({
   // 1. Start in center as house
   "0%": {
-    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    clipPath: "polygon(10% 50%, 50% 15%, 90% 50%, 90% 100%, 10% 100%)",
     transform: "translate(-50%, -50%)",
   },
   "10%": {
-    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    clipPath: "polygon(10% 50%, 50% 15%, 90% 50%, 90% 100%, 10% 100%)",
     transform: "translate(-50%, -50%)",
   },
 
@@ -40,13 +40,13 @@ const houseToSquareSlide = keyframes({
 
   // 6. Transform back to house IN CENTER
   "40%": {
-    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    clipPath: "polygon(10% 50%, 50% 15%, 90% 50%, 90% 100%, 10% 100%)",
     transform: "translate(-50%, -50%)",
   },
 
   // 7. Hold as house in center
   "50%": {
-    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    clipPath: "polygon(10% 50%, 50% 15%, 90% 50%, 90% 100%, 10% 100%)",
     transform: "translate(-50%, -50%)",
   },
 
@@ -76,13 +76,13 @@ const houseToSquareSlide = keyframes({
 
   // 12. Transform back to house IN CENTER
   "80%": {
-    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    clipPath: "polygon(10% 50%, 50% 15%, 90% 50%, 90% 100%, 10% 100%)",
     transform: "translate(-50%, -50%)",
   },
 
   // 13. Hold as house before restart
   "100%": {
-    clipPath: "polygon(10% 50%, 50% 0%, 90% 50%, 90% 100%, 10% 100%)",
+    clipPath: "polygon(10% 50%, 50% 15%, 90% 50%, 90% 100%, 10% 100%)",
     transform: "translate(-50%, -50%)",
   },
 });
@@ -112,7 +112,6 @@ export const LoadingOverlayStyled = styled("div", {
   alignItems: "center",
   backgroundColor: "$text",
   border: "1px solid $text",
-  borderRadius: "$small",
   bottom: "$medium",
   boxShadow: "$large",
   color: "$background",

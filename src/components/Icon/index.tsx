@@ -16,7 +16,7 @@ export default function Icon({
   inline,
   phosphor,
   system,
-  weight = "fill",
+  weight = "regular",
 }: IIcon): JSX.Element {
   const iconName = system || phosphor;
 

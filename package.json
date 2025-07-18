@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -37,7 +37,7 @@
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.31.0",
     "eslint-config-dolmios": "^2.0.9",
-    "next": "^15.4.1",
+    "next": "^15.4.2",
     "parcel": "^2.15.4",
     "path-browserify": "^1.0.1",
     "prettier": "^3.6.2",

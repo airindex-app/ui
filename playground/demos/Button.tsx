@@ -14,7 +14,7 @@ export default function ButtonDemo(): JSX.Element {
         <C.Text as="h4">Basic Usage</C.Text>
       }>
         <C.Stack>
-          <C.Button>Default Button</C.Button>
+          <C.Button theme="yellow">Default Button</C.Button>
           <C.Button small>Small Button</C.Button>
           <C.Button disabled>Disabled Button</C.Button>
         </C.Stack>

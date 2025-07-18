@@ -11,9 +11,13 @@ export const AvatarStyled = styled("div", {
   },
   alignSelf: "center",
   border: "1px solid $border",
+  defaultVariants: {
+    round: false,
+  },
   display: "inline-flex",
   height: "100%",
   justifyContent: "center",
+
   span: {
     alignItems: "center",
     color: "$text",
@@ -27,6 +31,14 @@ export const AvatarStyled = styled("div", {
   },
 
   variants: {
+    round: {
+      false: {
+        borderRadius: "$medium",
+      },
+      true: {
+        borderRadius: "50%",
+      },
+    },
     theme: {
       default: {
         backgroundColor: "$surface",

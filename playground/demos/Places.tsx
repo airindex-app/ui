@@ -46,7 +46,7 @@ export default function PlacesDemo() {
             }}
           />
           {selectedPlace && (
-            <Text css={{ backgroundColor: "$surface", borderRadius: "$medium", marginTop: "$small", padding: "$small" }}>
+            <Text css={{ backgroundColor: "$surface", marginTop: "$small", padding: "$small" }}>
               Selected: {selectedPlace}
             </Text>
           )}
@@ -131,7 +131,6 @@ export default function PlacesDemo() {
             <Text as="h3">Selected Place Details</Text>
             <pre style={{ 
               backgroundColor: "var(--colors-surface)", 
-              borderRadius: "var(--radii-medium)", 
               fontSize: "var(--fontSizes-small)",
               overflow: "auto",
               padding: "var(--space-medium)"

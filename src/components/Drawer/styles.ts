@@ -40,7 +40,6 @@ export const DialogCoreStyled = styled("div", {
     display: "none",
   },
   backgroundColor: "$surface",
-  borderRadius: "$large $large 0 0",
   bottom: 0,
   left: 0,
   maxHeight: "70vh",

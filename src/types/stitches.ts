@@ -70,7 +70,6 @@ export type TSpacingConfig = Record<
  * const Component = styled('div', {
  *   backgroundColor: '$surface',
  *   color: '$text',
- *   borderRadius: '$medium',
  *   fontSize: '$default'
  * });
  * ```

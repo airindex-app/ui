@@ -7,9 +7,7 @@ function DemoBox({ children, color }: { children: ReactNode; color: string }): J
   return (
     <C.Box css={{ 
       backgroundColor: color,
-      borderRadius: "$medium",
       color: "white",
-
       padding: "$small",
       textAlign: "center"
     }}>

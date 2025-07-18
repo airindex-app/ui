@@ -13,12 +13,10 @@ import {
   MenuGroupStyled,
   MenuItemStyled,
   MenuItemContentStyled,
+  MenuItemIconStyled,
   MenuStyled,
   MenuTriggerStyled,
   MenuContentStyled,
-  MenuIconStyled,
-  MenuSubItemStyled,
-  MenuSubGroupStyled,
   MenuHeaderStyled,
   MenuOverlayStyled,
 } from "./styles";
@@ -27,15 +25,17 @@ export default function Menu({
   children,
   css,
   initial,
+  logo,
   onSelection,
   options,
   trigger,
+  triggerCSS,
+  wrapperCSS,
 }: IMenu): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [subMenu, setSubMenu] = useState<string | null>(null);
 
   const animationDuration = 200;
   const isMenuOpen = isOpen || isMounted;
@@ -68,15 +68,6 @@ export default function Menu({
     handleClose();
   }
 
-  function handleItemClick(option: IMenu["options"][number]): void {
-    if (option.sub) {
-      setSubMenu(subMenu === option.value ? null : option.value);
-    } else {
-      setSubMenu(null);
-      handleSelection(option.value, option.label);
-    }
-  }
-
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       event.preventDefault();
@@ -88,8 +79,9 @@ export default function Menu({
   useOutsideClick(ref, () => handleClose());
 
   return (
-    <MenuStyled css={css}>
+    <MenuStyled css={wrapperCSS}>
       <MenuTriggerStyled
+        css={triggerCSS}
         onClick={(e): void => {
           e.stopPropagation();
           handleClick();
@@ -100,43 +92,29 @@ export default function Menu({
       {isMounted && (
         <Portal>
           <MenuOverlayStyled animation={isOpen}>
-            <MenuGroupStyled ref={ref} animation={isOpen}>
+            <MenuGroupStyled ref={ref} animation={isOpen} css={css}>
               <MenuHeaderStyled>
+                {logo && <div>{logo}</div>}
                 <Button icon={<Icon system="XCircleIcon" />} small onClick={() => handleClose()}>
                   Close
                 </Button>
               </MenuHeaderStyled>
 
               {options.map((option) => (
-                <div key={option.value}>
-                  <MenuItemStyled
-                    selected={initial === option.value || subMenu === option.value}
-                    onClick={() => handleItemClick(option)}>
-                    <MenuItemContentStyled>
-                      {option.icon && option.icon}
-                      {option.label}
-                    </MenuItemContentStyled>
-                    {option.sub && (
-                      <MenuIconStyled open={subMenu === option.value}>
-                        <Icon system="CaretDownIcon" />
-                      </MenuIconStyled>
+                <MenuItemStyled
+                  key={option.value}
+                  selected={initial === option.value}
+                  onClick={() => handleSelection(option.value, option.label)}>
+                  <MenuItemContentStyled>
+                    {option.icon && option.iconPosition === "left" && (
+                      <MenuItemIconStyled align="left">{option.icon}</MenuItemIconStyled>
                     )}
-                  </MenuItemStyled>
-
-                  {option.sub && subMenu === option.value && (
-                    <MenuSubGroupStyled>
-                      {option.sub.map((subOption) => (
-                        <MenuSubItemStyled
-                          key={subOption.value}
-                          selected={initial === subOption.value}
-                          onClick={() => handleSelection(subOption.value, subOption.label)}>
-                          {subOption.icon && subOption.icon}
-                          {subOption.label}
-                        </MenuSubItemStyled>
-                      ))}
-                    </MenuSubGroupStyled>
-                  )}
-                </div>
+                    {option.label}
+                    {option.icon && option.iconPosition !== "left" && (
+                      <MenuItemIconStyled align="right">{option.icon}</MenuItemIconStyled>
+                    )}
+                  </MenuItemContentStyled>
+                </MenuItemStyled>
               ))}
 
               {children && <MenuContentStyled>{children}</MenuContentStyled>}

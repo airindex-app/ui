@@ -86,6 +86,16 @@ export const ButtonStyled = styled("button", {
         borderColor: "$text",
         color: "$background",
       },
+      yellow: {
+        "&:not(:disabled):hover": {
+          backgroundColor: "$yellow",
+          borderColor: "$yellow",
+          opacity: "$default",
+        },
+        backgroundColor: "$yellow",
+        borderColor: "$yellow",
+        color: "$text",
+      },
     },
   },
 

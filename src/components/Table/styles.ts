@@ -34,7 +34,6 @@ export const TableStitches = styled("div", {
   phone: {
     backgroundColor: "transparent",
     border: "none",
-    borderRadius: 0,
     overflow: "visible",
   },
   position: "relative",
@@ -151,11 +150,9 @@ export const TableHeaderCellStitches = styled("th", {
   ...cellPaddingBase,
   "&:first-child": {
     ...cellPaddingBase["&:first-child"],
-    borderTopLeftRadius: "$medium",
   },
   "&:last-child": {
     ...cellPaddingBase["&:last-child"],
-    borderTopRightRadius: "$medium",
   },
   "& > div": {
     alignItems: "center",
@@ -182,8 +179,6 @@ export const AnimatedTableRow = styled(TableRowStitches, {
 export const TablePaginationBlock = styled("div", {
   alignItems: "center",
   backgroundColor: "$background",
-  borderBottomLeftRadius: "$medium",
-  borderBottomRightRadius: "$medium",
   borderTop: "1px solid $borderLight",
   display: "flex",
   gap: "$medium",
@@ -193,7 +188,6 @@ export const TablePaginationBlock = styled("div", {
     alignItems: "stretch",
     backgroundColor: "transparent",
     border: "none",
-    borderRadius: 0,
     flexDirection: "column",
     gap: "$small",
     marginTop: "$medium",

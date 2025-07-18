@@ -12,7 +12,6 @@ export const PlacesDropdownStyled = styled("div", {
   },
   backgroundColor: "$surface",
   border: "1px solid $border",
-  borderRadius: "$medium",
   lineBreak: "auto",
   overflowY: "auto",
   padding: "$smallest $smaller",
@@ -38,7 +37,6 @@ export const PlacesItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
-  borderRadius: "$medium",
   cursor: "pointer",
   margin: "$smallest $smaller",
   padding: "$smaller $small",
