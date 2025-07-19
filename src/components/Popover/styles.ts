@@ -17,7 +17,7 @@ export const PopoverContentStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
-  backgroundColor: "$surface",
+  backgroundColor: "$background",
   border: "1px solid $border",
   overflowY: "auto",
   padding: "$small $medium",

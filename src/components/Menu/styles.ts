@@ -26,7 +26,7 @@ const dialogContainerBase = {
   "&::-webkit-scrollbar": {
     display: "none",
   },
-  backgroundColor: "$surface",
+  backgroundColor: "$background",
   left: "50%",
   maxHeight: "80vh",
   minHeight: "auto",
@@ -82,16 +82,14 @@ export const MenuItemStyled = styled("div", {
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
-  "&:not(:last-child)": {
-    borderBottom: "1px solid $borderLight",
-  },
   alignItems: "center",
+  backgroundColor: "$surface",
   color: "$text",
   cursor: "pointer",
   display: "flex",
   fontSize: "$default",
   justifyContent: "space-between",
-  margin: "$smallest $smaller",
+  margin: "$smaller",
   padding: "$smaller $small",
   textAlign: "left",
   transition: "$default",
@@ -139,7 +137,7 @@ export const MenuContentStyled = styled("div", {
 
 export const MenuHeaderStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$surface",
+  backgroundColor: "$background",
   borderBottom: "1px solid $border",
   display: "flex",
   fontFamily: "$default",

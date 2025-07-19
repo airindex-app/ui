@@ -123,62 +123,47 @@ export default function Input({
 
         {hasFunctions && (
           <InputFunctionStyled>
-            {loading && <Loading css={{ marginRight: "$smaller" }} />}
+            {loading && <Loading />}
 
             {copy && (
               <Button
                 disabled={isCopied || disabled}
-                icon={!isPhone ? <Icon system="ClipboardTextIcon" /> : undefined}
+                icon={<Icon system="ClipboardTextIcon" />}
                 small
                 onClick={() => handleCopy()}>
-                {!isPhone ? "Copy" : <Icon system="ClipboardTextIcon" />}
+                {!isPhone ? "Copy" : undefined}
               </Button>
             )}
 
             {reveal && (
               <Button
                 disabled={disabled}
-                icon={
-                  !isPhone ? (
-                    !isRevealed ? (
-                      <Icon system="EyeIcon" />
-                    ) : (
-                      <Icon system="EyeClosedIcon" />
-                    )
-                  ) : undefined
-                }
+                icon={!isRevealed ? <Icon system="EyeIcon" /> : <Icon system="EyeClosedIcon" />}
                 small
                 onClick={() => handleReveal()}>
-                {!isPhone ? (
-                  !isRevealed ? (
-                    "Reveal"
-                  ) : (
-                    "Hide"
-                  )
-                ) : !isRevealed ? (
-                  <Icon system="EyeIcon" />
-                ) : (
-                  <Icon system="EyeClosedIcon" />
-                )}
+                {!isPhone ? (!isRevealed ? "Reveal" : "Hide") : undefined}
               </Button>
             )}
 
             {reset && inputValue && (
-              <Button disabled={disabled} small onClick={() => handleReset()}>
-                <Icon system="XCircleIcon" />
-              </Button>
+              <Button
+                disabled={disabled}
+                icon={<Icon system="XCircleIcon" />}
+                small
+                onClick={() => handleReset()}
+              />
             )}
 
             {submit && (
               <Button
                 disabled={isSubmitDisabled}
-                icon={!isPhone ? <Icon system="ArrowRightIcon" /> : undefined}
+                icon={<Icon system="ArrowRightIcon" />}
                 iconPosition="right"
                 small
                 theme={isSubmitValid ? "solid" : "default"}
                 type="submit"
                 onClick={() => handleSubmit()}>
-                {!isPhone ? submit : <Icon system="ArrowRightIcon" />}
+                {!isPhone ? submit : undefined}
               </Button>
             )}
           </InputFunctionStyled>
@@ -188,23 +173,17 @@ export default function Input({
       {hasCallback && (
         <InputCallbackStyled>
           {error && (
-            <Badge
-              icon={!errorMessage ? <Icon system="WarningCircleIcon" /> : undefined}
-              theme="yellow">
+            <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
-            <Badge
-              icon={!successMessage ? <Icon system="CheckCircleIcon" /> : undefined}
-              theme="yellow">
+            <Badge icon={<Icon system="CheckCircleIcon" />} theme="yellow">
               {successMessage || "Success"}
             </Badge>
           )}
           {warning && (
-            <Badge
-              icon={!warningMessage ? <Icon system="WarningCircleIcon" /> : undefined}
-              theme="yellow">
+            <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
               {warningMessage || "Warning"}
             </Badge>
           )}

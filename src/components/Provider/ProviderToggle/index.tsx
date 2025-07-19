@@ -34,9 +34,8 @@ export default function ProviderToggle(): JSX.Element {
       css={{
         textTransform: "capitalize",
       }}
-      icon={currentThemeIcon}
       small>
-      {currentTheme}
+      {currentThemeIcon}
     </Button>
   );
 

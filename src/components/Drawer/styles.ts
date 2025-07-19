@@ -39,7 +39,7 @@ export const DialogCoreStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
-  backgroundColor: "$surface",
+  backgroundColor: "$background",
   bottom: 0,
   left: 0,
   maxHeight: "70vh",

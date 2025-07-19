@@ -95,16 +95,16 @@ const defaultTheme: TThemeConfig = {
 
 const darkThemeConfig: Partial<TThemeConfig> = {
   colors: {
-    background: "#161616",
-    border: "rgba(250, 250, 245, 0.12)",
-    borderLight: "rgba(250, 250, 245, 0.08)",
-    overlay: "rgba(250, 250, 245, 0.18)",
-    surface: "#202020",
-    surfaceHover: "rgba(250, 250, 245, 0.10)",
-    surfaceLight: "rgba(250, 250, 245, 0.03)",
+    background: "#0f0f0f",
+    border: "rgba(255, 255, 255, 0.2)",
+    borderLight: "rgba(255, 255, 255, 0.1)",
+    overlay: "rgba(0, 0, 0, 0.7)",
+    surface: "#222222",
+    surfaceHover: "rgba(255, 255, 255, 0.2)",
+    surfaceLight: "rgba(255, 255, 255, 0.1)",
     text: "#FFFFFF",
-    yellow: "#f6b024",
-    yellowLight: "#383305",
+    yellow: "#ffcd1a",
+    yellowLight: "#64521E",
   },
 };
 

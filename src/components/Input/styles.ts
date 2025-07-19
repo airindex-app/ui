@@ -58,11 +58,12 @@ export const InputAreaStyled = styled("input", {
 
 export const InputFunctionStyled = styled("div", {
   alignItems: "center",
-  alignSelf: "center",
   display: "flex",
+  flexBasis: "auto",
+  flexDirection: "row",
   gap: "$smaller",
   height: "100%",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   padding: "$smallest $small $smallest 0",
   verticalAlign: "middle",
 });

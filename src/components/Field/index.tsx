@@ -102,34 +102,37 @@ export default function Field({
 
         {hasFunctions && (
           <FieldFunctionStyled>
-            {loading && <Loading css={{ marginRight: "$smaller" }} />}
+            {loading && <Loading />}
 
             {copy && (
               <Button
                 disabled={isCopied || disabled}
-                icon={!isPhone ? <Icon system="ClipboardTextIcon" /> : undefined}
+                icon={<Icon system="ClipboardTextIcon" />}
                 small
                 onClick={() => handleCopy()}>
-                {!isPhone ? "Copy" : <Icon system="ClipboardTextIcon" />}
+                {!isPhone ? "Copy" : undefined}
               </Button>
             )}
 
             {reset && inputValue && (
-              <Button disabled={disabled} small onClick={() => handleReset()}>
-                <Icon system="XCircleIcon" />
-              </Button>
+              <Button
+                disabled={disabled}
+                icon={<Icon system="XCircleIcon" />}
+                small
+                onClick={() => handleReset()}
+              />
             )}
 
             {submit && (
               <Button
                 disabled={isSubmitDisabled}
-                icon={!isPhone ? <Icon system="ArrowRightIcon" /> : undefined}
+                icon={<Icon system="ArrowRightIcon" />}
                 iconPosition="right"
                 small
                 theme={isSubmitValid ? "solid" : "default"}
                 type="submit"
                 onClick={() => handleSubmit()}>
-                {!isPhone ? submit : <Icon system="ArrowRightIcon" />}
+                {!isPhone ? submit : undefined}
               </Button>
             )}
           </FieldFunctionStyled>
@@ -139,23 +142,17 @@ export default function Field({
       {hasCallback && (
         <FieldCallbackStyled>
           {error && (
-            <Badge
-              icon={!errorMessage ? <Icon system="WarningCircleIcon" /> : undefined}
-              theme="yellow">
+            <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
-            <Badge
-              icon={!successMessage ? <Icon system="CheckCircleIcon" /> : undefined}
-              theme="yellow">
+            <Badge icon={<Icon system="CheckCircleIcon" />} theme="yellow">
               {successMessage || "Success"}
             </Badge>
           )}
           {warning && (
-            <Badge
-              icon={!warningMessage ? <Icon system="WarningCircleIcon" /> : undefined}
-              theme="yellow">
+            <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
               {warningMessage || "Warning"}
             </Badge>
           )}

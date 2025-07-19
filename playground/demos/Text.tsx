@@ -14,10 +14,10 @@ export default function TextDemo(): JSX.Element {
         <C.Text as="h4">Hero Gradient Text</C.Text>
       }>
         <C.Stack css={{ gap: "$small" }}>
-          <C.Text hero as="h1">Hero Heading 1</C.Text>
-          <C.Text hero as="h2">Hero Heading 2</C.Text>
-          <C.Text hero as="h3">Hero Heading 3</C.Text>
-          <C.Text hero as="p">Hero paragraph text with beautiful gradient</C.Text>
+          <C.Text as="h1" hero>Hero Heading 1</C.Text>
+          <C.Text as="h2" hero>Hero Heading 2</C.Text>
+          <C.Text as="h3" hero>Hero Heading 3</C.Text>
+          <C.Text as="p" hero>Hero paragraph text with beautiful gradient</C.Text>
         </C.Stack>
       </C.Box>
 

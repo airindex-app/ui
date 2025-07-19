@@ -45,14 +45,18 @@ export default function Button({
         </ButtonLoadingStyled>
       )}
 
-      {showLeftIcon && <ButtonIconStyled align="left">{icon}</ButtonIconStyled>}
+      {showLeftIcon && (
+        <ButtonIconStyled align={small ? "smallLeft" : "left"}>{icon}</ButtonIconStyled>
+      )}
 
       {children}
 
-      {showRightIcon && <ButtonIconStyled align="right">{icon}</ButtonIconStyled>}
+      {showRightIcon && (
+        <ButtonIconStyled align={small ? "smallRight" : "right"}>{icon}</ButtonIconStyled>
+      )}
 
       {external && (
-        <ButtonIconStyled align="right">
+        <ButtonIconStyled align={small ? "smallRight" : "right"}>
           <Icon system="ArrowUpRightIcon" />
         </ButtonIconStyled>
       )}

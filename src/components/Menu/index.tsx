@@ -95,7 +95,11 @@ export default function Menu({
             <MenuGroupStyled ref={ref} animation={isOpen} css={css}>
               <MenuHeaderStyled>
                 {logo && <div>{logo}</div>}
-                <Button icon={<Icon system="XCircleIcon" />} small onClick={() => handleClose()}>
+                <Button
+                  icon={<Icon system="XCircleIcon" />}
+                  small
+                  theme="minimal"
+                  onClick={() => handleClose()}>
                   Close
                 </Button>
               </MenuHeaderStyled>

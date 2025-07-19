@@ -55,6 +55,7 @@ export const ButtonStyled = styled("button", {
         fontSize: "$small",
         lineHeight: "$small",
         minHeight: "$smaller",
+        padding: "$smallest $small",
 
         phone: {
           minHeight: "$smallest",
@@ -65,7 +66,6 @@ export const ButtonStyled = styled("button", {
       default: {
         "&:not(:disabled):hover": {
           backgroundColor: "$surfaceHover",
-          borderColor: "$border",
         },
       },
       minimal: {
@@ -78,8 +78,6 @@ export const ButtonStyled = styled("button", {
       },
       solid: {
         "&:not(:disabled):hover": {
-          backgroundColor: "$text",
-          borderColor: "$text",
           opacity: "$default",
         },
         backgroundColor: "$text",
@@ -88,20 +86,21 @@ export const ButtonStyled = styled("button", {
       },
       yellow: {
         "&:not(:disabled):hover": {
-          backgroundColor: "$yellow",
-          borderColor: "$yellow",
           opacity: "$default",
         },
         backgroundColor: "$yellow",
         borderColor: "$yellow",
         color: "$text",
+        darkOnly: {
+          color: "$background",
+        },
       },
     },
   },
 
   verticalAlign: "middle",
   whiteSpace: "nowrap",
-  width: "auto",
+  width: "fit-content",
 });
 
 export const ButtonIconStyled = styled("span", {
@@ -110,9 +109,15 @@ export const ButtonIconStyled = styled("span", {
   variants: {
     align: {
       left: {
-        marginRight: "$smaller",
+        marginRight: "$small",
       },
       right: {
+        marginLeft: "$small",
+      },
+      smallLeft: {
+        marginRight: "$smaller",
+      },
+      smallRight: {
         marginLeft: "$smaller",
       },
     },
