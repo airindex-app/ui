@@ -84,7 +84,7 @@ export const BoxStyled = styled("article", {
         backgroundColor: "$surface",
       },
       fill: {
-        background: "$surface",
+        backgroundColor: "$surfaceLight",
       },
       minimal: {
         backgroundColor: "transparent",

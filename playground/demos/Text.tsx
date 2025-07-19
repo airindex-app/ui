@@ -35,6 +35,12 @@ export default function TextDemo(): JSX.Element {
           <C.Text as="p">Paragraph text</C.Text>
           <C.Text as="small">Small text</C.Text>
           <C.Text as="strong">Strong text</C.Text>
+          <C.Text as="ol">Ordered list</C.Text>
+          <C.Text as="ul">Unordered list</C.Text>
+          <C.Text as="li">List item</C.Text>
+          <C.Text as="label">Label text</C.Text>
+          <C.Text as="span">Span text</C.Text>
+          <C.Text as="small">Small text</C.Text>
         </C.Stack>
       </C.Box>
 

@@ -43,7 +43,7 @@ export const spacings: TSpacingConfig = {
 const defaultTheme: TThemeConfig = {
   colors: {
     background: "#f6f6f4",
-    border: "rgba(160, 160, 155, 0.3)",
+    border: "rgba(160, 160, 155, 0.35)",
     borderLight: "rgba(160, 160, 155, 0.15)",
     overlay: "rgba(15, 8, 18, 0.2)",
     surface: "#FFFFFF",
@@ -59,10 +59,10 @@ const defaultTheme: TThemeConfig = {
   },
   fontSizes: {
     default: "clamp(0.9375rem, 0.875rem + 0.5vw, 1.125rem)",
-    h1: "clamp(2rem, 1.75rem + 1.25vw, 2.9rem)",
-    h2: "clamp(1.75rem, 1.5rem + 1vw, 2.5rem)",
-    h3: "clamp(1.5rem, 1.25rem + 1vw, 2rem)",
-    h4: "clamp(1.375rem, 1.25rem + 0.5vw, 1.5rem)",
+    h1: "clamp(2rem, 1.75rem + 1vw, 2.75rem)",
+    h2: "clamp(1.75rem, 1.5rem + 0.75vw, 2.25rem)",
+    h3: "clamp(1.5rem, 1.25rem + 0.75vw, 2rem)",
+    h4: "clamp(1.375rem, 1.25rem + 0.5vw, 1.625rem)",
     h5: "clamp(1.25rem, 1.125rem + 0.5vw, 1.375rem)",
     h6: "clamp(1.125rem, 1.0625rem + 0.25vw, 1.25rem)",
     micro: "clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)",

@@ -89,7 +89,9 @@ export const TextSizes = {
     opacity: "$default",
   },
   ol: {
+    listStyle: "decimal inside !important",
     listStylePosition: "inside",
+    listStyleType: "decimal",
     marginBottom: 0,
     paddingLeft: "$small",
   },
@@ -104,7 +106,7 @@ export const TextSizes = {
     color: "$text",
     display: "block",
     fontSize: "$small",
-    lineHeight: "$default",
+    lineHeight: "$small",
     marginBottom: "$smaller",
     opacity: "$default",
   },
@@ -120,7 +122,9 @@ export const TextSizes = {
     lineHeight: "inherit",
   },
   ul: {
+    listStyle: "disc inside !important",
     listStylePosition: "inside",
+    listStyleType: "disc",
     marginBottom: 0,
     paddingLeft: "$small",
   },
