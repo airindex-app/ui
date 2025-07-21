@@ -31,7 +31,6 @@ export default function ViewDemo(): JSX.Element {
             height: "150px", 
             justifyContent: "center" 
           }} 
-          hero 
           inverted
         >
           <C.Text css={{ color: "white" }}>Hero section</C.Text>

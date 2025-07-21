@@ -14,6 +14,9 @@ importers:
       '@googlemaps/js-api-loader':
         specifier: ^1.16.10
         version: 1.16.10
+      '@phosphor-icons/react':
+        specifier: ^2.1.10
+        version: 2.1.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       dayjs:
         specifier: ^1.11.13
         version: 1.11.13
@@ -36,9 +39,6 @@ importers:
       '@parcel/transformer-typescript-types':
         specifier: ^2.15.4
         version: 2.15.4(@parcel/core@2.15.4(@swc/helpers@0.5.17))(typescript@5.8.3)
-      '@phosphor-icons/react':
-        specifier: ^2.1.10
-        version: 2.1.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@stitches/react':
         specifier: ^1.2.8
         version: 1.2.8(react@19.1.0)

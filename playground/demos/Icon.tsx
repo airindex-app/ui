@@ -1,6 +1,15 @@
 import { JSX } from "react";
-
 import * as C from "../../src/index";
+import {
+  CircleIcon,
+  CheckCircleIcon,
+  WarningCircleIcon,
+  XCircleIcon,
+  ArrowRightIcon,
+  InfoIcon,
+  MagnifyingGlassIcon,
+  ArrowClockwiseIcon,
+} from "@phosphor-icons/react";
 
 export default function IconDemo(): JSX.Element {
   return (
@@ -14,10 +23,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h6">Basic Usage</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon system="CircleIcon" />
-          <C.Icon system="CheckCircleIcon" />
-          <C.Icon system="WarningCircleIcon" />
-          <C.Icon system="XCircleIcon" />
+          <C.Icon phosphor={<CircleIcon />} />
+          <C.Icon phosphor={<CheckCircleIcon />} />
+          <C.Icon phosphor={<WarningCircleIcon />} />
+          <C.Icon phosphor={<XCircleIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -26,10 +35,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h4">Sizes</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon forceSize={16} system="CheckCircleIcon" />
-          <C.Icon forceSize={24} system="CheckCircleIcon" />
-          <C.Icon forceSize={32} system="CheckCircleIcon" />
-          <C.Icon forceSize={48} system="CheckCircleIcon" />
+          <C.Icon forceSize={16} phosphor={<CheckCircleIcon />} />
+          <C.Icon forceSize={24} phosphor={<CheckCircleIcon />} />
+          <C.Icon forceSize={32} phosphor={<CheckCircleIcon />} />
+          <C.Icon forceSize={48} phosphor={<CheckCircleIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -38,10 +47,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h4">Colors</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon forceColor="text" system="CheckCircleIcon" />
-          <C.Icon forceColor="blue" system="CheckCircleIcon" />
-          <C.Icon forceColor="purple" system="CheckCircleIcon" />
-          <C.Icon forceColor="orange" system="CheckCircleIcon" />
+          <C.Icon forceColor="text" phosphor={<CheckCircleIcon />} />
+          <C.Icon forceColor="blue" phosphor={<CheckCircleIcon />} />
+          <C.Icon forceColor="purple" phosphor={<CheckCircleIcon />} />
+          <C.Icon forceColor="orange" phosphor={<CheckCircleIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -51,10 +60,10 @@ export default function IconDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Text>
-            Text with <C.Icon inline="smaller" system="CheckCircleIcon" /> icon
+            Text with <C.Icon inline="smaller" phosphor={<CheckCircleIcon />} /> icon
           </C.Text>
           <C.Text>
-            <C.Icon inline="small" system="ArrowRightIcon" /> Icon with margin
+            <C.Icon inline="small" phosphor={<ArrowRightIcon />} /> Icon with margin
           </C.Text>
         </C.Stack>
       </C.Box>
@@ -64,10 +73,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h4">System Icons</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon system="ArrowRightIcon" />
-          <C.Icon system="InfoIcon" />
-          <C.Icon system="MagnifyingGlassIcon" />
-          <C.Icon system="ArrowClockwiseIcon" />
+          <C.Icon phosphor={<ArrowRightIcon />} />
+          <C.Icon phosphor={<InfoIcon />} />
+          <C.Icon phosphor={<MagnifyingGlassIcon />} />
+          <C.Icon phosphor={<ArrowClockwiseIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -79,17 +88,17 @@ export default function IconDemo(): JSX.Element {
           <C.Icon 
             forceColor="blue" 
             forceSize={32} 
-            system="CheckCircleIcon" 
+            phosphor={<CheckCircleIcon />} 
           />
           <C.Icon 
             forceColor="orange" 
             forceSize={32} 
-            system="WarningCircleIcon" 
+            phosphor={<WarningCircleIcon />} 
           />
           <C.Icon 
             forceColor="red" 
             forceSize={32} 
-            system="XCircleIcon" 
+            phosphor={<XCircleIcon />} 
           />
         </C.Stack>
       </C.Box>

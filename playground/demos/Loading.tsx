@@ -26,10 +26,8 @@ export default function LoadingDemo(): JSX.Element {
         <C.Text as="h4">Themes</C.Text>
       }>
         <C.Stack>
-          <C.Loading theme="default" />
+          <C.Loading />
           <C.Text as="small">Default theme</C.Text>
-          <C.Loading theme="colored" />
-          <C.Text as="small">Colored theme</C.Text>
         </C.Stack>
       </C.Box>
 
@@ -82,7 +80,6 @@ export default function LoadingDemo(): JSX.Element {
         <C.Stack direction="row">
           <C.Loading 
             css={{ height: "32px", width: "32px" }}
-            theme="colored"
           />
           <C.Loading 
             css={{ 

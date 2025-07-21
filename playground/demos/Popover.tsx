@@ -1,6 +1,7 @@
 import { JSX } from "react";
 
 import * as C from "../../src/index";
+import { InfoIcon, ArrowDownIcon, ArrowsOutSimpleIcon, XIcon, ArrowUpIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 export default function PopoverDemo(): JSX.Element {
   return (
@@ -16,7 +17,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon system="InfoIcon" />
+              <C.Icon phosphor={<InfoIcon />} />
               Basic
             </C.Button>
           }
@@ -33,7 +34,7 @@ export default function PopoverDemo(): JSX.Element {
           small
           trigger={
             <C.Button>
-              <C.Icon system="ArrowDownIcon" />
+              <C.Icon phosphor={<ArrowDownIcon />} />
               Small
             </C.Button>
           }
@@ -50,7 +51,7 @@ export default function PopoverDemo(): JSX.Element {
           minimal
           trigger={
             <C.Button>
-              <C.Icon system="ArrowsOutSimpleIcon" />
+              <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
               Minimal
             </C.Button>
           }
@@ -70,7 +71,7 @@ export default function PopoverDemo(): JSX.Element {
           disabled
           trigger={
             <C.Button disabled>
-              <C.Icon system="XIcon" />
+              <C.Icon phosphor={<XIcon />} />
               Disabled
             </C.Button>
           }
@@ -90,7 +91,7 @@ export default function PopoverDemo(): JSX.Element {
           }}
           trigger={
             <C.Button>
-              <C.Icon system="ArrowUpIcon" />
+              <C.Icon phosphor={<ArrowUpIcon />} />
               Styled
             </C.Button>
           }
@@ -108,14 +109,13 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon system="ArrowRightIcon" />
+              <C.Icon phosphor={<ArrowRightIcon />} />
               Rich
             </C.Button>
           }
         >
           <C.Stack css={{ gap: "$small" }}>
             <C.Text as="strong">User Profile</C.Text>
-            <C.Badge theme="blue">Active</C.Badge>
             <C.Button small>View Details</C.Button>
           </C.Stack>
         </C.Popover>
@@ -128,7 +128,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon system="ArrowsOutSimpleIcon" />
+              <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
               Wide
             </C.Button>
           }
@@ -157,7 +157,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon system="ArrowDownIcon" />
+              <C.Icon phosphor={<ArrowDownIcon />} />
               Long List
             </C.Button>
           }
@@ -173,7 +173,7 @@ export default function PopoverDemo(): JSX.Element {
                 }}
                 small
               >
-                <C.Icon system="ArrowRightIcon" />
+                <C.Icon phosphor={<ArrowRightIcon />} />
                 Menu Item {i + 1} - This is a longer description
               </C.Button>
             ))}

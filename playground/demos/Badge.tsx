@@ -1,5 +1,7 @@
+import { CircleIcon } from "@phosphor-icons/react";
 import { JSX } from "react";
 
+import { ArrowRightIcon, CheckCircleIcon } from "../../src/icons";
 import * as C from "../../src/index";
 
 export default function BadgeDemo(): JSX.Element {
@@ -27,9 +29,6 @@ export default function BadgeDemo(): JSX.Element {
         <C.Stack>
           <C.Badge theme="default" variant="border">Default</C.Badge>
           <C.Badge theme="solid" variant="border">Solid</C.Badge>
-          <C.Badge theme="blue" variant="border">Blue</C.Badge>
-          <C.Badge theme="purple" variant="border">Purple</C.Badge>
-          <C.Badge theme="orange" variant="border">Orange</C.Badge>
           <C.Badge theme="yellow" variant="border">Yellow</C.Badge>
         </C.Stack>
       </C.Box>
@@ -41,9 +40,6 @@ export default function BadgeDemo(): JSX.Element {
         <C.Stack>
           <C.Badge theme="default" variant="theme">Default</C.Badge>
           <C.Badge theme="solid" variant="theme">Solid</C.Badge>
-          <C.Badge theme="blue" variant="theme">Blue</C.Badge>
-          <C.Badge theme="purple" variant="theme">Purple</C.Badge>
-          <C.Badge theme="orange" variant="theme">Orange</C.Badge>
           <C.Badge theme="yellow" variant="theme">Yellow</C.Badge>
         </C.Stack>
       </C.Box>
@@ -53,13 +49,13 @@ export default function BadgeDemo(): JSX.Element {
         <C.Text as="h4">With Icons</C.Text>
       }>
         <C.Stack>
-          <C.Badge icon={<C.Icon system="CheckCircleIcon" />}>
+          <C.Badge icon={<C.Icon phosphor={<CheckCircleIcon />} />}>
             Success
           </C.Badge>
           <C.Badge 
-            icon={<C.Icon system="ArrowRightIcon" />}
+            icon={<C.Icon phosphor={<ArrowRightIcon />} />}
             iconPosition="right"
-            theme="blue"
+            theme="yellow"
           >
             Next
           </C.Badge>
@@ -72,8 +68,8 @@ export default function BadgeDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Badge link>Clickable</C.Badge>
-          <C.Badge closable theme="orange">Closable</C.Badge>
-          <C.Badge loading theme="purple">Loading</C.Badge>
+          <C.Badge closable theme="yellow">Closable</C.Badge>
+          <C.Badge loading theme="yellow">Loading</C.Badge>
         </C.Stack>
       </C.Box>
 
@@ -82,7 +78,7 @@ export default function BadgeDemo(): JSX.Element {
         <C.Text as="h4">Layout Options</C.Text>
       }>
         <C.Stack>
-          <C.Badge block theme="blue">Full Width</C.Badge>
+          <C.Badge block theme="yellow">Full Width</C.Badge>
           <C.Text>
             Text with <C.Badge inline="smaller">inline</C.Badge> badge
           </C.Text>
@@ -95,18 +91,18 @@ export default function BadgeDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
-            <C.Badge theme="blue" variant="border">Border Blue</C.Badge>
-            <C.Badge theme="blue" variant="theme">Theme Blue</C.Badge>
+            <C.Badge theme="yellow" variant="border">Border Blue</C.Badge>
+            <C.Badge theme="yellow" variant="theme">Theme Blue</C.Badge>
           </C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
-            <C.Badge theme="purple" variant="border">Border Purple</C.Badge>
-            <C.Badge theme="purple" variant="theme">Theme Purple</C.Badge>
+            <C.Badge theme="yellow" variant="border">Border Purple</C.Badge>
+            <C.Badge theme="yellow" variant="theme">Theme Purple</C.Badge>
           </C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
-            <C.Badge icon={<C.Icon system="CheckCircleIcon" />} theme="orange" variant="border">
+            <C.Badge icon={<C.Icon phosphor={<CheckCircleIcon />} />} theme="yellow" variant="border">
               Border with Icon
             </C.Badge>
-            <C.Badge icon={<C.Icon system="CheckCircleIcon" />} theme="orange" variant="theme">
+            <C.Badge icon={<C.Icon phosphor={<CheckCircleIcon />} />} theme="yellow" variant="theme">
               Theme with Icon
             </C.Badge>
           </C.Stack>
@@ -119,17 +115,17 @@ export default function BadgeDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Badge 
-            icon={<C.Icon system="CircleIcon" />} 
+            icon={<C.Icon phosphor={<CircleIcon />} />} 
             small 
-            theme="purple"
+            theme="yellow"
             variant="theme"
           >
             Status
           </C.Badge>
           <C.Badge 
             closable 
-            icon={<C.Icon system="CheckCircleIcon" />}
-            theme="solid"
+              icon={<C.Icon phosphor={<CheckCircleIcon />} />}
+            theme="yellow"
             variant="border"
           >
             Complete

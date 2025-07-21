@@ -1,6 +1,7 @@
 import { JSX } from "react";
 
 import * as C from "../../src/index";
+import { CheckCircleIcon, ArrowRightIcon, ArrowClockwiseIcon } from "@phosphor-icons/react";
 
 export default function ButtonDemo(): JSX.Element {
   return (
@@ -36,11 +37,11 @@ export default function ButtonDemo(): JSX.Element {
         <C.Text as="h4">With Icons</C.Text>
       }>
         <C.Stack>
-          <C.Button icon={<C.Icon system="CheckCircleIcon" />}>
+          <C.Button icon={<C.Icon phosphor={<CheckCircleIcon />} />}>
             Success
           </C.Button>
           <C.Button 
-            icon={<C.Icon system="ArrowRightIcon" />}
+            icon={<C.Icon phosphor={<ArrowRightIcon />} />}
             iconPosition="right"
           >
             Next
@@ -79,14 +80,14 @@ export default function ButtonDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Button 
-            icon={<C.Icon system="CheckCircleIcon" />} 
+            icon={<C.Icon phosphor={<CheckCircleIcon />} />} 
             small
             theme="solid"
           >
             Small Solid
           </C.Button>
           <C.Button 
-            icon={<C.Icon system="ArrowClockwiseIcon" />} 
+            icon={<C.Icon phosphor={<ArrowClockwiseIcon />} />} 
             loading
             theme="minimal"
           >

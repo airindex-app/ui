@@ -1,5 +1,6 @@
 import { useRef, useState, type JSX } from "react";
 
+import { XCircleIcon } from "../../icons";
 import {
   Button,
   Text,
@@ -102,7 +103,10 @@ export default function Drawer({
               }}>
               <DialogHeaderStyled>
                 <Text as="h4">{title}</Text>
-                <Button icon={<Icon system="XCircleIcon" />} small onClick={() => handleClose()}>
+                <Button
+                  icon={<Icon phosphor={<XCircleIcon />} />}
+                  small
+                  onClick={() => handleClose()}>
                   Close
                 </Button>
               </DialogHeaderStyled>

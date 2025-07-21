@@ -1,29 +1,20 @@
 import type { IconProps } from "@phosphor-icons/react";
 
-import * as PhosphorIcons from "@phosphor-icons/react";
-import { type ComponentType, type JSX } from "react";
+import { cloneElement, ReactElement } from "react";
 
-import type { IIcon } from "../../index";
+import type { IIcon } from "../../types/components";
 
 import { IconStyled } from "./styles";
 
-export const BASE_SIZE = 21;
+const STANDARD_WEIGHT = "regular";
 
 export default function Icon({
   css,
   forceColor,
-  forceSize = BASE_SIZE,
+  forceSize = 21,
   inline,
   phosphor,
-  system,
-  weight = "regular",
-}: IIcon): JSX.Element {
-  const iconName = system || phosphor;
-
-  if (!iconName) return <> </>;
-
-  const Icon = PhosphorIcons[iconName as keyof typeof PhosphorIcons] as ComponentType<IconProps>;
-
+}: IIcon): ReactElement {
   return (
     <IconStyled
       css={{
@@ -43,7 +34,7 @@ export default function Icon({
         }),
         ...css,
       }}>
-      <Icon weight={weight} />
+      {cloneElement(phosphor as ReactElement<IconProps>, { weight: STANDARD_WEIGHT })}
     </IconStyled>
   );
 }

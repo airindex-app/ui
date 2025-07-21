@@ -1,23 +1,24 @@
 import { JSX, useState } from "react";
 
 import * as C from "../../src/index";
+import { ArrowRightIcon, InfoIcon, XCircleIcon, CheckCircleIcon, MagnifyingGlassIcon, ArrowDownIcon, ArrowsOutSimpleIcon } from "@phosphor-icons/react";
 
 export default function MenuDemo(): JSX.Element {
   const [selectedOption, setSelectedOption] = useState<string>();
 
   const basicOptions = [
     {
-      icon: <C.Icon system="ArrowRightIcon" />,
+      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
       label: "Dashboard",
       value: "dashboard"
     },
     {
-      icon: <C.Icon system="InfoIcon" />,
+      icon: <C.Icon phosphor={<InfoIcon />} />,
       label: "Settings",
       value: "settings"
     },
     {
-      icon: <C.Icon system="XCircleIcon" />,
+      icon: <C.Icon phosphor={<XCircleIcon />} />,
       label: "Logout",
       value: "logout"
     }
@@ -25,16 +26,16 @@ export default function MenuDemo(): JSX.Element {
 
   const menuWithSubs = [
     {
-      icon: <C.Icon system="ArrowRightIcon" />,
+      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
       label: "Account",
       sub: [
         {
-          icon: <C.Icon system="CheckCircleIcon" />,
+          icon: <C.Icon phosphor={<CheckCircleIcon />} />,
           label: "Profile",
           value: "profile"
         },
         {
-          icon: <C.Icon system="InfoIcon" />,
+          icon: <C.Icon phosphor={<InfoIcon />} />,
           label: "Settings",
           value: "settings"
         }
@@ -42,7 +43,7 @@ export default function MenuDemo(): JSX.Element {
       value: "account"
     },
     {
-      icon: <C.Icon system="MagnifyingGlassIcon" />,
+      icon: <C.Icon phosphor={<MagnifyingGlassIcon />} />,
       label: "Help",
       value: "help"
     }
@@ -77,7 +78,7 @@ export default function MenuDemo(): JSX.Element {
           <C.Menu
             options={basicOptions}
             trigger={
-              <C.Button icon={<C.Icon system="ArrowDownIcon" />}>
+              <C.Button icon={<C.Icon phosphor={<ArrowDownIcon />} />}>
                 Actions
               </C.Button>
             }
@@ -106,7 +107,7 @@ export default function MenuDemo(): JSX.Element {
             options={basicOptions}
             trigger={
               <C.Button 
-                icon={<C.Icon system="ArrowsOutSimpleIcon" />}
+                icon={<C.Icon phosphor={<ArrowsOutSimpleIcon />} />}
                 small
                 theme="minimal"
               />

@@ -1,6 +1,7 @@
 import { Fragment, type JSX } from "react";
 import { Balancer } from "react-wrap-balancer";
 
+import { ArrowUpRightIcon } from "../../icons";
 import { Icon, type IText } from "../../index";
 import { TextStyled } from "./styles";
 
@@ -68,7 +69,7 @@ export default function Text({
             marginTop: "-$smallest",
           }}
           forceSize={18}
-          system="ArrowUpRightIcon"
+          phosphor={<ArrowUpRightIcon />}
         />
       )}
     </TextStyled>

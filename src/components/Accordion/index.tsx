@@ -1,5 +1,6 @@
 import { useState, useRef, type JSX } from "react";
 
+import { ArrowDownIcon, ArrowRightIcon } from "../../icons";
 import { Icon, Stack, Text, type IAccordion } from "../../index";
 import {
   AccordionStyled,
@@ -86,7 +87,7 @@ export default function Accordion({
                     inline
                     justify="space-between">
                     <Text as="h6">{option.label}</Text>
-                    <Icon system={isOpen ? "ArrowDownIcon" : "ArrowRightIcon"} />
+                    <Icon phosphor={isOpen ? <ArrowDownIcon /> : <ArrowRightIcon />} />
                   </Stack>
                 }
                 minimal
@@ -115,7 +116,13 @@ export default function Accordion({
           <AccordionItemStyled key={option.value}>
             <AccordionButtonStyled
               expanded={isOpen}
-              icon={isOpen ? <Icon system="ArrowDownIcon" /> : <Icon system="ArrowRightIcon" />}
+              icon={
+                isOpen ? (
+                  <Icon phosphor={<ArrowDownIcon />} />
+                ) : (
+                  <Icon phosphor={<ArrowRightIcon />} />
+                )
+              }
               iconPosition="right"
               large={option.large}
               onClick={handleItemClick(option.value)}>

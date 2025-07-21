@@ -2,6 +2,7 @@
 import { JSX, useState } from "react";
 
 import * as C from "../../src/index";
+import { ArrowRightIcon, InfoIcon, ArrowUpIcon } from "@phosphor-icons/react";
 
 // Content components for tab panels
 
@@ -20,17 +21,17 @@ export default function TabsDemo(): JSX.Element {
 
   const iconOptions = [
     { 
-      icon: <C.Icon system="ArrowRightIcon" />,
+      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
       label: "Home",
       value: "home"
     },
     {
-      icon: <C.Icon system="InfoIcon" />,
+      icon: <C.Icon phosphor={<InfoIcon />} />,
       label: "Info",
       value: "info"
     },
     {
-      icon: <C.Icon system="ArrowUpIcon" />,
+      icon: <C.Icon phosphor={<ArrowUpIcon />} />,
       label: "Settings",
       value: "settings"
     }

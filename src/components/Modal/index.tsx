@@ -1,5 +1,6 @@
 import { useRef, useState, type JSX, type MouseEvent } from "react";
 
+import { XCircleIcon } from "../../icons";
 import {
   Button,
   useEventListener,
@@ -101,7 +102,7 @@ export default function Modal({
               <ModalHeaderStyled>
                 <span>{title}</span>
                 <Button
-                  icon={<Icon system="XCircleIcon" />}
+                  icon={<Icon phosphor={<XCircleIcon />} />}
                   small
                   theme="minimal"
                   onClick={() => handleClose()}>

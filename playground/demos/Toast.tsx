@@ -1,3 +1,4 @@
+import { InfoIcon, ArrowUpIcon, XIcon, ArrowsOutSimpleIcon, ArrowRightIcon, ArrowDownIcon } from "@phosphor-icons/react";
 import { JSX } from "react";
 import { toast } from "react-hot-toast";
 
@@ -17,7 +18,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast("This is a default toast message")}
         >
-          <C.Icon system="InfoIcon" />
+          <C.Icon phosphor={<InfoIcon />} />
           Show Toast
         </C.Button>
       </C.Stack>
@@ -28,7 +29,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast.success("Operation completed successfully!")}
         >
-          <C.Icon system="ArrowUpIcon" />
+          <C.Icon phosphor={<ArrowUpIcon />} />
           Success Toast
         </C.Button>
       </C.Stack>
@@ -39,7 +40,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast.error("Something went wrong!")}
         >
-          <C.Icon system="XIcon" />
+          <C.Icon phosphor={<XIcon />} />
           Error Toast
         </C.Button>
       </C.Stack>
@@ -54,7 +55,7 @@ export default function ToastDemo(): JSX.Element {
             })
           }
         >
-          <C.Icon system="ArrowsOutSimpleIcon" />
+          <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
           Long Toast
         </C.Button>
       </C.Stack>
@@ -69,7 +70,7 @@ export default function ToastDemo(): JSX.Element {
             setTimeout(() => toast.error("Third toast"), 1000);
           }}
         >
-          <C.Icon system="ArrowRightIcon" />
+          <C.Icon phosphor={<ArrowRightIcon />} />
           Multiple Toasts
         </C.Button>
       </C.Stack>
@@ -80,7 +81,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast.dismiss()}
         >
-          <C.Icon system="ArrowDownIcon" />
+          <C.Icon phosphor={<ArrowDownIcon />} />
           Clear All
         </C.Button>
       </C.Stack>

@@ -1,6 +1,13 @@
 import { ChangeEvent, useState, type JSX } from "react";
 import toast from "react-hot-toast";
 
+import {
+  ClipboardTextIcon,
+  XCircleIcon,
+  ArrowRightIcon,
+  WarningCircleIcon,
+  CheckCircleIcon,
+} from "../../icons";
 import { Badge, Button, Loading, useBreakpoints, Icon, type IField } from "../../index";
 import {
   FieldStyled,
@@ -107,7 +114,7 @@ export default function Field({
             {copy && (
               <Button
                 disabled={isCopied || disabled}
-                icon={<Icon system="ClipboardTextIcon" />}
+                icon={<Icon phosphor={<ClipboardTextIcon />} />}
                 small
                 onClick={() => handleCopy()}>
                 {!isPhone ? "Copy" : undefined}
@@ -117,7 +124,7 @@ export default function Field({
             {reset && inputValue && (
               <Button
                 disabled={disabled}
-                icon={<Icon system="XCircleIcon" />}
+                icon={<Icon phosphor={<XCircleIcon />} />}
                 small
                 onClick={() => handleReset()}
               />
@@ -126,7 +133,7 @@ export default function Field({
             {submit && (
               <Button
                 disabled={isSubmitDisabled}
-                icon={<Icon system="ArrowRightIcon" />}
+                icon={<Icon phosphor={<ArrowRightIcon />} />}
                 iconPosition="right"
                 small
                 theme={isSubmitValid ? "solid" : "default"}
@@ -142,17 +149,17 @@ export default function Field({
       {hasCallback && (
         <FieldCallbackStyled>
           {error && (
-            <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
+            <Badge icon={<Icon phosphor={<WarningCircleIcon />} />} theme="yellow">
               {errorMessage || "Error"}
             </Badge>
           )}
           {success && (
-            <Badge icon={<Icon system="CheckCircleIcon" />} theme="yellow">
+            <Badge icon={<Icon phosphor={<CheckCircleIcon />} />} theme="yellow">
               {successMessage || "Success"}
             </Badge>
           )}
           {warning && (
-            <Badge icon={<Icon system="WarningCircleIcon" />} theme="yellow">
+            <Badge icon={<Icon phosphor={<WarningCircleIcon />} />} theme="yellow">
               {warningMessage || "Warning"}
             </Badge>
           )}

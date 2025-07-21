@@ -188,7 +188,7 @@ export default function UtilsDemo(): JSX.Element {
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
             <C.Text>Always visible</C.Text>
             <C.Badge css={{ hiddenInline: "phone" }}>Desktop only</C.Badge>
-            <C.Badge css={{ visibleInline: "phone" }} theme="orange">Mobile only</C.Badge>
+            <C.Badge css={{ visibleInline: "phone" }} theme="yellow">Mobile only</C.Badge>
           </C.Stack>
           <C.Text as="small" css={{ opacity: "$light" }}>
             hiddenInline/visibleInline for inline elements

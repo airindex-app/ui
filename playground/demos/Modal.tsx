@@ -1,6 +1,7 @@
 import { JSX } from "react";
 
 import * as C from "../../src/index";
+import { ArrowsOutSimpleIcon } from "@phosphor-icons/react";
 
 export default function ModalDemo(): JSX.Element {
   return (
@@ -39,7 +40,7 @@ export default function ModalDemo(): JSX.Element {
             title="Icon Trigger"
             trigger={
               <C.Button 
-                icon={<C.Icon system="ArrowsOutSimpleIcon" />}
+                icon={<C.Icon phosphor={<ArrowsOutSimpleIcon />} />}
                 small
                 theme="minimal"
               />

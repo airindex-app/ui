@@ -39,7 +39,7 @@ export default function DrawerDemo(): JSX.Element {
             title="Icon Trigger"
             trigger={
               <C.Button 
-                icon={<C.Icon system="ArrowsOutSimpleIcon" />}
+                icon={<C.Icon phosphor={<ArrowsOutSimpleIcon />} />}
                 small
                 theme="minimal"
               />
@@ -121,7 +121,7 @@ export default function DrawerDemo(): JSX.Element {
             title="Settings Panel"
             trigger={
               <C.Button 
-                icon={<C.Icon system="InfoIcon" />}
+                icon={<C.Icon phosphor={<InfoIcon />} />}
                 theme="solid"
               >
                 Settings

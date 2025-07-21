@@ -1,4 +1,4 @@
-import { type CSSProperties, type CSS } from "@stitches/react";
+import { type CSS } from "@stitches/react";
 import { type ImageProps } from "next/image";
 import {
   ReactNode,
@@ -7,10 +7,11 @@ import {
   MouseEventHandler,
   RefObject,
   type JSX,
+  CSSProperties,
+  ReactElement,
 } from "react";
 
 import { TextSizes } from "../components/Text/styles";
-import { systemIcons } from "../icons";
 import { spacings } from "../stitches.config";
 
 /**
@@ -986,11 +987,7 @@ export interface IPortal {
  *
  * @example
  * ```tsx
- * // Using system icons (recommended for internal use)
- * <Icon system="ArrowRightIcon" forceColor="blue" forceSize={24} inline="small" />
- *
- * // Using any Phosphor icon (for client use)
- * <Icon phosphor="AnyPhosphorIcon" forceColor="blue" forceSize={24} inline="small" weight="bold" />
+ * <Icon phosphor={<ArrowRightIcon />} forceColor="blue" forceSize={24} inline="small" />
  * ```
  */
 export interface IIcon {
@@ -1002,12 +999,8 @@ export interface IIcon {
   forceSize?: number;
   /** Inline spacing around the icon */
   inline?: keyof typeof spacings;
-  /** System icon name (for internal use) */
-  system?: (typeof systemIcons)[number];
-  /** Any Phosphor icon name (for client use) */
-  phosphor?: keyof typeof import("@phosphor-icons/react");
-  /** Icon weight from Phosphor */
-  weight?: "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
+  /** The icon element to render (required) */
+  phosphor: ReactElement;
 }
 
 /**

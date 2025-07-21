@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 
+import { ArrowUpRightIcon } from "../../icons";
 import { Loading, Icon, type IButton } from "../../index";
 import { ButtonIconStyled, ButtonLoadingStyled, ButtonStyled } from "./styles";
 
@@ -57,7 +58,7 @@ export default function Button({
 
       {external && (
         <ButtonIconStyled align={small ? "smallRight" : "right"}>
-          <Icon system="ArrowUpRightIcon" />
+          <Icon phosphor={<ArrowUpRightIcon />} />
         </ButtonIconStyled>
       )}
     </ButtonStyled>
