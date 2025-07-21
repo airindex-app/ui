@@ -1,20 +1,17 @@
-import type { IconProps } from "@phosphor-icons/react";
-
 import { cloneElement, ReactElement } from "react";
 
 import type { IIcon } from "../../types/components";
 
+import useMountSSR from "../../hooks/useMountSSR";
 import { IconStyled } from "./styles";
 
 const STANDARD_WEIGHT = "regular";
 
-export default function Icon({
-  css,
-  forceColor,
-  forceSize = 21,
-  inline,
-  phosphor,
-}: IIcon): ReactElement {
+export default function Icon({ css, forceColor, forceSize = 21, inline, phosphor }: IIcon) {
+  const isMounted = useMountSSR();
+
+  if (!isMounted) return null;
+
   return (
     <IconStyled
       css={{
@@ -34,7 +31,7 @@ export default function Icon({
         }),
         ...css,
       }}>
-      {cloneElement(phosphor as ReactElement<IconProps>, { weight: STANDARD_WEIGHT })}
+      {cloneElement(phosphor as ReactElement<{ weight?: string }>, { weight: STANDARD_WEIGHT })}
     </IconStyled>
   );
 }
