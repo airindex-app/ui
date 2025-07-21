@@ -4,6 +4,7 @@ export * from "./stitches.config";
 export * from "./types/components";
 export * from "./types/hooks";
 export * from "./types/stitches";
+export * from "./icons";
 
 export { default as Accordion } from "./components/Accordion";
 export { default as Avatar } from "./components/Avatar";

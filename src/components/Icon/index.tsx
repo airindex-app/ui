@@ -1,16 +1,20 @@
-import { cloneElement, ReactElement } from "react";
+import { type JSX } from "react";
 
 import type { IIcon } from "../../types/components";
 
 import useMountSSR from "../../hooks/useMountSSR";
 import { IconStyled } from "./styles";
 
-const STANDARD_WEIGHT = "regular";
-
-export default function Icon({ css, forceColor, forceSize = 21, inline, phosphor }: IIcon) {
+export default function Icon({
+  css,
+  forceColor,
+  forceSize = 21,
+  inline,
+  phosphor,
+}: IIcon): JSX.Element {
   const isMounted = useMountSSR();
 
-  if (!isMounted) return null;
+  if (!isMounted) return <> </>;
 
   return (
     <IconStyled
@@ -31,7 +35,7 @@ export default function Icon({ css, forceColor, forceSize = 21, inline, phosphor
         }),
         ...css,
       }}>
-      {cloneElement(phosphor as ReactElement<{ weight?: string }>, { weight: STANDARD_WEIGHT })}
+      {phosphor}
     </IconStyled>
   );
 }
