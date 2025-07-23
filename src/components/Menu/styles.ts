@@ -130,9 +130,8 @@ export const MenuItemIconStyled = styled("div", {
 });
 
 export const MenuContentStyled = styled("div", {
-  borderTop: "1px solid $border",
   display: "block",
-  padding: "$medium",
+  padding: "$medium $small",
 });
 
 export const MenuHeaderStyled = styled("div", {
