@@ -14,7 +14,7 @@ export default function Icon({
 }: IIcon): JSX.Element {
   const isMounted = useMountSSR();
 
-  if (!isMounted) return <> </>;
+  if (!isMounted || !phosphor) return <> </>;
 
   return (
     <IconStyled

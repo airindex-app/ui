@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -73,7 +73,6 @@
   "license": "MIT",
   "module": "dist/index.js",
   "peerDependencies": {
-    "@phosphor-icons/react": "^2.1.10",
     "@stitches/react": "^1.2.8",
     "next": "^15.1.0",
     "react": "^19.0.0",
