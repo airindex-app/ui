@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -18,9 +18,9 @@
     "url": "https://github.com/airindex-app/ui/issues"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.10",
     "@floating-ui/dom": "^1.7.2",
     "@googlemaps/js-api-loader": "^1.16.10",
+    "@phosphor-icons/react": "^2.1.10",
     "dayjs": "^1.11.13",
     "fast-sort": "^3.4.1",
     "react-hot-toast": "^2.5.2",
@@ -37,7 +37,7 @@
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.31.0",
     "eslint-config-dolmios": "^2.0.9",
-    "next": "^15.4.2",
+    "next": "^15.4.3",
     "parcel": "^2.15.4",
     "path-browserify": "^1.0.1",
     "prettier": "^3.6.2",
