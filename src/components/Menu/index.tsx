@@ -1,6 +1,6 @@
 import { useRef, useState, type JSX } from "react";
 
-import { XCircleIcon } from "../../icons";
+import { CrossCircledIcon } from "../../icons";
 import {
   Button,
   Portal,
@@ -97,7 +97,7 @@ export default function Menu({
               <MenuHeaderStyled>
                 {logo && <div>{logo}</div>}
                 <Button
-                  icon={<Icon phosphor={<XCircleIcon />} />}
+                  icon={<Icon radix={<CrossCircledIcon />} />}
                   small
                   theme="minimal"
                   onClick={() => handleClose()}>
@@ -122,7 +122,11 @@ export default function Menu({
                 </MenuItemStyled>
               ))}
 
-              {children && <MenuContentStyled>{children}</MenuContentStyled>}
+              {children && (
+                <MenuContentStyled>
+                  {typeof children === "function" ? children(handleClose) : children}
+                </MenuContentStyled>
+              )}
             </MenuGroupStyled>
           </MenuOverlayStyled>
         </Portal>

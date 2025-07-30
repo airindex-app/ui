@@ -2,7 +2,7 @@ import { JSX, useState } from "react";
 
 import * as C from "../../src/index";
 import type { ITable } from "../../src/index";
-import { ArrowUpRightIcon, ArrowClockwiseIcon, WarningCircleIcon } from "@phosphor-icons/react";
+import { ArrowTopRightIcon, ChevronUpIcon, ExclamationTriangleIcon } from "../../src/icons";
 
 // Sample data generator
 const generateData = (count: number): ITable["rows"] => {
@@ -10,7 +10,7 @@ const generateData = (count: number): ITable["rows"] => {
     cells: {
       actions: (
         <C.Button small theme="minimal">
-          <C.Icon phosphor={<ArrowUpRightIcon />} />
+          <C.Icon radix={<ArrowTopRightIcon />} />
         </C.Button>
       ),
       name: `Item ${i + 1}`,
@@ -104,7 +104,7 @@ export default function TableDemo(): JSX.Element {
       }>
         <C.Stack css={{ gap: "$small" }}>
           <C.Button small onClick={simulateLoading}>
-            <C.Icon phosphor={<ArrowClockwiseIcon />} />
+            <C.Icon radix={<ChevronUpIcon />} />
             Load
           </C.Button>
           <C.Table
@@ -121,7 +121,7 @@ export default function TableDemo(): JSX.Element {
       }>
         <C.Stack css={{ gap: "$small" }}>
           <C.Button small onClick={simulateError}>
-            <C.Icon phosphor={<WarningCircleIcon />} />
+            <C.Icon radix={<ExclamationTriangleIcon />} />
             Error
           </C.Button>
           <C.Table

@@ -1,7 +1,7 @@
 import { useEffect, useState, type JSX } from "react";
 import toast from "react-hot-toast";
 
-import { XCircleIcon } from "../../../icons";
+import { CrossCircledIcon } from "../../../icons";
 import {
   Input,
   Loading,
@@ -249,7 +249,7 @@ export default function SelectMulti({
               onMouseOver={() => handleResetMouseOver()}>
               Reset
               <SelectIconStyled align="right">
-                <Icon phosphor={<XCircleIcon />} />
+                <Icon radix={<CrossCircledIcon />} />
               </SelectIconStyled>
             </SelectItemStyled>
           )}

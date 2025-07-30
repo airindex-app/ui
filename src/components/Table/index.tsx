@@ -2,11 +2,11 @@ import { sort } from "fast-sort";
 import { useState, useCallback, useMemo, Fragment, useRef, useEffect, type JSX } from "react";
 
 import {
-  WarningCircleIcon,
+  ExclamationTriangleIcon,
   CaretDownIcon,
   CaretRightIcon,
-  SortAscendingIcon,
-  SortDescendingIcon,
+  ArrowUpIcon,
+  ArrowDownIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
 } from "../../icons";
@@ -143,7 +143,7 @@ export default function Table({
   const renderErrorState = useCallback((): JSX.Element => {
     return (
       <Stack css={{ alignItems: "center", gap: "$small" }}>
-        <Badge icon={<Icon phosphor={<WarningCircleIcon />} />} theme="yellow">
+        <Badge icon={<Icon radix={<ExclamationTriangleIcon />} />} theme="yellow">
           {error}
         </Badge>
       </Stack>
@@ -211,9 +211,9 @@ export default function Table({
                           toggleRow(row.id);
                         }}>
                         {isExpanded ? (
-                          <Icon phosphor={<CaretDownIcon />} />
+                          <Icon radix={<CaretDownIcon />} />
                         ) : (
-                          <Icon phosphor={<CaretRightIcon />} />
+                          <Icon radix={<CaretRightIcon />} />
                         )}
                       </Button>
                     )}
@@ -264,9 +264,9 @@ export default function Table({
                             toggleRow(row.id);
                           }}>
                           {isExpanded ? (
-                            <Icon phosphor={<CaretDownIcon />} />
+                            <Icon radix={<CaretDownIcon />} />
                           ) : (
-                            <Icon phosphor={<CaretRightIcon />} />
+                            <Icon radix={<CaretRightIcon />} />
                           )}
                         </Button>
                       )}
@@ -313,12 +313,12 @@ export default function Table({
                       onClick={() => handleSort(col.key)}>
                       {sortColumn === col.key ? (
                         sortDirection === "asc" ? (
-                          <Icon phosphor={<SortAscendingIcon />} />
+                          <Icon radix={<ArrowUpIcon />} />
                         ) : (
-                          <Icon phosphor={<SortDescendingIcon />} />
+                          <Icon radix={<ArrowDownIcon />} />
                         )
                       ) : (
-                        <Icon phosphor={<SortAscendingIcon />} />
+                        <Icon radix={<ArrowUpIcon />} />
                       )}
                     </Button>
                   )}
@@ -384,7 +384,7 @@ export default function Table({
           <Stack>
             <Button
               disabled={isFirstPage}
-              icon={<Icon phosphor={<ArrowLeftIcon />} />}
+              icon={<Icon radix={<ArrowLeftIcon />} />}
               inline="small"
               small
               onClick={handlePrevPage}>
@@ -392,7 +392,7 @@ export default function Table({
             </Button>
             <Button
               disabled={isLastPage}
-              icon={<Icon phosphor={<ArrowRightIcon />} />}
+              icon={<Icon radix={<ArrowRightIcon />} />}
               iconPosition="right"
               small
               onClick={handleNextPage}>

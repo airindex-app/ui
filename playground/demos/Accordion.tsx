@@ -1,7 +1,6 @@
-import { InfoIcon } from "@phosphor-icons/react";
 import { JSX } from "react";
 
-import { ArrowRightIcon } from "../../src/icons";
+import { ExclamationTriangleIcon, ArrowRightIcon } from "../../src/icons";
 import * as C from "../../src/index";
 
 export default function AccordionDemo(): JSX.Element {
@@ -40,13 +39,13 @@ export default function AccordionDemo(): JSX.Element {
           options={[
             {
               children: <C.Text>Welcome to our platform!</C.Text>,
-              icon: <C.Icon phosphor={<ArrowRightIcon />} />,
+              icon: <C.Icon radix={<ArrowRightIcon />} />,
               label: "Getting Started",
               value: "start"
             },
             {
               children: <C.Text>Manage your account settings.</C.Text>,
-              icon: <C.Icon phosphor={<InfoIcon />} />,
+              icon: <C.Icon radix={<ExclamationTriangleIcon />} />,
               label: "Account",
               value: "account"
             }

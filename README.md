@@ -158,9 +158,47 @@ import { Provider } from '@airindex-app/ui';
 This library is built on top of excellent open source projects:
 
 - **[@stitches/react](https://stitches.dev/)** - CSS-in-JS library with near-zero runtime
-- **[@phosphor-icons/react](https://phosphoricons.com/)** - Flexible icon family for interfaces
+- **[@radix-ui/react-icons](https://www.radix-ui.com/icons)** - Clean, consistent icon family for interfaces
 - **[react-hot-toast](https://react-hot-toast.com/)** - Smoking hot React notifications
 - **[fast-sort](https://github.com/snovakovic/fast-sort)** - Blazing fast array sorting
+
+
+## Components
+
+This library includes the following components with full TypeScript support and comprehensive documentation:
+
+- **[Accordion](./docs/components/interfaces/IAccordion.md)** - Collapsible content sections with multiple expansion support
+- **[Avatar](./docs/components/interfaces/IAvatar.md)** - User profile image with fallback text display
+- **[Badge](./docs/components/interfaces/IBadge.md)** - Small status indicators and informational labels
+- **[Box](./docs/components/interfaces/IBox.md)** - Versatile container with optional image, header, and footer
+- **[Button](./docs/components/interfaces/IButton.md)** - Interactive element for user actions with multiple themes
+- **[Divider](./docs/components/interfaces/IDivider.md)** - Visual separator line with customizable spacing
+- **[Drawer](./docs/components/interfaces/IDrawer.md)** - Slide-out panel overlay for secondary content
+- **[Field](./docs/components/interfaces/IField.md)** - Multi-line textarea input with validation and actions
+- **[Form](./docs/components/interfaces/IForm.md)** - Form wrapper with validation and submission handling
+- **[Icon](./docs/components/interfaces/IIcon.md)** - Consistent icon wrapper with theming support
+- **[Image](./docs/components/interfaces/IImage.md)** - Enhanced Next.js Image with additional styling options
+- **[Input](./docs/components/interfaces/IInput.md)** - Single-line form input with validation and actions
+- **[Loading](./docs/components/interfaces/ILoading.md)** - Animated loading spinner with customizable appearance
+- **[LoadingOverlay](./docs/components/interfaces/ILoadingOverlay.md)** - Full-screen loading overlay with message display
+- **[Maps](./docs/components/interfaces/IMaps.md)** - Component for maps functionality
+- **[Menu](./docs/components/interfaces/IMenu.md)** - Dropdown menu with nested options and keyboard navigation
+- **[Modal](./docs/components/interfaces/IModal.md)** - Centered overlay dialog for important interactions
+- **[Places](./docs/components/interfaces/IPlaces.md)** - Component for places functionality
+- **[Popover](./docs/components/interfaces/IPopover.md)** - Floating content overlay triggered by user interaction
+- **[Portal](./docs/components/interfaces/IPortal.md)** - Render content outside normal DOM hierarchy
+- **[Provider](./docs/components/interfaces/IProvider.md)** - Theme and context provider for the entire UI system
+- **[Select](./docs/components/interfaces/ISelect.md)** - Dropdown selection with filtering and positioning options
+- **[SelectMulti](./docs/components/interfaces/ISelectMulti.md)** - Multi-selection dropdown with limits and batch operations
+- **[Stack](./docs/components/interfaces/IStack.md)** - Responsive layout container with flexible spacing and alignment
+- **[Table](./docs/components/interfaces/ITable.md)** - Data table with sorting, pagination, and nested rows
+- **[Tabs](./docs/components/interfaces/ITabs.md)** - Tabbed interface for organizing content into panels
+- **[Text](./docs/components/interfaces/IText.md)** - Versatile text element with multiple sizes, styles, and link support
+- **[Toast](./docs/components/interfaces/IToast.md)** - Component for toast functionality
+- **[View](./docs/components/interfaces/IView.md)** - Main layout container with hero styling and responsive behavior
+
+> 📖 **Full API Documentation**: Detailed TypeScript interfaces, props, and examples are available in the [`docs/components/interfaces/`](./docs/components/interfaces/) directory. All documentation is auto-generated from TSDoc comments in the source code.
+
 
 ## License
 

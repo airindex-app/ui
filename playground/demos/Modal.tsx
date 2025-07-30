@@ -1,7 +1,7 @@
 import { JSX } from "react";
 
 import * as C from "../../src/index";
-import { ArrowsOutSimpleIcon } from "@phosphor-icons/react";
+import { ExitIcon } from "../../src/icons";
 
 export default function ModalDemo(): JSX.Element {
   return (
@@ -40,7 +40,7 @@ export default function ModalDemo(): JSX.Element {
             title="Icon Trigger"
             trigger={
               <C.Button 
-                icon={<C.Icon phosphor={<ArrowsOutSimpleIcon />} />}
+                icon={<C.Icon radix={<ExitIcon />} />}
                 small
                 theme="minimal"
               />
@@ -129,6 +129,45 @@ export default function ModalDemo(): JSX.Element {
                 <C.Button theme="solid">Delete</C.Button>
               </C.Stack>
             </C.Stack>
+          </C.Modal>
+        </C.Stack>
+      </C.Box>
+
+      {/* Close from Inside */}
+      <C.Box header={
+        <C.Text as="h4">Close from Inside</C.Text>
+      }>
+        <C.Stack>
+          <C.Modal
+            title="Close from Inside Demo"
+            trigger={<C.Button theme="solid">Open Demo</C.Button>}
+          >
+            {(close) => (
+              <C.Stack>
+                <C.Text>This modal demonstrates closing from buttons inside the content.</C.Text>
+                <C.Stack direction="row" gap="small">
+                  <C.Button 
+                    theme="minimal" 
+                    onClick={() => {
+                      console.log("Cancel button clicked");
+                      close(); // This will close the modal
+                    }}
+                  >
+                    Cancel
+                  </C.Button>
+                  <C.Button 
+                    theme="solid"
+                    onClick={() => {
+                      console.log("Save button clicked");
+                      // Do some action first, then close
+                      close(); // This will close the modal
+                    }}
+                  >
+                    Save
+                  </C.Button>
+                </C.Stack>
+              </C.Stack>
+            )}
           </C.Modal>
         </C.Stack>
       </C.Box>

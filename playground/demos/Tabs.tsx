@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import { JSX, useState } from "react";
 
+import { ArrowRightIcon, ExclamationTriangleIcon, ArrowUpIcon } from "../../src/icons";
 import * as C from "../../src/index";
-import { ArrowRightIcon, InfoIcon, ArrowUpIcon } from "@phosphor-icons/react";
 
 // Content components for tab panels
 
@@ -21,17 +21,17 @@ export default function TabsDemo(): JSX.Element {
 
   const iconOptions = [
     { 
-      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
+      icon: <C.Icon radix={<ArrowRightIcon />} />,
       label: "Home",
       value: "home"
     },
     {
-      icon: <C.Icon phosphor={<InfoIcon />} />,
+                    icon: <C.Icon radix={<ExclamationTriangleIcon />} />,
       label: "Info",
       value: "info"
     },
     {
-      icon: <C.Icon phosphor={<ArrowUpIcon />} />,
+      icon: <C.Icon radix={<ArrowUpIcon />} />,
       label: "Settings",
       value: "settings"
     }

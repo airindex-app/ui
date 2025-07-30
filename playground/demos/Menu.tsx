@@ -1,24 +1,24 @@
 import { JSX, useState } from "react";
 
 import * as C from "../../src/index";
-import { ArrowRightIcon, InfoIcon, XCircleIcon, CheckCircleIcon, MagnifyingGlassIcon, ArrowDownIcon, ArrowsOutSimpleIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, ExclamationTriangleIcon, CrossCircledIcon, CheckCircledIcon, ClipboardIcon, ArrowDownIcon, ExitIcon } from "../../src/icons";
 
 export default function MenuDemo(): JSX.Element {
   const [selectedOption, setSelectedOption] = useState<string>();
 
   const basicOptions = [
     {
-      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
+      icon: <C.Icon radix={<ArrowRightIcon />} />,
       label: "Dashboard",
       value: "dashboard"
     },
     {
-      icon: <C.Icon phosphor={<InfoIcon />} />,
+      icon: <C.Icon radix={<ExclamationTriangleIcon />} />,
       label: "Settings",
       value: "settings"
     },
     {
-      icon: <C.Icon phosphor={<XCircleIcon />} />,
+      icon: <C.Icon radix={<CrossCircledIcon />} />,
       label: "Logout",
       value: "logout"
     }
@@ -26,16 +26,16 @@ export default function MenuDemo(): JSX.Element {
 
   const menuWithSubs = [
     {
-      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
+      icon: <C.Icon radix={<ArrowRightIcon />} />,
       label: "Account",
       sub: [
         {
-          icon: <C.Icon phosphor={<CheckCircleIcon />} />,
+          icon: <C.Icon radix={<CheckCircledIcon />} />,
           label: "Profile",
           value: "profile"
         },
         {
-          icon: <C.Icon phosphor={<InfoIcon />} />,
+          icon: <C.Icon radix={<ExclamationTriangleIcon />} />,
           label: "Settings",
           value: "settings"
         }
@@ -43,7 +43,7 @@ export default function MenuDemo(): JSX.Element {
       value: "account"
     },
     {
-      icon: <C.Icon phosphor={<MagnifyingGlassIcon />} />,
+      icon: <C.Icon radix={<ClipboardIcon />} />,
       label: "Help",
       value: "help"
     }
@@ -78,7 +78,7 @@ export default function MenuDemo(): JSX.Element {
           <C.Menu
             options={basicOptions}
             trigger={
-              <C.Button icon={<C.Icon phosphor={<ArrowDownIcon />} />}>
+              <C.Button icon={<C.Icon radix={<ArrowDownIcon />} />}>
                 Actions
               </C.Button>
             }
@@ -107,7 +107,7 @@ export default function MenuDemo(): JSX.Element {
             options={basicOptions}
             trigger={
               <C.Button 
-                icon={<C.Icon phosphor={<ArrowsOutSimpleIcon />} />}
+                icon={<C.Icon radix={<ExitIcon />} />}
                 small
                 theme="minimal"
               />
@@ -148,6 +148,45 @@ export default function MenuDemo(): JSX.Element {
             options={basicOptions}
             trigger={<C.Button theme="minimal">Pre-selected</C.Button>}
           />
+        </C.Stack>
+      </C.Box>
+
+      {/* Close from Inside */}
+      <C.Box header={
+        <C.Text as="h4">Close from Inside</C.Text>
+      }>
+        <C.Stack>
+          <C.Menu
+            options={basicOptions}
+            trigger={<C.Button theme="solid">Open Menu</C.Button>}
+          >
+            {(close) => (
+              <C.Stack css={{ gap: "$small" }}>
+                <C.Text as="strong">Custom Actions</C.Text>
+                <C.Button 
+                  small
+                  theme="minimal" 
+                  onClick={() => {
+                    console.log("Cancel button clicked");
+                    close(); // This will close the menu
+                  }}
+                >
+                  Cancel
+                </C.Button>
+                <C.Button 
+                  small
+                  theme="solid"
+                  onClick={() => {
+                    console.log("Save button clicked");
+                    // Do some action first, then close
+                    close(); // This will close the menu
+                  }}
+                >
+                  Save
+                </C.Button>
+              </C.Stack>
+            )}
+          </C.Menu>
         </C.Stack>
       </C.Box>
     </C.Stack>

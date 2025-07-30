@@ -1,4 +1,4 @@
-import { InfoIcon, ArrowUpIcon, XIcon, ArrowsOutSimpleIcon, ArrowRightIcon, ArrowDownIcon } from "@phosphor-icons/react";
+import { InfoCircledIcon, ArrowUpIcon, CrossCircledIcon, ExitIcon, ArrowRightIcon, ArrowDownIcon } from "../../src/icons";
 import { JSX } from "react";
 import { toast } from "react-hot-toast";
 
@@ -18,7 +18,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast("This is a default toast message")}
         >
-          <C.Icon phosphor={<InfoIcon />} />
+          <C.Icon radix={<InfoCircledIcon />} />
           Show Toast
         </C.Button>
       </C.Stack>
@@ -29,7 +29,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast.success("Operation completed successfully!")}
         >
-          <C.Icon phosphor={<ArrowUpIcon />} />
+          <C.Icon radix={<ArrowUpIcon />} />
           Success Toast
         </C.Button>
       </C.Stack>
@@ -40,7 +40,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast.error("Something went wrong!")}
         >
-          <C.Icon phosphor={<XIcon />} />
+          <C.Icon radix={<CrossCircledIcon />} />
           Error Toast
         </C.Button>
       </C.Stack>
@@ -55,7 +55,7 @@ export default function ToastDemo(): JSX.Element {
             })
           }
         >
-          <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
+          <C.Icon radix={<ExitIcon />} />
           Long Toast
         </C.Button>
       </C.Stack>
@@ -70,7 +70,7 @@ export default function ToastDemo(): JSX.Element {
             setTimeout(() => toast.error("Third toast"), 1000);
           }}
         >
-          <C.Icon phosphor={<ArrowRightIcon />} />
+          <C.Icon radix={<ArrowRightIcon />} />
           Multiple Toasts
         </C.Button>
       </C.Stack>
@@ -81,7 +81,7 @@ export default function ToastDemo(): JSX.Element {
         <C.Button
           onClick={() => toast.dismiss()}
         >
-          <C.Icon phosphor={<ArrowDownIcon />} />
+          <C.Icon radix={<ArrowDownIcon />} />
           Clear All
         </C.Button>
       </C.Stack>

@@ -1,4 +1,4 @@
-import { ArrowRightIcon, ArrowDownIcon, ArrowUpIcon, CheckCircleIcon, InfoIcon, ArrowsOutSimpleIcon, XCircleIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, ArrowDownIcon, ArrowUpIcon, CheckCircledIcon, InfoCircledIcon, ExitIcon, CrossCircledIcon } from "../../src/icons";
 import { JSX, useState } from "react";
 
 import * as C from "../../src/index";
@@ -11,25 +11,25 @@ export default function SelectDemo(): JSX.Element {
 
   const options = [
     {
-      icon: <C.Icon phosphor={<ArrowRightIcon />} />,
+      icon: <C.Icon radix={<ArrowRightIcon />} />,
       iconPosition: "left" as const,
       label: "Option 1",
       value: "option1"
     },
     {
-      icon: <C.Icon phosphor={<ArrowDownIcon />} />,
+      icon: <C.Icon radix={<ArrowDownIcon />} />,
       iconPosition: "left" as const,
       label: "Option 2",
       value: "option2"
     },
     {
-      icon: <C.Icon phosphor={<ArrowUpIcon />} />,
+      icon: <C.Icon radix={<ArrowUpIcon />} />,
       iconPosition: "left" as const,
       label: "Option 3",
       value: "option3"
     },
     {
-      icon: <C.Icon phosphor={<CheckCircleIcon />} />,
+                    icon: <C.Icon radix={<CheckCircledIcon />} />,
       iconPosition: "left" as const,
       label: "Option 4",
       value: "option4"
@@ -69,7 +69,7 @@ export default function SelectDemo(): JSX.Element {
             options={options.slice(0, 3)}
             trigger={
               <C.Button>
-                <C.Icon phosphor={<ArrowDownIcon />} />
+                <C.Icon radix={<ArrowDownIcon />} />
                 {controlledValue ? options.find(o => o.value === controlledValue)?.label : "Select"}
               </C.Button>
             }
@@ -88,7 +88,7 @@ export default function SelectDemo(): JSX.Element {
           options={options.slice(0, 3)}
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowDownIcon />} />
+              <C.Icon radix={<ArrowDownIcon />} />
               {singleValue ? options.find(o => o.value === singleValue)?.label : "Select"}
             </C.Button>
           }
@@ -107,7 +107,7 @@ export default function SelectDemo(): JSX.Element {
           options={manyOptions}
           trigger={
             <C.Button>
-              <C.Icon phosphor={<InfoIcon />} />
+              <C.Icon radix={<InfoCircledIcon />} />
               {filteredValue || "Search"}
             </C.Button>
           }
@@ -125,7 +125,7 @@ export default function SelectDemo(): JSX.Element {
           options={options}
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
+              <C.Icon radix={<ExitIcon />} />
               Multi ({multiValue.length})
             </C.Button>
           }
@@ -146,7 +146,7 @@ export default function SelectDemo(): JSX.Element {
           options={options.slice(0, 2)}
           trigger={
             <C.Button disabled>
-              <C.Icon phosphor={<XCircleIcon />} />
+              <C.Icon radix={<CrossCircledIcon />} />
               Disabled
             </C.Button>
           }
@@ -164,7 +164,7 @@ export default function SelectDemo(): JSX.Element {
           options={options}
           trigger={
             <C.Button>
-              <C.Icon phosphor={<InfoIcon />} />
+              <C.Icon radix={<InfoCircledIcon />} />
               Limited (2 max)
             </C.Button>
           }
@@ -185,7 +185,7 @@ export default function SelectDemo(): JSX.Element {
           reset={false}
           trigger={
             <C.Button>
-              <C.Icon phosphor={<XCircleIcon />} />
+              <C.Icon radix={<CrossCircledIcon />} />
               No reset
             </C.Button>
           }

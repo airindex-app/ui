@@ -1,6 +1,6 @@
-import { ArrowDownIcon } from "@phosphor-icons/react";
 import { JSX, useState } from "react";
 
+import { ChevronDownIcon } from "../src/icons";
 import * as C from "../src/index";
 import AccordionDemo from "./demos/Accordion";
 import AvatarDemo from "./demos/Avatar";
@@ -99,7 +99,7 @@ export function App(): JSX.Element {
             options={DEMO_OPTIONS}
             trigger={
               <C.Button theme="solid">
-                <C.Icon phosphor={<ArrowDownIcon />} />
+                <C.Icon radix={<ChevronDownIcon />} />
                 {DEMO_OPTIONS.find((opt) => opt.value === selectedDemo)?.label ||
                   "Select Component"}
               </C.Button>

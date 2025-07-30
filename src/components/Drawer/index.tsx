@@ -1,6 +1,6 @@
 import { useRef, useState, type JSX } from "react";
 
-import { XCircleIcon } from "../../icons";
+import { CrossCircledIcon } from "../../icons";
 import {
   Button,
   Text,
@@ -12,12 +12,12 @@ import {
   type IDrawer,
 } from "../../index";
 import {
-  DialogContentStyled,
-  DialogCoreStyled,
-  DialogHeaderStyled,
-  DialogOverlayStyled,
-  DialogStyled,
-  DialogTriggerStyled,
+  DrawerContentStyled,
+  DrawerCoreStyled,
+  DrawerHeaderStyled,
+  DrawerOverlayStyled,
+  DrawerStyled,
+  DrawerTriggerStyled,
 } from "./styles";
 
 export default function Drawer({
@@ -72,9 +72,9 @@ export default function Drawer({
   });
 
   return (
-    <DialogStyled css={wrapperCSS}>
+    <DrawerStyled css={wrapperCSS}>
       {trigger ? (
-        <DialogTriggerStyled
+        <DrawerTriggerStyled
           css={triggerCSS}
           onClick={(e): void => {
             e.stopPropagation();
@@ -83,15 +83,15 @@ export default function Drawer({
             }
           }}>
           {trigger}
-        </DialogTriggerStyled>
+        </DrawerTriggerStyled>
       ) : (
         "Missing trigger"
       )}
 
       {isMounted && (
         <Portal disabled={!portal}>
-          <DialogOverlayStyled animation={isOpen}>
-            <DialogCoreStyled
+          <DrawerOverlayStyled animation={isOpen}>
+            <DrawerCoreStyled
               ref={ref}
               animation={isOpen}
               css={{
@@ -101,21 +101,25 @@ export default function Drawer({
                   minHeight: `${forceHeight}vh`,
                 }),
               }}>
-              <DialogHeaderStyled>
-                <Text as="h4">{title}</Text>
+              <DrawerHeaderStyled>
+                <Text as="h6" bottom="none">
+                  {title}
+                </Text>
                 <Button
-                  icon={<Icon phosphor={<XCircleIcon />} />}
+                  icon={<Icon radix={<CrossCircledIcon />} />}
                   small
                   onClick={() => handleClose()}>
                   Close
                 </Button>
-              </DialogHeaderStyled>
+              </DrawerHeaderStyled>
 
-              <DialogContentStyled>{children}</DialogContentStyled>
-            </DialogCoreStyled>
-          </DialogOverlayStyled>
+              <DrawerContentStyled>
+                {typeof children === "function" ? children(handleClose) : children}
+              </DrawerContentStyled>
+            </DrawerCoreStyled>
+          </DrawerOverlayStyled>
         </Portal>
       )}
-    </DialogStyled>
+    </DrawerStyled>
   );
 }

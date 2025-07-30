@@ -1,7 +1,6 @@
-import { CircleIcon } from "@phosphor-icons/react";
 import { JSX } from "react";
 
-import { ArrowRightIcon, CheckCircleIcon } from "../../src/icons";
+import { CheckCircledIcon, ArrowRightIcon } from "../../src/icons";
 import * as C from "../../src/index";
 
 export default function BadgeDemo(): JSX.Element {
@@ -49,11 +48,11 @@ export default function BadgeDemo(): JSX.Element {
         <C.Text as="h4">With Icons</C.Text>
       }>
         <C.Stack>
-          <C.Badge icon={<C.Icon phosphor={<CheckCircleIcon />} />}>
+          <C.Badge icon={<C.Icon radix={<CheckCircledIcon />} />}>
             Success
           </C.Badge>
           <C.Badge 
-            icon={<C.Icon phosphor={<ArrowRightIcon />} />}
+            icon={<C.Icon radix={<ArrowRightIcon />} />}
             iconPosition="right"
             theme="yellow"
           >
@@ -99,10 +98,10 @@ export default function BadgeDemo(): JSX.Element {
             <C.Badge theme="yellow" variant="theme">Theme Purple</C.Badge>
           </C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
-            <C.Badge icon={<C.Icon phosphor={<CheckCircleIcon />} />} theme="yellow" variant="border">
+            <C.Badge icon={<C.Icon radix={<CheckCircledIcon />} />} theme="yellow" variant="border">
               Border with Icon
             </C.Badge>
-            <C.Badge icon={<C.Icon phosphor={<CheckCircleIcon />} />} theme="yellow" variant="theme">
+            <C.Badge icon={<C.Icon radix={<CheckCircledIcon />} />} theme="yellow" variant="theme">
               Theme with Icon
             </C.Badge>
           </C.Stack>
@@ -115,7 +114,7 @@ export default function BadgeDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Badge 
-            icon={<C.Icon phosphor={<CircleIcon />} />} 
+            icon={<C.Icon radix={<CheckCircledIcon />} />} 
             small 
             theme="yellow"
             variant="theme"
@@ -124,7 +123,7 @@ export default function BadgeDemo(): JSX.Element {
           </C.Badge>
           <C.Badge 
             closable 
-              icon={<C.Icon phosphor={<CheckCircleIcon />} />}
+              icon={<C.Icon radix={<CheckCircledIcon />} />}
             theme="yellow"
             variant="border"
           >

@@ -1,8 +1,9 @@
 import { useRef, useState, type JSX, type MouseEvent } from "react";
 
-import { XCircleIcon } from "../../icons";
+import { CrossCircledIcon } from "../../icons";
 import {
   Button,
+  Text,
   useEventListener,
   useOutsideClick,
   useScrollLock,
@@ -21,7 +22,6 @@ import {
 
 export default function Modal({
   children,
-  close,
   css,
   disabled,
   forceHeight,
@@ -45,10 +45,6 @@ export default function Modal({
     setTimeout(() => {
       setIsMounted(false);
     }, animationDuration);
-
-    if (close) {
-      close();
-    }
   }
 
   function handleOpen(): void {
@@ -100,9 +96,11 @@ export default function Modal({
               }}
               small={small}>
               <ModalHeaderStyled>
-                <span>{title}</span>
+                <Text as="h6" bottom="none">
+                  {title}
+                </Text>
                 <Button
-                  icon={<Icon phosphor={<XCircleIcon />} />}
+                  icon={<Icon radix={<CrossCircledIcon />} />}
                   small
                   theme="minimal"
                   onClick={() => handleClose()}>
@@ -110,7 +108,9 @@ export default function Modal({
                 </Button>
               </ModalHeaderStyled>
 
-              <ModalContentStyled>{children}</ModalContentStyled>
+              <ModalContentStyled>
+                {typeof children === "function" ? children(handleClose) : children}
+              </ModalContentStyled>
             </ModalGroupStyled>
           </ModalOverlayStyled>
         </Portal>

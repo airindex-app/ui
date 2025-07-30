@@ -10,11 +10,11 @@ export default function Icon({
   forceColor,
   forceSize = 21,
   inline,
-  phosphor,
+  radix,
 }: IIcon): JSX.Element {
   const isMounted = useMountSSR();
 
-  if (!isMounted || !phosphor) return <> </>;
+  if (!isMounted || !radix) return <> </>;
 
   return (
     <IconStyled
@@ -35,7 +35,7 @@ export default function Icon({
         }),
         ...css,
       }}>
-      {phosphor}
+      {radix}
     </IconStyled>
   );
 }

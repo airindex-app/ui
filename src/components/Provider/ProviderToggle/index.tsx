@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-import { MoonIcon, SunIcon, MonitorIcon } from "../../../icons";
+import { MoonIcon, SunIcon, DesktopIcon } from "../../../icons";
 import { useMountSSR, Select, Button, useTheme, Icon, type ISelect } from "../../../index";
 
 export default function ProviderToggle(): JSX.Element {
@@ -8,15 +8,15 @@ export default function ProviderToggle(): JSX.Element {
   const isMounted = useMountSSR();
 
   const options = [
-    { icon: <Icon phosphor={<MoonIcon />} />, iconPosition: "right", label: "Dark", value: "dark" },
+    { icon: <Icon radix={<MoonIcon />} />, iconPosition: "right", label: "Dark", value: "dark" },
     {
-      icon: <Icon phosphor={<SunIcon />} />,
+      icon: <Icon radix={<SunIcon />} />,
       iconPosition: "right",
       label: "Light",
       value: "light",
     },
     {
-      icon: <Icon phosphor={<MonitorIcon />} />,
+      icon: <Icon radix={<DesktopIcon />} />,
       iconPosition: "right",
       label: "System",
       value: "system",

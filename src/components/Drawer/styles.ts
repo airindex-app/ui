@@ -1,20 +1,19 @@
 import { fadeIn, fadeOut, slideInUp, slideOutDown, styled } from "../../stitches.config";
-import { TextStyled } from "../Text/styles";
 
-export const DialogStyled = styled("div", {
+export const DrawerStyled = styled("div", {
   display: "inline-block",
   position: "relative",
   verticalAlign: "middle",
 });
 
-export const DialogTriggerStyled = styled("div", {
+export const DrawerTriggerStyled = styled("div", {
   cursor: "pointer",
   display: "inline-flex",
   position: "relative",
   verticalAlign: "middle",
 });
 
-export const DialogOverlayStyled = styled("div", {
+export const DrawerOverlayStyled = styled("div", {
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
   inset: 0,
@@ -35,7 +34,7 @@ export const DialogOverlayStyled = styled("div", {
   zIndex: "$modal",
 });
 
-export const DialogCoreStyled = styled("div", {
+export const DrawerCoreStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
@@ -70,23 +69,16 @@ export const DialogCoreStyled = styled("div", {
   width: "100%",
 });
 
-export const DialogHeaderStyled = styled("div", {
-  [`& ${TextStyled}`]: {
-    marginBottom: "0 !important",
-    verticalAlign: "middle",
-  },
+export const DrawerHeaderStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$surface",
+  backgroundColor: "$background",
   borderBottom: "1px solid $borderLight",
   display: "flex",
   justifyContent: "space-between",
   padding: "$medium",
-  position: "sticky",
-  top: 0,
-  zIndex: "$special",
 });
 
-export const DialogContentStyled = styled("div", {
+export const DrawerContentStyled = styled("div", {
   margin: "0 auto",
   maxWidth: "600px",
   padding: "$large $medium",

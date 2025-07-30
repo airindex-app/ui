@@ -1,6 +1,6 @@
 import { useState, useRef, type JSX } from "react";
 
-import { ArrowDownIcon, ArrowRightIcon } from "../../icons";
+import { ChevronDownIcon, ChevronRightIcon } from "../../icons";
 import { Icon, Stack, Text, type IAccordion } from "../../index";
 import {
   AccordionStyled,
@@ -87,7 +87,7 @@ export default function Accordion({
                     inline
                     justify="space-between">
                     <Text as="h6">{option.label}</Text>
-                    <Icon phosphor={isOpen ? <ArrowDownIcon /> : <ArrowRightIcon />} />
+                    <Icon radix={isOpen ? <ChevronDownIcon /> : <ChevronRightIcon />} />
                   </Stack>
                 }
                 minimal
@@ -118,9 +118,9 @@ export default function Accordion({
               expanded={isOpen}
               icon={
                 isOpen ? (
-                  <Icon phosphor={<ArrowDownIcon />} />
+                  <Icon radix={<ChevronDownIcon />} />
                 ) : (
-                  <Icon phosphor={<ArrowRightIcon />} />
+                  <Icon radix={<ChevronRightIcon />} />
                 )
               }
               iconPosition="right"

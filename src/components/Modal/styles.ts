@@ -91,8 +91,6 @@ export const ModalHeaderStyled = styled("div", {
   backgroundColor: "$background",
   borderBottom: "1px solid $borderLight",
   display: "flex",
-  fontFamily: "$default",
-  fontWeight: 600,
   justifyContent: "space-between",
   padding: "$medium",
 });

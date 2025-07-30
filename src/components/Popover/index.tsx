@@ -59,7 +59,7 @@ export default function Popover({
           }}
           minimal={minimal}
           small={small}>
-          {children}
+          {typeof children === "function" ? children(handleClose) : children}
         </PopoverContentStyled>
       )}
     </PopoverStyled>

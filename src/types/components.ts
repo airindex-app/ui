@@ -189,10 +189,8 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
  * ```
  */
 export interface IDrawer {
-  /** Content to display inside the drawer */
-  children: ReactNode;
-  /** Function to close the drawer programmatically */
-  close?: () => void;
+  /** Content to display inside the drawer - can be ReactNode or a function that receives the close function */
+  children: ReactNode | ((close: () => void) => ReactNode);
   /** Custom CSS styles for the drawer */
   css?: CSS;
   /** Whether the drawer trigger is disabled */
@@ -228,10 +226,8 @@ export interface IDrawer {
  * ```
  */
 export interface IModal {
-  /** Content to display inside the modal */
-  children: ReactNode;
-  /** Function to close the modal programmatically */
-  close?: () => void;
+  /** Content to display inside the modal - can be ReactNode or a function that receives the close function */
+  children: ReactNode | ((close: () => void) => ReactNode);
   /** Custom CSS styles for the modal */
   css?: CSS;
   /** Whether the modal trigger is disabled */
@@ -563,8 +559,8 @@ export interface ILoadingOverlay extends ILoading {
  * ```
  */
 export interface IMenu {
-  /** Additional content to render in the menu */
-  children?: ReactNode;
+  /** Additional content to render in the menu - can be ReactNode or a function that receives the close function */
+  children?: ReactNode | ((close: () => void) => ReactNode);
   /** Custom CSS styles */
   css?: CSS;
   /** Initially selected option value */
@@ -602,8 +598,8 @@ export interface IMenu {
  * ```
  */
 export interface IPopover {
-  /** Content to display in the popover */
-  children: ReactNode;
+  /** Content to display in the popover - can be ReactNode or a function that receives the close function */
+  children: ReactNode | ((close: () => void) => ReactNode);
   /** Custom CSS styles */
   css?: CSS;
   /** Whether the popover trigger is disabled */
@@ -983,11 +979,11 @@ export interface IPortal {
 }
 
 /**
- * Icon component props - wrapper for Phosphor icons with consistent styling
+ * Icon component props - wrapper for Radix icons with consistent styling
  *
  * @example
  * ```tsx
- * <Icon phosphor={<ArrowRightIcon />} forceColor="blue" forceSize={24} inline="small" />
+ * <Icon radix={<ArrowRightIcon />} forceColor="blue" forceSize={24} inline="small" />
  * ```
  */
 export interface IIcon {
@@ -1000,7 +996,7 @@ export interface IIcon {
   /** Inline spacing around the icon */
   inline?: keyof typeof spacings;
   /** The icon element to render (required) */
-  phosphor: ReactElement;
+  radix: ReactElement;
 }
 
 /**

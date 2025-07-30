@@ -1,7 +1,7 @@
 import { useState, type JSX } from "react";
 import { toast } from "react-hot-toast";
 
-import { ClipboardTextIcon, XCircleIcon } from "../../icons";
+import { ClipboardIcon, CrossCircledIcon } from "../../icons";
 import { Loading, Icon, type IBadge } from "../../index";
 import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./styles";
 
@@ -72,7 +72,7 @@ export default function Badge({
 
       {copy && (
         <BadgeIconStyled align={small ? "smallLeft" : "left"} hover>
-          <Icon phosphor={<ClipboardTextIcon />} />
+          <Icon radix={<ClipboardIcon />} />
         </BadgeIconStyled>
       )}
 
@@ -90,7 +90,7 @@ export default function Badge({
             e.stopPropagation();
             handleClose();
           }}>
-          <Icon phosphor={<XCircleIcon />} />
+          <Icon radix={<CrossCircledIcon />} />
         </BadgeIconStyled>
       )}
     </BadgeStyled>

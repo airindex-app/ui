@@ -13,7 +13,7 @@ try {
   
   // Read the generated interfaces documentation
   const docsPath = path.join(__dirname, '..', 'docs');
-  const interfacesPath = path.join(docsPath, 'interfaces');
+  const interfacesPath = path.join(docsPath, 'components', 'interfaces');
   
   if (!fs.existsSync(interfacesPath)) {
     console.log('❌ No interfaces documentation found');
@@ -82,10 +82,10 @@ This library includes the following components with full TypeScript support and 
 ${components.map(component => {
   const description = componentDescriptions[component] || `Component for ${component.toLowerCase()} functionality`;
 
-  return `- **[${component}](./docs/interfaces/I${component}.md)** - ${description}`;
+  return `- **[${component}](./docs/components/interfaces/I${component}.md)** - ${description}`;
 }).join('\n')}
 
-> 📖 **Full API Documentation**: Detailed TypeScript interfaces, props, and examples are available in the [\`docs/interfaces/\`](./docs/interfaces/) directory. All documentation is auto-generated from TSDoc comments in the source code.
+> 📖 **Full API Documentation**: Detailed TypeScript interfaces, props, and examples are available in the [\`docs/components/interfaces/\`](./docs/components/interfaces/) directory. All documentation is auto-generated from TSDoc comments in the source code.
 
 `;
 

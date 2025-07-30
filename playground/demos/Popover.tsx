@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 import { JSX } from "react";
 
+import { InfoCircledIcon, ArrowDownIcon, ExitIcon, CrossCircledIcon, ArrowUpIcon, ArrowRightIcon } from "../../src/icons";
 import * as C from "../../src/index";
-import { InfoIcon, ArrowDownIcon, ArrowsOutSimpleIcon, XIcon, ArrowUpIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 export default function PopoverDemo(): JSX.Element {
   return (
@@ -17,7 +18,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon phosphor={<InfoIcon />} />
+              <C.Icon radix={<InfoCircledIcon />} />
               Basic
             </C.Button>
           }
@@ -34,7 +35,7 @@ export default function PopoverDemo(): JSX.Element {
           small
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowDownIcon />} />
+              <C.Icon radix={<ArrowDownIcon />} />
               Small
             </C.Button>
           }
@@ -51,7 +52,7 @@ export default function PopoverDemo(): JSX.Element {
           minimal
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
+              <C.Icon radix={<ExitIcon />} />
               Minimal
             </C.Button>
           }
@@ -71,7 +72,7 @@ export default function PopoverDemo(): JSX.Element {
           disabled
           trigger={
             <C.Button disabled>
-              <C.Icon phosphor={<XIcon />} />
+              <C.Icon radix={<CrossCircledIcon />} />
               Disabled
             </C.Button>
           }
@@ -91,7 +92,7 @@ export default function PopoverDemo(): JSX.Element {
           }}
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowUpIcon />} />
+              <C.Icon radix={<ArrowUpIcon />} />
               Styled
             </C.Button>
           }
@@ -109,7 +110,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowRightIcon />} />
+              <C.Icon radix={<ArrowRightIcon />} />
               Rich
             </C.Button>
           }
@@ -128,7 +129,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowsOutSimpleIcon />} />
+              <C.Icon radix={<ExitIcon />} />
               Wide
             </C.Button>
           }
@@ -157,7 +158,7 @@ export default function PopoverDemo(): JSX.Element {
         <C.Popover
           trigger={
             <C.Button>
-              <C.Icon phosphor={<ArrowDownIcon />} />
+              <C.Icon radix={<ArrowDownIcon />} />
               Long List
             </C.Button>
           }
@@ -173,7 +174,7 @@ export default function PopoverDemo(): JSX.Element {
                 }}
                 small
               >
-                <C.Icon phosphor={<ArrowRightIcon />} />
+                <C.Icon radix={<ArrowRightIcon />} />
                 Menu Item {i + 1} - This is a longer description
               </C.Button>
             ))}
@@ -182,6 +183,50 @@ export default function PopoverDemo(): JSX.Element {
               It tests the overflow behavior and ensures proper scrolling functionality within the constrained height.
             </C.Text>
           </C.Stack>
+        </C.Popover>
+      </C.Box>
+
+      {/* Close from Inside */}
+      <C.Box header={
+        <C.Text as="h4">Close from Inside</C.Text>
+      }>
+        <C.Popover
+          trigger={
+            <C.Button>
+              <C.Icon radix={<InfoCircledIcon />} />
+              Close Demo
+            </C.Button>
+          }
+        >
+          {(close) => (
+            <C.Stack css={{ gap: "$small" }}>
+              <C.Text as="strong">Action Panel</C.Text>
+              <C.Text>This popover demonstrates closing from buttons inside the content.</C.Text>
+              <C.Stack direction="row" gap="small">
+                <C.Button 
+                  small
+                  theme="minimal" 
+                  onClick={() => {
+                    console.log("Cancel button clicked");
+                    close(); // This will close the popover
+                  }}
+                >
+                  Cancel
+                </C.Button>
+                <C.Button 
+                  small
+                  theme="solid"
+                  onClick={() => {
+                    console.log("Save button clicked");
+                    // Do some action first, then close
+                    close(); // This will close the popover
+                  }}
+                >
+                  Save
+                </C.Button>
+              </C.Stack>
+            </C.Stack>
+          )}
         </C.Popover>
       </C.Box>
     </C.Stack>

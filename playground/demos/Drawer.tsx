@@ -1,6 +1,7 @@
 import { JSX } from "react";
 
 import * as C from "../../src/index";
+import { ExitIcon, InfoCircledIcon } from "../../src/icons";
 
 export default function DrawerDemo(): JSX.Element {
   return (
@@ -39,7 +40,7 @@ export default function DrawerDemo(): JSX.Element {
             title="Icon Trigger"
             trigger={
               <C.Button 
-                icon={<C.Icon phosphor={<ArrowsOutSimpleIcon />} />}
+                icon={<C.Icon radix={<ExitIcon />} />}
                 small
                 theme="minimal"
               />
@@ -121,7 +122,7 @@ export default function DrawerDemo(): JSX.Element {
             title="Settings Panel"
             trigger={
               <C.Button 
-                icon={<C.Icon phosphor={<InfoIcon />} />}
+                icon={<C.Icon radix={<InfoCircledIcon />} />}
                 theme="solid"
               >
                 Settings
@@ -133,6 +134,45 @@ export default function DrawerDemo(): JSX.Element {
               <C.Button block theme="minimal">Option 1</C.Button>
               <C.Button block theme="minimal">Option 2</C.Button>
             </C.Stack>
+          </C.Drawer>
+        </C.Stack>
+      </C.Box>
+
+      {/* Close from Inside */}
+      <C.Box header={
+        <C.Text as="h4">Close from Inside</C.Text>
+      }>
+        <C.Stack>
+          <C.Drawer
+            title="Close from Inside Demo"
+            trigger={<C.Button theme="solid">Open Demo</C.Button>}
+          >
+            {(close) => (
+              <C.Stack>
+                <C.Text>This drawer demonstrates closing from buttons inside the content.</C.Text>
+                <C.Stack direction="row" gap="small">
+                  <C.Button 
+                    theme="minimal" 
+                    onClick={() => {
+                      console.log("Cancel button clicked");
+                      close(); // This will close the drawer
+                    }}
+                  >
+                    Cancel
+                  </C.Button>
+                  <C.Button 
+                    theme="solid"
+                    onClick={() => {
+                      console.log("Save button clicked");
+                      // Do some action first, then close
+                      close(); // This will close the drawer
+                    }}
+                  >
+                    Save
+                  </C.Button>
+                </C.Stack>
+              </C.Stack>
+            )}
           </C.Drawer>
         </C.Stack>
       </C.Box>

@@ -1,6 +1,6 @@
 import { useState, type JSX } from "react";
 
-import { ArrowsInSimpleIcon, ArrowsOutSimpleIcon, XCircleIcon } from "../../icons";
+import { EnterIcon, ExitIcon, CrossCircledIcon } from "../../icons";
 import { Button, Image, Loading, Icon, type IBox } from "../../index";
 import {
   BoxExitStyled,
@@ -133,13 +133,7 @@ export default function Box({
       {expandable && !cta && (
         <BoxExpanderTrigger expanded={isExpanded}>
           <Button
-            icon={
-              isExpanded ? (
-                <Icon phosphor={<ArrowsInSimpleIcon />} />
-              ) : (
-                <Icon phosphor={<ArrowsOutSimpleIcon />} />
-              )
-            }
+            icon={isExpanded ? <Icon radix={<EnterIcon />} /> : <Icon radix={<ExitIcon />} />}
             small
             theme={isExpanded ? "default" : "solid"}
             onClick={() => setIsExpanded(!isExpanded)}>
@@ -151,7 +145,7 @@ export default function Box({
       {closable && !cta && (
         <BoxExitStyled onClick={() => handleClose()}>
           <Button small theme="minimal">
-            <Icon phosphor={<XCircleIcon />} />
+            <Icon radix={<CrossCircledIcon />} />
           </Button>
         </BoxExitStyled>
       )}

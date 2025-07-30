@@ -1,10 +1,11 @@
-**@airindex-app/ui v0.2.19**
+**@airindex-app/ui v0.1.12**
 
 ***
 
-# @airindex-app/ui v0.2.19
+# @airindex-app/ui v0.1.12
 
 ## Modules
 
-- [stitches.types](stitches.types/README.md)
-- [types](types/README.md)
+- [components](components/README.md)
+- [hooks](hooks/README.md)
+- [stitches](stitches/README.md)

@@ -1,15 +1,14 @@
 import { JSX } from "react";
-import * as C from "../../src/index";
+
 import {
-  CircleIcon,
-  CheckCircleIcon,
-  WarningCircleIcon,
-  XCircleIcon,
+  CheckCircledIcon,
+  ExclamationTriangleIcon,
+  CrossCircledIcon,
   ArrowRightIcon,
-  InfoIcon,
-  MagnifyingGlassIcon,
-  ArrowClockwiseIcon,
-} from "@phosphor-icons/react";
+  ClipboardIcon,
+  ChevronUpIcon,
+} from "../../src/icons";
+import * as C from "../../src/index";
 
 export default function IconDemo(): JSX.Element {
   return (
@@ -23,10 +22,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h6">Basic Usage</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon phosphor={<CircleIcon />} />
-          <C.Icon phosphor={<CheckCircleIcon />} />
-          <C.Icon phosphor={<WarningCircleIcon />} />
-          <C.Icon phosphor={<XCircleIcon />} />
+          <C.Icon radix={<CheckCircledIcon />} />
+          <C.Icon radix={<CheckCircledIcon />} />
+          <C.Icon radix={<ExclamationTriangleIcon />} />
+          <C.Icon radix={<CrossCircledIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -35,10 +34,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h4">Sizes</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon forceSize={16} phosphor={<CheckCircleIcon />} />
-          <C.Icon forceSize={24} phosphor={<CheckCircleIcon />} />
-          <C.Icon forceSize={32} phosphor={<CheckCircleIcon />} />
-          <C.Icon forceSize={48} phosphor={<CheckCircleIcon />} />
+          <C.Icon forceSize={16} radix={<CheckCircledIcon />} />
+          <C.Icon forceSize={24} radix={<CheckCircledIcon />} />
+          <C.Icon forceSize={32} radix={<CheckCircledIcon />} />
+          <C.Icon forceSize={48} radix={<CheckCircledIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -47,10 +46,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h4">Colors</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon forceColor="text" phosphor={<CheckCircleIcon />} />
-          <C.Icon forceColor="blue" phosphor={<CheckCircleIcon />} />
-          <C.Icon forceColor="purple" phosphor={<CheckCircleIcon />} />
-          <C.Icon forceColor="orange" phosphor={<CheckCircleIcon />} />
+          <C.Icon forceColor="text" radix={<CheckCircledIcon />} />
+          <C.Icon forceColor="blue" radix={<CheckCircledIcon />} />
+          <C.Icon forceColor="purple" radix={<CheckCircledIcon />} />
+          <C.Icon forceColor="orange" radix={<CheckCircledIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -60,10 +59,10 @@ export default function IconDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Text>
-            Text with <C.Icon inline="smaller" phosphor={<CheckCircleIcon />} /> icon
+            Text with <C.Icon inline="smaller" radix={<CheckCircledIcon />} /> icon
           </C.Text>
           <C.Text>
-            <C.Icon inline="small" phosphor={<ArrowRightIcon />} /> Icon with margin
+            <C.Icon inline="small" radix={<ArrowRightIcon />} /> Icon with margin
           </C.Text>
         </C.Stack>
       </C.Box>
@@ -73,10 +72,10 @@ export default function IconDemo(): JSX.Element {
         <C.Text as="h4">System Icons</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Icon phosphor={<ArrowRightIcon />} />
-          <C.Icon phosphor={<InfoIcon />} />
-          <C.Icon phosphor={<MagnifyingGlassIcon />} />
-          <C.Icon phosphor={<ArrowClockwiseIcon />} />
+          <C.Icon radix={<ArrowRightIcon />} />
+          <C.Icon radix={<ExclamationTriangleIcon />} />
+          <C.Icon radix={<ClipboardIcon />} />
+          <C.Icon radix={<ChevronUpIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -88,17 +87,17 @@ export default function IconDemo(): JSX.Element {
           <C.Icon 
             forceColor="blue" 
             forceSize={32} 
-            phosphor={<CheckCircleIcon />} 
+            radix={<CheckCircledIcon />} 
           />
           <C.Icon 
             forceColor="orange" 
             forceSize={32} 
-            phosphor={<WarningCircleIcon />} 
+            radix={<ExclamationTriangleIcon />} 
           />
           <C.Icon 
             forceColor="red" 
             forceSize={32} 
-            phosphor={<XCircleIcon />} 
+            radix={<CrossCircledIcon />} 
           />
         </C.Stack>
       </C.Box>
