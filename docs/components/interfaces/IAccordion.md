@@ -6,7 +6,7 @@
 
 # Interface: IAccordion
 
-Defined in: [components.ts:1059](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1059)
+Defined in: [components.ts:1059](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1059)
 
 Accordion component props - collapsible content sections with optional multiple expansion
 
@@ -39,7 +39,7 @@ Accordion component props - collapsible content sections with optional multiple 
 
 > `optional` **allowMultiple**: `boolean`
 
-Defined in: [components.ts:1061](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1061)
+Defined in: [components.ts:1061](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1061)
 
 Whether multiple sections can be open simultaneously
 
@@ -49,7 +49,7 @@ Whether multiple sections can be open simultaneously
 
 > `optional` **initial**: `string`
 
-Defined in: [components.ts:1063](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1063)
+Defined in: [components.ts:1063](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1063)
 
 Initially opened section value
 
@@ -59,7 +59,7 @@ Initially opened section value
 
 > `optional` **onToggle**: (`value`, `isOpen`) => `void`
 
-Defined in: [components.ts:1065](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1065)
+Defined in: [components.ts:1065](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1065)
 
 Callback when section is toggled
 
@@ -83,7 +83,7 @@ Callback when section is toggled
 
 > **options**: `object`[]
 
-Defined in: [components.ts:1067](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1067)
+Defined in: [components.ts:1067](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1067)
 
 Array of accordion sections
 
@@ -113,6 +113,6 @@ Array of accordion sections
 
 > `optional` **mode**: `"grid"` \| `"list"`
 
-Defined in: [components.ts:1075](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1075)
+Defined in: [components.ts:1075](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1075)
 
 Display mode: 'list' (default) or 'grid'

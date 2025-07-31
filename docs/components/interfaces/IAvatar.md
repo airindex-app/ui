@@ -6,7 +6,7 @@
 
 # Interface: IAvatar
 
-Defined in: [components.ts:25](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L25)
+Defined in: [components.ts:25](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L25)
 
 Avatar component props
 
@@ -22,7 +22,7 @@ Avatar component props
 
 > `optional` **alt**: `string`
 
-Defined in: [components.ts:27](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L27)
+Defined in: [components.ts:27](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L27)
 
 Alternative text for the avatar image
 
@@ -32,7 +32,7 @@ Alternative text for the avatar image
 
 > `optional` **colors**: `boolean`
 
-Defined in: [components.ts:29](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L29)
+Defined in: [components.ts:29](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L29)
 
 Whether to show colored background for fallback
 
@@ -42,7 +42,7 @@ Whether to show colored background for fallback
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:31](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L31)
+Defined in: [components.ts:31](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L31)
 
 Custom CSS styles
 
@@ -52,7 +52,7 @@ Custom CSS styles
 
 > **fallback**: `string`
 
-Defined in: [components.ts:33](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L33)
+Defined in: [components.ts:33](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L33)
 
 Fallback text to display when image is not available
 
@@ -62,7 +62,7 @@ Fallback text to display when image is not available
 
 > `optional` **round**: `boolean`
 
-Defined in: [components.ts:35](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L35)
+Defined in: [components.ts:35](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L35)
 
 Whether to make the avatar round/circular
 
@@ -72,7 +72,7 @@ Whether to make the avatar round/circular
 
 > `optional` **src**: `string`
 
-Defined in: [components.ts:37](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L37)
+Defined in: [components.ts:37](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L37)
 
 Source URL for the avatar image
 
@@ -82,6 +82,6 @@ Source URL for the avatar image
 
 > `optional` **width**: `number`
 
-Defined in: [components.ts:39](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L39)
+Defined in: [components.ts:39](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L39)
 
 Width of the avatar in pixels

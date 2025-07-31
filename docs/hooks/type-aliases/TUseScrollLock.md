@@ -8,7 +8,7 @@
 
 > **TUseScrollLock** = \[`boolean`, (`locked`) => `void`\]
 
-Defined in: [hooks.ts:172](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/hooks.ts#L172)
+Defined in: [hooks.ts:172](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/hooks.ts#L172)
 
 Body scroll lock management with scroll bar width compensation
 

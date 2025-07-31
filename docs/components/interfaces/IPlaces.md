@@ -6,7 +6,7 @@
 
 # Interface: IPlaces
 
-Defined in: [components.ts:456](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L456)
+Defined in: [components.ts:456](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L456)
 
 Places component props - Google Places autocomplete input with dropdown
 
@@ -31,7 +31,7 @@ Places component props - Google Places autocomplete input with dropdown
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:404](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L404)
+Defined in: [components.ts:404](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L404)
 
 Custom CSS styles
 
@@ -45,7 +45,7 @@ Custom CSS styles
 
 > `optional` **error**: `boolean`
 
-Defined in: [components.ts:406](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L406)
+Defined in: [components.ts:406](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L406)
 
 Whether the input is in an error state
 
@@ -59,7 +59,7 @@ Whether the input is in an error state
 
 > `optional` **errorMessage**: `string`
 
-Defined in: [components.ts:408](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L408)
+Defined in: [components.ts:408](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L408)
 
 Error message to display below the input
 
@@ -73,7 +73,7 @@ Error message to display below the input
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:410](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L410)
+Defined in: [components.ts:410](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L410)
 
 HTML id attribute for the input
 
@@ -87,7 +87,7 @@ HTML id attribute for the input
 
 > `optional` **listen**: `boolean`
 
-Defined in: [components.ts:412](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L412)
+Defined in: [components.ts:412](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L412)
 
 Whether to listen for form validation events
 
@@ -101,7 +101,7 @@ Whether to listen for form validation events
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:414](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L414)
+Defined in: [components.ts:414](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L414)
 
 Whether to show a loading state
 
@@ -115,7 +115,7 @@ Whether to show a loading state
 
 > `optional` **mustRef**: `RefObject`\<`null` \| `HTMLInputElement`\>
 
-Defined in: [components.ts:416](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L416)
+Defined in: [components.ts:416](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L416)
 
 Ref object to access the input element directly
 
@@ -129,7 +129,7 @@ Ref object to access the input element directly
 
 > **name**: `string`
 
-Defined in: [components.ts:418](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L418)
+Defined in: [components.ts:418](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L418)
 
 Name attribute for the input (required)
 
@@ -143,7 +143,7 @@ Name attribute for the input (required)
 
 > `optional` **resetFunction**: () => `void`
 
-Defined in: [components.ts:422](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L422)
+Defined in: [components.ts:422](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L422)
 
 Function to call when reset button is clicked
 
@@ -161,7 +161,7 @@ Function to call when reset button is clicked
 
 > `optional` **submitValid**: (`value`) => `boolean`
 
-Defined in: [components.ts:430](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L430)
+Defined in: [components.ts:430](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L430)
 
 Function to validate input value before submit
 
@@ -185,7 +185,7 @@ Function to validate input value before submit
 
 > `optional` **success**: `boolean`
 
-Defined in: [components.ts:432](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L432)
+Defined in: [components.ts:432](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L432)
 
 Whether the input is in a success state
 
@@ -199,7 +199,7 @@ Whether the input is in a success state
 
 > `optional` **successMessage**: `string`
 
-Defined in: [components.ts:434](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L434)
+Defined in: [components.ts:434](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L434)
 
 Success message to display below the input
 
@@ -213,7 +213,7 @@ Success message to display below the input
 
 > `optional` **warning**: `boolean`
 
-Defined in: [components.ts:436](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L436)
+Defined in: [components.ts:436](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L436)
 
 Whether the input is in a warning state
 
@@ -227,7 +227,7 @@ Whether the input is in a warning state
 
 > `optional` **warningMessage**: `string`
 
-Defined in: [components.ts:438](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L438)
+Defined in: [components.ts:438](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L438)
 
 Warning message to display below the input
 
@@ -241,7 +241,7 @@ Warning message to display below the input
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [components.ts:440](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L440)
+Defined in: [components.ts:440](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L440)
 
 Width of the input field
 
@@ -255,7 +255,7 @@ Width of the input field
 
 > **apiKey**: `string`
 
-Defined in: [components.ts:459](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L459)
+Defined in: [components.ts:459](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L459)
 
 Google Maps API key for Places API
 
@@ -265,7 +265,7 @@ Google Maps API key for Places API
 
 > `optional` **onPlaceSelect**: (`place`) => `void`
 
-Defined in: [components.ts:461](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L461)
+Defined in: [components.ts:461](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L461)
 
 Callback when a place is selected from the dropdown
 
@@ -307,7 +307,7 @@ Callback when a place is selected from the dropdown
 
 > `optional` **countries**: `string`[]
 
-Defined in: [components.ts:471](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L471)
+Defined in: [components.ts:471](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L471)
 
 Country restrictions (ISO 3166-1 Alpha-2 country codes)
 
@@ -317,7 +317,7 @@ Country restrictions (ISO 3166-1 Alpha-2 country codes)
 
 > `optional` **types**: `string`[]
 
-Defined in: [components.ts:473](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L473)
+Defined in: [components.ts:473](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L473)
 
 Types of places to search for
 
@@ -327,7 +327,7 @@ Types of places to search for
 
 > `optional` **dropdownCSS**: `CSS`
 
-Defined in: [components.ts:475](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L475)
+Defined in: [components.ts:475](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L475)
 
 Custom CSS styles for the dropdown
 
@@ -337,7 +337,7 @@ Custom CSS styles for the dropdown
 
 > `optional` **dropdownWidth**: `string` \| `number`
 
-Defined in: [components.ts:477](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L477)
+Defined in: [components.ts:477](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L477)
 
 Width of the dropdown
 
@@ -347,6 +347,6 @@ Width of the dropdown
 
 > `optional` **dropdownHeight**: `string` \| `number`
 
-Defined in: [components.ts:479](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L479)
+Defined in: [components.ts:479](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L479)
 
 Height of the dropdown

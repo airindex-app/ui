@@ -8,7 +8,7 @@
 
 > **TUseLocalStorage**\<`T`\> = \[`T`, (`value`) => `void`\]
 
-Defined in: [hooks.ts:156](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/hooks.ts#L156)
+Defined in: [hooks.ts:156](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/hooks.ts#L156)
 
 Local storage state management with automatic persistence and sync across tabs
 

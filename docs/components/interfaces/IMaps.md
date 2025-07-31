@@ -6,7 +6,7 @@
 
 # Interface: IMaps
 
-Defined in: [components.ts:503](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L503)
+Defined in: [components.ts:503](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L503)
 
 Maps component props - simple Google Maps display
 
@@ -35,7 +35,7 @@ Maps component props - simple Google Maps display
 
 > **apiKey**: `string`
 
-Defined in: [components.ts:505](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L505)
+Defined in: [components.ts:505](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L505)
 
 Google Maps API key for Maps API
 
@@ -45,7 +45,7 @@ Google Maps API key for Maps API
 
 > `optional` **height**: `string` \| `number`
 
-Defined in: [components.ts:507](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L507)
+Defined in: [components.ts:507](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L507)
 
 Height of the map
 
@@ -55,7 +55,7 @@ Height of the map
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:509](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L509)
+Defined in: [components.ts:509](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L509)
 
 Custom CSS styles
 
@@ -65,7 +65,7 @@ Custom CSS styles
 
 > `optional` **center**: `string` \| \{ `lat`: `number`; `lng`: `number`; \}
 
-Defined in: [components.ts:511](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L511)
+Defined in: [components.ts:511](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L511)
 
 Map center - coordinates object or address string. Shows loading if not provided.
 
@@ -75,7 +75,7 @@ Map center - coordinates object or address string. Shows loading if not provided
 
 > `optional` **zoom**: `number`
 
-Defined in: [components.ts:513](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L513)
+Defined in: [components.ts:513](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L513)
 
 Map zoom level
 
@@ -85,6 +85,6 @@ Map zoom level
 
 > `optional` **mapType**: `"roadmap"` \| `"satellite"` \| `"hybrid"` \| `"terrain"`
 
-Defined in: [components.ts:515](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L515)
+Defined in: [components.ts:515](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L515)
 
 Map type

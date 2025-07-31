@@ -163,6 +163,7 @@ This library is built on top of excellent open source projects:
 - **[fast-sort](https://github.com/snovakovic/fast-sort)** - Blazing fast array sorting
 
 
+
 ## Components
 
 This library includes the following components with full TypeScript support and comprehensive documentation:
@@ -198,7 +199,6 @@ This library includes the following components with full TypeScript support and 
 - **[View](./docs/components/interfaces/IView.md)** - Main layout container with hero styling and responsive behavior
 
 > 📖 **Full API Documentation**: Detailed TypeScript interfaces, props, and examples are available in the [`docs/components/interfaces/`](./docs/components/interfaces/) directory. All documentation is auto-generated from TSDoc comments in the source code.
-
 
 ## License
 

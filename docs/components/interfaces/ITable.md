@@ -6,7 +6,7 @@
 
 # Interface: ITable
 
-Defined in: [components.ts:818](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L818)
+Defined in: [components.ts:818](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L818)
 
 Table component props - data table with sorting, pagination, and nested rows
 
@@ -32,7 +32,7 @@ Table component props - data table with sorting, pagination, and nested rows
 
 > **columns**: `object`[]
 
-Defined in: [components.ts:820](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L820)
+Defined in: [components.ts:820](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L820)
 
 Column definitions with keys, labels, and options
 
@@ -62,7 +62,7 @@ Column definitions with keys, labels, and options
 
 > **rows**: `object`[]
 
-Defined in: [components.ts:828](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L828)
+Defined in: [components.ts:828](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L828)
 
 Row data with cells mapped to column keys
 
@@ -84,7 +84,7 @@ Row data with cells mapped to column keys
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:837](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L837)
+Defined in: [components.ts:837](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L837)
 
 Custom CSS styles
 
@@ -94,7 +94,7 @@ Custom CSS styles
 
 > `optional` **error**: `string`
 
-Defined in: [components.ts:839](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L839)
+Defined in: [components.ts:839](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L839)
 
 Error message to display
 
@@ -104,7 +104,7 @@ Error message to display
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:841](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L841)
+Defined in: [components.ts:841](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L841)
 
 Whether the table is in a loading state
 
@@ -114,7 +114,7 @@ Whether the table is in a loading state
 
 > `optional` **pagination**: `boolean`
 
-Defined in: [components.ts:843](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L843)
+Defined in: [components.ts:843](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L843)
 
 Whether to show pagination controls
 
@@ -124,6 +124,6 @@ Whether to show pagination controls
 
 > `optional` **kbd**: `boolean`
 
-Defined in: [components.ts:845](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L845)
+Defined in: [components.ts:845](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L845)
 
 Whether to enable keyboard navigation

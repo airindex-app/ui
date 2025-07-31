@@ -25,11 +25,11 @@ export const ButtonStyled = styled("button", {
   letterSpacing: "-0.02em",
   lineHeight: "$default",
   margin: 0,
-  minHeight: "$small",
+  minHeight: "33px",
   outline: 0,
   padding: "$smallest $small",
   phone: {
-    minHeight: "$smaller",
+    minHeight: "29px",
     padding: "$smallest $small",
   },
   position: "relative",
@@ -54,11 +54,11 @@ export const ButtonStyled = styled("button", {
       true: {
         fontSize: "$small",
         lineHeight: "$small",
-        minHeight: "$smaller",
+        minHeight: "28px",
         padding: "$smallest $small",
 
         phone: {
-          minHeight: "$smallest",
+          minHeight: "26px",
         },
       },
     },

@@ -6,7 +6,7 @@
 
 # Interface: IImage
 
-Defined in: [components.ts:372](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L372)
+Defined in: [components.ts:372](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L372)
 
 Image component props - enhanced Next.js Image with additional styling options
 
@@ -31,7 +31,7 @@ Image component props - enhanced Next.js Image with additional styling options
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:374](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L374)
+Defined in: [components.ts:374](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L374)
 
 Custom CSS styles
 
@@ -41,7 +41,7 @@ Custom CSS styles
 
 > `optional` **fill**: `boolean`
 
-Defined in: [components.ts:376](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L376)
+Defined in: [components.ts:376](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L376)
 
 Whether the image should fill its container
 
@@ -55,7 +55,7 @@ Whether the image should fill its container
 
 > `optional` **fillFit**: `ObjectFit`
 
-Defined in: [components.ts:378](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L378)
+Defined in: [components.ts:378](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L378)
 
 How the image should fit when using fill
 
@@ -65,7 +65,7 @@ How the image should fit when using fill
 
 > `optional` **fillHeight**: `string` \| `number`
 
-Defined in: [components.ts:380](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L380)
+Defined in: [components.ts:380](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L380)
 
 Height when using fill mode
 
@@ -75,6 +75,6 @@ Height when using fill mode
 
 > `optional` **fillPosition**: `ObjectPosition`\<`string` \| `number`\>
 
-Defined in: [components.ts:382](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L382)
+Defined in: [components.ts:382](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L382)
 
 Position of the image when using fill

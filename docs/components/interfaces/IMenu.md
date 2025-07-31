@@ -6,7 +6,7 @@
 
 # Interface: IMenu
 
-Defined in: [components.ts:561](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L561)
+Defined in: [components.ts:561](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L561)
 
 Menu component props - dropdown menu with nested options
 
@@ -29,7 +29,7 @@ Menu component props - dropdown menu with nested options
 
 > `optional` **children**: `ReactNode` \| (`close`) => `ReactNode`
 
-Defined in: [components.ts:563](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L563)
+Defined in: [components.ts:563](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L563)
 
 Additional content to render in the menu - can be ReactNode or a function that receives the close function
 
@@ -39,7 +39,7 @@ Additional content to render in the menu - can be ReactNode or a function that r
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:565](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L565)
+Defined in: [components.ts:565](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L565)
 
 Custom CSS styles
 
@@ -49,7 +49,7 @@ Custom CSS styles
 
 > `optional` **initial**: `string`
 
-Defined in: [components.ts:567](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L567)
+Defined in: [components.ts:567](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L567)
 
 Initially selected option value
 
@@ -59,7 +59,7 @@ Initially selected option value
 
 > `optional` **onSelection**: (`value`, `label`) => `void`
 
-Defined in: [components.ts:569](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L569)
+Defined in: [components.ts:569](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L569)
 
 Callback when menu option is selected
 
@@ -83,7 +83,7 @@ Callback when menu option is selected
 
 > **options**: `object`[]
 
-Defined in: [components.ts:571](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L571)
+Defined in: [components.ts:571](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L571)
 
 Array of menu options
 
@@ -109,7 +109,7 @@ Array of menu options
 
 > **trigger**: `ReactNode`
 
-Defined in: [components.ts:578](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L578)
+Defined in: [components.ts:578](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L578)
 
 Element that triggers the menu
 
@@ -119,7 +119,7 @@ Element that triggers the menu
 
 > `optional` **triggerCSS**: `CSS`
 
-Defined in: [components.ts:580](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L580)
+Defined in: [components.ts:580](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L580)
 
 Custom CSS styles for the trigger
 
@@ -129,7 +129,7 @@ Custom CSS styles for the trigger
 
 > `optional` **wrapperCSS**: `CSS`
 
-Defined in: [components.ts:582](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L582)
+Defined in: [components.ts:582](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L582)
 
 Custom CSS styles for the menu wrapper
 
@@ -139,6 +139,6 @@ Custom CSS styles for the menu wrapper
 
 > `optional` **logo**: `ReactNode`
 
-Defined in: [components.ts:584](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L584)
+Defined in: [components.ts:584](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L584)
 
 Logo to display in the menu header

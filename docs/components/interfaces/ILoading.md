@@ -6,7 +6,7 @@
 
 # Interface: ILoading
 
-Defined in: [components.ts:526](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L526)
+Defined in: [components.ts:526](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L526)
 
 Loading component props - animated loading spinner
 
@@ -26,7 +26,7 @@ Loading component props - animated loading spinner
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:528](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L528)
+Defined in: [components.ts:528](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L528)
 
 Custom CSS styles
 
@@ -36,6 +36,6 @@ Custom CSS styles
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [components.ts:530](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L530)
+Defined in: [components.ts:530](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L530)
 
 Width of the loading component

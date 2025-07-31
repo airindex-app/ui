@@ -74,6 +74,18 @@ export default function ButtonDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
+      {/* Icon Only vs Text Heights */}
+      <C.Box header={
+        <C.Text as="h4">Height Consistency</C.Text>
+      }>
+        <C.Stack direction="horizontal">
+          <C.Button>Text Button</C.Button>
+          <C.Button icon={<C.Icon radix={<CheckCircledIcon />} />} />
+          <C.Button small>Small Text</C.Button>
+          <C.Button small icon={<C.Icon radix={<CheckCircledIcon />} />} />
+        </C.Stack>
+      </C.Box>
+
       {/* Combinations */}
       <C.Box header={
         <C.Text as="h4">Combinations</C.Text>

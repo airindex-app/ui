@@ -8,7 +8,7 @@
 
 > **TDynamicViewportConfig** = `object`
 
-Defined in: [stitches.ts:138](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/stitches.ts#L138)
+Defined in: [stitches.ts:138](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L138)
 
 Dynamic viewport configuration object
 
@@ -18,7 +18,7 @@ Dynamic viewport configuration object
 
 > **property**: `string`
 
-Defined in: [stitches.ts:139](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/stitches.ts#L139)
+Defined in: [stitches.ts:139](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L139)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [stitches.ts:139](https://github.com/airindex-app/ui/blob/51b723e17d
 
 > **value**: `string`
 
-Defined in: [stitches.ts:140](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/stitches.ts#L140)
+Defined in: [stitches.ts:140](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L140)
 
 ***
 
@@ -34,4 +34,4 @@ Defined in: [stitches.ts:140](https://github.com/airindex-app/ui/blob/51b723e17d
 
 > **unit**: `"vh"` \| `"vw"` \| `"vi"` \| `"vb"`
 
-Defined in: [stitches.ts:141](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/stitches.ts#L141)
+Defined in: [stitches.ts:141](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L141)

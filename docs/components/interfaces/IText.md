@@ -6,7 +6,7 @@
 
 # Interface: IText
 
-Defined in: [components.ts:858](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L858)
+Defined in: [components.ts:858](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L858)
 
 Text component props - versatile text element with styling and link options
 
@@ -28,7 +28,7 @@ Text component props - versatile text element with styling and link options
 
 > `optional` **accent**: `boolean`
 
-Defined in: [components.ts:860](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L860)
+Defined in: [components.ts:860](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L860)
 
 Whether to use accent styling
 
@@ -38,7 +38,7 @@ Whether to use accent styling
 
 > `optional` **as**: `"small"` \| `"a"` \| `"h1"` \| `"h2"` \| `"h3"` \| `"h4"` \| `"h5"` \| `"h6"` \| `"label"` \| `"li"` \| `"ol"` \| `"p"` \| `"span"` \| `"strong"` \| `"ul"` \| `"micro"`
 
-Defined in: [components.ts:862](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L862)
+Defined in: [components.ts:862](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L862)
 
 HTML element type and text size
 
@@ -48,7 +48,7 @@ HTML element type and text size
 
 > `optional` **balanced**: `boolean`
 
-Defined in: [components.ts:864](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L864)
+Defined in: [components.ts:864](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L864)
 
 Whether to use balanced text wrapping
 
@@ -58,7 +58,7 @@ Whether to use balanced text wrapping
 
 > `optional` **bottom**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:866](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L866)
+Defined in: [components.ts:866](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L866)
 
 Bottom margin/spacing
 
@@ -68,7 +68,7 @@ Bottom margin/spacing
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:868](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L868)
+Defined in: [components.ts:868](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L868)
 
 Text content
 
@@ -82,7 +82,7 @@ Text content
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:870](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L870)
+Defined in: [components.ts:870](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L870)
 
 Custom CSS styles
 
@@ -92,7 +92,7 @@ Custom CSS styles
 
 > `optional` **hero**: `boolean`
 
-Defined in: [components.ts:872](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L872)
+Defined in: [components.ts:872](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L872)
 
 Whether to apply hero gradient styling
 
@@ -102,7 +102,7 @@ Whether to apply hero gradient styling
 
 > `optional` **highlight**: `"default"` \| `"yellow"`
 
-Defined in: [components.ts:874](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L874)
+Defined in: [components.ts:874](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L874)
 
 Highlight color theme
 
@@ -112,7 +112,7 @@ Highlight color theme
 
 > `optional` **href**: `string`
 
-Defined in: [components.ts:876](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L876)
+Defined in: [components.ts:876](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L876)
 
 URL for link functionality
 
@@ -122,7 +122,7 @@ URL for link functionality
 
 > `optional` **inline**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:878](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L878)
+Defined in: [components.ts:878](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L878)
 
 Inline spacing around the text
 
@@ -132,7 +132,7 @@ Inline spacing around the text
 
 > `optional` **link**: `"default"` \| `"minimal"`
 
-Defined in: [components.ts:880](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L880)
+Defined in: [components.ts:880](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L880)
 
 Link styling variant
 
@@ -142,7 +142,7 @@ Link styling variant
 
 > `optional` **muted**: `boolean`
 
-Defined in: [components.ts:882](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L882)
+Defined in: [components.ts:882](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L882)
 
 Whether to use muted styling with default opacity
 
@@ -152,7 +152,7 @@ Whether to use muted styling with default opacity
 
 > `optional` **override**: `"small"` \| `"a"` \| `"h1"` \| `"h2"` \| `"h3"` \| `"h4"` \| `"h5"` \| `"h6"` \| `"label"` \| `"li"` \| `"ol"` \| `"p"` \| `"span"` \| `"strong"` \| `"ul"` \| `"micro"`
 
-Defined in: [components.ts:884](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L884)
+Defined in: [components.ts:884](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L884)
 
 Override the default size from 'as' prop
 
@@ -162,7 +162,7 @@ Override the default size from 'as' prop
 
 > `optional` **rel**: `string`
 
-Defined in: [components.ts:886](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L886)
+Defined in: [components.ts:886](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L886)
 
 Relationship attribute for links
 
@@ -176,7 +176,7 @@ Relationship attribute for links
 
 > `optional` **target**: `"_blank"` \| `"_self"`
 
-Defined in: [components.ts:888](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L888)
+Defined in: [components.ts:888](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L888)
 
 Link target
 
@@ -186,7 +186,7 @@ Link target
 
 > `optional` **top**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:890](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L890)
+Defined in: [components.ts:890](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L890)
 
 Top margin/spacing
 
@@ -196,6 +196,6 @@ Top margin/spacing
 
 > `optional` **truncate**: `1` \| `2` \| `3` \| `4`
 
-Defined in: [components.ts:892](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L892)
+Defined in: [components.ts:892](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L892)
 
 Number of lines to truncate text to (1-4)

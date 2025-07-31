@@ -6,7 +6,7 @@
 
 # Interface: ITabs
 
-Defined in: [components.ts:1017](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1017)
+Defined in: [components.ts:1017](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1017)
 
 Tabs component props - tabbed interface for switching between content panels
 
@@ -29,7 +29,7 @@ Tabs component props - tabbed interface for switching between content panels
 
 > `optional` **initial**: `string`
 
-Defined in: [components.ts:1019](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1019)
+Defined in: [components.ts:1019](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1019)
 
 Initially selected tab value
 
@@ -39,7 +39,7 @@ Initially selected tab value
 
 > `optional` **small**: `boolean`
 
-Defined in: [components.ts:1021](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1021)
+Defined in: [components.ts:1021](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1021)
 
 Whether to use small tabs
 
@@ -49,7 +49,7 @@ Whether to use small tabs
 
 > `optional` **onSelection**: (`value`) => `void`
 
-Defined in: [components.ts:1023](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1023)
+Defined in: [components.ts:1023](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1023)
 
 Callback when tab is selected
 
@@ -69,7 +69,7 @@ Callback when tab is selected
 
 > **options**: `object`[]
 
-Defined in: [components.ts:1025](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1025)
+Defined in: [components.ts:1025](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1025)
 
 Array of tab options
 
@@ -91,6 +91,6 @@ Array of tab options
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:1031](https://github.com/airindex-app/ui/blob/51b723e17db3d2d7342fc2d9bd4a36ea0ad71f2a/src/types/components.ts#L1031)
+Defined in: [components.ts:1031](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L1031)
 
 Custom CSS styles
