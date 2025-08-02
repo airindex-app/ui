@@ -43,7 +43,7 @@ export default function Field({
   warningMessage,
   width,
 }: IField): JSX.Element {
-  const { isPhone } = useBreakpoints();
+  useBreakpoints();
   const [inputValue, setInputValue] = useState((value as string) || "");
   const [isCopied, setIsCopied] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -127,22 +127,15 @@ export default function Field({
             {loading && <Loading />}
 
             {copy && (
-              <Button
-                disabled={isCopied || disabled}
-                icon={<Icon radix={<ClipboardIcon />} />}
-                small
-                onClick={() => handleCopy()}>
-                {!isPhone ? "Copy" : undefined}
+              <Button disabled={isCopied || disabled} small onClick={() => handleCopy()}>
+                <Icon radix={<ClipboardIcon />} />
               </Button>
             )}
 
             {reset && inputValue && (
-              <Button
-                disabled={disabled}
-                icon={<Icon radix={<CrossCircledIcon />} />}
-                small
-                onClick={() => handleReset()}
-              />
+              <Button disabled={disabled} small onClick={() => handleReset()}>
+                <Icon radix={<CrossCircledIcon />} />
+              </Button>
             )}
 
             {submit && (
@@ -154,7 +147,7 @@ export default function Field({
                 theme={isSubmitValid ? "solid" : "default"}
                 type="submit"
                 onClick={() => handleSubmit()}>
-                {!isPhone ? submit : undefined}
+                {submit}
               </Button>
             )}
           </FieldFunctionStyled>
