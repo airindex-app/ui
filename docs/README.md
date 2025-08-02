@@ -1,8 +1,8 @@
-**@airindex-app/ui v0.1.12**
+**@airindex-app/ui v0.1.15**
 
 ***
 
-# @airindex-app/ui v0.1.12
+# @airindex-app/ui v0.1.15
 
 ## Modules
 

@@ -1,4 +1,4 @@
-import { ChangeEvent, useState, type JSX } from "react";
+import { ChangeEvent, KeyboardEvent, useCallback, useState, type JSX } from "react";
 import toast from "react-hot-toast";
 
 import {
@@ -25,6 +25,7 @@ export default function Field({
   error,
   errorMessage,
   id,
+  listen,
   loading,
   name,
   onChange,
@@ -52,13 +53,16 @@ export default function Field({
   const hasFunctions = loading || submit || copy || reset;
   const hasCallback = error || success || warning;
 
-  function handleChange(event: ChangeEvent<HTMLTextAreaElement>): void {
-    setInputValue(event.target.value);
-    setIsSubmitted(false);
-    if (onChange) {
-      onChange(event);
-    }
-  }
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLTextAreaElement>): void => {
+      setInputValue(event.target.value);
+      setIsSubmitted(false);
+      if (onChange) {
+        onChange(event);
+      }
+    },
+    [onChange],
+  );
 
   function handleCopy(): void {
     if (copy && inputValue) {
@@ -87,6 +91,16 @@ export default function Field({
     }
   }
 
+  const handleKeyDown = useCallback(
+    (event: KeyboardEvent<HTMLTextAreaElement>): void => {
+      if (listen && event.key === "Enter" && submitFunction && isSubmitValid) {
+        event.preventDefault();
+        handleSubmit();
+      }
+    },
+    [listen, submitFunction, isSubmitValid, handleSubmit],
+  );
+
   return (
     <FieldStyled
       css={{
@@ -104,7 +118,8 @@ export default function Field({
           placeholder={placeholder}
           rows={rows}
           value={inputValue}
-          onChange={(event) => handleChange(event)}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
 
         {hasFunctions && (

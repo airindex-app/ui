@@ -40,6 +40,11 @@ export const providerReset = globalCss({
     padding: 0,
   },
 
+  // Remove browser default focus outline for programmatically focused elements
+  "*:focus": {
+    outline: theme.colors.yellow,
+  },
+
   "::selection": {
     backgroundColor: theme.colors.text,
     color: theme.colors.background,

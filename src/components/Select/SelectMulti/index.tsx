@@ -1,4 +1,4 @@
-import { useEffect, useState, type JSX } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
 import toast from "react-hot-toast";
 
 import { CrossCircledIcon } from "../../../icons";
@@ -45,6 +45,7 @@ export default function SelectMulti({
   const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = useFloatingUI();
   const { isPhone } = useBreakpoints();
   const { height: windowHeight } = useWindowDimensions();
+  const optionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState("");
@@ -67,8 +68,13 @@ export default function SelectMulti({
     if (!isOpen) {
       setSearch("");
       setFocused("");
+    } else if (shouldShowFilter) {
+      // If there's a filter, it will get focus naturally - no action needed
+    } else if (contentRef.current) {
+      // Focus the dropdown container when there's no filter
+      contentRef.current.focus();
     }
-  }, [isOpen]);
+  }, [isOpen, shouldShowFilter]);
 
   function handleSelection(option: { label: string; value: string }): void {
     const selectionIndex = selected.findIndex((item) => item.value === option.value);
@@ -104,52 +110,40 @@ export default function SelectMulti({
   }
 
   function handleKeyDown(event: KeyboardEvent): void {
-    if (isPhone) return;
-
-    if (event.key === "Escape") {
-      event.preventDefault();
-      handleClose();
-    }
-
-    if (!isOpen) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        handleClick();
-      }
-
-      return;
-    }
+    if (isPhone || !isOpen) return;
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
-      const index = options.findIndex((option) => option.value === focused);
+      const index = filteredOptions.findIndex((option) => option.value === focused);
 
-      if (index < options.length - 1) {
-        setFocused(options[index + 1].value);
-        const element = document.querySelector(`[data-value="${options[index + 1].value}"]`);
+      if (index < filteredOptions.length - 1) {
+        const nextValue = filteredOptions[index + 1].value;
 
-        element?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        setFocused(nextValue);
+
+        optionRefs.current[nextValue]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
     }
 
     if (event.key === "ArrowUp") {
       event.preventDefault();
-      const index = options.findIndex((option) => option.value === focused);
+      const index = filteredOptions.findIndex((option) => option.value === focused);
 
       if (index > 0) {
-        setFocused(options[index - 1].value);
-        const element = document.querySelector(`[data-value="${options[index - 1].value}"]`);
+        const prevValue = filteredOptions[index - 1].value;
 
-        element?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        setFocused(prevValue);
+
+        optionRefs.current[prevValue]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
     }
 
     if (event.key === "Enter") {
       event.preventDefault();
-      const index = options.findIndex((option) => option.value === focused);
+      const index = filteredOptions.findIndex((option) => option.value === focused);
 
       if (index >= 0) {
-        handleSelection(options[index]);
+        handleSelection(filteredOptions[index]);
       }
     }
   }
@@ -170,8 +164,16 @@ export default function SelectMulti({
     return selected.findIndex((item) => item.value === optionValue) !== -1;
   }
 
+  function handleEscapeKey(event: KeyboardEvent): void {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      handleClose();
+    }
+  }
+
   useOutsideClick(contentRef, () => handleClose());
-  useEventListener("keydown", handleKeyDown);
+  useEventListener("keydown", handleEscapeKey);
+  useEventListener("keydown", handleKeyDown, contentRef);
 
   return (
     <SelectStyled css={wrapperCSS}>
@@ -200,7 +202,8 @@ export default function SelectMulti({
             },
             width: width || "auto",
             ...css,
-          }}>
+          }}
+          tabIndex={-1}>
           {label && (
             <SelectLabelStyled>
               <Text as="h6">{label}</Text>
@@ -224,7 +227,9 @@ export default function SelectMulti({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value}
-                data-value={option.value}
+                ref={(el) => {
+                  optionRefs.current[option.value] = el;
+                }}
                 focused={option.value === focused && !isPhone}
                 selected={isOptionSelected(option.value)}
                 onClick={() => handleSelection(option)}

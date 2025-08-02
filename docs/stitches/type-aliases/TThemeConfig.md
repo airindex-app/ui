@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **TThemeConfig** = `object`
 
-Defined in: [stitches.ts:77](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L77)
+Defined in: [stitches.ts:77](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L77)
 
 Theme configuration for colors, typography, and design tokens
 
@@ -28,7 +28,7 @@ const Component = styled('div', {
 
 > **colors**: `Record`\<`"background"` \| `"text"` \| `"yellow"` \| `"yellowLight"` \| `"border"` \| `"borderLight"` \| `"surface"` \| `"surfaceHover"` \| `"surfaceLight"` \| `"overlay"`, `string`\>
 
-Defined in: [stitches.ts:79](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L79)
+Defined in: [stitches.ts:79](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L79)
 
 Color palette for the design system
 
@@ -38,7 +38,7 @@ Color palette for the design system
 
 > **fonts**: `object`
 
-Defined in: [stitches.ts:93](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L93)
+Defined in: [stitches.ts:93](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L93)
 
 Font family configuration
 
@@ -56,7 +56,7 @@ Font family configuration
 
 > **fontSizes**: `Record`\<`"micro"` \| `"small"` \| `"default"` \| `"h6"` \| `"h5"` \| `"h4"` \| `"h3"` \| `"h2"` \| `"h1"`, `string`\>
 
-Defined in: [stitches.ts:98](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L98)
+Defined in: [stitches.ts:98](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L98)
 
 Font size scale with responsive clamp values
 
@@ -66,7 +66,7 @@ Font size scale with responsive clamp values
 
 > **lineHeights**: `object`
 
-Defined in: [stitches.ts:103](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L103)
+Defined in: [stitches.ts:103](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L103)
 
 Line height values
 
@@ -84,7 +84,7 @@ Line height values
 
 > **opacities**: `object`
 
-Defined in: [stitches.ts:108](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L108)
+Defined in: [stitches.ts:108](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L108)
 
 Opacity values
 
@@ -102,7 +102,7 @@ Opacity values
 
 > **sizes**: [`TSpacingConfig`](TSpacingConfig.md)
 
-Defined in: [stitches.ts:114](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L114)
+Defined in: [stitches.ts:114](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L114)
 
 Size scale (same as spacings)
 
@@ -112,7 +112,7 @@ Size scale (same as spacings)
 
 > **space**: [`TSpacingConfig`](TSpacingConfig.md)
 
-Defined in: [stitches.ts:116](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L116)
+Defined in: [stitches.ts:116](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L116)
 
 Space scale (same as spacings)
 
@@ -122,7 +122,7 @@ Space scale (same as spacings)
 
 > **transitions**: `object`
 
-Defined in: [stitches.ts:118](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L118)
+Defined in: [stitches.ts:118](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L118)
 
 Transition configurations
 
@@ -136,7 +136,7 @@ Transition configurations
 
 > **zIndices**: `object`
 
-Defined in: [stitches.ts:122](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L122)
+Defined in: [stitches.ts:122](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L122)
 
 Z-index layering
 

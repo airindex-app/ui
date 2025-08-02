@@ -305,6 +305,8 @@ export interface IField extends ComponentPropsWithRef<"textarea"> {
   submitFunction?: (value: string) => void | Promise<void> | unknown;
   /** Function to validate field value before submit */
   submitValid?: (value: string) => boolean;
+  /** Whether to listen for Enter key to submit (disables Enter for new lines) */
+  listen?: boolean;
   /** Whether the field is in a success state */
   success?: boolean;
   /** Success message to display below the field */

@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IStack
 
-Defined in: [components.ts:743](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L743)
+Defined in: [components.ts:745](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L745)
 
 Stack component props - responsive layout container with flexible spacing and alignment
 
@@ -33,7 +33,7 @@ Stack component props - responsive layout container with flexible spacing and al
 
 > `optional` **align**: `TextAlign`
 
-Defined in: [components.ts:745](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L745)
+Defined in: [components.ts:747](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L747)
 
 Text alignment within the stack
 
@@ -43,7 +43,7 @@ Text alignment within the stack
 
 > `optional` **as**: keyof IntrinsicElements
 
-Defined in: [components.ts:747](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L747)
+Defined in: [components.ts:749](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L749)
 
 HTML element type to render as
 
@@ -53,7 +53,7 @@ HTML element type to render as
 
 > `optional` **bottom**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:749](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L749)
+Defined in: [components.ts:751](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L751)
 
 Bottom margin/spacing
 
@@ -63,7 +63,7 @@ Bottom margin/spacing
 
 > `optional` **children**: `ReactNode`
 
-Defined in: [components.ts:751](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L751)
+Defined in: [components.ts:753](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L753)
 
 Content to display in the stack
 
@@ -73,7 +73,7 @@ Content to display in the stack
 
 > `optional` **className**: `string`
 
-Defined in: [components.ts:753](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L753)
+Defined in: [components.ts:755](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L755)
 
 CSS class name
 
@@ -83,7 +83,7 @@ CSS class name
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:755](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L755)
+Defined in: [components.ts:757](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L757)
 
 Custom CSS styles
 
@@ -93,7 +93,7 @@ Custom CSS styles
 
 > `optional` **direction**: `"row"` \| `"column"`
 
-Defined in: [components.ts:757](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L757)
+Defined in: [components.ts:759](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L759)
 
 Direction of the flex layout
 
@@ -103,7 +103,7 @@ Direction of the flex layout
 
 > `optional` **inline**: `boolean`
 
-Defined in: [components.ts:759](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L759)
+Defined in: [components.ts:761](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L761)
 
 Whether to remove text margins and align items
 
@@ -113,7 +113,7 @@ Whether to remove text margins and align items
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [components.ts:761](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L761)
+Defined in: [components.ts:763](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L763)
 
 Whether to use minimal styling
 
@@ -123,7 +123,7 @@ Whether to use minimal styling
 
 > `optional` **onClick**: () => `void`
 
-Defined in: [components.ts:763](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L763)
+Defined in: [components.ts:765](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L765)
 
 Click handler for the stack
 
@@ -137,7 +137,7 @@ Click handler for the stack
 
 > `optional` **top**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:765](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L765)
+Defined in: [components.ts:767](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L767)
 
 Top margin/spacing
 
@@ -147,7 +147,7 @@ Top margin/spacing
 
 > `optional` **width**: `number`
 
-Defined in: [components.ts:767](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L767)
+Defined in: [components.ts:769](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L769)
 
 Default width percentage
 
@@ -157,7 +157,7 @@ Default width percentage
 
 > `optional` **widthResponsive**: `object`
 
-Defined in: [components.ts:769](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L769)
+Defined in: [components.ts:771](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L771)
 
 Responsive width percentages
 
@@ -187,7 +187,7 @@ Responsive width percentages
 
 > `optional` **justify**: `JustifyContent`
 
-Defined in: [components.ts:777](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L777)
+Defined in: [components.ts:779](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L779)
 
 Main axis alignment
 
@@ -197,7 +197,7 @@ Main axis alignment
 
 > `optional` **gap**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:779](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L779)
+Defined in: [components.ts:781](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L781)
 
 Gap between items
 
@@ -207,7 +207,7 @@ Gap between items
 
 > `optional` **wrap**: `"wrap"` \| `"nowrap"` \| `"wrap-reverse"`
 
-Defined in: [components.ts:781](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L781)
+Defined in: [components.ts:783](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L783)
 
 Whether to wrap items
 
@@ -217,7 +217,7 @@ Whether to wrap items
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:783](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L783)
+Defined in: [components.ts:785](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L785)
 
 HTML id attribute
 
@@ -227,7 +227,7 @@ HTML id attribute
 
 > `optional` **inverted**: `boolean`
 
-Defined in: [components.ts:785](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L785)
+Defined in: [components.ts:787](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L787)
 
 Whether to use dark theme
 
@@ -237,7 +237,7 @@ Whether to use dark theme
 
 > `optional` **alignItems**: `AlignItems`
 
-Defined in: [components.ts:787](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L787)
+Defined in: [components.ts:789](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L789)
 
 Cross-axis alignment
 
@@ -247,7 +247,7 @@ Cross-axis alignment
 
 > `optional` **alignContent**: `AlignContent`
 
-Defined in: [components.ts:789](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L789)
+Defined in: [components.ts:791](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L791)
 
 Content alignment
 
@@ -257,7 +257,7 @@ Content alignment
 
 > `optional` **basis**: `FlexBasis`\<`string` \| `number`\>
 
-Defined in: [components.ts:791](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L791)
+Defined in: [components.ts:793](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L793)
 
 Flex basis
 
@@ -267,7 +267,7 @@ Flex basis
 
 > `optional` **grow**: `FlexGrow`
 
-Defined in: [components.ts:793](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L793)
+Defined in: [components.ts:795](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L795)
 
 Flex grow
 
@@ -277,7 +277,7 @@ Flex grow
 
 > `optional` **shrink**: `FlexShrink`
 
-Defined in: [components.ts:795](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L795)
+Defined in: [components.ts:797](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L797)
 
 Flex shrink
 
@@ -287,6 +287,6 @@ Flex shrink
 
 > `optional` **order**: `Order`
 
-Defined in: [components.ts:797](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L797)
+Defined in: [components.ts:799](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L799)
 
 Flex order

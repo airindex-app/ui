@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IForm
 
-Defined in: [components.ts:336](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L336)
+Defined in: [components.ts:338](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L338)
 
 Form component props - form wrapper with validation and submission handling
 
@@ -34,7 +34,7 @@ Form component props - form wrapper with validation and submission handling
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:338](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L338)
+Defined in: [components.ts:340](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L340)
 
 Form content and input elements
 
@@ -48,7 +48,7 @@ Form content and input elements
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:340](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L340)
+Defined in: [components.ts:342](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L342)
 
 Custom CSS styles
 
@@ -58,7 +58,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [components.ts:342](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L342)
+Defined in: [components.ts:344](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L344)
 
 Whether the form is disabled
 
@@ -68,7 +68,7 @@ Whether the form is disabled
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:344](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L344)
+Defined in: [components.ts:346](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L346)
 
 HTML id attribute for the form
 
@@ -82,7 +82,7 @@ HTML id attribute for the form
 
 > `optional` **listen**: `boolean`
 
-Defined in: [components.ts:346](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L346)
+Defined in: [components.ts:348](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L348)
 
 Whether to listen for form validation events
 
@@ -92,7 +92,7 @@ Whether to listen for form validation events
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:348](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L348)
+Defined in: [components.ts:350](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L350)
 
 Whether the form is in a loading/submitting state
 
@@ -102,7 +102,7 @@ Whether the form is in a loading/submitting state
 
 > **name**: `string`
 
-Defined in: [components.ts:350](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L350)
+Defined in: [components.ts:352](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L352)
 
 Name attribute for the form (required)
 
@@ -116,7 +116,7 @@ Name attribute for the form (required)
 
 > `optional` **submit**: `string`
 
-Defined in: [components.ts:352](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L352)
+Defined in: [components.ts:354](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L354)
 
 Text for the submit button
 
@@ -126,7 +126,7 @@ Text for the submit button
 
 > **submitFunction**: () => `unknown`
 
-Defined in: [components.ts:354](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L354)
+Defined in: [components.ts:356](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L356)
 
 Function to call when form is submitted
 
@@ -140,6 +140,6 @@ Function to call when form is submitted
 
 > `optional` **submitValid**: `boolean`
 
-Defined in: [components.ts:356](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L356)
+Defined in: [components.ts:358](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L358)
 
 Whether the form is valid and can be submitted

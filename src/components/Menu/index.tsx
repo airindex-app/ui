@@ -1,4 +1,4 @@
-import { useRef, useState, type JSX } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -37,12 +37,14 @@ export default function Menu({
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [focused, setFocused] = useState("");
 
   const animationDuration = 200;
   const isMenuOpen = isOpen || isMounted;
 
   function handleClose(): void {
     setIsOpen(false);
+    setFocused("");
     setTimeout(() => {
       setIsMounted(false);
     }, animationDuration);
@@ -69,12 +71,57 @@ export default function Menu({
     handleClose();
   }
 
+  function handleKeyDown(event: KeyboardEvent): void {
+    if (!isOpen) return;
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      const index = options.findIndex((option) => option.value === focused);
+
+      if (index < options.length - 1) {
+        setFocused(options[index + 1].value);
+      }
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      const index = options.findIndex((option) => option.value === focused);
+
+      if (index > 0) {
+        setFocused(options[index - 1].value);
+      }
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const index = options.findIndex((option) => option.value === focused);
+
+      if (index >= 0) {
+        handleSelection(options[index].value, options[index].label);
+      }
+    }
+  }
+
+  function handleItemMouseOver(value: string): void {
+    setFocused(value);
+  }
+
+  useEffect(() => {
+    if (isOpen && ref.current) {
+      ref.current.focus();
+    } else {
+      setFocused("");
+    }
+  }, [isOpen]);
+
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       event.preventDefault();
       handleClose();
     }
   });
+
+  useEventListener("keydown", handleKeyDown, ref);
 
   useScrollLock(isMounted);
   useOutsideClick(ref, () => handleClose());
@@ -93,7 +140,7 @@ export default function Menu({
       {isMounted && (
         <Portal>
           <MenuOverlayStyled animation={isOpen}>
-            <MenuGroupStyled ref={ref} animation={isOpen} css={css}>
+            <MenuGroupStyled ref={ref} animation={isOpen} css={css} tabIndex={-1}>
               <MenuHeaderStyled>
                 {logo && <div>{logo}</div>}
                 <Button
@@ -108,8 +155,10 @@ export default function Menu({
               {options.map((option) => (
                 <MenuItemStyled
                   key={option.value}
+                  focused={option.value === focused}
                   selected={initial === option.value}
-                  onClick={() => handleSelection(option.value, option.label)}>
+                  onClick={() => handleSelection(option.value, option.label)}
+                  onMouseOver={() => handleItemMouseOver(option.value)}>
                   <MenuItemContentStyled>
                     {option.icon && option.iconPosition === "left" && (
                       <MenuItemIconStyled align="left">{option.icon}</MenuItemIconStyled>

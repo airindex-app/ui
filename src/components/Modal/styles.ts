@@ -23,15 +23,10 @@ const overlayBase = {
 
 // Shared base for dialog-style containers
 const dialogContainerBase = {
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
   backgroundColor: "$background",
   left: "50%",
   maxHeight: "80vh",
   minHeight: "auto",
-  overflowX: "hidden",
-  overflowY: "auto",
   phone: {
     maxHeight: "90vh",
     width: "95%",
@@ -74,6 +69,8 @@ export const ModalOverlayStyled = styled("div", {
 
 export const ModalGroupStyled = styled("div", {
   ...dialogContainerBase,
+  display: "flex",
+  flexDirection: "column",
   maxWidth: "600px",
   padding: 0,
   variants: {
@@ -91,10 +88,17 @@ export const ModalHeaderStyled = styled("div", {
   backgroundColor: "$background",
   borderBottom: "1px solid $borderLight",
   display: "flex",
+  flexShrink: 0,
   justifyContent: "space-between",
   padding: "$medium",
 });
 
 export const ModalContentStyled = styled("div", {
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+  flex: 1,
+  overflowX: "hidden",
+  overflowY: "auto",
   padding: "$medium",
 });

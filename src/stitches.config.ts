@@ -80,7 +80,7 @@ const defaultTheme: TThemeConfig = {
   sizes: spacings,
   space: spacings,
   transitions: {
-    default: "all 0.35s ease",
+    default: "all 0.420s ease",
   },
   zIndices: {
     menu: 999,

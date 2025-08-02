@@ -1,4 +1,4 @@
-import { useEffect, useState, type JSX } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
 
 import {
   Input,
@@ -41,6 +41,7 @@ export default function Select({
   const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = useFloatingUI();
   const { isPhone } = useBreakpoints();
   const { height: windowHeight } = useWindowDimensions();
+  const optionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState("");
@@ -61,14 +62,13 @@ export default function Select({
     if (!isOpen) {
       setSearch("");
       setFocused("");
-    } else {
-      const searchInput = document.querySelector('input[name="select-filter"]') as HTMLInputElement;
-
-      if (searchInput && filter) {
-        searchInput.focus();
-      }
+    } else if (shouldShowFilter) {
+      // If there's a filter, it will get focus naturally - no action needed
+    } else if (contentRef.current) {
+      // Focus the dropdown container when there's no filter
+      contentRef.current.focus();
     }
-  }, [isOpen, filter]);
+  }, [isOpen, shouldShowFilter]);
 
   useEffect(() => {
     if (initial !== undefined) {
@@ -85,53 +85,48 @@ export default function Select({
   }
 
   function handleKeyDown(event: KeyboardEvent): void {
-    if (isPhone) return;
-
-    if (event.key === "Escape") {
-      event.preventDefault();
-      handleClose();
-    }
-
-    if (!isOpen) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        handleClick();
-      }
-
-      return;
-    }
+    if (isPhone || !isOpen) return;
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
-      const index = options.findIndex((option) => option.value === focused);
+      const index = filteredOptions.findIndex((option) => option.value === focused);
 
-      if (index < options.length - 1) {
-        setFocused(options[index + 1].value);
-        const element = document.querySelector(`[data-value="${options[index + 1].value}"]`);
+      if (index < filteredOptions.length - 1) {
+        const nextValue = filteredOptions[index + 1].value;
 
-        element?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        setFocused(nextValue);
+
+        optionRefs.current[nextValue]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
     }
 
     if (event.key === "ArrowUp") {
       event.preventDefault();
-      const index = options.findIndex((option) => option.value === focused);
+      const index = filteredOptions.findIndex((option) => option.value === focused);
 
       if (index > 0) {
-        setFocused(options[index - 1].value);
-        const element = document.querySelector(`[data-value="${options[index - 1].value}"]`);
+        const prevValue = filteredOptions[index - 1].value;
 
-        element?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        setFocused(prevValue);
+
+        optionRefs.current[prevValue]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
     }
 
     if (event.key === "Enter") {
       event.preventDefault();
-      const index = options.findIndex((option) => option.value === focused);
+      const index = filteredOptions.findIndex((option) => option.value === focused);
 
       if (index >= 0) {
-        handleSelection(options[index].value, options[index].label);
+        handleSelection(filteredOptions[index].value, filteredOptions[index].label);
       }
+    }
+  }
+
+  function handleEscapeKey(event: KeyboardEvent): void {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      handleClose();
     }
   }
 
@@ -142,7 +137,8 @@ export default function Select({
   }
 
   useOutsideClick(contentRef, () => handleClose());
-  useEventListener("keydown", handleKeyDown);
+  useEventListener("keydown", handleEscapeKey);
+  useEventListener("keydown", handleKeyDown, contentRef);
 
   return (
     <SelectStyled css={wrapperCSS}>
@@ -171,7 +167,8 @@ export default function Select({
             },
             width: width || "auto",
             ...css,
-          }}>
+          }}
+          tabIndex={-1}>
           {label && (
             <SelectLabelStyled>
               <Text as="h6">{label}</Text>
@@ -195,7 +192,9 @@ export default function Select({
             filteredOptions.map((option) => (
               <SelectItemStyled
                 key={option.value}
-                data-value={option.value}
+                ref={(el) => {
+                  optionRefs.current[option.value] = el;
+                }}
                 focused={option.value === focused && !isPhone}
                 last={last && !search}
                 selected={option.value === selected}

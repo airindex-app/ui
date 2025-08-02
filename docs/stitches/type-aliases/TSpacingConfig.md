@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **TSpacingConfig** = `Record`\<`"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`, `string`\>
 
-Defined in: [stitches.ts:59](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/stitches.ts#L59)
+Defined in: [stitches.ts:59](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/stitches.ts#L59)
 
 Spacing scale configuration used throughout the design system
 

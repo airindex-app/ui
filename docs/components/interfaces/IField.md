@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IField
 
-Defined in: [components.ts:283](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L283)
+Defined in: [components.ts:283](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L283)
 
 Field component props - multi-line textarea input with validation
 
@@ -33,7 +33,7 @@ Field component props - multi-line textarea input with validation
 
 > `optional` **copy**: `boolean`
 
-Defined in: [components.ts:285](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L285)
+Defined in: [components.ts:285](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L285)
 
 Whether to show a copy button for the field value
 
@@ -43,7 +43,7 @@ Whether to show a copy button for the field value
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:287](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L287)
+Defined in: [components.ts:287](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L287)
 
 Custom CSS styles
 
@@ -53,7 +53,7 @@ Custom CSS styles
 
 > `optional` **error**: `boolean`
 
-Defined in: [components.ts:289](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L289)
+Defined in: [components.ts:289](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L289)
 
 Whether the field is in an error state
 
@@ -63,7 +63,7 @@ Whether the field is in an error state
 
 > `optional` **errorMessage**: `string`
 
-Defined in: [components.ts:291](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L291)
+Defined in: [components.ts:291](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L291)
 
 Error message to display below the field
 
@@ -73,7 +73,7 @@ Error message to display below the field
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:293](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L293)
+Defined in: [components.ts:293](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L293)
 
 HTML id attribute for the field
 
@@ -87,7 +87,7 @@ HTML id attribute for the field
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:295](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L295)
+Defined in: [components.ts:295](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L295)
 
 Whether to show a loading state
 
@@ -97,7 +97,7 @@ Whether to show a loading state
 
 > **name**: `string`
 
-Defined in: [components.ts:297](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L297)
+Defined in: [components.ts:297](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L297)
 
 Name attribute for the field (required)
 
@@ -111,7 +111,7 @@ Name attribute for the field (required)
 
 > `optional` **reset**: `boolean`
 
-Defined in: [components.ts:299](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L299)
+Defined in: [components.ts:299](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L299)
 
 Whether to show a reset button
 
@@ -121,7 +121,7 @@ Whether to show a reset button
 
 > `optional` **resetFunction**: () => `void`
 
-Defined in: [components.ts:301](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L301)
+Defined in: [components.ts:301](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L301)
 
 Function to call when reset button is clicked
 
@@ -135,7 +135,7 @@ Function to call when reset button is clicked
 
 > `optional` **submit**: `string`
 
-Defined in: [components.ts:303](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L303)
+Defined in: [components.ts:303](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L303)
 
 Text for the submit button
 
@@ -145,7 +145,7 @@ Text for the submit button
 
 > `optional` **submitFunction**: (`value`) => `unknown`
 
-Defined in: [components.ts:305](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L305)
+Defined in: [components.ts:305](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L305)
 
 Function to call when submit action is triggered
 
@@ -165,7 +165,7 @@ Function to call when submit action is triggered
 
 > `optional` **submitValid**: (`value`) => `boolean`
 
-Defined in: [components.ts:307](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L307)
+Defined in: [components.ts:307](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L307)
 
 Function to validate field value before submit
 
@@ -181,11 +181,21 @@ Function to validate field value before submit
 
 ***
 
+### listen?
+
+> `optional` **listen**: `boolean`
+
+Defined in: [components.ts:309](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L309)
+
+Whether to listen for Enter key to submit (disables Enter for new lines)
+
+***
+
 ### success?
 
 > `optional` **success**: `boolean`
 
-Defined in: [components.ts:309](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L309)
+Defined in: [components.ts:311](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L311)
 
 Whether the field is in a success state
 
@@ -195,7 +205,7 @@ Whether the field is in a success state
 
 > `optional` **successMessage**: `string`
 
-Defined in: [components.ts:311](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L311)
+Defined in: [components.ts:313](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L313)
 
 Success message to display below the field
 
@@ -205,7 +215,7 @@ Success message to display below the field
 
 > `optional` **warning**: `boolean`
 
-Defined in: [components.ts:313](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L313)
+Defined in: [components.ts:315](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L315)
 
 Whether the field is in a warning state
 
@@ -215,7 +225,7 @@ Whether the field is in a warning state
 
 > `optional` **warningMessage**: `string`
 
-Defined in: [components.ts:315](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L315)
+Defined in: [components.ts:317](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L317)
 
 Warning message to display below the field
 
@@ -225,6 +235,6 @@ Warning message to display below the field
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [components.ts:317](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L317)
+Defined in: [components.ts:319](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L319)
 
 Width of the field

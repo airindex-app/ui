@@ -35,6 +35,11 @@ export const TabStyled = styled(Button, {
   padding: "$smaller $small",
   transition: "$default",
   variants: {
+    focused: {
+      true: {
+        backgroundColor: "$surfaceHover",
+      },
+    },
     selected: {
       false: {
         backgroundColor: "transparent",

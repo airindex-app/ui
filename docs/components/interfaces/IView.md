@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IView
 
-Defined in: [components.ts:941](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L941)
+Defined in: [components.ts:943](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L943)
 
 View component props - main layout container
 
@@ -24,7 +24,7 @@ View component props - main layout container
 
 > `optional` **app**: `boolean`
 
-Defined in: [components.ts:943](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L943)
+Defined in: [components.ts:945](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L945)
 
 Whether this is an app-level view
 
@@ -34,7 +34,7 @@ Whether this is an app-level view
 
 > `optional` **as**: keyof IntrinsicElements
 
-Defined in: [components.ts:945](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L945)
+Defined in: [components.ts:947](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L947)
 
 HTML element type to render as
 
@@ -44,7 +44,7 @@ HTML element type to render as
 
 > `optional` **bottom**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:947](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L947)
+Defined in: [components.ts:949](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L949)
 
 Bottom margin/spacing
 
@@ -54,7 +54,7 @@ Bottom margin/spacing
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:949](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L949)
+Defined in: [components.ts:951](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L951)
 
 Content to display in the view
 
@@ -64,7 +64,7 @@ Content to display in the view
 
 > `optional` **container**: `boolean`
 
-Defined in: [components.ts:951](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L951)
+Defined in: [components.ts:953](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L953)
 
 Whether to use container width constraints
 
@@ -74,7 +74,7 @@ Whether to use container width constraints
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:953](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L953)
+Defined in: [components.ts:955](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L955)
 
 Custom CSS styles
 
@@ -84,7 +84,7 @@ Custom CSS styles
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:955](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L955)
+Defined in: [components.ts:957](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L957)
 
 HTML id attribute
 
@@ -94,7 +94,7 @@ HTML id attribute
 
 > `optional` **inverted**: `boolean`
 
-Defined in: [components.ts:957](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L957)
+Defined in: [components.ts:959](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L959)
 
 Whether to invert colors
 
@@ -104,7 +104,7 @@ Whether to invert colors
 
 > `optional` **noPrint**: `boolean`
 
-Defined in: [components.ts:959](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L959)
+Defined in: [components.ts:961](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L961)
 
 Whether to hide when printing
 
@@ -114,6 +114,6 @@ Whether to hide when printing
 
 > `optional` **top**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:961](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L961)
+Defined in: [components.ts:963](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L963)
 
 Top margin/spacing

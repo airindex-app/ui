@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IUseWindowDimensions
 
-Defined in: [hooks.ts:101](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/hooks.ts#L101)
+Defined in: [hooks.ts:101](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L101)
 
 Browser window dimensions with automatic updates on resize
 
@@ -29,7 +29,7 @@ return (
 
 > **height**: `number`
 
-Defined in: [hooks.ts:103](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/hooks.ts#L103)
+Defined in: [hooks.ts:103](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L103)
 
 Window inner height in pixels
 
@@ -39,6 +39,6 @@ Window inner height in pixels
 
 > **width**: `number`
 
-Defined in: [hooks.ts:105](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/hooks.ts#L105)
+Defined in: [hooks.ts:105](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L105)
 
 Window inner width in pixels

@@ -1,5 +1,13 @@
 import { Loader } from "@googlemaps/js-api-loader";
-import React, { useEffect, useState, useRef, type JSX } from "react";
+import {
+  ChangeEvent,
+  KeyboardEvent,
+  MouseEvent,
+  useEffect,
+  useState,
+  useRef,
+  type JSX,
+} from "react";
 
 import {
   Input,
@@ -121,7 +129,7 @@ export default function Places({
     }
   }, [value, selectedPlace]);
 
-  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>): void {
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>): void {
     setInputValue(event.target.value);
     setSelectedPlace(""); // Clear selected place when user types
 
@@ -148,7 +156,7 @@ export default function Places({
         preventDefault: () => {},
         stopPropagation: () => {},
         target: { name: name, value: selectedValue },
-      } as React.ChangeEvent<HTMLInputElement>;
+      } as ChangeEvent<HTMLInputElement>;
 
       onChange(syntheticEvent);
     }
@@ -163,7 +171,7 @@ export default function Places({
     }
   }
 
-  function handleInputKeyDown(event: React.KeyboardEvent<HTMLInputElement>): void {
+  function handleInputKeyDown(event: KeyboardEvent): void {
     if (event.key === "Escape" && isOpen) {
       event.preventDefault();
       handleClose();
@@ -172,7 +180,7 @@ export default function Places({
 
   const handleItemClick =
     (prediction: PlacePrediction) =>
-    (e: React.MouseEvent): void => {
+    (e: MouseEvent): void => {
       e.stopPropagation();
       handleSelection(prediction);
     };

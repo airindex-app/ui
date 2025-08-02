@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 import { JSX } from "react";
 
-import * as C from "../../src/index";
 import { ExitIcon } from "../../src/icons";
+import * as C from "../../src/index";
 
 export default function ModalDemo(): JSX.Element {
   return (
@@ -92,6 +93,33 @@ export default function ModalDemo(): JSX.Element {
               <C.Text>This content is forced to a specific height and will scroll.</C.Text>
               <C.Text>Additional content that demonstrates the scrolling behavior when the modal height is constrained.</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>      
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>  
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>  
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>  
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>  
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>  
             </C.Stack>
           </C.Modal>
         </C.Stack>

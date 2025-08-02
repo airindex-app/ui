@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.12**](../../README.md)
+[**@airindex-app/ui v0.1.15**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IPopover
 
-Defined in: [components.ts:600](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L600)
+Defined in: [components.ts:602](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L602)
 
 Popover component props - floating content overlay
 
@@ -27,7 +27,7 @@ Popover component props - floating content overlay
 
 > **children**: `ReactNode` \| (`close`) => `ReactNode`
 
-Defined in: [components.ts:602](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L602)
+Defined in: [components.ts:604](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L604)
 
 Content to display in the popover - can be ReactNode or a function that receives the close function
 
@@ -37,7 +37,7 @@ Content to display in the popover - can be ReactNode or a function that receives
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:604](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L604)
+Defined in: [components.ts:606](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L606)
 
 Custom CSS styles
 
@@ -47,7 +47,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [components.ts:606](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L606)
+Defined in: [components.ts:608](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L608)
 
 Whether the popover trigger is disabled
 
@@ -57,7 +57,7 @@ Whether the popover trigger is disabled
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [components.ts:608](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L608)
+Defined in: [components.ts:610](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L610)
 
 Whether to use minimal styling
 
@@ -67,7 +67,7 @@ Whether to use minimal styling
 
 > `optional` **small**: `boolean`
 
-Defined in: [components.ts:610](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L610)
+Defined in: [components.ts:612](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L612)
 
 Whether to render a smaller popover
 
@@ -77,7 +77,7 @@ Whether to render a smaller popover
 
 > **trigger**: `ReactNode`
 
-Defined in: [components.ts:612](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L612)
+Defined in: [components.ts:614](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L614)
 
 Element that triggers the popover
 
@@ -87,7 +87,7 @@ Element that triggers the popover
 
 > `optional` **triggerCSS**: `CSS`
 
-Defined in: [components.ts:614](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L614)
+Defined in: [components.ts:616](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L616)
 
 Custom CSS styles for the trigger
 
@@ -97,6 +97,6 @@ Custom CSS styles for the trigger
 
 > `optional` **wrapperCSS**: `CSS`
 
-Defined in: [components.ts:616](https://github.com/airindex-app/ui/blob/44c2ff1163e9f47e185bc913a5043dd88c81b2b7/src/types/components.ts#L616)
+Defined in: [components.ts:618](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L618)
 
 Custom CSS styles for the popover wrapper

@@ -35,23 +35,19 @@ export const DrawerOverlayStyled = styled("div", {
 });
 
 export const DrawerCoreStyled = styled("div", {
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
   backgroundColor: "$background",
   bottom: 0,
+  display: "flex",
+  flexDirection: "column",
   left: 0,
   maxHeight: "70vh",
   minHeight: "30vh",
-  overflowX: "hidden",
-  overflowY: "auto",
   phone: {
     maxHeight: "90vh",
     minHeight: "50vh",
   },
   position: "fixed",
   right: 0,
-
   transition: "$default",
   variants: {
     animation: {
@@ -65,7 +61,6 @@ export const DrawerCoreStyled = styled("div", {
       },
     },
   },
-
   width: "100%",
 });
 
@@ -74,13 +69,20 @@ export const DrawerHeaderStyled = styled("div", {
   backgroundColor: "$background",
   borderBottom: "1px solid $borderLight",
   display: "flex",
+  flexShrink: 0,
   justifyContent: "space-between",
   padding: "$medium",
 });
 
 export const DrawerContentStyled = styled("div", {
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+  flex: 1,
   margin: "0 auto",
   maxWidth: "600px",
+  overflowX: "hidden",
+  overflowY: "auto",
   padding: "$large $medium",
   paddingBottom: "calc($medium + env(safe-area-inset-bottom))",
   width: "100%",

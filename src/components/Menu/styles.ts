@@ -95,6 +95,11 @@ export const MenuItemStyled = styled("div", {
   transition: "$default",
   userSelect: "none",
   variants: {
+    focused: {
+      true: {
+        backgroundColor: "$surfaceHover",
+      },
+    },
     selected: {
       true: {
         backgroundColor: "$surface",
