@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 import { ArrowTopRightIcon } from "../../icons";
 import { Loading, Icon, type IButton } from "../../index";
-import { ButtonIconStyled, ButtonLoadingStyled, ButtonStyled } from "./styles";
+import { ButtonIconStyled, ButtonLoadingStyled, ButtonStyled, NewDotStyled } from "./styles";
 
 export default function Button({
   block,
@@ -14,6 +14,7 @@ export default function Button({
   iconPosition,
   inline,
   loading,
+  new: isNew,
   onClick,
   small,
   theme,
@@ -61,6 +62,8 @@ export default function Button({
           <Icon radix={<ArrowTopRightIcon />} />
         </ButtonIconStyled>
       )}
+
+      {isNew && <NewDotStyled theme={theme || "default"} />}
     </ButtonStyled>
   );
 }

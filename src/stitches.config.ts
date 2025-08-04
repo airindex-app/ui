@@ -274,3 +274,19 @@ export const slideOutDown = keyframes({
     transform: "translateY(100%)",
   },
 });
+
+export const pulse = keyframes({
+  // scale and opacity from 0.7 to 1.3 back to 1
+  "0%": {
+    opacity: 1,
+    transform: "scale(1)",
+  },
+  "50%": {
+    opacity: 0.75,
+    transform: "scale(1.3)",
+  },
+  "100%": {
+    opacity: 1,
+    transform: "scale(1)",
+  },
+});

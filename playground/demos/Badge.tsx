@@ -108,6 +108,23 @@ export default function BadgeDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
+      {/* New Feature Indicator */}
+      <C.Box header={
+        <C.Text as="h4">New Feature Indicator</C.Text>
+      }>
+        <C.Stack>
+          <C.Badge new theme="yellow" variant="border">New Update</C.Badge>
+          <C.Badge new small theme="solid" variant="theme">New</C.Badge>
+          <C.Badge 
+            new
+            icon={<C.Icon radix={<CheckCircledIcon />} />}
+            theme="default"
+          >
+            New Feature
+          </C.Badge>
+        </C.Stack>
+      </C.Box>
+
       {/* Combinations */}
       <C.Box header={
         <C.Text as="h4">Combinations</C.Text>
@@ -128,6 +145,22 @@ export default function BadgeDemo(): JSX.Element {
             variant="border"
           >
             Complete
+          </C.Badge>
+          <C.Badge 
+            new
+            closable
+            theme="yellow"
+            variant="theme"
+          >
+            New & Closable
+          </C.Badge>
+          <C.Badge 
+            new
+            copy="v2.1.0"
+            theme="solid"
+            variant="border"
+          >
+            New Release
           </C.Badge>
         </C.Stack>
       </C.Box>

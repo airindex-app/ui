@@ -1,4 +1,4 @@
-import { styled, fadeOut } from "../../stitches.config";
+import { styled, fadeOut, pulse } from "../../stitches.config";
 
 export const BadgeStyled = styled("span", {
   alignContent: "center !important",
@@ -169,4 +169,28 @@ export const BadgeLoadingStyled = styled("div", {
   inset: 0,
   justifyContent: "center",
   position: "absolute",
+});
+
+export const NewDotStyled = styled("span", {
+  animation: `${pulse} 3s infinite`,
+  borderRadius: "50%",
+  height: "8px",
+  position: "absolute",
+  right: "-3px",
+  top: "-3px",
+  variants: {
+    theme: {
+      default: {
+        backgroundColor: "$yellow",
+      },
+      solid: {
+        backgroundColor: "$yellow",
+      },
+      yellow: {
+        backgroundColor: "$text",
+      },
+    },
+  },
+  width: "8px",
+  zIndex: 2,
 });

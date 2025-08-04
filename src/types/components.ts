@@ -70,6 +70,8 @@ export interface IBadge {
   link?: boolean;
   /** Whether to show a loading state */
   loading?: boolean;
+  /** Whether to show a small yellow dot indicator in the top right */
+  new?: boolean;
   /** Click handler for interactive badges */
   onClick?: MouseEventHandler<HTMLDivElement>;
   /** Whether to render a smaller version of the badge */
@@ -168,6 +170,8 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
   inline?: keyof typeof spacings | "auto";
   /** Whether to show a loading state with spinner */
   loading?: boolean;
+  /** Whether to show a small yellow dot indicator in the top right */
+  new?: boolean;
   /** Whether to render a smaller version of the button */
   small?: boolean;
   /** Visual theme/style variant for the button */

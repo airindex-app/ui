@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 
 import { ClipboardIcon, CrossCircledIcon } from "../../icons";
 import { Loading, Icon, type IBadge } from "../../index";
-import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled } from "./styles";
+import { BadgeIconStyled, BadgeStyled, BadgeLoadingStyled, NewDotStyled } from "./styles";
 
 export default function Badge({
   block,
@@ -16,6 +16,7 @@ export default function Badge({
   inline,
   link,
   loading,
+  new: isNew,
   onClick,
   small,
   theme = "default",
@@ -93,6 +94,8 @@ export default function Badge({
           <Icon radix={<CrossCircledIcon />} />
         </BadgeIconStyled>
       )}
+
+      {isNew && <NewDotStyled theme={theme} />}
     </BadgeStyled>
   );
 }

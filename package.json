@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -84,7 +84,7 @@
     "url": "git://github.com/airindex-app/ui.git"
   },
   "scripts": {
-    "build": "pnpm tidy && pnpm documentation && pnpm prebuild && parcel build src/index.ts --dist-dir dist",
+    "build": "pnpm tidy && pnpm prebuild && parcel build src/index.ts --dist-dir dist",
     "bump": "pnpm up && pnpm tidy && pnpm build",
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
     "documentation": "node scripts/generate-docs.js",

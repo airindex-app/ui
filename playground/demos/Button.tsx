@@ -86,6 +86,23 @@ export default function ButtonDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
+      {/* New Feature Indicator */}
+      <C.Box header={
+        <C.Text as="h4">New Feature Indicator</C.Text>
+      }>
+        <C.Stack>
+          <C.Button new theme="solid">New Feature</C.Button>
+          <C.Button new small theme="yellow">New Small</C.Button>
+          <C.Button 
+            new
+            icon={<C.Icon radix={<CheckCircledIcon />} />}
+            theme="minimal"
+          >
+            New with Icon
+          </C.Button>
+        </C.Stack>
+      </C.Box>
+
       {/* Combinations */}
       <C.Box header={
         <C.Text as="h4">Combinations</C.Text>
@@ -104,6 +121,14 @@ export default function ButtonDemo(): JSX.Element {
             theme="minimal"
           >
             Processing
+          </C.Button>
+          <C.Button 
+            new
+            icon={<C.Icon radix={<ArrowRightIcon />} />}
+            iconPosition="right"
+            theme="yellow"
+          >
+            New Action
           </C.Button>
         </C.Stack>
       </C.Box>

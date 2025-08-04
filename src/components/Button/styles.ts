@@ -1,4 +1,4 @@
-import { styled } from "../../stitches.config";
+import { pulse, styled } from "../../stitches.config";
 
 export const ButtonStyled = styled("button", {
   "&:active": {
@@ -134,4 +134,31 @@ export const ButtonLoadingStyled = styled("div", {
   justifyContent: "center",
   position: "absolute",
   zIndex: 1,
+});
+
+export const NewDotStyled = styled("span", {
+  animation: `${pulse} 3s infinite linear`,
+  borderRadius: "50%",
+  height: "8px",
+  position: "absolute",
+  right: "-3px",
+  top: "-3px",
+  variants: {
+    theme: {
+      default: {
+        backgroundColor: "$yellow",
+      },
+      minimal: {
+        backgroundColor: "$yellow",
+      },
+      solid: {
+        backgroundColor: "$yellow",
+      },
+      yellow: {
+        backgroundColor: "$text",
+      },
+    },
+  },
+  width: "8px",
+  zIndex: 2,
 });
