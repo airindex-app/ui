@@ -24,11 +24,11 @@ const overlayBase = {
 // Shared base for dialog-style containers
 const dialogContainerBase = {
   backgroundColor: "$background",
+  dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
   left: "50%",
-  maxHeight: "80vh",
   minHeight: "auto",
   phone: {
-    maxHeight: "90vh",
+    dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
     width: "95%",
   },
   position: "fixed",

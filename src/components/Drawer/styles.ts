@@ -38,11 +38,13 @@ export const DrawerCoreStyled = styled("div", {
   backgroundColor: "$background",
   bottom: 0,
   display: "flex",
+  dynamicViewport: { property: "maxHeight", unit: "vh", value: "70" },
   flexDirection: "column",
   left: 0,
   maxHeight: "70vh",
   minHeight: "30vh",
   phone: {
+    dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
     maxHeight: "90vh",
     minHeight: "50vh",
   },
