@@ -9,7 +9,6 @@ export const ButtonStyled = styled("button", {
     cursor: "not-allowed",
     opacity: "$light",
   },
-
   alignContent: "center",
   alignItems: "center",
   appearance: "none",
@@ -25,11 +24,11 @@ export const ButtonStyled = styled("button", {
   letterSpacing: "-0.02em",
   lineHeight: "$default",
   margin: 0,
-  minHeight: "33px",
+  minHeight: "34px",
   outline: 0,
   padding: "$smallest $small",
   phone: {
-    minHeight: "29px",
+    minHeight: "33px",
     padding: "$smallest $small",
   },
   position: "relative",
@@ -58,7 +57,7 @@ export const ButtonStyled = styled("button", {
         padding: "$smallest $small",
 
         phone: {
-          minHeight: "26px",
+          minHeight: "25px",
         },
       },
     },
