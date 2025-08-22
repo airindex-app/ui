@@ -151,15 +151,28 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
     // Dynamic viewport utilities with fallback
     dynamicViewport: (config: TDynamicViewportConfig): Record<string, unknown> => {
       const { property, value, unit } = config;
-      const dynamicUnit = unit.replace("v", "dv") as "dvh" | "dvw" | "dvi" | "dvb";
 
-      // Convert camelCase to kebab-case for @supports query
-      const kebabProperty = property.replace(/([A-Z])/g, "-$1").toLowerCase();
+      // Determine axis for feature query based on unit
+      const isHeight =
+        unit.endsWith("vh") || unit.endsWith("dvh") || unit.endsWith("svh") || unit.endsWith("lvh");
+      const featureProp = isHeight ? "height" : "width";
+      const smallViewportUnit = isHeight ? "svh" : "svw";
+      const dynamicViewportUnit = isHeight ? "dvh" : "dvw";
 
       return {
-        [property]: `${value}${unit}`,
-        [`@supports (${kebabProperty}: 100${dynamicUnit})`]: {
-          [property]: `${value}${dynamicUnit}`,
+        // Fallback to classic viewport units first
+        [property]: `calc(var(${isHeight ? "--ai-vh" : "--ai-vw"}, 1${unit.replace("d", "")} ) * ${Number(value) / 1})`,
+        // Also set plain unit as baseline for browsers without CSS var support
+        [`@supports (${featureProp}: 100${unit.replace("d", "")})`]: {
+          [property]: `${value}${unit.replace("d", "")}`,
+        },
+        // Prefer small viewport unit (accounts for toolbars shown)
+        [`@supports (${featureProp}: 100${smallViewportUnit})`]: {
+          [property]: `${value}${smallViewportUnit}`,
+        },
+        // Override with dynamic viewport when supported (updates as UI chrome changes)
+        [`@supports (${featureProp}: 100${dynamicViewportUnit})`]: {
+          [property]: `${value}${dynamicViewportUnit}`,
         },
       };
     },

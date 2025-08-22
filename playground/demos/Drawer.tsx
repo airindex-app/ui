@@ -79,6 +79,25 @@ export default function DrawerDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
+      {/* Long Content (No Forced Height) */}
+      <C.Box header={
+        <C.Text as="h4">Long Content (No Forced Height)</C.Text>
+      }>
+        <C.Stack>
+          <C.Drawer
+            title="Very Long Drawer Content"
+            trigger={<C.Button theme="solid">Open Long Drawer</C.Button>}
+          >
+            <C.Stack>
+              <C.Text>This drawer intentionally contains excessive content to test dynamic maxHeight without forceHeight.</C.Text>
+              {Array.from({ length: 40 }).map((_, i) => (
+                <C.Text key={i}>Row {i + 1}: More content to force scrolling and exercise svh/dvh behavior.</C.Text>
+              ))}
+            </C.Stack>
+          </C.Drawer>
+        </C.Stack>
+      </C.Box>
+
       {/* Forced Height */}
       <C.Box header={
         <C.Text as="h4">Forced Height</C.Text>

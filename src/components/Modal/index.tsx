@@ -9,6 +9,7 @@ import {
   useScrollLock,
   Icon,
   Portal,
+  useViewport,
   type IModal,
 } from "../../index";
 import {
@@ -36,6 +37,7 @@ export default function Modal({
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const { heightPx, supportsDynamicVH, supportsSmallVH } = useViewport();
 
   const animationDuration = 200;
   const isModalOpen = isOpen || isMounted;
@@ -91,7 +93,16 @@ export default function Modal({
               ref={ref}
               animation={isOpen}
               css={{
-                ...(forceHeight && { height: `${forceHeight}vh` }),
+                ...(forceHeight &&
+                  (!supportsDynamicVH && !supportsSmallVH
+                    ? { height: `${(forceHeight / 100) * heightPx}px` }
+                    : {
+                        dynamicViewport: {
+                          property: "height",
+                          unit: "vh",
+                          value: String(forceHeight),
+                        },
+                      })),
                 ...css,
               }}
               small={small}>

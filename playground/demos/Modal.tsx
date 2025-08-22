@@ -79,6 +79,25 @@ export default function ModalDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
+      {/* Long Content (No Forced Height) */}
+      <C.Box header={
+        <C.Text as="h4">Long Content (No Forced Height)</C.Text>
+      }>
+        <C.Stack>
+          <C.Modal
+            title="Very Long Content"
+            trigger={<C.Button theme="solid">Open Long Modal</C.Button>}
+          >
+            <C.Stack>
+              <C.Text>This modal intentionally contains excessive content to test dynamic viewport maxHeight without forceHeight.</C.Text>
+              {Array.from({ length: 40 }).map((_, i) => (
+                <C.Text key={i}>Line {i + 1}: More content to force scrolling and exercise svh/dvh behavior.</C.Text>
+              ))}
+            </C.Stack>
+          </C.Modal>
+        </C.Stack>
+      </C.Box>
+
       {/* Forced Height */}
       <C.Box header={
         <C.Text as="h4">Forced Height</C.Text>

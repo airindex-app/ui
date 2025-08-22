@@ -9,6 +9,7 @@ import {
   useScrollLock,
   Icon,
   Portal,
+  useViewport,
   type IDrawer,
 } from "../../index";
 import {
@@ -33,6 +34,7 @@ export default function Drawer({
 }: IDrawer): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const { heightPx, supportsDynamicVH, supportsSmallVH } = useViewport();
   const ref = useRef<HTMLDivElement | null>(null);
 
   function handleClose(): void {
@@ -96,10 +98,19 @@ export default function Drawer({
               animation={isOpen}
               css={{
                 ...css,
-                ...(forceHeight && {
-                  maxHeight: `${forceHeight}vh`,
-                  minHeight: `${forceHeight}vh`,
-                }),
+                ...(forceHeight &&
+                  (!supportsDynamicVH && !supportsSmallVH
+                    ? {
+                        maxHeight: `${(forceHeight / 100) * heightPx}px`,
+                        minHeight: `${(forceHeight / 100) * heightPx}px`,
+                      }
+                    : {
+                        dynamicViewport: {
+                          property: "maxHeight",
+                          unit: "vh",
+                          value: String(forceHeight),
+                        },
+                      })),
               }}>
               <DrawerHeaderStyled>
                 <Text as="h6" bottom="none">
