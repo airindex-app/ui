@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to {{ .SiteURL }}</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f6f6f4; color:#141415; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#f6f6f4;">
+    <tr>
+      <td style="padding:20px; text-align:center; vertical-align:top;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; max-width:600px; margin:0 auto;">
+          <tr>
+            <td style="padding:0; vertical-align:top;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; background-color:#FFFFFF; border:1px solid rgba(160,160,155,0.35); border-top:8px solid #ffcd1a; box-shadow:0 2px 20px rgba(20,20,21,0.08); mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                <tr>
+                  <td style="padding:20px; color:#141415; vertical-align:top;">
+                    <img src="https://airindex.app/logo-square.jpg" width="64" height="64" alt="AirIndex" style="display:block; -ms-interpolation-mode:bicubic; margin:0 0 20px 0; border:1px solid rgba(160,160,155,0.35); background:#ffffff; outline:none; text-decoration:none; border-collapse:collapse;" />
+                    <div style="font-size:13px; line-height:1.4; opacity:0.75; margin:0 0 6px 0; mso-line-height-rule:exactly;">Welcome to {{ .SiteURL }}</div>
+                    <h1 style="font-size:36px; line-height:1.2; margin:0 0 20px 0; color:#141415; mso-line-height-rule:exactly;">Verify Your Email</h1>
+                    <p style="margin:0 0 12px 0; font-size:16px; line-height:1.5; color:#141415; opacity:0.85; mso-line-height-rule:exactly; word-break:break-word;">
+                      Thank you for signing up! To complete your registration and access your account, please verify your email address by clicking the button below.
+                    </p>
+                    <p style="margin:0 0 24px 0; font-size:16px; line-height:1.5; color:#141415; opacity:0.85; mso-line-height-rule:exactly; word-break:break-word;">
+                      This verification link will expire in 24 hours. If you didn't create an account with {{ .SiteURL }}, you can safely ignore this email.
+                    </p>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 24px 0; border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                      <tr>
+                        <td style="text-align:center; background-color:#141415;">
+                          <a href="{{ .ConfirmationURL }}" style="display:block; padding:10px 16px; font-size:16px; font-weight:700; text-decoration:none; color:#FFFFFF !important; background-color:#141415; border:1px solid rgba(160,160,155,0.35);">
+                            Verify Email Address
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                    <div style="font-size:13px; line-height:1.4; color:#141415; opacity:0.75; mso-line-height-rule:exactly; word-break:break-word;">
+                      Or, copy and paste this into your browser:
+                      <a href="{{ .ConfirmationURL }}" style="color:#141415; text-decoration:none; border-bottom:1px solid rgba(20,20,21,0.3);">{{ .ConfirmationURL }}</a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+
