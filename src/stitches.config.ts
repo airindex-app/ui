@@ -186,6 +186,9 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
     print: (value: unknown): Record<string, unknown> => ({
       [breakpoints.special.print]: value,
     }),
+    reduceMotion: (value: unknown): Record<string, unknown> => ({
+      "@media (prefers-reduced-motion: reduce)": value,
+    }),
     // Visibility utilities
     hidden: (value: TBreakpointName): Record<string, unknown> => ({
       [breakpoints[value]]: {
@@ -301,5 +304,28 @@ export const pulse = keyframes({
   "100%": {
     opacity: 1,
     transform: "scale(1)",
+  },
+});
+
+// Subtle vertical fade+lift used for small surfaces like popovers, lists
+export const fadeInUp = keyframes({
+  from: {
+    opacity: 0,
+    transform: "translateY(4px)",
+  },
+  to: {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+});
+
+export const fadeOutDown = keyframes({
+  from: {
+    opacity: 1,
+    transform: "translateY(0)",
+  },
+  to: {
+    opacity: 0,
+    transform: "translateY(4px)",
   },
 });

@@ -5,9 +5,11 @@ import { LoadingOverlayStyled, LoadingOverlayTitledStyled } from "../styles";
 
 export default function LoadingOverlay({ title }: ILoadingOverlay): JSX.Element {
   return (
-    <LoadingOverlayStyled>
+    <LoadingOverlayStyled aria-live="polite" role="status">
       <Loading />
       <LoadingOverlayTitledStyled>{title}</LoadingOverlayTitledStyled>
     </LoadingOverlayStyled>
   );
 }
+
+LoadingOverlay.displayName = "LoadingOverlay";

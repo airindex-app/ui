@@ -17,13 +17,6 @@ export const ViewStyled = styled("section", {
         color: "$text",
       },
     },
-    noPrint: {
-      true: {
-        print: {
-          display: "none",
-        },
-      },
-    },
   },
 
   width: "100%",

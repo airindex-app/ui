@@ -1,6 +1,5 @@
 import { fadeIn, fadeOut, slideInScale, slideOutScale, styled } from "../../stitches.config";
 
-// Shared base for overlay components (Menu/Modal/Drawer)
 const overlayBase = {
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
@@ -21,7 +20,6 @@ const overlayBase = {
   },
 } as const;
 
-// Shared base for dialog-style containers
 const dialogContainerBase = {
   backgroundColor: "$background",
   dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },

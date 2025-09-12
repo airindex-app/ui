@@ -11,6 +11,7 @@ export default function Icon({
   forceSize = 21,
   inline,
   radix,
+  ...rest
 }: IIcon): JSX.Element {
   const isMounted = useMountSSR();
 
@@ -18,6 +19,7 @@ export default function Icon({
 
   return (
     <IconStyled
+      aria-hidden
       css={{
         ...(inline && {
           marginRight: inline === "auto" ? "auto" : `$${inline}`,
@@ -34,8 +36,12 @@ export default function Icon({
           },
         }),
         ...css,
-      }}>
+      }}
+      role="img"
+      {...rest}>
       {radix}
     </IconStyled>
   );
 }
+
+Icon.displayName = "Icon";

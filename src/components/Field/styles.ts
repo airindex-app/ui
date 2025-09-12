@@ -19,7 +19,9 @@ export const FieldStyled = styled("div", {
 });
 
 export const FieldCoreStyled = styled("div", {
-  "&:focus-within": interactiveStyles,
+  "&:focus-within": {
+    ...interactiveStyles,
+  },
   "&:hover": interactiveStyles,
   backgroundColor: "$surface",
   border: "1px solid $border",

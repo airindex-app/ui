@@ -1,20 +1,17 @@
 import { useState, useRef, type JSX } from "react";
 
 import { ChevronDownIcon, ChevronRightIcon } from "../../icons";
-import { Icon, Stack, Text, type IAccordion } from "../../index";
+import { Icon, type IAccordion } from "../../index";
 import {
   AccordionStyled,
   AccordionItemStyled,
   AccordionButtonStyled,
-  AccordionCardStyled,
-  AccordionGridContentStyled,
   AccordionListContentStyled,
 } from "./styles";
 
 export default function Accordion({
   allowMultiple = false,
   initial,
-  mode = "list",
   onToggle,
   options,
 }: IAccordion): JSX.Element {
@@ -63,58 +60,21 @@ export default function Accordion({
   }
 
   if (!hasOptions) {
-    return <AccordionStyled mode={mode} />;
-  }
-
-  if (mode === "grid") {
-    return (
-      <AccordionStyled mode="grid">
-        {options.map((option) => {
-          const isOpen = openItems.has(option.value);
-
-          return (
-            <AccordionItemStyled key={option.value}>
-              <AccordionCardStyled
-                header={
-                  <Stack
-                    alignItems="center"
-                    css={{
-                      borderBottom: isOpen ? "1px solid $borderLight" : "1px solid transparent",
-                      padding: !isOpen ? "$medium" : "$small $medium",
-                      transition: "$default",
-                    }}
-                    direction="row"
-                    inline
-                    justify="space-between">
-                    <Text as="h6">{option.label}</Text>
-                    <Icon radix={isOpen ? <ChevronDownIcon /> : <ChevronRightIcon />} />
-                  </Stack>
-                }
-                minimal
-                onClick={handleItemClick(option.value)}>
-                <AccordionGridContentStyled
-                  ref={(el: HTMLDivElement | null) => {
-                    contentRefs.current[option.value] = el;
-                  }}
-                  expanded={isOpen}>
-                  {isOpen ? option.children : null}
-                </AccordionGridContentStyled>
-              </AccordionCardStyled>
-            </AccordionItemStyled>
-          );
-        })}
-      </AccordionStyled>
-    );
+    return <AccordionStyled />;
   }
 
   return (
-    <AccordionStyled mode="list">
+    <AccordionStyled>
       {options.map((option) => {
         const isOpen = openItems.has(option.value);
+        const buttonId = `accordion-${option.value}-button`;
+        const panelId = `accordion-${option.value}-panel`;
 
         return (
           <AccordionItemStyled key={option.value}>
             <AccordionButtonStyled
+              aria-controls={panelId}
+              aria-expanded={isOpen}
               expanded={isOpen}
               icon={
                 isOpen ? (
@@ -124,7 +84,7 @@ export default function Accordion({
                 )
               }
               iconPosition="right"
-              large={option.large}
+              id={buttonId}
               onClick={handleItemClick(option.value)}>
               {option.label}
             </AccordionButtonStyled>
@@ -132,7 +92,10 @@ export default function Accordion({
               ref={(el: HTMLDivElement | null) => {
                 contentRefs.current[option.value] = el;
               }}
-              expanded={isOpen}>
+              aria-labelledby={buttonId}
+              expanded={isOpen}
+              id={panelId}
+              role="region">
               <div>{option.children}</div>
             </AccordionListContentStyled>
           </AccordionItemStyled>
@@ -141,3 +104,5 @@ export default function Accordion({
     </AccordionStyled>
   );
 }
+
+Accordion.displayName = "Accordion";

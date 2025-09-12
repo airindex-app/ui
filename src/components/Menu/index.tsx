@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type JSX } from "react";
+import { useEffect, useId, useRef, useState, type JSX } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -23,6 +23,7 @@ import {
 } from "./styles";
 
 export default function Menu({
+  ariaLabel,
   children,
   css,
   initial,
@@ -33,6 +34,8 @@ export default function Menu({
   triggerCSS,
   wrapperCSS,
 }: IMenu): JSX.Element {
+  const reactId = useId();
+  const instanceId = `menu-${reactId}`;
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -129,6 +132,9 @@ export default function Menu({
   return (
     <MenuStyled css={wrapperCSS}>
       <MenuTriggerStyled
+        aria-controls={`${instanceId}-content`}
+        aria-expanded={isMenuOpen}
+        aria-haspopup="menu"
         css={triggerCSS}
         onClick={(e): void => {
           e.stopPropagation();
@@ -140,7 +146,14 @@ export default function Menu({
       {isMounted && (
         <Portal>
           <MenuOverlayStyled animation={isOpen}>
-            <MenuGroupStyled ref={ref} animation={isOpen} css={css} tabIndex={-1}>
+            <MenuGroupStyled
+              ref={ref}
+              animation={isOpen}
+              aria-label={ariaLabel || "Menu"}
+              css={css}
+              id={`${instanceId}-content`}
+              role="menu"
+              tabIndex={-1}>
               <MenuHeaderStyled>
                 {logo && <div>{logo}</div>}
                 <Button
@@ -155,7 +168,9 @@ export default function Menu({
               {options.map((option) => (
                 <MenuItemStyled
                   key={option.value}
+                  aria-checked={initial === option.value || undefined}
                   focused={option.value === focused}
+                  role="menuitemradio"
                   selected={initial === option.value}
                   onClick={() => handleSelection(option.value, option.label)}
                   onMouseOver={() => handleItemMouseOver(option.value)}>
@@ -183,3 +198,5 @@ export default function Menu({
     </MenuStyled>
   );
 }
+
+Menu.displayName = "Menu";

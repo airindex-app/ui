@@ -1,9 +1,10 @@
-export * from "./stitches.config";
+export { css, styled, globalCss, keyframes, theme, darkTheme, getCssText } from "./stitches.config";
 
 // Export all types
 export * from "./types/components";
 export * from "./types/hooks";
 export * from "./types/stitches";
+import { lazy } from "react";
 export * from "./icons";
 
 export { default as Accordion } from "./components/Accordion";
@@ -16,11 +17,11 @@ export { default as Drawer } from "./components/Drawer";
 export { default as Field } from "./components/Field";
 export { default as Form } from "./components/Form";
 export { default as Icon } from "./components/Icon";
-export { default as Image } from "./components/Image";
 export { default as Input } from "./components/Input";
 export { default as Loading } from "./components/Loading";
 export { default as LoadingOverlay } from "./components/Loading/LoadingOverlay";
 export { default as Maps } from "./components/Maps";
+export const MapsLazy = lazy(() => import("./components/Maps"));
 export { default as Menu } from "./components/Menu";
 export { default as Modal } from "./components/Modal";
 export { default as Places } from "./components/Places";
@@ -32,7 +33,6 @@ export { default as Select } from "./components/Select";
 export { default as SelectMulti } from "./components/Select/SelectMulti";
 export { default as Stack } from "./components/Stack";
 export { default as Table } from "./components/Table";
-export { default as Tabs } from "./components/Tabs";
 export { default as Text } from "./components/Text";
 export { default as View } from "./components/View";
 

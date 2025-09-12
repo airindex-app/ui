@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type JSX } from "react";
+import { useEffect, useId, useRef, useState, type JSX } from "react";
 
 import {
   Input,
@@ -38,10 +38,13 @@ export default function Select({
   width,
   wrapperCSS,
 }: ISelect): JSX.Element {
+  const reactId = useId();
+  const instanceId = `select-${reactId}`;
   const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = useFloatingUI();
   const { isPhone } = useBreakpoints();
   const { height: windowHeight } = useWindowDimensions();
   const optionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const filterRef = useRef<HTMLInputElement | null>(null);
 
   const [search, setSearch] = useState("");
   const [focused, setFocused] = useState("");
@@ -63,9 +66,8 @@ export default function Select({
       setSearch("");
       setFocused("");
     } else if (shouldShowFilter) {
-      // If there's a filter, it will get focus naturally - no action needed
+      filterRef.current?.focus();
     } else if (contentRef.current) {
-      // Focus the dropdown container when there's no filter
       contentRef.current.focus();
     }
   }, [isOpen, shouldShowFilter]);
@@ -86,6 +88,9 @@ export default function Select({
 
   function handleKeyDown(event: KeyboardEvent): void {
     if (isPhone || !isOpen) return;
+    const target = event.target as HTMLElement | null;
+
+    if (target && target.getAttribute("name") === "select-filter") return;
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
@@ -144,6 +149,9 @@ export default function Select({
     <SelectStyled css={wrapperCSS}>
       <SelectTriggerStyled
         ref={triggerRef}
+        aria-controls={`${instanceId}-listbox`}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
         css={triggerCSS}
         onClick={(e): void => {
           e.stopPropagation();
@@ -157,32 +165,82 @@ export default function Select({
         <SelectGroupStyled
           ref={contentRef}
           animation={isOpen}
+          aria-activedescendant={focused || undefined}
+          aria-busy={loading || undefined}
+          aria-labelledby={label ? `${instanceId}-label` : undefined}
           css={{
             height: height || "auto",
             maxHeight: windowHeight < 700 ? "50vh" : "70vh",
             maxWidth: width || "500px",
-            minWidth: width || filter ? "200px" : "125px",
+            minWidth: width || (filter ? "200px" : "125px"),
             phone: {
               maxWidth: "100%",
             },
             width: width || "auto",
             ...css,
           }}
+          id={`${instanceId}-listbox`}
+          role="listbox"
           tabIndex={-1}>
           {label && (
             <SelectLabelStyled>
-              <Text as="h6">{label}</Text>
+              <Text as="h6" id={`${instanceId}-label`}>
+                {label}
+              </Text>
             </SelectLabelStyled>
           )}
           {shouldShowFilter && (
             <SelectFilterStyled>
               <Input
+                ref={filterRef}
+                aria-label="Filter options"
                 disabled={!options}
                 name="select-filter"
                 placeholder="Type to search..."
                 submitValid={(): boolean => search.length > 0}
                 value={search}
                 onChange={(event): void => setSearch(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+                    event.preventDefault();
+                    const index = filteredOptions.findIndex((o) => o.value === focused);
+
+                    if (event.key === "ArrowDown") {
+                      const nextIndex =
+                        index < 0 ? 0 : Math.min(index + 1, filteredOptions.length - 1);
+                      const nextValue = filteredOptions[nextIndex]?.value;
+
+                      if (nextValue) {
+                        setFocused(nextValue);
+                        optionRefs.current[nextValue]?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "nearest",
+                        });
+                      }
+                    }
+                    if (event.key === "ArrowUp") {
+                      const prevIndex =
+                        index < 0 ? filteredOptions.length - 1 : Math.max(index - 1, 0);
+                      const prevValue = filteredOptions[prevIndex]?.value;
+
+                      if (prevValue) {
+                        setFocused(prevValue);
+                        optionRefs.current[prevValue]?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "nearest",
+                        });
+                      }
+                    }
+                  }
+                  if (event.key === "Enter") {
+                    event.preventDefault();
+                    const idx = filteredOptions.findIndex((o) => o.value === focused);
+
+                    if (idx >= 0) {
+                      handleSelection(filteredOptions[idx].value, filteredOptions[idx].label);
+                    }
+                  }
+                }}
               />
             </SelectFilterStyled>
           )}
@@ -195,8 +253,11 @@ export default function Select({
                 ref={(el) => {
                   optionRefs.current[option.value] = el;
                 }}
+                aria-selected={option.value === selected}
                 focused={option.value === focused && !isPhone}
+                id={option.value}
                 last={last && !search}
+                role="option"
                 selected={option.value === selected}
                 onClick={() => handleSelection(option.value, option.label)}
                 onMouseOver={() => handleItemMouseOver(option.value)}>
@@ -217,3 +278,5 @@ export default function Select({
     </SelectStyled>
   );
 }
+
+Select.displayName = "Select";

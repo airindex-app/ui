@@ -4,22 +4,10 @@ import Button from "../Button";
 
 export const AccordionStyled = styled("div", {
   alignItems: "flex-start",
+  display: "flex",
+  flexDirection: "column",
   gap: "$small",
   transition: "$default",
-  variants: {
-    mode: {
-      grid: {
-        display: "grid",
-        gap: "$medium",
-        gridTemplateColumns: "1fr 1fr",
-      },
-      list: {
-        display: "flex",
-        flexDirection: "column",
-      },
-    },
-  },
-
   width: "100%",
 });
 
@@ -28,25 +16,41 @@ export const AccordionItemStyled = styled("div", {
 });
 
 export const AccordionButtonStyled = styled(Button, {
+  "&::before": {
+    backgroundColor: "transparent",
+    bottom: 0,
+    content: "",
+    left: 0,
+    position: "absolute",
+    top: 0,
+    transition: "$default",
+    width: "2px",
+  },
+  "&:active": {
+    transform: "translateY(1px)",
+  },
   "& svg": {
     alignSelf: "flex-start",
     flexShrink: 0,
+    transition: "$default",
   },
   alignItems: "center",
   justifyContent: "space-between",
   padding: "$smaller $small",
+  position: "relative",
   textAlign: "left",
   transition: "$default",
   variants: {
     expanded: {
       true: {
-        backgroundColor: "$surface",
+        "&::before": {
+          backgroundColor: "$yellow",
+        },
+        "& svg": {
+          transform: "rotate(90deg)",
+        },
+        backgroundColor: "$surfaceLight",
         borderBottom: "none",
-      },
-    },
-    large: {
-      true: {
-        fontSize: "$h6 !important",
       },
     },
   },
@@ -63,7 +67,7 @@ export const AccordionCardStyled = styled(Box, {
 export const AccordionListContentStyled = styled("div", {
   border: "1px solid transparent",
   overflow: "hidden",
-  transition: "$default",
+  transition: "all 200ms ease-out",
 
   variants: {
     expanded: {
@@ -80,24 +84,7 @@ export const AccordionListContentStyled = styled("div", {
       },
     },
   },
+  willChange: "height, opacity, padding",
 });
 
-export const AccordionGridContentStyled = styled("div", {
-  overflow: "hidden",
-  transition: "$default",
-
-  variants: {
-    expanded: {
-      false: {
-        height: 0,
-        opacity: 0,
-        padding: `0 $medium`,
-      },
-      true: {
-        height: "auto",
-        opacity: 1,
-        padding: "$medium",
-      },
-    },
-  },
-});
+// Grid content removed

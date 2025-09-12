@@ -1,4 +1,4 @@
-import type { JSX, MouseEvent } from "react";
+import { useId, type JSX, type MouseEvent } from "react";
 
 import {
   useEventListener,
@@ -10,6 +10,7 @@ import {
 import { PopoverStyled, PopoverContentStyled, PopoverTriggerStyled } from "./styles";
 
 export default function Popover({
+  ariaLabel,
   children,
   css,
   disabled,
@@ -21,6 +22,8 @@ export default function Popover({
 }: IPopover): JSX.Element {
   const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = useFloatingUI();
   const { height: windowHeight } = useWindowDimensions();
+  const reactId = useId();
+  const instanceId = `popover-${reactId}`;
 
   function handleKeyDown(event: KeyboardEvent): void {
     if (event.key === "Escape") {
@@ -43,6 +46,9 @@ export default function Popover({
     <PopoverStyled css={wrapperCSS}>
       <PopoverTriggerStyled
         ref={triggerRef}
+        aria-controls={`${instanceId}-content`}
+        aria-expanded={isOpen}
+        aria-haspopup="dialog"
         css={triggerCSS}
         onClick={(e) => handleTriggerClick(e)}>
         {trigger}
@@ -52,12 +58,15 @@ export default function Popover({
         <PopoverContentStyled
           ref={contentRef}
           animation={isOpen}
+          aria-label={ariaLabel}
           css={{
             maxHeight: windowHeight < 700 ? "50vh" : "70vh",
             width: "auto",
             ...css,
           }}
+          id={`${instanceId}-content`}
           minimal={minimal}
+          role="region"
           small={small}>
           {typeof children === "function" ? children(handleClose) : children}
         </PopoverContentStyled>
@@ -65,3 +74,5 @@ export default function Popover({
     </PopoverStyled>
   );
 }
+
+Popover.displayName = "Popover";

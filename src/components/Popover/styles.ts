@@ -1,4 +1,4 @@
-import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { fadeInUp, fadeOutDown, styled } from "../../stitches.config";
 
 export const PopoverStyled = styled("div", {
   display: "inline-flex",
@@ -23,15 +23,22 @@ export const PopoverContentStyled = styled("div", {
   padding: "$small $medium",
   pointerEvents: "auto",
   textAlign: "left !important",
+  transformOrigin: "top center",
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} 200ms ease-out`,
+        animation: `${fadeOutDown} 180ms ease-out`,
         animationFillMode: "forwards",
+        reduceMotion: {
+          animation: "none",
+        },
       },
       true: {
-        animation: `${fadeIn} 200ms ease-out`,
+        animation: `${fadeInUp} 180ms ease-out`,
         animationFillMode: "forwards",
+        reduceMotion: {
+          animation: "none",
+        },
       },
     },
     minimal: {
@@ -57,6 +64,7 @@ export const PopoverContentStyled = styled("div", {
     },
   },
   width: "100%",
+  willChange: "transform, opacity",
   zIndex: "$popover",
 });
 

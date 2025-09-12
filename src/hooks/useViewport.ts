@@ -37,7 +37,7 @@ export function useViewport(): ViewportInfo {
 
     vv?.addEventListener("resize", update);
 
-    return () => {
+    return (): void => {
       window.removeEventListener("resize", update);
       window.removeEventListener("orientationchange", update);
       vv?.removeEventListener("resize", update);

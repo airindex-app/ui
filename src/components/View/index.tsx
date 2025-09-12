@@ -13,7 +13,6 @@ export default function View({
   css,
   id,
   inverted,
-  noPrint,
   top,
 }: IView): JSX.Element {
   return (
@@ -31,12 +30,13 @@ export default function View({
         }),
         ...css,
       }}
-      id={`view-${id}`}
-      inverted={inverted}
-      noPrint={noPrint}>
+      id={id ? `view-${id}` : undefined}
+      inverted={inverted}>
       <ViewContainerStyled app={app} container={container}>
         {children}
       </ViewContainerStyled>
     </ViewStyled>
   );
 }
+
+View.displayName = "View";

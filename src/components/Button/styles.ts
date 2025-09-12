@@ -3,11 +3,15 @@ import { pulse, styled } from "../../stitches.config";
 export const ButtonStyled = styled("button", {
   "&:active": {
     outline: 0,
+    transform: "translateY(1px)",
   },
 
   "&:disabled": {
     cursor: "not-allowed",
     opacity: "$light",
+  },
+  "&:focus, &:focus-visible": {
+    outline: 0,
   },
   alignContent: "center",
   alignItems: "center",
@@ -105,18 +109,25 @@ export const ButtonStyled = styled("button", {
 export const ButtonIconStyled = styled("span", {
   display: "inline-flex",
   justifyContent: "center",
+  transition: "$default",
   variants: {
     align: {
       left: {
         marginRight: "$small",
       },
       right: {
+        [`${ButtonStyled}:hover &`]: {
+          transform: "translateX(2px)",
+        },
         marginLeft: "$small",
       },
       smallLeft: {
         marginRight: "$smaller",
       },
       smallRight: {
+        [`${ButtonStyled}:hover &`]: {
+          transform: "translateX(2px)",
+        },
         marginLeft: "$smaller",
       },
     },

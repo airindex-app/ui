@@ -4,6 +4,7 @@ import {
   KeyboardEvent,
   MouseEvent,
   useEffect,
+  useId,
   useState,
   useRef,
   type JSX,
@@ -65,6 +66,8 @@ export default function Places({
 }: IPlaces): JSX.Element {
   const { contentRef, handleClick, handleClose, isMounted, isOpen, triggerRef } = useFloatingUI();
   const { height: windowHeight } = useWindowDimensions();
+  const reactId = useId();
+  const instanceId = `places-${reactId}`;
 
   const [inputValue, setInputValue] = useState((value as string) || "");
   const [predictions, setPredictions] = useState<PlacePrediction[]>([]);
@@ -76,7 +79,6 @@ export default function Places({
   const debouncedValue = useDebounce(inputValue, 300);
   const serviceRef = useRef<unknown>(null);
 
-  // Initialize Google Maps
   useEffect(() => {
     if (!apiKey || isReady) return;
 
@@ -98,7 +100,6 @@ export default function Places({
     initGoogleMaps();
   }, [apiKey, isReady]);
 
-  // Search places when dropdown is open and user types
   useEffect(() => {
     if (!debouncedValue.trim() || !isOpen || !serviceRef.current) {
       setPredictions([]);
@@ -122,7 +123,6 @@ export default function Places({
     );
   }, [debouncedValue, isOpen, countries, types]);
 
-  // Sync with external value prop
   useEffect(() => {
     if (value !== undefined && !selectedPlace) {
       setInputValue(value as string);
@@ -131,9 +131,8 @@ export default function Places({
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>): void {
     setInputValue(event.target.value);
-    setSelectedPlace(""); // Clear selected place when user types
+    setSelectedPlace("");
 
-    // Open dropdown when user starts typing
     if (!isOpen && event.target.value.trim() && isReady) {
       handleClick();
     }
@@ -146,10 +145,9 @@ export default function Places({
 
     setSelectedPlace(selectedValue);
     setInputValue(selectedValue);
-    setSelectionKey((prev) => prev + 1); // Increment key to force remount
+    setSelectionKey((prev) => prev + 1);
     handleClose();
 
-    // If there's an onChange handler, call it with synthetic event
     if (onChange) {
       const syntheticEvent = {
         currentTarget: { name: name, value: selectedValue },
@@ -161,7 +159,6 @@ export default function Places({
       onChange(syntheticEvent);
     }
 
-    // Always call onPlaceSelect if provided
     if (onPlaceSelect) onPlaceSelect(prediction);
   }
 
@@ -193,6 +190,8 @@ export default function Places({
         <Input
           key={selectionKey}
           {...inputProps}
+          aria-controls={`${instanceId}-listbox`}
+          aria-expanded={isOpen}
           css={{ width: width || "100%", ...css }}
           disabled={disabled || !isReady}
           error={error}
@@ -208,7 +207,6 @@ export default function Places({
           warningMessage={warningMessage}
           onChange={(e) => {
             handleInputChange(e);
-            onChange?.(e);
           }}
           onFocus={() => {
             handleInputFocus();
@@ -229,12 +227,17 @@ export default function Places({
             minWidth: dropdownWidth || "200px",
             width: dropdownWidth || "100%",
             ...dropdownCSS,
-          }}>
+          }}
+          id={`${instanceId}-listbox`}
+          role="listbox">
           {loading ? (
             <Loading />
           ) : predictions.length > 0 ? (
             predictions.map((prediction) => (
-              <PlacesItemStyled key={prediction.place_id} onClick={handleItemClick(prediction)}>
+              <PlacesItemStyled
+                key={prediction.place_id}
+                role="option"
+                onClick={handleItemClick(prediction)}>
                 {prediction.structured_formatting ? (
                   <div>
                     <Text as="strong">{prediction.structured_formatting.main_text}</Text>
@@ -257,3 +260,5 @@ export default function Places({
     </PlacesStyled>
   );
 }
+
+Places.displayName = "Places";

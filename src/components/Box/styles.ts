@@ -13,7 +13,7 @@ export const BoxStyled = styled("article", {
   variants: {
     animation: {
       true: {
-        animation: `${fadeOut} 0.1s ease-in-out`,
+        animation: `${fadeOut} 200ms ease-in-out`,
         animationFillMode: "forwards",
       },
     },
@@ -52,9 +52,12 @@ export const BoxStyled = styled("article", {
     hover: {
       true: {
         "&:hover": {
+          borderColor: "$text",
+          borderTopColor: "$text",
           img: {
             transform: "scale(1.02)",
           },
+          transform: "translateY(-2px)",
         },
         cursor: "pointer",
         img: {
@@ -127,6 +130,11 @@ export const BoxHeaderStyled = styled("div", {
       },
     },
   },
+});
+
+export const BoxImageStyled = styled("div", {
+  height: "100%",
+  width: "100%",
 });
 
 export const BoxFooterStyled = styled("div", {

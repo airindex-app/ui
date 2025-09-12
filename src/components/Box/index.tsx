@@ -1,7 +1,7 @@
 import { useState, type JSX } from "react";
 
 import { EnterIcon, ExitIcon, CrossCircledIcon } from "../../icons";
-import { Button, Image, Loading, Icon, type IBox } from "../../index";
+import { Button, Loading, Icon, type IBox } from "../../index";
 import {
   BoxExitStyled,
   BoxExpanderTrigger,
@@ -11,6 +11,7 @@ import {
   BoxInnerStyled,
   BoxLoadingStyled,
   BoxStyled,
+  BoxImageStyled,
 } from "./styles";
 
 export default function Box({
@@ -23,18 +24,20 @@ export default function Box({
   expandableHeight,
   footer,
   header,
+  hover,
+  id,
   image,
-  imageAlt,
   imageCTA,
   imageFit,
   imageHeight,
   imagePosition,
-  imageSizes,
   imageTarget,
   loading,
   minimal,
   onClick,
+  role,
   small,
+  tabIndex,
   theme = "default",
 }: IBox): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(true);
@@ -50,12 +53,15 @@ export default function Box({
 
   const padding = header || footer || image || minimal ? "none" : small ? "small" : "default";
   const hasInteraction = !!(cta || imageCTA || onClick);
+  const isHoverEnabled = !!(hover ?? hasInteraction);
 
   if (!isMounted) return null;
 
   return (
     <BoxStyled
       animation={!isOpen}
+      aria-busy={!!loading || undefined}
+      aria-label={cta ? (typeof header === "string" ? header : undefined) : undefined}
       as={cta ? "a" : "div"}
       border={border}
       collapsed={expandable && !isExpanded}
@@ -64,10 +70,14 @@ export default function Box({
         ...css,
       }}
       footer={!!footer}
-      hover={hasInteraction}
+      hover={!loading && isHoverEnabled}
       href={cta}
+      id={id}
       loading={!!loading}
       padding={padding}
+      rel={cta ? "noopener noreferrer" : undefined}
+      role={role}
+      tabIndex={tabIndex}
       target={cta ? "_blank" : undefined}
       theme={theme || "default"}
       onClick={onClick}>
@@ -78,37 +88,25 @@ export default function Box({
       )}
 
       <BoxFlexStyled>
-        {image &&
-          (imageCTA && !cta ? (
-            <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
-              <Image
-                alt={imageAlt || ""}
-                css={{
-                  img: {},
-                }}
-                fill
-                fillFit={imageFit}
-                fillHeight={imageHeight}
-                fillPosition={imagePosition}
-                sizes={imageSizes || "50vw"}
-                src={image}
-              />
-            </a>
-          ) : (
-            <Image
-              alt={imageAlt || ""}
-              css={{
-                img: {},
-              }}
-              fill
-              fillFit={imageFit}
-              fillHeight={imageHeight}
-              fillPosition={imagePosition}
-              sizes={imageSizes || "50vw"}
-              src={image}
-            />
-          ))}
-
+        {image && (
+          <BoxImageStyled
+            css={{
+              img: {
+                height: imageHeight || "100%",
+                objectFit: imageFit || "cover",
+                objectPosition: imagePosition || "center",
+                width: "100%",
+              },
+            }}>
+            {imageCTA && !cta ? (
+              <a href={imageCTA} rel="noopener noreferrer" target={imageTarget || "_blank"}>
+                {image}
+              </a>
+            ) : (
+              image
+            )}
+          </BoxImageStyled>
+        )}
         {header && (
           <BoxHeaderStyled padding={minimal ? "none" : small ? "small" : "default"}>
             {header}
@@ -152,3 +150,5 @@ export default function Box({
     </BoxStyled>
   );
 }
+
+Box.displayName = "Box";

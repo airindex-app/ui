@@ -1,4 +1,4 @@
-import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { fadeInUp, fadeOutDown, styled } from "../../stitches.config";
 
 export const PlacesStyled = styled("div", {
   display: "block",
@@ -17,30 +17,41 @@ export const PlacesDropdownStyled = styled("div", {
   padding: "$smallest $smaller",
   pointerEvents: "auto",
   textAlign: "left !important",
+  transformOrigin: "top center",
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} 200ms ease-out`,
+        animation: `${fadeOutDown} 200ms ease-out`,
         animationFillMode: "forwards",
       },
       true: {
-        animation: `${fadeIn} 200ms ease-out`,
+        animation: `${fadeInUp} 200ms ease-out`,
         animationFillMode: "forwards",
       },
     },
   },
   width: "100%",
+  willChange: "transform, opacity",
   zIndex: "$select",
 });
 
 export const PlacesItemStyled = styled("div", {
+  "&:active": {
+    transform: "translateY(1px)",
+  },
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
+  alignItems: "center",
   cursor: "pointer",
-  margin: "$smallest $smaller",
+  display: "flex",
+  gap: "$small",
+  justifyContent: "space-between",
+  margin: "$smaller",
   padding: "$smaller $small",
+  textAlign: "left",
   transition: "$default",
+  userSelect: "none",
 });
 
 export const PlacesEmptyStyled = styled("div", {

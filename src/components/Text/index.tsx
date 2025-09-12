@@ -56,7 +56,7 @@ export default function Text({
       inline={shouldShowInline ? true : false}
       link={link || (isAnchor ? "default" : undefined)}
       muted={muted}
-      rel={isAnchor ? rel : undefined}
+      rel={isAnchor ? (isExternalLink ? rel || "noopener noreferrer" : rel) : undefined}
       size={styleSize}
       target={isAnchor ? target : undefined}
       truncate={truncate}
@@ -75,3 +75,5 @@ export default function Text({
     </TextStyled>
   );
 }
+
+Text.displayName = "Text";

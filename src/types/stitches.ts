@@ -249,6 +249,12 @@ export type TStitchesUtils = {
   print: (value: unknown) => unknown;
 
   /**
+   * Apply styles when user prefers reduced motion
+   * @param value - CSS styles to apply
+   */
+  reduceMotion: (value: unknown) => unknown;
+
+  /**
    * Hide element at specific breakpoint
    * @param value - Breakpoint name where element should be hidden
    */

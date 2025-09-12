@@ -68,10 +68,7 @@ export default function SelectMulti({
     if (!isOpen) {
       setSearch("");
       setFocused("");
-    } else if (shouldShowFilter) {
-      // If there's a filter, it will get focus naturally - no action needed
-    } else if (contentRef.current) {
-      // Focus the dropdown container when there's no filter
+    } else if (!shouldShowFilter && contentRef.current) {
       contentRef.current.focus();
     }
   }, [isOpen, shouldShowFilter]);
@@ -263,3 +260,5 @@ export default function SelectMulti({
     </SelectStyled>
   );
 }
+
+SelectMulti.displayName = "SelectMulti";

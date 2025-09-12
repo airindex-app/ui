@@ -21,6 +21,7 @@ export default function Badge({
   small,
   theme = "default",
   variant = "border",
+  ...rest
 }: IBadge): JSX.Element | null {
   const [isOpen, setIsOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(true);
@@ -43,9 +44,12 @@ export default function Badge({
 
   if (!isMounted) return null;
 
+  const isInteractive = Boolean(link || onClick || copy);
+
   return (
     <BadgeStyled
       animation={!isOpen}
+      aria-busy={loading || undefined}
       block={block}
       css={{
         ...(inline && {
@@ -55,12 +59,22 @@ export default function Badge({
         }),
         ...css,
       }}
-      link={link || !!onClick || !!copy}
+      link={isInteractive}
       loading={loading}
+      role={isInteractive ? "button" : undefined}
       small={small}
+      tabIndex={isInteractive ? 0 : undefined}
       theme={theme}
       variant={variant}
-      onClick={copy ? handleCopy : onClick}>
+      onClick={copy ? handleCopy : onClick}
+      onKeyDown={(e): void => {
+        if (!isInteractive) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          e.currentTarget.click();
+        }
+      }}
+      {...rest}>
       {loading && (
         <BadgeLoadingStyled>
           <Loading />
@@ -87,9 +101,18 @@ export default function Badge({
         <BadgeIconStyled
           align={small ? "smallRight" : "right"}
           hover
+          role="button"
+          tabIndex={0}
           onClick={(e): void => {
             e.stopPropagation();
             handleClose();
+          }}
+          onKeyDown={(e): void => {
+            e.stopPropagation();
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              handleClose();
+            }
           }}>
           <Icon radix={<CrossCircledIcon />} />
         </BadgeIconStyled>
@@ -99,3 +122,5 @@ export default function Badge({
     </BadgeStyled>
   );
 }
+
+Badge.displayName = "Badge";

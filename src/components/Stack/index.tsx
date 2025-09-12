@@ -6,10 +6,8 @@ import { type IStack } from "../../index";
 import { darkTheme } from "../../stitches.config";
 import { StackStyled } from "./styles";
 
-// Helper function to calculate flex value for width
 const getFlexValue = (width: number): string => (width === 100 ? `0 0 100%` : `${width} 1 0%`);
 
-// Helper function to create responsive width styles
 const createResponsiveWidth = (widthResponsive: IStack["widthResponsive"], css: CSS = {}): CSS => {
   const responsiveStyles: CSS = {};
 
@@ -78,7 +76,6 @@ export default function Stack({
   wrap,
   ...rest
 }: IStack): JSX.Element {
-  // Default minimal to true for row direction unless explicitly set to false
   const effectiveMinimal = direction === "row" ? minimal !== false : minimal === true;
   const finalCSS: CSS = {
     ...(align && { textAlign: align }),
@@ -113,3 +110,5 @@ export default function Stack({
     </StackStyled>
   );
 }
+
+Stack.displayName = "Stack";

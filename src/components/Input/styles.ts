@@ -19,14 +19,16 @@ export const InputStyled = styled("div", {
 });
 
 export const InputCoreStyled = styled("div", {
-  "&:focus-within": interactiveStyles,
+  "&:focus-within": {
+    ...interactiveStyles,
+  },
   "&:hover": interactiveStyles,
-  alignContent: "center",
+  alignItems: "center",
   alignSelf: "center",
   backgroundColor: "$surface",
   border: "1px solid $border",
   display: "flex",
-  justifyContent: "center",
+  justifyContent: "space-between",
   transition: "$default",
   width: "100%",
 });
@@ -45,15 +47,15 @@ export const InputAreaStyled = styled("input", {
   border: "none",
   color: "$text",
   display: "block",
+  flex: "1 1 auto",
   fontFamily: "$default",
   fontSize: "$default",
   height: "$large",
+  minWidth: 0,
   padding: "0 $small",
   phone: {
     fontSize: "16px !important",
   },
-
-  width: "100%",
 });
 
 export const InputFunctionStyled = styled("div", {
@@ -62,10 +64,8 @@ export const InputFunctionStyled = styled("div", {
   flexBasis: "auto",
   flexDirection: "row",
   gap: "$smaller",
-  height: "100%",
   justifyContent: "flex-start",
-  padding: "$smallest $small $smallest 0",
-  verticalAlign: "middle",
+  padding: "0 $small 0 0",
 });
 
 export const InputCallbackStyled = styled("div", {

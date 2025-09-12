@@ -1,11 +1,9 @@
 import { type CSS } from "@stitches/react";
-import { type ImageProps } from "next/image";
 import {
   ReactNode,
   ComponentPropsWithRef,
   ComponentPropsWithoutRef,
   MouseEventHandler,
-  RefObject,
   type JSX,
   CSSProperties,
   ReactElement,
@@ -25,16 +23,14 @@ import { spacings } from "../stitches.config";
 export interface IAvatar {
   /** Alternative text for the avatar image */
   alt?: string;
-  /** Whether to show colored background for fallback */
-  colors?: boolean;
+  /** Visual theme/color scheme for the avatar */
+  theme?: "default" | "yellow";
   /** Custom CSS styles */
   css?: CSS;
   /** Fallback text to display when image is not available */
   fallback: string;
-  /** Whether to make the avatar round/circular */
-  round?: boolean;
   /** Source URL for the avatar image */
-  src?: string;
+  image?: ReactNode;
   /** Width of the avatar in pixels */
   width?: number;
 }
@@ -49,7 +45,7 @@ export interface IAvatar {
  * </Badge>
  * ```
  */
-export interface IBadge {
+export interface IBadge extends ComponentPropsWithoutRef<"span"> {
   /** Whether the badge should take full width */
   block?: boolean;
   /** Content to display inside the badge */
@@ -73,7 +69,7 @@ export interface IBadge {
   /** Whether to show a small yellow dot indicator in the top right */
   new?: boolean;
   /** Click handler for interactive badges */
-  onClick?: MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLSpanElement>;
   /** Whether to render a smaller version of the badge */
   small?: boolean;
   /** Visual theme/color scheme for the badge */
@@ -105,8 +101,12 @@ export interface IBox {
   closable?: boolean;
   /** Custom CSS styles */
   css?: CSS;
+  /** HTML id attribute for the box */
+  id?: string;
   /** Call-to-action text for the box */
   cta?: string;
+  /** Whether to enable hover interaction styles explicitly */
+  hover?: boolean;
   /** Whether the box can be expanded/collapsed */
   expandable?: boolean;
   /** Height when expanded in pixels */
@@ -115,10 +115,8 @@ export interface IBox {
   footer?: ReactNode;
   /** Header content to display at the top */
   header?: ReactNode;
-  /** Image URL to display in the box */
-  image?: string;
-  /** Alt text for the image */
-  imageAlt?: ImageProps["alt"];
+  /** Image to display in the box. Pass a URL string or a custom React element */
+  image?: ReactNode;
   /** Call-to-action text for the image */
   imageCTA?: string;
   /** How the image should fit within its container */
@@ -127,8 +125,6 @@ export interface IBox {
   imageHeight?: string;
   /** Position of the image within its container */
   imagePosition?: CSSProperties["objectPosition"];
-  /** Responsive image sizes */
-  imageSizes?: ImageProps["sizes"];
   /** Target for image link */
   imageTarget?: "_blank" | "_self";
   /** Whether to show a loading state */
@@ -137,6 +133,10 @@ export interface IBox {
   minimal?: boolean;
   /** Click handler for the box */
   onClick?: MouseEventHandler<HTMLDivElement>;
+  /** ARIA role */
+  role?: string;
+  /** Keyboard tab order */
+  tabIndex?: number;
   /** Whether to render a smaller version */
   small?: boolean;
   /** Visual theme/color scheme for the box */
@@ -327,15 +327,28 @@ export interface IField extends ComponentPropsWithRef<"textarea"> {
  * Form component props - form wrapper with validation and submission handling
  *
  * @example
+ * // Boolean validity and arg-less submission (backward compatible)
  * ```tsx
  * <Form
  *   name="userForm"
- *   submitFunction={handleFormSubmit}
+ *   submit="Submit"
  *   submitValid={isFormValid}
- *   loading={isSubmitting}
+ *   submitFunction={() => doSubmit()}
  * >
  *   <Input name="email" type="email" />
- *   <Button type="submit">Submit</Button>
+ * </Form>
+ * ```
+ *
+ * @example
+ * // Function validity and data-aware submission
+ * ```tsx
+ * <Form
+ *   name="userForm"
+ *   submit="Save"
+ *   submitValid={(data) => Boolean(data.email)}
+ *   submitFunction={(data) => saveEmail(String(data.email))}
+ * >
+ *   <Input name="email" type="email" />
  * </Form>
  * ```
  */
@@ -356,10 +369,18 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
   name: string;
   /** Text for the submit button */
   submit?: string;
-  /** Function to call when form is submitted */
-  submitFunction: () => void | Promise<void> | unknown;
-  /** Whether the form is valid and can be submitted */
-  submitValid?: boolean;
+  /**
+   * Function to call when form is submitted.
+   * If it declares parameters, it will receive a plain object of form data (name/value pairs).
+   * If it declares no parameters, it's called with no args (backward compatible).
+   */
+  submitFunction:
+    | ((data: Record<string, FormDataEntryValue>) => void | Promise<void> | unknown)
+    | (() => void | Promise<void> | unknown);
+  /**
+   * Form validity. Can be a boolean or a function that receives current form data and returns a boolean.
+   */
+  submitValid?: boolean | ((data: Record<string, FormDataEntryValue>) => boolean);
 }
 
 /**
@@ -375,18 +396,7 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
  * />
  * ```
  */
-export interface IImage extends ImageProps {
-  /** Custom CSS styles */
-  css?: CSS;
-  /** Whether the image should fill its container */
-  fill?: boolean;
-  /** How the image should fit when using fill */
-  fillFit?: CSSProperties["objectFit"];
-  /** Height when using fill mode */
-  fillHeight?: string | number;
-  /** Position of the image when using fill */
-  fillPosition?: CSSProperties["objectPosition"];
-}
+// Image component removed; use native <img> with props on containers instead
 
 /**
  * Input component props - form input field with validation and actions
@@ -418,8 +428,6 @@ export interface IInput extends ComponentPropsWithRef<"input"> {
   listen?: boolean;
   /** Whether to show a loading state */
   loading?: boolean;
-  /** Ref object to access the input element directly */
-  mustRef?: RefObject<HTMLInputElement | null>;
   /** Name attribute for the input (required) */
   name: string;
   /** Whether to show a reset button */
@@ -519,6 +527,8 @@ export interface IMaps {
   zoom?: number;
   /** Map type */
   mapType?: "roadmap" | "satellite" | "hybrid" | "terrain";
+  /** Optional accessible label for the map region */
+  ariaLabel?: string;
 }
 
 /**
@@ -565,6 +575,8 @@ export interface ILoadingOverlay extends ILoading {
  * ```
  */
 export interface IMenu {
+  /** Accessible label for the menu container */
+  ariaLabel?: string;
   /** Additional content to render in the menu - can be ReactNode or a function that receives the close function */
   children?: ReactNode | ((close: () => void) => ReactNode);
   /** Custom CSS styles */
@@ -591,6 +603,17 @@ export interface IMenu {
 }
 
 /**
+ * Popover usage now accepts ariaLabel for accessible description of the region
+ *
+ * @example
+ * ```tsx
+ * <Popover ariaLabel="More info" trigger={<Button>Info</Button>}>
+ *   <Text>Details here</Text>
+ * </Popover>
+ * ```
+ */
+
+/**
  * Popover component props - floating content overlay
  *
  * @example
@@ -604,6 +627,8 @@ export interface IMenu {
  * ```
  */
 export interface IPopover {
+  /** Accessible label for the popover content region */
+  ariaLabel?: string;
   /** Content to display in the popover - can be ReactNode or a function that receives the close function */
   children: ReactNode | ((close: () => void) => ReactNode);
   /** Custom CSS styles */
@@ -961,8 +986,6 @@ export interface IView {
   id?: string;
   /** Whether to invert colors */
   inverted?: boolean;
-  /** Whether to hide when printing */
-  noPrint?: boolean;
   /** Top margin/spacing */
   top?: keyof typeof spacings;
 }
@@ -992,7 +1015,7 @@ export interface IPortal {
  * <Icon radix={<ArrowRightIcon />} forceColor="blue" forceSize={24} inline="small" />
  * ```
  */
-export interface IIcon {
+export interface IIcon extends ComponentPropsWithoutRef<"span"> {
   /** Custom CSS styles */
   css?: CSS;
   /** Force a specific color from theme */
@@ -1020,22 +1043,7 @@ export interface IIcon {
  * />
  * ```
  */
-export interface ITabs {
-  /** Initially selected tab value */
-  initial?: string;
-  /** Whether to use small tabs */
-  small?: boolean;
-  /** Callback when tab is selected */
-  onSelection?: (value: string) => void;
-  /** Array of tab options */
-  options: Array<{
-    icon?: ReactNode;
-    label: string;
-    value: string;
-  }>;
-  /** Custom CSS styles */
-  css?: CSS;
-}
+// Tabs component removed
 
 /**
  * Accordion component props - collapsible content sections with optional multiple expansion
@@ -1055,7 +1063,6 @@ export interface ITabs {
  *       label: "Section 2",
  *       value: "section2",
  *       children: <Text>Content for section 2</Text>,
- *       large: true
  *     }
  *   ]}
  *   onToggle={(value, isOpen) => console.log(value, isOpen)}
@@ -1075,8 +1082,5 @@ export interface IAccordion {
     icon?: ReactNode;
     label: string;
     value: string;
-    large?: boolean;
   }>;
-  /** Display mode: 'list' (default) or 'grid' */
-  mode?: "list" | "grid";
 }

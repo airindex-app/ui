@@ -32,17 +32,11 @@ export function ToastController({
     }
   };
 
-  const getToastTheme = (): "yellow" => {
-    // Always return yellow for all toast types
-    return "yellow";
-  };
-
   const handleToastClick = (id: string): void => {
     toast.remove(id);
   };
 
   const renderToast = (t: Toast): JSX.Element => {
-    const theme = getToastTheme();
     const message = prepareMessage(t.message);
 
     return (
@@ -50,7 +44,7 @@ export function ToastController({
         onClick={() => handleToastClick(t.id)}
         onMouseEnter={startPause}
         onMouseLeave={endPause}>
-        <Badge link theme={theme}>
+        <Badge link theme="yellow">
           {message}
         </Badge>
       </ToastStyled>

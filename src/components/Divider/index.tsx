@@ -6,6 +6,7 @@ import { DividerStyled } from "./styles";
 export default function Divider({ bottom, css, top, ...rest }: IDivider): JSX.Element {
   return (
     <DividerStyled
+      aria-orientation="horizontal"
       css={{
         ...(top && {
           marginTop: `$${top}`,
@@ -15,7 +16,10 @@ export default function Divider({ bottom, css, top, ...rest }: IDivider): JSX.El
         }),
         ...css,
       }}
+      role="separator"
       {...rest}
     />
   );
 }
+
+Divider.displayName = "Divider";

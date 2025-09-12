@@ -1,24 +1,15 @@
 import type { JSX } from "react";
 
-import { Image, Text, type IAvatar } from "../../index";
+import { Text, type IAvatar } from "../../index";
 import { AvatarStyled } from "./styles";
 
-const getTheme = (): "yellow" => {
-  // Always return yellow for colored avatars
-  return "yellow";
-};
-
 export default function Avatar({
-  alt,
-  colors,
   css,
   fallback,
-  round = false,
-  src,
+  image,
+  theme = "default",
   width = 32,
 }: IAvatar): JSX.Element {
-  const theme = colors ? getTheme() : "default";
-
   return (
     <AvatarStyled
       css={{
@@ -30,13 +21,10 @@ export default function Avatar({
         width: width,
         ...css,
       }}
-      round={round}
       theme={theme}>
-      {src ? (
-        <Image alt={alt || fallback} fill fillFit="cover" sizes={`${width}px`} src={src} />
-      ) : (
-        <Text as="span">{fallback}</Text>
-      )}
+      {image || <Text as="span">{fallback}</Text>}
     </AvatarStyled>
   );
 }
+
+Avatar.displayName = "Avatar";

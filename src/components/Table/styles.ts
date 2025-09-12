@@ -1,6 +1,5 @@
 import { fadeIn, styled } from "../../stitches.config";
 
-// Shared patterns
 const cellPaddingBase = {
   "&:first-child": {
     paddingLeft: "$medium",
@@ -98,7 +97,7 @@ export const TableMobileRow = styled("div", {
 export const TableMobileLabel = styled("span", {
   color: "$text",
   fontSize: "$small",
-  fontWeight: 500,
+  fontWeight: 600,
   minWidth: "50px",
   opacity: "$light",
 });
@@ -163,7 +162,7 @@ export const TableHeaderCellStitches = styled("th", {
   borderBottom: "1px solid $borderLight",
   color: "$text",
   fontSize: "$small",
-  fontWeight: 500,
+  fontWeight: 600,
   padding: "$small $medium",
   textAlign: "left",
   variants: {

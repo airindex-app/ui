@@ -1,6 +1,5 @@
-import { fadeIn, fadeOut, styled } from "../../stitches.config";
+import { fadeInUp, fadeOutDown, styled } from "../../stitches.config";
 
-// Shared base for sticky elements in select
 const stickyBase = {
   backgroundColor: "$background",
   position: "sticky",
@@ -32,19 +31,21 @@ export const SelectGroupStyled = styled("div", {
   padding: "$smallest $smaller",
   pointerEvents: "auto",
   textAlign: "left !important",
+  transformOrigin: "top center",
   variants: {
     animation: {
       false: {
-        animation: `${fadeOut} 200ms ease-out`,
+        animation: `${fadeOutDown} 200ms ease-out`,
         animationFillMode: "forwards",
       },
       true: {
-        animation: `${fadeIn} 200ms ease-out`,
+        animation: `${fadeInUp} 200ms ease-out`,
         animationFillMode: "forwards",
       },
     },
   },
   width: "100%",
+  willChange: "transform, opacity",
   zIndex: "$select",
 });
 
@@ -54,11 +55,15 @@ export const SelectFilterStyled = styled("div", {
 });
 
 export const SelectItemStyled = styled("div", {
+  "&:active": {
+    transform: "translateY(1px)",
+  },
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
   alignItems: "center",
   backgroundColor: "$surface",
+  borderLeft: "2px solid transparent",
   color: "$text",
   cursor: "pointer",
   display: "flex",
@@ -86,10 +91,11 @@ export const SelectItemStyled = styled("div", {
     },
     selected: {
       true: {
-        backgroundColor: "$surface",
+        backgroundColor: "$surfaceLight",
+        borderLeft: "2px solid $yellow",
         color: "$text",
         fontFamily: "$default",
-        fontWeight: 600,
+        fontWeight: 400,
       },
     },
   },
@@ -115,6 +121,7 @@ export const SelectIconStyled = styled("div", {
   alignItems: "center",
   display: "flex",
   justifyContent: "center",
+  transition: "$default",
   variants: {
     align: {
       left: {

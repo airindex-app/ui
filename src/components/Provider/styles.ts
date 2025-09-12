@@ -27,7 +27,6 @@ export const ToastStyled = styled("div", {
   width: "fit-content",
 });
 
-// Shared disabled state
 const disabledStyles = {
   cursor: "not-allowed",
   opacity: theme.opacities.light,
@@ -40,7 +39,6 @@ export const providerReset = globalCss({
     padding: 0,
   },
 
-  // Remove browser default focus outline for programmatically focused elements
   "*:focus": {
     outline: theme.colors.yellow,
   },
@@ -71,7 +69,7 @@ export const providerReset = globalCss({
     fontFeatureSettings: '"zero" 1, "tnum" 1, "calt" 1, "liga" 1, "case" 1',
     fontOpticalSizing: "auto",
     fontSize: theme.fontSizes.default,
-    fontWeight: "normal",
+    fontWeight: 400,
     letterSpacing: "0.015em",
     lineHeight: theme.lineHeights.default,
     margin: 0,
@@ -92,7 +90,7 @@ export const providerReset = globalCss({
 
   "h1, h2, h3, h4, h5, h6": {
     fontFeatureSettings: '"zero" 1, "tnum" 1, "calt" 1, "liga" 1, "case" 1',
-    fontWeight: "bold",
+    fontWeight: 600,
     lineHeight: theme.lineHeights.small,
     margin: 0,
     textRendering: "optimizeLegibility",
@@ -115,6 +113,14 @@ export const providerReset = globalCss({
   p: {
     lineHeight: theme.lineHeights.default,
     margin: 0,
+  },
+
+  reduceMotion: {
+    "*:not([data-allow-motion])": {
+      animation: "none !important",
+      scrollBehavior: "auto !important",
+      transition: "none !important",
+    },
   },
 
   svg: {

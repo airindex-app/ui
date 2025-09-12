@@ -1,6 +1,5 @@
 import { fadeIn, fadeOut, slideInScale, slideOutScale, styled } from "../../stitches.config";
 
-// Shared base for overlay components (Menu/Modal/Drawer)
 const overlayBase = {
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
@@ -21,7 +20,6 @@ const overlayBase = {
   },
 } as const;
 
-// Shared base for dialog-style containers
 const dialogContainerBase = {
   "&::-webkit-scrollbar": {
     display: "none",
@@ -79,11 +77,15 @@ export const MenuGroupStyled = styled("div", {
 });
 
 export const MenuItemStyled = styled("div", {
+  "&:active": {
+    transform: "translateY(1px)",
+  },
   "&:hover": {
     backgroundColor: "$surfaceHover",
   },
   alignItems: "center",
   backgroundColor: "$surface",
+  borderLeft: "2px solid transparent",
   color: "$text",
   cursor: "pointer",
   display: "flex",
@@ -102,9 +104,10 @@ export const MenuItemStyled = styled("div", {
     },
     selected: {
       true: {
-        backgroundColor: "$surface",
+        backgroundColor: "$surfaceLight",
+        borderLeft: "2px solid $yellow",
         fontFamily: "$default",
-        fontWeight: 600,
+        fontWeight: 400,
       },
     },
   },

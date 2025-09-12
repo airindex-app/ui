@@ -1,4 +1,4 @@
-import { useRef, useState, type JSX, type MouseEvent } from "react";
+import { useId, useRef, useState, type JSX, type MouseEvent } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -34,6 +34,7 @@ export default function Modal({
   wrapperCSS,
 }: IModal): JSX.Element {
   const ref = useRef<HTMLDivElement>(null);
+  const titleId = useId();
 
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -92,6 +93,8 @@ export default function Modal({
             <ModalGroupStyled
               ref={ref}
               animation={isOpen}
+              aria-labelledby={titleId}
+              aria-modal="true"
               css={{
                 ...(forceHeight &&
                   (!supportsDynamicVH && !supportsSmallVH
@@ -105,9 +108,10 @@ export default function Modal({
                       })),
                 ...css,
               }}
+              role="dialog"
               small={small}>
               <ModalHeaderStyled>
-                <Text as="h6" bottom="none">
+                <Text as="h6" bottom="none" id={titleId}>
                   {title}
                 </Text>
                 <Button
@@ -129,3 +133,5 @@ export default function Modal({
     </ModalStyled>
   );
 }
+
+Modal.displayName = "Modal";

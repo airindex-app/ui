@@ -286,7 +286,7 @@ export default function Table({
 
   return (
     <TableStitches css={css}>
-      <TableCoreStitches ref={tableRef}>
+      <TableCoreStitches ref={tableRef} aria-busy={loading || undefined}>
         <thead>
           <TableRowStitches ref={tableHeaderRef}>
             {memoizedColumns.map((col) => (
@@ -295,8 +295,16 @@ export default function Table({
                 align={col.align}
                 css={{
                   width: col.width || `calc(100% / ${memoizedColumns.length})`,
-                }}>
-                <div>
+                }}
+                scope="col">
+                <div
+                  aria-sort={
+                    col.sortable && sortColumn === col.key
+                      ? sortDirection === "asc"
+                        ? "ascending"
+                        : "descending"
+                      : undefined
+                  }>
                   {col.label}
                   {col.sortable && (
                     <Button
@@ -404,3 +412,5 @@ export default function Table({
     </TableStitches>
   );
 }
+
+Table.displayName = "Table";

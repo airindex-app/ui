@@ -1,4 +1,4 @@
-import { useRef, useState, type JSX } from "react";
+import { useId, useRef, useState, type JSX } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -36,6 +36,7 @@ export default function Drawer({
   const [isMounted, setIsMounted] = useState(false);
   const { heightPx, supportsDynamicVH, supportsSmallVH } = useViewport();
   const ref = useRef<HTMLDivElement | null>(null);
+  const titleId = useId();
 
   function handleClose(): void {
     setIsOpen(false);
@@ -96,6 +97,8 @@ export default function Drawer({
             <DrawerCoreStyled
               ref={ref}
               animation={isOpen}
+              aria-labelledby={titleId}
+              aria-modal="true"
               css={{
                 ...css,
                 ...(forceHeight &&
@@ -111,9 +114,10 @@ export default function Drawer({
                           value: String(forceHeight),
                         },
                       })),
-              }}>
+              }}
+              role="dialog">
               <DrawerHeaderStyled>
-                <Text as="h6" bottom="none">
+                <Text as="h6" bottom="none" id={titleId}>
                   {title}
                 </Text>
                 <Button
@@ -134,3 +138,5 @@ export default function Drawer({
     </DrawerStyled>
   );
 }
+
+Drawer.displayName = "Drawer";
