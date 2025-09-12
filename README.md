@@ -81,7 +81,7 @@ pnpm tidy
 pnpm build
 
 # Generate documentation
-pnpm docs:only
+pnpm docs
 ```
 
 ## Project Structure
