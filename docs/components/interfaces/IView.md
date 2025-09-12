@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../../README.md)
+[**@airindex-app/ui v0.2.0**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IView
 
-Defined in: [components.ts:943](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L943)
+Defined in: [components.ts:972](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L972)
 
 View component props - main layout container
 
@@ -24,7 +24,7 @@ View component props - main layout container
 
 > `optional` **app**: `boolean`
 
-Defined in: [components.ts:945](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L945)
+Defined in: [components.ts:974](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L974)
 
 Whether this is an app-level view
 
@@ -34,7 +34,7 @@ Whether this is an app-level view
 
 > `optional` **as**: keyof IntrinsicElements
 
-Defined in: [components.ts:947](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L947)
+Defined in: [components.ts:976](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L976)
 
 HTML element type to render as
 
@@ -42,9 +42,9 @@ HTML element type to render as
 
 ### bottom?
 
-> `optional` **bottom**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
+> `optional` **bottom**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:949](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L949)
+Defined in: [components.ts:978](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L978)
 
 Bottom margin/spacing
 
@@ -54,7 +54,7 @@ Bottom margin/spacing
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:951](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L951)
+Defined in: [components.ts:980](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L980)
 
 Content to display in the view
 
@@ -64,7 +64,7 @@ Content to display in the view
 
 > `optional` **container**: `boolean`
 
-Defined in: [components.ts:953](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L953)
+Defined in: [components.ts:982](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L982)
 
 Whether to use container width constraints
 
@@ -74,7 +74,7 @@ Whether to use container width constraints
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:955](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L955)
+Defined in: [components.ts:984](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L984)
 
 Custom CSS styles
 
@@ -84,7 +84,7 @@ Custom CSS styles
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:957](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L957)
+Defined in: [components.ts:986](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L986)
 
 HTML id attribute
 
@@ -94,26 +94,16 @@ HTML id attribute
 
 > `optional` **inverted**: `boolean`
 
-Defined in: [components.ts:959](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L959)
+Defined in: [components.ts:988](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L988)
 
 Whether to invert colors
 
 ***
 
-### noPrint?
-
-> `optional` **noPrint**: `boolean`
-
-Defined in: [components.ts:961](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L961)
-
-Whether to hide when printing
-
-***
-
 ### top?
 
-> `optional` **top**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
+> `optional` **top**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:963](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L963)
+Defined in: [components.ts:990](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L990)
 
 Top margin/spacing

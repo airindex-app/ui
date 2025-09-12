@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../../README.md)
+[**@airindex-app/ui v0.2.0**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ILoadingOverlay
 
-Defined in: [components.ts:543](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L543)
+Defined in: [components.ts:557](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L557)
 
 LoadingOverlay component props - full-screen loading overlay with message
 
@@ -26,7 +26,7 @@ LoadingOverlay component props - full-screen loading overlay with message
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:530](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L530)
+Defined in: [components.ts:544](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L544)
 
 Custom CSS styles
 
@@ -40,7 +40,7 @@ Custom CSS styles
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [components.ts:532](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L532)
+Defined in: [components.ts:546](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L546)
 
 Width of the loading component
 
@@ -54,6 +54,6 @@ Width of the loading component
 
 > **title**: `string`
 
-Defined in: [components.ts:545](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L545)
+Defined in: [components.ts:559](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L559)
 
 Title/message to display with the loading spinner

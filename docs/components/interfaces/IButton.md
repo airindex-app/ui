@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../../README.md)
+[**@airindex-app/ui v0.2.0**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IButton
 
-Defined in: [components.ts:156](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L156)
+Defined in: [components.ts:158](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L158)
 
 Button component props - interactive element for user actions
 
@@ -28,7 +28,7 @@ Button component props - interactive element for user actions
 
 > `optional` **block**: `boolean`
 
-Defined in: [components.ts:158](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L158)
+Defined in: [components.ts:160](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L160)
 
 Whether the button should take full width
 
@@ -38,7 +38,7 @@ Whether the button should take full width
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:160](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L160)
+Defined in: [components.ts:162](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L162)
 
 Custom CSS styles
 
@@ -48,7 +48,7 @@ Custom CSS styles
 
 > `optional` **external**: `boolean`
 
-Defined in: [components.ts:162](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L162)
+Defined in: [components.ts:164](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L164)
 
 Whether the button links to an external URL
 
@@ -58,7 +58,7 @@ Whether the button links to an external URL
 
 > `optional` **icon**: `ReactNode`
 
-Defined in: [components.ts:164](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L164)
+Defined in: [components.ts:166](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L166)
 
 Icon to display alongside the button text
 
@@ -68,7 +68,7 @@ Icon to display alongside the button text
 
 > `optional` **iconPosition**: `"left"` \| `"right"`
 
-Defined in: [components.ts:166](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L166)
+Defined in: [components.ts:168](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L168)
 
 Position of the icon relative to the text
 
@@ -76,9 +76,9 @@ Position of the icon relative to the text
 
 ### inline?
 
-> `optional` **inline**: `"none"` \| `"smallest"` \| `"smaller"` \| `"small"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
+> `optional` **inline**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:168](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L168)
+Defined in: [components.ts:170](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L170)
 
 Inline spacing around the button
 
@@ -88,9 +88,19 @@ Inline spacing around the button
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:170](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L170)
+Defined in: [components.ts:172](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L172)
 
 Whether to show a loading state with spinner
+
+***
+
+### new?
+
+> `optional` **new**: `boolean`
+
+Defined in: [components.ts:174](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L174)
+
+Whether to show a small yellow dot indicator in the top right
 
 ***
 
@@ -98,7 +108,7 @@ Whether to show a loading state with spinner
 
 > `optional` **small**: `boolean`
 
-Defined in: [components.ts:172](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L172)
+Defined in: [components.ts:176](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L176)
 
 Whether to render a smaller version of the button
 
@@ -106,8 +116,8 @@ Whether to render a smaller version of the button
 
 ### theme?
 
-> `optional` **theme**: `"default"` \| `"solid"` \| `"yellow"` \| `"minimal"`
+> `optional` **theme**: `"default"` \| `"yellow"` \| `"solid"` \| `"minimal"`
 
-Defined in: [components.ts:174](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L174)
+Defined in: [components.ts:178](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L178)
 
 Visual theme/style variant for the button

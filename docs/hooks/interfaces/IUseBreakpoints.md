@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../../README.md)
+[**@airindex-app/ui v0.2.0**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IUseBreakpoints
 
-Defined in: [hooks.ts:48](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L48)
+Defined in: [hooks.ts:48](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L48)
 
 Responsive breakpoint detection with boolean helpers for each screen size
 
@@ -29,7 +29,7 @@ return (
 
 > **breakpoint**: [`TBreakpoint`](../type-aliases/TBreakpoint.md)
 
-Defined in: [hooks.ts:50](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L50)
+Defined in: [hooks.ts:50](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L50)
 
 Current active breakpoint name
 
@@ -39,7 +39,7 @@ Current active breakpoint name
 
 > **isDesktop**: `boolean`
 
-Defined in: [hooks.ts:52](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L52)
+Defined in: [hooks.ts:52](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L52)
 
 Whether currently on desktop (desktopX) breakpoint
 
@@ -49,7 +49,7 @@ Whether currently on desktop (desktopX) breakpoint
 
 > **isLaptop**: `boolean`
 
-Defined in: [hooks.ts:54](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L54)
+Defined in: [hooks.ts:54](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L54)
 
 Whether currently on laptop (laptopX) breakpoint
 
@@ -59,7 +59,7 @@ Whether currently on laptop (laptopX) breakpoint
 
 > **isPhone**: `boolean`
 
-Defined in: [hooks.ts:56](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L56)
+Defined in: [hooks.ts:56](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L56)
 
 Whether currently on phone breakpoint
 
@@ -69,7 +69,7 @@ Whether currently on phone breakpoint
 
 > **isTablet**: `boolean`
 
-Defined in: [hooks.ts:58](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L58)
+Defined in: [hooks.ts:58](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L58)
 
 Whether currently on tablet (tabletX) breakpoint
 
@@ -79,6 +79,6 @@ Whether currently on tablet (tabletX) breakpoint
 
 > **isWide**: `boolean`
 
-Defined in: [hooks.ts:60](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L60)
+Defined in: [hooks.ts:60](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L60)
 
 Whether currently on wide breakpoint

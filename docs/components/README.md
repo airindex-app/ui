@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../README.md)
+[**@airindex-app/ui v0.2.0**](../README.md)
 
 ***
 
@@ -17,7 +17,6 @@
 - [IDivider](interfaces/IDivider.md)
 - [IField](interfaces/IField.md)
 - [IForm](interfaces/IForm.md)
-- [IImage](interfaces/IImage.md)
 - [IInput](interfaces/IInput.md)
 - [IPlaces](interfaces/IPlaces.md)
 - [IMaps](interfaces/IMaps.md)
@@ -35,5 +34,4 @@
 - [IView](interfaces/IView.md)
 - [IPortal](interfaces/IPortal.md)
 - [IIcon](interfaces/IIcon.md)
-- [ITabs](interfaces/ITabs.md)
 - [IAccordion](interfaces/IAccordion.md)

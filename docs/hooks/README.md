@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../README.md)
+[**@airindex-app/ui v0.2.0**](../README.md)
 
 ***
 

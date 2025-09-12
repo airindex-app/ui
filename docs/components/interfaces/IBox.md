@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../../README.md)
+[**@airindex-app/ui v0.2.0**](../../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: IBox
 
-Defined in: [components.ts:99](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L99)
+Defined in: [components.ts:97](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L97)
 
 Box component props - versatile container with optional image, header, and footer
 
@@ -30,7 +30,7 @@ Box component props - versatile container with optional image, header, and foote
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:101](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L101)
+Defined in: [components.ts:99](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L99)
 
 Content to display inside the box
 
@@ -40,7 +40,7 @@ Content to display inside the box
 
 > `optional` **closable**: `boolean`
 
-Defined in: [components.ts:103](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L103)
+Defined in: [components.ts:101](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L101)
 
 Whether the box can be closed/dismissed
 
@@ -50,9 +50,19 @@ Whether the box can be closed/dismissed
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:105](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L105)
+Defined in: [components.ts:103](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L103)
 
 Custom CSS styles
+
+***
+
+### id?
+
+> `optional` **id**: `string`
+
+Defined in: [components.ts:105](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L105)
+
+HTML id attribute for the box
 
 ***
 
@@ -60,9 +70,19 @@ Custom CSS styles
 
 > `optional` **cta**: `string`
 
-Defined in: [components.ts:107](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L107)
+Defined in: [components.ts:107](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L107)
 
 Call-to-action text for the box
+
+***
+
+### hover?
+
+> `optional` **hover**: `boolean`
+
+Defined in: [components.ts:109](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L109)
+
+Whether to enable hover interaction styles explicitly
 
 ***
 
@@ -70,7 +90,7 @@ Call-to-action text for the box
 
 > `optional` **expandable**: `boolean`
 
-Defined in: [components.ts:109](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L109)
+Defined in: [components.ts:111](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L111)
 
 Whether the box can be expanded/collapsed
 
@@ -80,7 +100,7 @@ Whether the box can be expanded/collapsed
 
 > `optional` **expandableHeight**: `number`
 
-Defined in: [components.ts:111](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L111)
+Defined in: [components.ts:113](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L113)
 
 Height when expanded in pixels
 
@@ -90,7 +110,7 @@ Height when expanded in pixels
 
 > `optional` **footer**: `ReactNode`
 
-Defined in: [components.ts:113](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L113)
+Defined in: [components.ts:115](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L115)
 
 Footer content to display at the bottom
 
@@ -100,7 +120,7 @@ Footer content to display at the bottom
 
 > `optional` **header**: `ReactNode`
 
-Defined in: [components.ts:115](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L115)
+Defined in: [components.ts:117](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L117)
 
 Header content to display at the top
 
@@ -108,21 +128,11 @@ Header content to display at the top
 
 ### image?
 
-> `optional` **image**: `string`
+> `optional` **image**: `ReactNode`
 
-Defined in: [components.ts:117](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L117)
+Defined in: [components.ts:119](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L119)
 
-Image URL to display in the box
-
-***
-
-### imageAlt?
-
-> `optional` **imageAlt**: `string`
-
-Defined in: [components.ts:119](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L119)
-
-Alt text for the image
+Image to display in the box. Pass a URL string or a custom React element
 
 ***
 
@@ -130,7 +140,7 @@ Alt text for the image
 
 > `optional` **imageCTA**: `string`
 
-Defined in: [components.ts:121](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L121)
+Defined in: [components.ts:121](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L121)
 
 Call-to-action text for the image
 
@@ -140,7 +150,7 @@ Call-to-action text for the image
 
 > `optional` **imageFit**: `ObjectFit`
 
-Defined in: [components.ts:123](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L123)
+Defined in: [components.ts:123](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L123)
 
 How the image should fit within its container
 
@@ -150,7 +160,7 @@ How the image should fit within its container
 
 > `optional` **imageHeight**: `string`
 
-Defined in: [components.ts:125](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L125)
+Defined in: [components.ts:125](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L125)
 
 Height of the image
 
@@ -160,19 +170,9 @@ Height of the image
 
 > `optional` **imagePosition**: `ObjectPosition`\<`string` \| `number`\>
 
-Defined in: [components.ts:127](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L127)
+Defined in: [components.ts:127](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L127)
 
 Position of the image within its container
-
-***
-
-### imageSizes?
-
-> `optional` **imageSizes**: `string`
-
-Defined in: [components.ts:129](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L129)
-
-Responsive image sizes
 
 ***
 
@@ -180,7 +180,7 @@ Responsive image sizes
 
 > `optional` **imageTarget**: `"_blank"` \| `"_self"`
 
-Defined in: [components.ts:131](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L131)
+Defined in: [components.ts:129](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L129)
 
 Target for image link
 
@@ -190,7 +190,7 @@ Target for image link
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:133](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L133)
+Defined in: [components.ts:131](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L131)
 
 Whether to show a loading state
 
@@ -200,7 +200,7 @@ Whether to show a loading state
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [components.ts:135](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L135)
+Defined in: [components.ts:133](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L133)
 
 Whether to render with minimal styling
 
@@ -210,9 +210,29 @@ Whether to render with minimal styling
 
 > `optional` **onClick**: `MouseEventHandler`\<`HTMLDivElement`\>
 
-Defined in: [components.ts:137](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L137)
+Defined in: [components.ts:135](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L135)
 
 Click handler for the box
+
+***
+
+### role?
+
+> `optional` **role**: `string`
+
+Defined in: [components.ts:137](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L137)
+
+ARIA role
+
+***
+
+### tabIndex?
+
+> `optional` **tabIndex**: `number`
+
+Defined in: [components.ts:139](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L139)
+
+Keyboard tab order
 
 ***
 
@@ -220,7 +240,7 @@ Click handler for the box
 
 > `optional` **small**: `boolean`
 
-Defined in: [components.ts:139](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L139)
+Defined in: [components.ts:141](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L141)
 
 Whether to render a smaller version
 
@@ -228,9 +248,9 @@ Whether to render a smaller version
 
 ### theme?
 
-> `optional` **theme**: `"fill"` \| `"default"` \| `"solid"` \| `"yellow"` \| `"minimal"`
+> `optional` **theme**: `"default"` \| `"yellow"` \| `"fill"` \| `"solid"` \| `"minimal"`
 
-Defined in: [components.ts:141](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L141)
+Defined in: [components.ts:143](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L143)
 
 Visual theme/color scheme for the box
 
@@ -238,8 +258,8 @@ Visual theme/color scheme for the box
 
 ### border?
 
-> `optional` **border**: `"default"` \| `"solid"` \| `"yellow"`
+> `optional` **border**: `"default"` \| `"yellow"` \| `"solid"`
 
-Defined in: [components.ts:143](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/components.ts#L143)
+Defined in: [components.ts:145](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L145)
 
 Add colored left border

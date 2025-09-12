@@ -1,4 +1,4 @@
-[**@airindex-app/ui v0.1.15**](../../README.md)
+[**@airindex-app/ui v0.2.0**](../../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **TBreakpoint** = `"phone"` \| `"tabletX"` \| `"laptopX"` \| `"desktopX"` \| `"wide"` \| `undefined`
 
-Defined in: [hooks.ts:31](https://github.com/airindex-app/ui/blob/c7ea135614befbd5605b13569e79882284e03edb/src/types/hooks.ts#L31)
+Defined in: [hooks.ts:31](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/hooks.ts#L31)
 
 Responsive breakpoint names with undefined for initial/unknown state
 
