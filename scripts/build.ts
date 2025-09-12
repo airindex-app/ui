@@ -37,7 +37,7 @@ async function buildLibrary() {
 
   // Generate TypeScript declaration files
   console.log('📝 Generating TypeScript declarations...')
-  execSync('tsc -p tsconfig.build.json --emitDeclarationOnly', { 
+  execSync('tsc -p tsconfig.build.json', { 
     stdio: 'inherit' 
   })
 
