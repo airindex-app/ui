@@ -1,7 +1,7 @@
-import { InfoCircledIcon, ArrowUpIcon, CrossCircledIcon, ExitIcon, ArrowRightIcon, ArrowDownIcon } from "../../src/icons";
 import { JSX } from "react";
 import { toast } from "react-hot-toast";
 
+import { InfoCircledIcon, ArrowUpIcon, CrossCircledIcon, ExitIcon, ArrowRightIcon, ArrowDownIcon } from "../../src/icons";
 import * as C from "../../src/index";
 
 export default function ToastDemo(): JSX.Element {

@@ -33,7 +33,7 @@ export default function ViewDemo(): JSX.Element {
           }} 
           inverted
         >
-          <C.Text css={{ color: "white" }}>Hero section</C.Text>
+          <C.Text css={{ color: "$text" }}>Hero section</C.Text>
         </C.View>
       </C.Box>
 

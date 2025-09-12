@@ -21,7 +21,6 @@ import PopoverDemo from "./demos/Popover";
 import SelectDemo from "./demos/Select";
 import StackDemo from "./demos/Stack";
 import TableDemo from "./demos/Table";
-import TabsDemo from "./demos/Tabs";
 import TextDemo from "./demos/Text";
 import ToastDemo from "./demos/Toast";
 import UtilsDemo from "./demos/Utils";
@@ -50,7 +49,6 @@ const DEMOS = {
   Select: SelectDemo,
   Stack: StackDemo,
   Table: TableDemo,
-  Tabs: TabsDemo,
   Text: TextDemo,
   Toast: ToastDemo,
   Utils: UtilsDemo,

@@ -9,11 +9,7 @@ export default function PlacesDemo() {
   const [selectedPlace, setSelectedPlace] = useState<string>("");
   const [selectedPlaceDetails, setSelectedPlaceDetails] = useState<any>(null);
 
-  // TEMPORARY: Hardcoded API key for testing - replace with env var once working
-  const apiKey = "AIzaSyBi7_1oi9VWPY1PwaYIEa6uS34JKR_6G-U";
-  
-  // Debug: Check if API key is loaded
-  console.log("Places Demo - API Key loaded:", apiKey ? "✅ YES" : "❌ NO", apiKey?.slice(0, 10) + "...");
+  const apiKey = (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) || "";
 
   if (!apiKey) {
     return (
@@ -106,25 +102,7 @@ export default function PlacesDemo() {
           />
         </div>
 
-        <div>
-          <Text as="h3">Custom Styling</Text>
-          <Places
-            apiKey={apiKey}
-            css={{
-              "& input": {
-                borderColor: "$blue",
-              },
-            }}
-            dropdownCSS={{
-              borderColor: "$blue",
-            }}
-            name="styled-places"
-            placeholder="Styled places search..."
-            onPlaceSelect={(place) => {
-              console.log("Styled place selected:", place);
-            }}
-          />
-        </div>
+        
 
         {selectedPlaceDetails && (
           <div>

@@ -90,12 +90,12 @@ export default function BadgeDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
-            <C.Badge theme="yellow" variant="border">Border Blue</C.Badge>
-            <C.Badge theme="yellow" variant="theme">Theme Blue</C.Badge>
+            <C.Badge theme="default" variant="border">Border Default</C.Badge>
+            <C.Badge theme="default" variant="theme">Theme Default</C.Badge>
           </C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
-            <C.Badge theme="yellow" variant="border">Border Purple</C.Badge>
-            <C.Badge theme="yellow" variant="theme">Theme Purple</C.Badge>
+            <C.Badge theme="yellow" variant="border">Border Yellow</C.Badge>
+            <C.Badge theme="yellow" variant="theme">Theme Yellow</C.Badge>
           </C.Stack>
           <C.Stack css={{ alignItems: "center", gap: "$small" }} direction="row">
             <C.Badge icon={<C.Icon radix={<CheckCircledIcon />} />} theme="yellow" variant="border">

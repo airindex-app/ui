@@ -20,11 +20,11 @@ export default function UtilsDemo(): JSX.Element {
             overflow: "auto"
           }}>
             <C.Text as="small" css={{ opacity: "$light" }}>
-              See CSS for max-height fallback
+              See CSS for max-height fallbacks
             </C.Text>
             <C.Text>
-              This box uses dynamicViewport utility with max-height: 50vh fallback to 50dvh.
-              Try inspecting the CSS to see the @supports rule.
+              Uses dynamicViewport with max-height 50vh, upgrading to svh/dvh when supported.
+              Inspect CSS to see the @supports rules.
             </C.Text>
           </C.Box>
         </C.Stack>
@@ -38,20 +38,20 @@ export default function UtilsDemo(): JSX.Element {
           <C.Box css={{
             backgroundColor: "$surface",
             darkOnly: {
-              backgroundColor: "$purple"
+              backgroundColor: "$surfaceHover"
             }
           }}>
             <C.Text as="small" css={{ opacity: "$light" }}>
               See CSS for theme-specific styles
             </C.Text>
-            <C.Text>Dark mode only: Purple background in dark theme</C.Text>
+            <C.Text>Dark mode only: Subtle hover background in dark theme</C.Text>
           </C.Box>
           <C.Box css={{
             lightOnly: {
-              backgroundColor: "$blueLight"
+              backgroundColor: "$surfaceLight"
             }
           }}>
-            <C.Text>Light mode only: Blue background in light theme</C.Text>
+            <C.Text>Light mode only: Light surface background</C.Text>
           </C.Box>
         </C.Stack>
       </C.Box>
@@ -64,23 +64,23 @@ export default function UtilsDemo(): JSX.Element {
           <C.Box css={{
             backgroundColor: "$surface",
             laptop: {
-              backgroundColor: "$purpleLight"
+              backgroundColor: "$surfaceHover"
             },
             phone: {
-              backgroundColor: "$orangeLight"
+              backgroundColor: "$surfaceLight"
             },
             tablet: {
-              backgroundColor: "$blueLight"
+              backgroundColor: "$surfaceLight"
             }
           }}>
             <C.Text as="small" css={{ opacity: "$light" }}>
               Resize window to see changes
             </C.Text>
             <C.Text>
-              Changes color based on breakpoint:
-              <br />• Phone: Orange
-              <br />• Tablet: Blue  
-              <br />• Laptop+: Purple
+              Changes background based on breakpoint:
+              <br />• Phone: surfaceLight
+              <br />• Tablet: surfaceLight  
+              <br />• Laptop+: surfaceHover
             </C.Text>
           </C.Box>
         </C.Stack>
@@ -141,7 +141,7 @@ export default function UtilsDemo(): JSX.Element {
           <C.Box css={{
             backgroundColor: "$surface",
             wide: {
-              backgroundColor: "$purpleLight",
+              backgroundColor: "$surfaceHover",
               padding: "$largest"
             }
           }}>
@@ -149,7 +149,7 @@ export default function UtilsDemo(): JSX.Element {
               Only applies on very wide screens (2201px+)
             </C.Text>
             <C.Text>
-              Enhanced styling for ultra-wide displays with extra padding and purple background.
+              Enhanced styling for ultra-wide displays with extra padding and subtle hover background.
             </C.Text>
           </C.Box>
         </C.Stack>
@@ -163,7 +163,7 @@ export default function UtilsDemo(): JSX.Element {
           <C.Box css={{
             backgroundColor: "$surface",
             darkOnly: {
-              backgroundColor: "$orangeLight"
+              backgroundColor: "$yellowLight"
             },
             dynamicViewport: { property: 'minHeight', unit: 'vh', value: '20' },
             phone: {

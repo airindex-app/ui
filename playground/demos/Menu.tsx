@@ -1,7 +1,7 @@
 import { JSX, useState } from "react";
 
 import * as C from "../../src/index";
-import { ArrowRightIcon, ExclamationTriangleIcon, CrossCircledIcon, CheckCircledIcon, ClipboardIcon, ArrowDownIcon, ExitIcon } from "../../src/icons";
+import { ArrowRightIcon, ExclamationTriangleIcon, CrossCircledIcon, ArrowDownIcon, ExitIcon } from "../../src/icons";
 
 export default function MenuDemo(): JSX.Element {
   const [selectedOption, setSelectedOption] = useState<string>();
@@ -24,30 +24,7 @@ export default function MenuDemo(): JSX.Element {
     }
   ];
 
-  const menuWithSubs = [
-    {
-      icon: <C.Icon radix={<ArrowRightIcon />} />,
-      label: "Account",
-      sub: [
-        {
-          icon: <C.Icon radix={<CheckCircledIcon />} />,
-          label: "Profile",
-          value: "profile"
-        },
-        {
-          icon: <C.Icon radix={<ExclamationTriangleIcon />} />,
-          label: "Settings",
-          value: "settings"
-        }
-      ],
-      value: "account"
-    },
-    {
-      icon: <C.Icon radix={<ClipboardIcon />} />,
-      label: "Help",
-      value: "help"
-    }
-  ];
+  
 
   return (
     <C.Stack css={{ 
@@ -86,17 +63,7 @@ export default function MenuDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
-      {/* With Sub-menus */}
-      <C.Box header={
-        <C.Text as="h4">With Sub-menus</C.Text>
-      }>
-        <C.Stack>
-          <C.Menu
-            options={menuWithSubs}
-            trigger={<C.Button theme="solid">Navigation</C.Button>}
-          />
-        </C.Stack>
-      </C.Box>
+      
 
       {/* Custom Triggers */}
       <C.Box header={

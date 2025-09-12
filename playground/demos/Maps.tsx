@@ -2,11 +2,7 @@
 import { Maps, Stack, Text, View } from "../../src";
 
 export default function MapsDemo() {
-  // TEMPORARY: Hardcoded API key for testing - replace with env var once working
-  const apiKey = "AIzaSyBi7_1oi9VWPY1PwaYIEa6uS34JKR_6G-U";
-  
-  // Debug: Check if API key is loaded
-  console.log("Maps Demo - API Key loaded:", apiKey ? "✅ YES" : "❌ NO", apiKey?.slice(0, 10) + "...");
+  const apiKey = (typeof process !== "undefined" && process.env?.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) || "";
 
   if (!apiKey) {
     return (
@@ -74,7 +70,6 @@ export default function MapsDemo() {
           <Maps
             apiKey={apiKey}
             center="Eiffel Tower, Paris"
-            css={{ maxWidth: "500px" }}
             height="300px"
             zoom={15}
           />

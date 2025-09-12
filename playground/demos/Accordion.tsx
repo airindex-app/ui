@@ -93,42 +93,7 @@ export default function AccordionDemo(): JSX.Element {
         />
       </C.Box>
 
-      {/* Grid Mode */}
-      <C.Box header={
-        <C.Text as="h4">Grid Mode</C.Text>
-      }>
-        <C.Accordion
-          mode="grid"
-          options={[
-            {
-              children: <C.Text>Grid layout option.</C.Text>,
-              label: "Grid Item 1",
-              value: "grid1"
-            },
-            {
-              children: <C.Text>Another grid item.</C.Text>,
-              label: "Grid Item 2",
-              value: "grid2"
-            }
-          ]}
-        />
-      </C.Box>
-
-      {/* Large Variant */}
-      <C.Box header={
-        <C.Text as="h4">Large Variant</C.Text>
-      }>
-        <C.Accordion
-          options={[
-            {
-              children: <C.Text>This accordion item uses the large variant.</C.Text>,
-              label: "Large Item",
-              large: true,
-              value: "large"
-            }
-          ]}
-        />
-      </C.Box>
+      
 
       {/* Long Text Wrapping */}
       <C.Box header={

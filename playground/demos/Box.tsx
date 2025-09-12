@@ -20,6 +20,18 @@ export default function BoxDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
+      {/* Hover & Links */}
+      <C.Box header={
+        <C.Text as="h4">Hover & Links</C.Text>
+      }>
+        <C.Stack>
+          <C.Box hover>Explicit hover (prop)</C.Box>
+          <C.Box onClick={() => {}}>Auto hover via onClick</C.Box>
+          <C.Box cta="https://example.com">Auto hover via link (cta)</C.Box>
+          <C.Box hover loading>Hover disabled while loading</C.Box>
+        </C.Stack>
+      </C.Box>
+
       {/* Themes (Filled Backgrounds) */}
       <C.Box header={
         <C.Text as="h4">Themes (Filled)</C.Text>
@@ -143,7 +155,7 @@ export default function BoxDemo(): JSX.Element {
             small
             theme="yellow"
           >
-            Closable gradient box
+            Closable box
           </C.Box>
           <C.Box 
             border="yellow"

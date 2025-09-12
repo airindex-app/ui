@@ -48,9 +48,9 @@ export default function LoadingDemo(): JSX.Element {
         <C.Text as="h4">Custom Colors</C.Text>
       }>
         <C.Stack direction="row">
-          <C.Loading css={{ color: "$blue" }} />
-          <C.Loading css={{ color: "$purple" }} />
-          <C.Loading css={{ color: "$orange" }} />
+          <C.Loading css={{ color: "$text" }} />
+          <C.Loading css={{ color: "$border" }} />
+          <C.Loading css={{ color: "$borderLight" }} />
           <C.Loading css={{ color: "$yellow" }} />
         </C.Stack>
       </C.Box>
@@ -83,7 +83,7 @@ export default function LoadingDemo(): JSX.Element {
           />
           <C.Loading 
             css={{ 
-              color: "$purple", 
+              color: "$yellow", 
               height: "24px",
               width: "24px" 
             }}

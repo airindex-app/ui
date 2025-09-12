@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { JSX } from "react";
 
-import { InfoCircledIcon, ArrowDownIcon, ExitIcon, CrossCircledIcon, ArrowUpIcon, ArrowRightIcon } from "../../src/icons";
+import { InfoCircledIcon, ArrowDownIcon, ExitIcon, CrossCircledIcon, ArrowRightIcon } from "../../src/icons";
 import * as C from "../../src/index";
 
 export default function PopoverDemo(): JSX.Element {
@@ -78,28 +78,6 @@ export default function PopoverDemo(): JSX.Element {
           }
         >
           <C.Text>This won't show.</C.Text>
-        </C.Popover>
-      </C.Box>
-
-      {/* Custom Styling */}
-      <C.Box header={
-        <C.Text as="h4">Custom CSS</C.Text>
-      }>
-        <C.Popover
-          css={{
-            backgroundColor: "$purple",
-            color: "white",
-          }}
-          trigger={
-            <C.Button>
-              <C.Icon radix={<ArrowUpIcon />} />
-              Styled
-            </C.Button>
-          }
-        >
-          <C.Text css={{ color: "inherit" }}>
-            Custom background and text color.
-          </C.Text>
         </C.Popover>
       </C.Box>
 

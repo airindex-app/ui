@@ -1,6 +1,6 @@
-import { ArrowRightIcon, ArrowDownIcon, ArrowUpIcon, CheckCircledIcon, InfoCircledIcon, ExitIcon, CrossCircledIcon } from "../../src/icons";
 import { JSX, useState } from "react";
 
+import { ArrowRightIcon, ArrowDownIcon, ArrowUpIcon, CheckCircledIcon, InfoCircledIcon, ExitIcon, CrossCircledIcon } from "../../src/icons";
 import * as C from "../../src/index";
 
 export default function SelectDemo(): JSX.Element {

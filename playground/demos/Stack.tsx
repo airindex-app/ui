@@ -7,7 +7,7 @@ function DemoBox({ children, color }: { children: ReactNode; color: string }): J
   return (
     <C.Box css={{ 
       backgroundColor: color,
-      color: "white",
+      color: color === "$yellow" ? "$text" : "$surface",
       padding: "$small",
       textAlign: "center"
     }}>
@@ -27,9 +27,9 @@ export default function StackDemo(): JSX.Element {
         <C.Text as="h4">Basic Usage</C.Text>
       }>
         <C.Stack css={{ gap: "$small" }}>
-          <DemoBox color="$purple">Item 1</DemoBox>
-          <DemoBox color="$purple">Item 2</DemoBox>
-          <DemoBox color="$purple">Item 3</DemoBox>
+          <DemoBox color="$text">Item 1</DemoBox>
+          <DemoBox color="$text">Item 2</DemoBox>
+          <DemoBox color="$text">Item 3</DemoBox>
         </C.Stack>
       </C.Box>
 
@@ -37,9 +37,9 @@ export default function StackDemo(): JSX.Element {
         <C.Text as="h4">Row Direction</C.Text>
       }>
         <C.Stack css={{ gap: "$small" }} direction="row">
-          <DemoBox color="$blue">Item 1</DemoBox>
-          <DemoBox color="$blue">Item 2</DemoBox>
-          <DemoBox color="$blue">Item 3</DemoBox>
+          <DemoBox color="$text">Item 1</DemoBox>
+          <DemoBox color="$text">Item 2</DemoBox>
+          <DemoBox color="$text">Item 3</DemoBox>
         </C.Stack>
       </C.Box>
 
@@ -48,13 +48,13 @@ export default function StackDemo(): JSX.Element {
       }>
         <C.Stack css={{ gap: "$small" }}>
           <C.Stack direction="column" width={100}>
-            <DemoBox color="$orange">100% with padding</DemoBox>
+            <DemoBox color="$yellow">100% with padding</DemoBox>
           </C.Stack>
           <C.Stack direction="column" width={75}>
-            <DemoBox color="$orange">75% with padding</DemoBox>
+            <DemoBox color="$yellow">75% with padding</DemoBox>
           </C.Stack>
           <C.Stack direction="column" width={50}>
-            <DemoBox color="$orange">50% with padding</DemoBox>
+            <DemoBox color="$yellow">50% with padding</DemoBox>
           </C.Stack>
         </C.Stack>
       </C.Box>
@@ -62,17 +62,17 @@ export default function StackDemo(): JSX.Element {
       <C.Box header={
         <C.Text as="h4">Responsive (Debug)</C.Text>
       }>
-        <C.Stack css={{ border: "1px solid red" }} direction="row" wrap>
+        <C.Stack css={{ border: "1px solid $border" }} direction="row" wrap="wrap">
           <C.Stack 
-            css={{ border: "2px solid blue" }}
+            css={{ border: "2px solid $border" }}
             direction="column"
             width={40}
             widthResponsive={{ phone: 100 }}
           >
-            <DemoBox color="$blue">40% default, 100% on phone</DemoBox>
+            <DemoBox color="$text">40% default, 100% on phone</DemoBox>
           </C.Stack>
           <C.Stack 
-            css={{ border: "2px solid purple" }}
+            css={{ border: "2px solid $border" }}
             direction="column"
             width={60}
             widthResponsive={{ 
@@ -80,7 +80,7 @@ export default function StackDemo(): JSX.Element {
               tabletX: 80 
             }}
           >
-            <DemoBox color="$purple">60% default, 80% tabletX, 100% phone</DemoBox>
+            <DemoBox color="$text">60% default, 80% tabletX, 100% phone</DemoBox>
           </C.Stack>
         </C.Stack>
       </C.Box>
@@ -94,7 +94,7 @@ export default function StackDemo(): JSX.Element {
             width={50}
             widthResponsive={{ phone: 100 }}
           >
-            <DemoBox color="$orange">50% desktop, 100% phone (auto-wraps)</DemoBox>
+            <DemoBox color="$yellow">50% desktop, 100% phone (auto-wraps)</DemoBox>
           </C.Stack>
           <C.Stack 
             direction="column"
@@ -123,13 +123,13 @@ export default function StackDemo(): JSX.Element {
           </C.Stack>
           <C.Stack 
             css={{
-              backgroundColor: "$purple",
+              backgroundColor: "$surfaceLight",
               padding: "$small",
               phone: {
-                backgroundColor: "$blue"
+                backgroundColor: "$surfaceLight"
               },
               tabletX: {
-                backgroundColor: "$orange"
+                backgroundColor: "$surfaceHover"
               }
             }}
             direction="column"
@@ -139,7 +139,7 @@ export default function StackDemo(): JSX.Element {
               tabletX: 50 
             }}
           >
-            <DemoBox color="black">Should work together!</DemoBox>
+            <DemoBox color="$text">Should work together!</DemoBox>
           </C.Stack>
         </C.Stack>
       </C.Box>
@@ -162,11 +162,11 @@ export default function StackDemo(): JSX.Element {
         <C.Text as="h4">With Spacing</C.Text>
       }>
         <C.Stack css={{ gap: "$small" }}>
-          <DemoBox color="$purple">Top</DemoBox>
+          <DemoBox color="$text">Top</DemoBox>
           <C.Stack bottom="medium" top="medium">
-            <DemoBox color="$purple">Spaced</DemoBox>
+            <DemoBox color="$text">Spaced</DemoBox>
           </C.Stack>
-          <DemoBox color="$purple">Bottom</DemoBox>
+          <DemoBox color="$text">Bottom</DemoBox>
         </C.Stack>
       </C.Box>
 
@@ -174,9 +174,9 @@ export default function StackDemo(): JSX.Element {
         <C.Text as="h4">Inverted</C.Text>
       }>
         <C.Stack css={{ gap: "$small" }} inverted>
-          <DemoBox color="$blue">First</DemoBox>
-          <DemoBox color="$blue">Second</DemoBox>
-          <DemoBox color="$blue">Third</DemoBox>
+          <DemoBox color="$text">First</DemoBox>
+          <DemoBox color="$text">Second</DemoBox>
+          <DemoBox color="$text">Third</DemoBox>
         </C.Stack>
       </C.Box>
     </C.Stack>

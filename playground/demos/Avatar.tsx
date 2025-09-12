@@ -34,16 +34,13 @@ export default function AvatarDemo(): JSX.Element {
         </C.Stack>
       </C.Box>
 
-      {/* Colors */}
-        <C.Box header={
-        <C.Text as="h4">Colors</C.Text>
+      {/* Themes */}
+      <C.Box header={
+        <C.Text as="h4">Themes</C.Text>
       }>
         <C.Stack>
-          <C.Avatar colors fallback="A" />
-          <C.Avatar colors fallback="B" />
-          <C.Avatar colors fallback="C" />
-          <C.Avatar colors fallback="D" />
-          <C.Avatar colors fallback="E" />
+          <C.Avatar fallback="D" />
+          <C.Avatar theme="yellow" fallback="Y" />
         </C.Stack>
       </C.Box>
     </C.Stack>

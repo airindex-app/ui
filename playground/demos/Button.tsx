@@ -78,7 +78,7 @@ export default function ButtonDemo(): JSX.Element {
       <C.Box header={
         <C.Text as="h4">Height Consistency</C.Text>
       }>
-        <C.Stack direction="horizontal">
+        <C.Stack direction="row">
           <C.Button>Text Button</C.Button>
           <C.Button icon={<C.Icon radix={<CheckCircledIcon />} />} />
           <C.Button small>Small Text</C.Button>

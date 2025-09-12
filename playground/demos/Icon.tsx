@@ -47,9 +47,9 @@ export default function IconDemo(): JSX.Element {
       }>
         <C.Stack direction="row">
           <C.Icon forceColor="text" radix={<CheckCircledIcon />} />
-          <C.Icon forceColor="blue" radix={<CheckCircledIcon />} />
-          <C.Icon forceColor="purple" radix={<CheckCircledIcon />} />
-          <C.Icon forceColor="orange" radix={<CheckCircledIcon />} />
+          <C.Icon forceColor="yellow" radix={<CheckCircledIcon />} />
+          <C.Icon forceColor="border" radix={<CheckCircledIcon />} />
+          <C.Icon forceColor="borderLight" radix={<CheckCircledIcon />} />
         </C.Stack>
       </C.Box>
 
@@ -85,17 +85,17 @@ export default function IconDemo(): JSX.Element {
       }>
         <C.Stack direction="row">
           <C.Icon 
-            forceColor="blue" 
+            forceColor="yellow" 
             forceSize={32} 
             radix={<CheckCircledIcon />} 
           />
           <C.Icon 
-            forceColor="orange" 
+            forceColor="border" 
             forceSize={32} 
             radix={<ExclamationTriangleIcon />} 
           />
           <C.Icon 
-            forceColor="red" 
+            forceColor="text" 
             forceSize={32} 
             radix={<CrossCircledIcon />} 
           />
