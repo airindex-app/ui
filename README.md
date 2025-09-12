@@ -170,6 +170,7 @@ This library is built on top of excellent open source projects:
 
 
 
+
 ## Components
 
 This library includes the following components with full TypeScript support and comprehensive documentation:
@@ -184,7 +185,6 @@ This library includes the following components with full TypeScript support and 
 - **[Field](./docs/components/interfaces/IField.md)** - Multi-line textarea input with validation and actions
 - **[Form](./docs/components/interfaces/IForm.md)** - Form wrapper with validation and submission handling
 - **[Icon](./docs/components/interfaces/IIcon.md)** - Consistent icon wrapper with theming support
-- **[Image](./docs/components/interfaces/IImage.md)** - Enhanced Next.js Image with additional styling options
 - **[Input](./docs/components/interfaces/IInput.md)** - Single-line form input with validation and actions
 - **[Loading](./docs/components/interfaces/ILoading.md)** - Animated loading spinner with customizable appearance
 - **[LoadingOverlay](./docs/components/interfaces/ILoadingOverlay.md)** - Full-screen loading overlay with message display
@@ -199,7 +199,6 @@ This library includes the following components with full TypeScript support and 
 - **[SelectMulti](./docs/components/interfaces/ISelectMulti.md)** - Multi-selection dropdown with limits and batch operations
 - **[Stack](./docs/components/interfaces/IStack.md)** - Responsive layout container with flexible spacing and alignment
 - **[Table](./docs/components/interfaces/ITable.md)** - Data table with sorting, pagination, and nested rows
-- **[Tabs](./docs/components/interfaces/ITabs.md)** - Tabbed interface for organizing content into panels
 - **[Text](./docs/components/interfaces/IText.md)** - Versatile text element with multiple sizes, styles, and link support
 - **[Toast](./docs/components/interfaces/IToast.md)** - Component for toast functionality
 - **[View](./docs/components/interfaces/IView.md)** - Main layout container with hero styling and responsive behavior

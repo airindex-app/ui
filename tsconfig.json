@@ -1,4 +1,42 @@
 {
-  "extends": "eslint-config-dolmios/configs/lib/tsconfig",
-  "include": ["src", "playground"]
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "types": [
+      "bun-types"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "playground/**/*.ts",
+    "playground/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "playground/dist"
+  ]
 }

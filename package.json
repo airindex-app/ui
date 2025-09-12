@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
-  "description": "AirIndex's internal component library, built with React, Next.js, and Stitches.",
-  "version": "0.1.20",
+  "description": "AirIndex's internal component library, built with React, and Stitches.",
+  "version": "0.2.0",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -27,9 +27,6 @@
     "react-wrap-balancer": "^1.1.1"
   },
   "devDependencies": {
-    "@parcel/optimizer-htmlnano": "^2.15.4",
-    "@parcel/packager-ts": "^2.15.4",
-    "@parcel/transformer-typescript-types": "^2.15.4",
     "@stitches/react": "^1.2.8",
     "@types/google.maps": "^3.58.1",
     "@types/node": "^24.3.1",
@@ -37,18 +34,15 @@
     "@types/react-dom": "^19.1.9",
     "eslint": "^9.35.0",
     "eslint-config-dolmios": "^2.0.12",
-    "next": "^15.5.2",
-    "parcel": "^2.15.4",
-    "path-browserify": "^1.0.1",
+    "bun-types": "^1.2.19",
+    "esbuild": "^0.23.0",
     "prettier": "^3.6.2",
-    "process": "^0.11.10",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tslib": "^2.8.1",
     "typedoc": "^0.28.12",
     "typedoc-plugin-markdown": "^4.8.1",
-    "typescript": "^5.9.2",
-    "util": "^0.12.5"
+    "typescript": "^5.9.2"
   },
   "files": [
     "dist"
@@ -61,8 +55,6 @@
     "design",
     "framework",
     "frontend",
-    "next",
-    "nextjs",
     "react",
     "react-component",
     "stitches",
@@ -74,7 +66,6 @@
   "module": "dist/index.js",
   "peerDependencies": {
     "@stitches/react": "^1.2.8",
-    "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -84,15 +75,18 @@
     "url": "git://github.com/airindex-app/ui.git"
   },
   "scripts": {
-    "build": "pnpm tidy && pnpm prebuild && parcel build src/index.ts --dist-dir dist",
-    "bump": "pnpm up && pnpm tidy && pnpm build",
-    "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && parcel playground/index.html --dist-dir playground/dist --open --no-cache --port 420",
+    "build": "bun run tidy && bun run prebuild && bun run build:js && bun run build:types",
+    "build:js": "bun build ./src/index.ts --outdir ./dist --format=esm --target=browser --jsx=react --minify --external react --external react-dom --external @stitches/react",
+    "build:types": "tsc -p tsconfig.build.json",
+    "bump": "bunx npm-check-updates -u && bun install && bun run tidy && bun run build",
+    "dev": "echo '⚡️ Starting Bun preview on http://localhost:420' && bun run build:js && bun run playground:dev",
+    "playground:dev": "bun run playground/dev.ts",
     "documentation": "node scripts/generate-docs.js",
     "kill": "lsof -ti tcp:420 | xargs kill",
     "lint": "eslint src --ext .ts,.tsx --fix",
-    "prebuild": "rm -rf dist .parcel-cache",
-    "prettier": "prettier --check --write src playground/App.tsx",
-    "tidy": "pnpm lint && pnpm prettier",
+    "prebuild": "rm -rf dist .parcel-cache playground/dist",
+    "prettier": "prettier --check --write src",
+    "tidy": "bun run lint && bun run prettier",
     "typecheck": "tsc --noEmit"
   },
   "sideEffects": false,
