@@ -27,7 +27,7 @@ const dialogContainerBase = {
   left: "50%",
   minHeight: "auto",
   phone: {
-    dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
+    dynamicViewport: { property: "maxHeight", unit: "vh", value: "85" },
     width: "95%",
   },
   position: "fixed",
