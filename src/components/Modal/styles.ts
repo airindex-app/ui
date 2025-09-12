@@ -3,6 +3,7 @@ import { fadeIn, fadeOut, slideInScale, slideOutScale, styled } from "../../stit
 const overlayBase = {
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
+  dynamicViewport: { property: "height", unit: "vh", value: "100" },
   inset: 0,
   position: "fixed",
   transition: "$default",
@@ -26,7 +27,7 @@ const dialogContainerBase = {
   left: "50%",
   minHeight: "auto",
   phone: {
-    dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
+    dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
     width: "95%",
   },
   position: "fixed",

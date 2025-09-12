@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, and Stitches.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [

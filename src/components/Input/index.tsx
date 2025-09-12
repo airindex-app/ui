@@ -145,10 +145,10 @@ const Input = forwardRef<HTMLInputElement, IInput>(
               {copy && (
                 <Button
                   disabled={isCopied || disabled}
-                  icon={<Icon radix={<ClipboardIcon />} />}
+                  icon={!isPhone ? <Icon radix={<ClipboardIcon />} /> : undefined}
                   small
                   onClick={() => handleCopy()}>
-                  {!isPhone ? "Copy" : undefined}
+                  {!isPhone ? "Copy" : <Icon radix={<ClipboardIcon />} />}
                 </Button>
               )}
 
@@ -156,37 +156,46 @@ const Input = forwardRef<HTMLInputElement, IInput>(
                 <Button
                   disabled={disabled}
                   icon={
-                    !isRevealed ? (
-                      <Icon radix={<EyeOpenIcon />} />
-                    ) : (
-                      <Icon radix={<EyeNoneIcon />} />
-                    )
+                    !isPhone ? (
+                      !isRevealed ? (
+                        <Icon radix={<EyeOpenIcon />} />
+                      ) : (
+                        <Icon radix={<EyeNoneIcon />} />
+                      )
+                    ) : undefined
                   }
                   small
                   onClick={() => handleReveal()}>
-                  {!isPhone ? (!isRevealed ? "Reveal" : "Hide") : undefined}
+                  {!isPhone ? (
+                    !isRevealed ? (
+                      "Reveal"
+                    ) : (
+                      "Hide"
+                    )
+                  ) : !isRevealed ? (
+                    <Icon radix={<EyeOpenIcon />} />
+                  ) : (
+                    <Icon radix={<EyeNoneIcon />} />
+                  )}
                 </Button>
               )}
 
               {reset && inputValue && (
-                <Button
-                  disabled={disabled}
-                  icon={<Icon radix={<CrossCircledIcon />} />}
-                  small
-                  onClick={() => handleReset()}
-                />
+                <Button disabled={disabled} small onClick={() => handleReset()}>
+                  <Icon radix={<CrossCircledIcon />} />
+                </Button>
               )}
 
               {submit && (
                 <Button
                   disabled={isSubmitDisabled}
-                  icon={<Icon radix={<ArrowRightIcon />} />}
-                  iconPosition="right"
+                  icon={!isPhone ? <Icon radix={<ArrowRightIcon />} /> : undefined}
+                  iconPosition={!isPhone ? "right" : undefined}
                   small
                   theme={isSubmitValid ? "solid" : "default"}
                   type="submit"
                   onClick={() => handleSubmit()}>
-                  {!isPhone ? submit : undefined}
+                  {!isPhone ? submit : <Icon radix={<ArrowRightIcon />} />}
                 </Button>
               )}
             </InputFunctionStyled>
