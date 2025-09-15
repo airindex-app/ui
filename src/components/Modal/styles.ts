@@ -1,10 +1,14 @@
 import { fadeIn, fadeOut, slideInScale, slideOutScale, styled } from "../../stitches.config";
 
 const overlayBase = {
+  alignItems: "center",
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
-  dynamicViewport: { property: "height", unit: "vh", value: "100" },
+  display: "flex",
   inset: 0,
+  justifyContent: "center",
+  overflow: "hidden",
+  pointerEvents: "auto",
   position: "fixed",
   transition: "$default",
   variants: {
@@ -24,15 +28,14 @@ const overlayBase = {
 const dialogContainerBase = {
   backgroundColor: "$background",
   dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
-  left: "50%",
+  maxWidth: "90%",
   minHeight: "auto",
+  overflow: "hidden",
   phone: {
-    dynamicViewport: { property: "maxHeight", unit: "vh", value: "85" },
-    width: "95%",
+    dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
+    maxWidth: "95%",
   },
-  position: "fixed",
-  top: "50%",
-  transform: "translate(-50%, -50%)",
+  position: "relative",
   variants: {
     animation: {
       false: {
@@ -45,7 +48,7 @@ const dialogContainerBase = {
       },
     },
   },
-  width: "90%",
+  width: "100%",
 } as const;
 
 export const ModalStyled = styled("div", {

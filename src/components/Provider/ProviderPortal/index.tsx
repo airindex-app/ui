@@ -15,10 +15,7 @@ export default function Portal({ children, disabled }: IPortal): JSX.Element {
   };
 
   const getPortalContainer = (): Element => {
-    const mainElements = document.querySelectorAll("main");
-    const hasMainElement = mainElements.length === 1;
-
-    return hasMainElement ? mainElements[0] : document.body;
+    return document.body;
   };
 
   const setupPortal = (): (() => void) => {

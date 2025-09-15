@@ -163,7 +163,7 @@ export type TUseLocalStorage<T> = [T, (value: T) => void];
  * const [isLocked, setLocked] = useScrollLock(false);
  *
  * return (
- *   <button onClick={() => setLocked(!isLocked)}>
+ *   <button onClyeick={() => setLocked(!isLocked)}>
  *     {isLocked ? "Unlock" : "Lock"} scroll
  *   </button>
  * );

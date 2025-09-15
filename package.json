@@ -1,7 +1,7 @@
 {
   "name": "@airindex-app/ui",
   "description": "AirIndex's internal component library, built with React, and Stitches.",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -29,20 +29,20 @@
   "devDependencies": {
     "@stitches/react": "^1.2.8",
     "@types/google.maps": "^3.58.1",
-    "@types/node": "^24.3.1",
-    "@types/react": "^19.1.12",
+    "@types/node": "^24.4.0",
+    "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "eslint": "^9.35.0",
     "eslint-config-dolmios": "^2.0.12",
-    "bun-types": "^1.2.19",
-    "esbuild": "^0.23.0",
-    "glob": "^11.0.0",
+    "bun-types": "^1.2.22",
+    "esbuild": "^0.23.1",
+    "glob": "^11.0.3",
     "prettier": "^3.6.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tslib": "^2.8.1",
-    "tsx": "^4.7.1",
-    "typedoc": "^0.28.12",
+    "tsx": "^4.20.5",
+    "typedoc": "^0.28.13",
     "typedoc-plugin-markdown": "^4.8.1",
     "typescript": "^5.9.2"
   },

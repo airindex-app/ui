@@ -118,7 +118,6 @@ import { Provider } from '@airindex-app/ui';
 <Button css={{ 
   backgroundColor: '$purple', 
   color: '$background',
-  borderRadius: '$large' 
 }}>
   Custom Button
 </Button>

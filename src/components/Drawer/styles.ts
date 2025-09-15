@@ -14,9 +14,14 @@ export const DrawerTriggerStyled = styled("div", {
 });
 
 export const DrawerOverlayStyled = styled("div", {
+  alignItems: "flex-end",
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
+  display: "flex",
   inset: 0,
+  justifyContent: "center",
+  overflow: "hidden",
+  pointerEvents: "auto",
   position: "fixed",
   transition: "$default",
   variants: {
@@ -36,20 +41,16 @@ export const DrawerOverlayStyled = styled("div", {
 
 export const DrawerCoreStyled = styled("div", {
   backgroundColor: "$background",
-  bottom: 0,
   display: "flex",
   dynamicViewport: { property: "maxHeight", unit: "vh", value: "70" },
   flexDirection: "column",
-  left: 0,
-  maxHeight: "70vh",
   minHeight: "30vh",
+  overflow: "hidden",
   phone: {
     dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
-    maxHeight: "90vh",
     minHeight: "50vh",
   },
-  position: "fixed",
-  right: 0,
+  position: "relative",
   transition: "$default",
   variants: {
     animation: {

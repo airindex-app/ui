@@ -253,22 +253,22 @@ export const fadeOut = keyframes({
 export const slideInScale = keyframes({
   from: {
     opacity: 0,
-    transform: "translate(-50%, -50%) scale(0.95)",
+    transform: "scale(0.95)",
   },
   to: {
     opacity: 1,
-    transform: "translate(-50%, -50%) scale(1)",
+    transform: "scale(1)",
   },
 });
 
 export const slideOutScale = keyframes({
   from: {
     opacity: 1,
-    transform: "translate(-50%, -50%) scale(1)",
+    transform: "scale(1)",
   },
   to: {
     opacity: 0,
-    transform: "translate(-50%, -50%) scale(0.95)",
+    transform: "scale(0.95)",
   },
 });
 
