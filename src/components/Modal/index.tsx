@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type JSX, type MouseEvent } from "react";
+import { useId, type JSX, type MouseEvent } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -6,10 +6,9 @@ import {
   Text,
   useEventListener,
   useOutsideClick,
-  useScrollLock,
+  useModal,
   Icon,
   Portal,
-  useViewport,
   type IModal,
 } from "../../index";
 import {
@@ -25,7 +24,6 @@ export default function Modal({
   children,
   css,
   disabled,
-  forceHeight,
   portal = true,
   small,
   title,
@@ -33,48 +31,22 @@ export default function Modal({
   triggerCSS,
   wrapperCSS,
 }: IModal): JSX.Element {
-  const ref = useRef<HTMLDivElement>(null);
   const titleId = useId();
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const { heightPx, supportsDynamicVH, supportsSmallVH } = useViewport();
-
-  const animationDuration = 200;
-  const isModalOpen = isOpen || isMounted;
-
-  function handleClose(): void {
-    setIsOpen(false);
-    setTimeout(() => {
-      setIsMounted(false);
-    }, animationDuration);
-  }
-
-  function handleOpen(): void {
-    setIsOpen(true);
-    setIsMounted(true);
-  }
+  const modal = useModal();
 
   function handleClick(): void {
     if (disabled) return;
-
-    if (isModalOpen) {
-      setIsOpen(false);
-      setIsMounted(false);
-    } else {
-      handleOpen();
-    }
+    modal.handleClick();
   }
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       event.preventDefault();
-      handleClose();
+      modal.handleClose();
     }
   });
 
-  useScrollLock(isMounted);
-  useOutsideClick(ref, () => handleClose());
+  useOutsideClick(modal.modalRef, () => modal.handleClose());
 
   return (
     <ModalStyled css={wrapperCSS}>
@@ -87,27 +59,22 @@ export default function Modal({
         {trigger}
       </ModalTriggerStyled>
 
-      {isMounted && (
+      {modal.isMounted && (
         <Portal disabled={!portal}>
-          <ModalOverlayStyled animation={isOpen}>
+          <ModalOverlayStyled
+            animation={modal.isOpen}
+            css={{
+              ...(modal.viewportHeight && {
+                height: `${modal.viewportHeight}px`,
+                minHeight: `${modal.viewportHeight}px`,
+              }),
+            }}>
             <ModalGroupStyled
-              ref={ref}
-              animation={isOpen}
+              ref={modal.modalRef}
+              animation={modal.isOpen}
               aria-labelledby={titleId}
               aria-modal="true"
-              css={{
-                ...(forceHeight &&
-                  (!supportsDynamicVH && !supportsSmallVH
-                    ? { height: `${(forceHeight / 100) * heightPx}px` }
-                    : {
-                        dynamicViewport: {
-                          property: "height",
-                          unit: "vh",
-                          value: String(forceHeight),
-                        },
-                      })),
-                ...css,
-              }}
+              css={css}
               role="dialog"
               small={small}>
               <ModalHeaderStyled>
@@ -118,13 +85,13 @@ export default function Modal({
                   icon={<Icon radix={<CrossCircledIcon />} />}
                   small
                   theme="minimal"
-                  onClick={() => handleClose()}>
+                  onClick={() => modal.handleClose()}>
                   Close
                 </Button>
               </ModalHeaderStyled>
 
               <ModalContentStyled>
-                {typeof children === "function" ? children(handleClose) : children}
+                {typeof children === "function" ? children(modal.handleClose) : children}
               </ModalContentStyled>
             </ModalGroupStyled>
           </ModalOverlayStyled>

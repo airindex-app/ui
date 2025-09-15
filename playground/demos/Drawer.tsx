@@ -104,7 +104,6 @@ export default function DrawerDemo(): JSX.Element {
       }>
         <C.Stack>
           <C.Drawer
-            forceHeight={70}
             title="Scrollable Content"
             trigger={<C.Button>Long Content</C.Button>}
           >

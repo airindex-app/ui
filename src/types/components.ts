@@ -200,7 +200,6 @@ export interface IDrawer {
   /** Whether the drawer trigger is disabled */
   disabled?: boolean;
   /** Force a specific height for the drawer in pixels */
-  forceHeight?: number;
   /** Whether to render the drawer in a portal */
   portal?: boolean;
   /** Whether to render a smaller version of the drawer */
@@ -237,7 +236,6 @@ export interface IModal {
   /** Whether the modal trigger is disabled */
   disabled?: boolean;
   /** Force a specific height for the modal in pixels */
-  forceHeight?: number;
   /** Whether to render the modal in a portal */
   portal?: boolean;
   /** Whether to render a smaller version of the modal */

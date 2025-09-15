@@ -73,7 +73,6 @@ export const providerReset = globalCss({
     letterSpacing: "0.015em",
     lineHeight: theme.lineHeights.default,
     margin: 0,
-    minHeight: "100vh",
     MozOsxFontSmoothing: "grayscale",
     overflowX: "hidden",
     padding: 0,

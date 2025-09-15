@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type JSX } from "react";
+import { useEffect, useId, useState, type JSX } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -6,7 +6,7 @@ import {
   Portal,
   useEventListener,
   useOutsideClick,
-  useScrollLock,
+  useModal,
   Icon,
   type IMenu,
 } from "../../index";
@@ -36,35 +36,18 @@ export default function Menu({
 }: IMenu): JSX.Element {
   const reactId = useId();
   const instanceId = `menu-${reactId}`;
-  const ref = useRef<HTMLDivElement>(null);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const [focused, setFocused] = useState("");
 
-  const animationDuration = 200;
-  const isMenuOpen = isOpen || isMounted;
-
-  function handleClose(): void {
-    setIsOpen(false);
-    setFocused("");
-    setTimeout(() => {
-      setIsMounted(false);
-    }, animationDuration);
-  }
-
-  function handleOpen(): void {
-    setIsOpen(true);
-    setIsMounted(true);
-  }
+  const menu = useModal();
 
   function handleClick(): void {
-    if (isMenuOpen) {
-      setIsOpen(false);
-      setIsMounted(false);
-    } else {
-      handleOpen();
-    }
+    menu.handleClick();
+  }
+
+  function handleClose(): void {
+    setFocused("");
+    menu.handleClose();
   }
 
   function handleSelection(value: string, label: string): void {
@@ -75,7 +58,7 @@ export default function Menu({
   }
 
   function handleKeyDown(event: KeyboardEvent): void {
-    if (!isOpen) return;
+    if (!menu.isOpen) return;
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
@@ -110,12 +93,12 @@ export default function Menu({
   }
 
   useEffect(() => {
-    if (isOpen && ref.current) {
-      ref.current.focus();
+    if (menu.isOpen && menu.modalRef.current) {
+      menu.modalRef.current.focus();
     } else {
       setFocused("");
     }
-  }, [isOpen]);
+  }, [menu.isOpen]);
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
@@ -124,16 +107,15 @@ export default function Menu({
     }
   });
 
-  useEventListener("keydown", handleKeyDown, ref);
+  useEventListener("keydown", handleKeyDown, menu.modalRef);
 
-  useScrollLock(isMounted);
-  useOutsideClick(ref, () => handleClose());
+  useOutsideClick(menu.modalRef, () => handleClose());
 
   return (
     <MenuStyled css={wrapperCSS}>
       <MenuTriggerStyled
         aria-controls={`${instanceId}-content`}
-        aria-expanded={isMenuOpen}
+        aria-expanded={menu.isOpen}
         aria-haspopup="menu"
         css={triggerCSS}
         onClick={(e): void => {
@@ -143,12 +125,20 @@ export default function Menu({
         {trigger}
       </MenuTriggerStyled>
 
-      {isMounted && (
+      {menu.isMounted && (
         <Portal>
-          <MenuOverlayStyled animation={isOpen}>
+          <MenuOverlayStyled
+            animation={menu.isOpen}
+            css={{
+              // Use JS viewport height for iOS dynamic toolbar fixes
+              ...(menu.viewportHeight && {
+                height: `${menu.viewportHeight}px`,
+                minHeight: `${menu.viewportHeight}px`,
+              }),
+            }}>
             <MenuGroupStyled
-              ref={ref}
-              animation={isOpen}
+              ref={menu.modalRef}
+              animation={menu.isOpen}
               aria-label={ariaLabel || "Menu"}
               css={css}
               id={`${instanceId}-content`}

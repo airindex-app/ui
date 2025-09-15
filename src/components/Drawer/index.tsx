@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type JSX } from "react";
+import { useId, type JSX } from "react";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -6,10 +6,9 @@ import {
   Text,
   useEventListener,
   useOutsideClick,
-  useScrollLock,
+  useModal,
   Icon,
   Portal,
-  useViewport,
   type IDrawer,
 } from "../../index";
 import {
@@ -25,52 +24,31 @@ export default function Drawer({
   children,
   css,
   disabled,
-  forceHeight,
   portal = true,
   title,
   trigger,
   triggerCSS,
   wrapperCSS,
 }: IDrawer): JSX.Element {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const { heightPx, supportsDynamicVH, supportsSmallVH } = useViewport();
-  const ref = useRef<HTMLDivElement | null>(null);
   const titleId = useId();
-
-  function handleClose(): void {
-    setIsOpen(false);
-    setTimeout(() => {
-      setIsMounted(false);
-    }, 200);
-  }
-
-  function handleOpen(): void {
-    setIsOpen(true);
-    setIsMounted(true);
-  }
+  const drawer = useModal();
 
   function handleClick(): void {
-    if (isOpen || isMounted) {
-      setIsOpen(false);
-      setIsMounted(false);
-    } else {
-      handleOpen();
+    if (!disabled) {
+      drawer.handleClick();
     }
   }
 
   useEventListener("keydown", (event: KeyboardEvent) => {
     if (event.key === "Escape") {
       event.preventDefault();
-      handleClose();
+      drawer.handleClose();
     }
   });
 
-  useScrollLock(isMounted);
-
-  useOutsideClick(ref, () => {
-    if (isOpen) {
-      handleClose();
+  useOutsideClick(drawer.modalRef, () => {
+    if (drawer.isOpen) {
+      drawer.handleClose();
     }
   });
 
@@ -81,9 +59,7 @@ export default function Drawer({
           css={triggerCSS}
           onClick={(e): void => {
             e.stopPropagation();
-            if (!disabled) {
-              handleClick();
-            }
+            handleClick();
           }}>
           {trigger}
         </DrawerTriggerStyled>
@@ -91,30 +67,23 @@ export default function Drawer({
         "Missing trigger"
       )}
 
-      {isMounted && (
+      {drawer.isMounted && (
         <Portal disabled={!portal}>
-          <DrawerOverlayStyled animation={isOpen}>
+          <DrawerOverlayStyled
+            animation={drawer.isOpen}
+            css={{
+              // Use JS viewport height for iOS dynamic toolbar fixes
+              ...(drawer.viewportHeight && {
+                height: `${drawer.viewportHeight}px`,
+                minHeight: `${drawer.viewportHeight}px`,
+              }),
+            }}>
             <DrawerCoreStyled
-              ref={ref}
-              animation={isOpen}
+              ref={drawer.modalRef}
+              animation={drawer.isOpen}
               aria-labelledby={titleId}
               aria-modal="true"
-              css={{
-                ...css,
-                ...(forceHeight &&
-                  (!supportsDynamicVH && !supportsSmallVH
-                    ? {
-                        maxHeight: `${(forceHeight / 100) * heightPx}px`,
-                        minHeight: `${(forceHeight / 100) * heightPx}px`,
-                      }
-                    : {
-                        dynamicViewport: {
-                          property: "maxHeight",
-                          unit: "vh",
-                          value: String(forceHeight),
-                        },
-                      })),
-              }}
+              css={css}
               role="dialog">
               <DrawerHeaderStyled>
                 <Text as="h6" bottom="none" id={titleId}>
@@ -123,13 +92,13 @@ export default function Drawer({
                 <Button
                   icon={<Icon radix={<CrossCircledIcon />} />}
                   small
-                  onClick={() => handleClose()}>
+                  onClick={() => drawer.handleClose()}>
                   Close
                 </Button>
               </DrawerHeaderStyled>
 
               <DrawerContentStyled>
-                {typeof children === "function" ? children(handleClose) : children}
+                {typeof children === "function" ? children(drawer.handleClose) : children}
               </DrawerContentStyled>
             </DrawerCoreStyled>
           </DrawerOverlayStyled>

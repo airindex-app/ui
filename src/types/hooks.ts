@@ -156,17 +156,53 @@ export interface IUseFloatingUI {
 export type TUseLocalStorage<T> = [T, (value: T) => void];
 
 /**
- * Body scroll lock management with scroll bar width compensation
+ * Clean modal state management with viewport handling for iOS issues
+ * Similar to useFloatingUI but for full-screen overlays
+ *
+ * @param options - Configuration options for the modal
+ * @param options.onClose - Callback fired when modal closes
+ * @param options.preventBodyScroll - Whether to prevent body scrolling (default: true)
+ * @param options.animationDuration - Animation duration in milliseconds (default: 200)
  *
  * @example
  * ```tsx
- * const [isLocked, setLocked] = useScrollLock(false);
+ * const modal = useModal({
+ *   onClose: () => console.log('Modal closed'),
+ *   preventBodyScroll: true
+ * });
  *
  * return (
- *   <button onClyeick={() => setLocked(!isLocked)}>
- *     {isLocked ? "Unlock" : "Lock"} scroll
- *   </button>
+ *   <>
+ *     <button onClick={modal.handleClick}>Toggle Modal</button>
+ *     {modal.isMounted && (
+ *       <ModalOverlay
+ *         css={{
+ *           height: modal.viewportHeight ? `${modal.viewportHeight}px` : '100vh'
+ *         }}
+ *       >
+ *         <ModalContent ref={modal.modalRef}>
+ *           <h2>Modal Title</h2>
+ *           <button onClick={modal.handleClose}>Close</button>
+ *         </ModalContent>
+ *       </ModalOverlay>
+ *     )}
+ *   </>
  * );
  * ```
  */
-export type TUseScrollLock = [boolean, (locked: boolean) => void];
+export interface IUseModal {
+  /** Whether the modal is currently open and visible */
+  isOpen: boolean;
+  /** Whether the modal is mounted in the DOM */
+  isMounted: boolean;
+  /** Ref to attach to the modal content element for scroll lock */
+  modalRef: { current: HTMLDivElement | null };
+  /** Current viewport height in pixels for iOS overlay fixes */
+  viewportHeight: number;
+  /** Function to open the modal */
+  handleOpen: () => void;
+  /** Function to close the modal */
+  handleClose: () => void;
+  /** Function to toggle modal open/closed state */
+  handleClick: () => void;
+}

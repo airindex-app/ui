@@ -148,7 +148,7 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
     phoneX: (value: unknown): Record<string, unknown> => ({
       [breakpoints.phoneX]: value,
     }),
-    // Dynamic viewport utilities with fallback
+    // Dynamic viewport utilities with modern fallback
     dynamicViewport: (config: TDynamicViewportConfig): Record<string, unknown> => {
       const { property, value, unit } = config;
 
@@ -156,21 +156,13 @@ export const { css, getCssText, globalCss, keyframes, styled, theme } = createSt
       const isHeight =
         unit.endsWith("vh") || unit.endsWith("dvh") || unit.endsWith("svh") || unit.endsWith("lvh");
       const featureProp = isHeight ? "height" : "width";
-      const smallViewportUnit = isHeight ? "svh" : "svw";
       const dynamicViewportUnit = isHeight ? "dvh" : "dvw";
+      const classicUnit = isHeight ? "vh" : "vw";
 
       return {
-        // Fallback to classic viewport units first
-        [property]: `calc(var(${isHeight ? "--ai-vh" : "--ai-vw"}, 1${unit.replace("d", "")} ) * ${Number(value) / 1})`,
-        // Also set plain unit as baseline for browsers without CSS var support
-        [`@supports (${featureProp}: 100${unit.replace("d", "")})`]: {
-          [property]: `${value}${unit.replace("d", "")}`,
-        },
-        // Prefer small viewport unit (accounts for toolbars shown)
-        [`@supports (${featureProp}: 100${smallViewportUnit})`]: {
-          [property]: `${value}${smallViewportUnit}`,
-        },
-        // Override with dynamic viewport when supported (updates as UI chrome changes)
+        // Classic viewport units as fallback
+        [property]: `${value}${classicUnit}`,
+        // Use dynamic viewport when supported (updates as UI chrome changes)
         [`@supports (${featureProp}: 100${dynamicViewportUnit})`]: {
           [property]: `${value}${dynamicViewportUnit}`,
         },
