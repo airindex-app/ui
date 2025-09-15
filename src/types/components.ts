@@ -199,9 +199,6 @@ export interface IDrawer {
   css?: CSS;
   /** Whether the drawer trigger is disabled */
   disabled?: boolean;
-  /** Force a specific height for the drawer in pixels */
-  /** Whether to render the drawer in a portal */
-  portal?: boolean;
   /** Whether to render a smaller version of the drawer */
   small?: boolean;
   /** Title text displayed in the drawer header */
@@ -235,9 +232,6 @@ export interface IModal {
   css?: CSS;
   /** Whether the modal trigger is disabled */
   disabled?: boolean;
-  /** Force a specific height for the modal in pixels */
-  /** Whether to render the modal in a portal */
-  portal?: boolean;
   /** Whether to render a smaller version of the modal */
   small?: boolean;
   /** Title text displayed in the modal header */
@@ -986,23 +980,6 @@ export interface IView {
   inverted?: boolean;
   /** Top margin/spacing */
   top?: keyof typeof spacings;
-}
-
-/**
- * Portal component props - renders children in a portal (outside normal DOM tree)
- *
- * @example
- * ```tsx
- * <Portal disabled={false}>
- *   <Modal>Content rendered in portal</Modal>
- * </Portal>
- * ```
- */
-export interface IPortal {
-  /** Content to render in the portal */
-  children?: ReactNode;
-  /** Whether to disable portal rendering */
-  disabled?: boolean;
 }
 
 /**

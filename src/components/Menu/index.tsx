@@ -1,15 +1,8 @@
 import { useEffect, useId, useState, type JSX } from "react";
+import { createPortal } from "react-dom";
 
 import { CrossCircledIcon } from "../../icons";
-import {
-  Button,
-  Portal,
-  useEventListener,
-  useOutsideClick,
-  useModal,
-  Icon,
-  type IMenu,
-} from "../../index";
+import { Button, useEventListener, useOutsideClick, useModal, Icon, type IMenu } from "../../index";
 import {
   MenuGroupStyled,
   MenuItemStyled,
@@ -125,8 +118,8 @@ export default function Menu({
         {trigger}
       </MenuTriggerStyled>
 
-      {menu.isMounted && (
-        <Portal>
+      {menu.isMounted &&
+        createPortal(
           <MenuOverlayStyled
             animation={menu.isOpen}
             css={{
@@ -182,9 +175,9 @@ export default function Menu({
                 </MenuContentStyled>
               )}
             </MenuGroupStyled>
-          </MenuOverlayStyled>
-        </Portal>
-      )}
+          </MenuOverlayStyled>,
+          document.body,
+        )}
     </MenuStyled>
   );
 }

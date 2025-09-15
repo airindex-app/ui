@@ -1,4 +1,5 @@
 import { useId, type JSX } from "react";
+import { createPortal } from "react-dom";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -8,7 +9,6 @@ import {
   useOutsideClick,
   useModal,
   Icon,
-  Portal,
   type IDrawer,
 } from "../../index";
 import {
@@ -24,7 +24,6 @@ export default function Drawer({
   children,
   css,
   disabled,
-  portal = true,
   title,
   trigger,
   triggerCSS,
@@ -67,8 +66,8 @@ export default function Drawer({
         "Missing trigger"
       )}
 
-      {drawer.isMounted && (
-        <Portal disabled={!portal}>
+      {drawer.isMounted &&
+        createPortal(
           <DrawerOverlayStyled
             animation={drawer.isOpen}
             css={{
@@ -101,9 +100,9 @@ export default function Drawer({
                 {typeof children === "function" ? children(drawer.handleClose) : children}
               </DrawerContentStyled>
             </DrawerCoreStyled>
-          </DrawerOverlayStyled>
-        </Portal>
-      )}
+          </DrawerOverlayStyled>,
+          document.body,
+        )}
     </DrawerStyled>
   );
 }

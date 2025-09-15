@@ -1,4 +1,5 @@
 import { useId, type JSX, type MouseEvent } from "react";
+import { createPortal } from "react-dom";
 
 import { CrossCircledIcon } from "../../icons";
 import {
@@ -8,7 +9,6 @@ import {
   useOutsideClick,
   useModal,
   Icon,
-  Portal,
   type IModal,
 } from "../../index";
 import {
@@ -24,7 +24,6 @@ export default function Modal({
   children,
   css,
   disabled,
-  portal = true,
   small,
   title,
   trigger,
@@ -59,8 +58,8 @@ export default function Modal({
         {trigger}
       </ModalTriggerStyled>
 
-      {modal.isMounted && (
-        <Portal disabled={!portal}>
+      {modal.isMounted &&
+        createPortal(
           <ModalOverlayStyled
             animation={modal.isOpen}
             css={{
@@ -94,9 +93,9 @@ export default function Modal({
                 {typeof children === "function" ? children(modal.handleClose) : children}
               </ModalContentStyled>
             </ModalGroupStyled>
-          </ModalOverlayStyled>
-        </Portal>
-      )}
+          </ModalOverlayStyled>,
+          document.body,
+        )}
     </ModalStyled>
   );
 }

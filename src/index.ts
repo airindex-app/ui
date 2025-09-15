@@ -26,7 +26,6 @@ export { default as Menu } from "./components/Menu";
 export { default as Modal } from "./components/Modal";
 export { default as Places } from "./components/Places";
 export { default as Popover } from "./components/Popover";
-export { default as Portal } from "./components/Provider/ProviderPortal";
 export { default as Provider } from "./components/Provider";
 export { default as ProviderToggle } from "./components/Provider/ProviderToggle";
 export { default as Select } from "./components/Select";
