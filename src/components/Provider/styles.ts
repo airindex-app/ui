@@ -1,7 +1,6 @@
 import { darkTheme, globalCss, styled, theme } from "../../stitches.config";
 
 export const ProviderStyled = styled("main", {
-  minHeight: "100vh",
   position: "relative",
 });
 

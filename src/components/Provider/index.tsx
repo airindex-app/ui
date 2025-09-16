@@ -1,4 +1,4 @@
-import { type JSX } from "react";
+import { useEffect, type JSX } from "react";
 
 import { type IProvider } from "../../index";
 import { darkTheme } from "../../stitches.config";
@@ -10,8 +10,20 @@ export default function Provider({ children, css, dark }: IProvider): JSX.Elemen
 
   providerReset();
 
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add(darkTheme);
+    } else {
+      document.body.classList.remove(darkTheme);
+    }
+
+    return (): void => {
+      document.body.classList.remove(darkTheme);
+    };
+  }, [isDarkMode]);
+
   return (
-    <ProviderStyled className={isDarkMode ? darkTheme : ""} css={css}>
+    <ProviderStyled css={css}>
       <ToastController />
       {children}
     </ProviderStyled>
