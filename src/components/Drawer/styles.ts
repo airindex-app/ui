@@ -18,6 +18,7 @@ export const DrawerOverlayStyled = styled("div", {
   backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
   display: "flex",
+  dynamicViewport: { property: "height", unit: "vh", value: "100" },
   inset: 0,
   justifyContent: "center",
   overflow: "hidden",

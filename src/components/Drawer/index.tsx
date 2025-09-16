@@ -68,15 +68,7 @@ export default function Drawer({
 
       {drawer.isMounted &&
         createPortal(
-          <DrawerOverlayStyled
-            animation={drawer.isOpen}
-            css={{
-              // Use JS viewport height for iOS dynamic toolbar fixes
-              ...(drawer.viewportHeight && {
-                height: `${drawer.viewportHeight}px`,
-                minHeight: `${drawer.viewportHeight}px`,
-              }),
-            }}>
+          <DrawerOverlayStyled animation={drawer.isOpen}>
             <DrawerCoreStyled
               ref={drawer.modalRef}
               animation={drawer.isOpen}

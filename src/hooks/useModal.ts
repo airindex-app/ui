@@ -13,18 +13,8 @@ export default function useModal({
 } = {}): IUseModal {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [viewportHeight, setViewportHeight] = useState(0);
 
   const modalRef = useRef<HTMLDivElement>(null);
-
-  // Handle iOS dynamic toolbar viewport issues
-  const updateViewportHeight = useCallback((): void => {
-    // Use Visual Viewport API for precise visible area (modern browsers)
-    // Falls back to window.innerHeight for compatibility
-    const height = window.visualViewport?.height || window.innerHeight;
-
-    setViewportHeight(height);
-  }, []);
 
   // Modal functions
   function handleOpen(): void {
@@ -47,40 +37,6 @@ export default function useModal({
       handleOpen();
     }
   }
-
-  // Listen for viewport changes (iOS toolbar show/hide)
-  useEffect(() => {
-    if (!isMounted) return;
-
-    updateViewportHeight();
-
-    const handleViewportChange = (): void => {
-      // Use requestAnimationFrame for smooth updates without setTimeout delay
-      requestAnimationFrame(updateViewportHeight);
-    };
-
-    // Primary: Visual Viewport API (modern browsers) - tracks actual visible area
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener("resize", handleViewportChange);
-    } else {
-      // Fallback: Monitor scroll events for mobile toolbar changes (older browsers)
-      window.addEventListener("scroll", handleViewportChange, { passive: true });
-    }
-
-    // Standard viewport change events
-    window.addEventListener("resize", handleViewportChange);
-    window.addEventListener("orientationchange", handleViewportChange);
-
-    return (): void => {
-      if (window.visualViewport) {
-        window.visualViewport.removeEventListener("resize", handleViewportChange);
-      } else {
-        window.removeEventListener("scroll", handleViewportChange);
-      }
-      window.removeEventListener("resize", handleViewportChange);
-      window.removeEventListener("orientationchange", handleViewportChange);
-    };
-  }, [isMounted, updateViewportHeight]);
 
   // Clean scroll lock
   useEffect(() => {
@@ -144,6 +100,5 @@ export default function useModal({
     isMounted,
     isOpen,
     modalRef,
-    viewportHeight,
   };
 }

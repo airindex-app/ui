@@ -120,15 +120,7 @@ export default function Menu({
 
       {menu.isMounted &&
         createPortal(
-          <MenuOverlayStyled
-            animation={menu.isOpen}
-            css={{
-              // Use JS viewport height for iOS dynamic toolbar fixes
-              ...(menu.viewportHeight && {
-                height: `${menu.viewportHeight}px`,
-                minHeight: `${menu.viewportHeight}px`,
-              }),
-            }}>
+          <MenuOverlayStyled animation={menu.isOpen}>
             <MenuGroupStyled
               ref={menu.modalRef}
               animation={menu.isOpen}

@@ -177,7 +177,7 @@ export type TUseLocalStorage<T> = [T, (value: T) => void];
  *     {modal.isMounted && (
  *       <ModalOverlay
  *         css={{
- *           height: modal.viewportHeight ? `${modal.viewportHeight}px` : '100vh'
+ *           height: '100dvh' // Dynamic viewport height with fallback
  *         }}
  *       >
  *         <ModalContent ref={modal.modalRef}>
@@ -197,8 +197,6 @@ export interface IUseModal {
   isMounted: boolean;
   /** Ref to attach to the modal content element for scroll lock */
   modalRef: { current: HTMLDivElement | null };
-  /** Current viewport height in pixels for iOS overlay fixes */
-  viewportHeight: number;
   /** Function to open the modal */
   handleOpen: () => void;
   /** Function to close the modal */

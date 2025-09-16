@@ -60,14 +60,7 @@ export default function Modal({
 
       {modal.isMounted &&
         createPortal(
-          <ModalOverlayStyled
-            animation={modal.isOpen}
-            css={{
-              ...(modal.viewportHeight && {
-                height: `${modal.viewportHeight}px`,
-                minHeight: `${modal.viewportHeight}px`,
-              }),
-            }}>
+          <ModalOverlayStyled animation={modal.isOpen}>
             <ModalGroupStyled
               ref={modal.modalRef}
               animation={modal.isOpen}
