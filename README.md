@@ -7,7 +7,7 @@
 
 ## ⚠️ Important Notice
 
-**This library is built specifically for AirIndex's design system and internal use cases.** While it's open-sourced for transparency and potential inspiration, it's **not intended as a general-purpose component library** for public consumption. 
+**This library is built specifically for AirIndex's design system and internal use cases.** While it's open-sourced for transparency and potential inspiration, it's **not intended as a general-purpose component library** for public consumption.
 
 - ✅ **Use if**: You're working on AirIndex projects or want to study the implementation
 - ❌ **Consider alternatives if**: You need a general-purpose UI library for your own projects
@@ -115,8 +115,8 @@ import { Provider } from '@airindex-app/ui';
 </Provider>
 
 // Custom CSS with theme tokens
-<Button css={{ 
-  backgroundColor: '$purple', 
+<Button css={{
+  backgroundColor: '$purple',
   color: '$background',
 }}>
   Custom Button
@@ -180,7 +180,6 @@ This library includes the following components with full TypeScript support and 
 - **[Box](./docs/components/interfaces/IBox.md)** - Versatile container with optional image, header, and footer
 - **[Button](./docs/components/interfaces/IButton.md)** - Interactive element for user actions with multiple themes
 - **[Divider](./docs/components/interfaces/IDivider.md)** - Visual separator line with customizable spacing
-- **[Drawer](./docs/components/interfaces/IDrawer.md)** - Slide-out panel overlay for secondary content
 - **[Field](./docs/components/interfaces/IField.md)** - Multi-line textarea input with validation and actions
 - **[Form](./docs/components/interfaces/IForm.md)** - Form wrapper with validation and submission handling
 - **[Icon](./docs/components/interfaces/IIcon.md)** - Consistent icon wrapper with theming support

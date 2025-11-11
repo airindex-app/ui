@@ -1,7 +1,8 @@
 import { fadeInUp, fadeOutDown, styled } from "../../stitches.config";
 
 const stickyBase = {
-  backgroundColor: "$background",
+  backdropFilter: "blur(16px)",
+  backgroundColor: "transparent",
   position: "sticky",
   top: 0,
   zIndex: "$select",
@@ -24,7 +25,8 @@ export const SelectGroupStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
-  backgroundColor: "$background",
+  backdropFilter: "blur(8px)",
+  backgroundColor: "$glass",
   border: "1px solid $border",
   lineBreak: "auto",
   overflowY: "auto",
@@ -62,7 +64,7 @@ export const SelectItemStyled = styled("div", {
     backgroundColor: "$surfaceHover",
   },
   alignItems: "center",
-  backgroundColor: "$surface",
+  backgroundColor: "$background",
   borderLeft: "2px solid transparent",
   color: "$text",
   cursor: "pointer",
@@ -111,7 +113,7 @@ export const SelectEmptyStyled = styled("div", {
 
 export const SelectLabelStyled = styled("div", {
   ...stickyBase,
-  borderBottom: "1px solid $border",
+  borderBottom: "1px solid $borderLight",
   fontFamily: "$default",
   fontWeight: 600,
   padding: "$smaller $small $smallest $small",

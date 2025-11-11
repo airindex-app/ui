@@ -1,4 +1,4 @@
-import { JSX, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 
 import { ChevronDownIcon } from "../src/icons";
 import * as C from "../src/index";
@@ -8,7 +8,6 @@ import BadgeDemo from "./demos/Badge";
 import BoxDemo from "./demos/Box";
 import ButtonDemo from "./demos/Button";
 import DividerDemo from "./demos/Divider";
-import DrawerDemo from "./demos/Drawer";
 import FieldDemo from "./demos/Field";
 import IconDemo from "./demos/Icon";
 import InputDemo from "./demos/Input";
@@ -36,7 +35,6 @@ const DEMOS = {
   Box: BoxDemo,
   Button: ButtonDemo,
   Divider: DividerDemo,
-  Drawer: DrawerDemo,
   Field: FieldDemo,
   Icon: IconDemo,
   Input: InputDemo,
@@ -63,7 +61,39 @@ const DEMO_OPTIONS = Object.keys(DEMOS).map((name) => ({
 
 export function App(): JSX.Element {
   const { isDarkTheme } = C.useTheme();
-  const [selectedDemo, setSelectedDemo] = useState("avatar");
+
+  // Initialize from URL hash or default to "avatar"
+  const getInitialDemo = () => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.slice(1); // Remove the '#'
+      if (hash && DEMO_OPTIONS.some((opt) => opt.value === hash.toLowerCase())) {
+        return hash.toLowerCase();
+      }
+    }
+    return "avatar";
+  };
+
+  const [selectedDemo, setSelectedDemo] = useState(getInitialDemo);
+
+  // Update URL hash when selectedDemo changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.location.hash = selectedDemo;
+    }
+  }, [selectedDemo]);
+
+  // Listen for hash changes (browser back/forward)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash && DEMO_OPTIONS.some((opt) => opt.value === hash.toLowerCase())) {
+        setSelectedDemo(hash.toLowerCase());
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   // Get the current demo component
   const key = (Object.keys(DEMOS).find((key) => key.toLowerCase() === selectedDemo) ||

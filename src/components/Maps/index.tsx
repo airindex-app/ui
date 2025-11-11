@@ -1,4 +1,4 @@
-import { Loader } from "@googlemaps/js-api-loader";
+import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import { useEffect, useRef, useState, type JSX } from "react";
 
 import { Loading, type IMaps } from "../../index";
@@ -44,16 +44,17 @@ export default function Maps({
       }
 
       if (typeof center === "string") {
-        const loader = new Loader({
-          apiKey,
+        setOptions({
+          key: apiKey,
           libraries: ["places", "maps", "geocoding"],
-          version: "weekly",
+          v: "weekly",
         });
 
-        const google = await loader.load();
+        await importLibrary("geocoding");
 
         if (!isActive) return;
-        const geocoder = new google.maps.Geocoder();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const geocoder = new (window as any).google.maps.Geocoder();
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         geocoder.geocode({ address: center }, (results: any, status: string) => {
@@ -91,18 +92,19 @@ export default function Maps({
 
     let isActive = true;
     const initMap = async (): Promise<void> => {
-      const loader = new Loader({
-        apiKey,
+      setOptions({
+        key: apiKey,
         libraries: ["places", "maps", "geocoding"],
-        version: "weekly",
+        v: "weekly",
       });
 
-      const google = await loader.load();
+      await importLibrary("maps");
 
       if (!isActive) return;
 
       if (mapRef.current) {
-        mapInstanceRef.current = new google.maps.Map(mapRef.current, {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        mapInstanceRef.current = new (window as any).google.maps.Map(mapRef.current, {
           center: resolvedCenter,
           mapTypeId: mapType,
           zoom,

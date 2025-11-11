@@ -11,6 +11,7 @@ import {
   MenuStyled,
   MenuTriggerStyled,
   MenuContentStyled,
+  MenuFooterStyled,
   MenuHeaderStyled,
   MenuOverlayStyled,
 } from "./styles";
@@ -134,37 +135,38 @@ export default function Menu({
                 <Button
                   icon={<Icon radix={<CrossCircledIcon />} />}
                   small
-                  theme="minimal"
                   onClick={() => handleClose()}>
                   Close
                 </Button>
               </MenuHeaderStyled>
 
-              {options.map((option) => (
-                <MenuItemStyled
-                  key={option.value}
-                  aria-checked={initial === option.value || undefined}
-                  focused={option.value === focused}
-                  role="menuitemradio"
-                  selected={initial === option.value}
-                  onClick={() => handleSelection(option.value, option.label)}
-                  onMouseOver={() => handleItemMouseOver(option.value)}>
-                  <MenuItemContentStyled>
-                    {option.icon && option.iconPosition === "left" && (
-                      <MenuItemIconStyled align="left">{option.icon}</MenuItemIconStyled>
-                    )}
-                    {option.label}
-                    {option.icon && option.iconPosition !== "left" && (
-                      <MenuItemIconStyled align="right">{option.icon}</MenuItemIconStyled>
-                    )}
-                  </MenuItemContentStyled>
-                </MenuItemStyled>
-              ))}
+              <MenuContentStyled>
+                {options.map((option) => (
+                  <MenuItemStyled
+                    key={option.value}
+                    aria-checked={initial === option.value || undefined}
+                    focused={option.value === focused}
+                    role="menuitemradio"
+                    selected={initial === option.value}
+                    onClick={() => handleSelection(option.value, option.label)}
+                    onMouseOver={() => handleItemMouseOver(option.value)}>
+                    <MenuItemContentStyled>
+                      {option.icon && option.iconPosition === "left" && (
+                        <MenuItemIconStyled align="left">{option.icon}</MenuItemIconStyled>
+                      )}
+                      {option.label}
+                      {option.icon && option.iconPosition !== "left" && (
+                        <MenuItemIconStyled align="right">{option.icon}</MenuItemIconStyled>
+                      )}
+                    </MenuItemContentStyled>
+                  </MenuItemStyled>
+                ))}
+              </MenuContentStyled>
 
               {children && (
-                <MenuContentStyled>
+                <MenuFooterStyled>
                   {typeof children === "function" ? children(handleClose) : children}
-                </MenuContentStyled>
+                </MenuFooterStyled>
               )}
             </MenuGroupStyled>
           </MenuOverlayStyled>,

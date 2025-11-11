@@ -83,6 +83,7 @@ export type TThemeConfig = {
     | "yellowLight"
     | "border"
     | "borderLight"
+    | "glass"
     | "surface"
     | "surfaceHover"
     | "surfaceLight"

@@ -1,42 +1,47 @@
-import { fadeIn, fadeOut, slideInScale, slideOutScale, styled } from "../../stitches.config";
+import { slideInScale, slideOutScale, styled } from "../../stitches.config";
 
-const overlayBase = {
+export const MenuStyled = styled("div", {
+  display: "inline-flex",
+  height: "100%",
+  verticalAlign: "middle",
+});
+
+export const MenuTriggerStyled = styled("div", {
+  cursor: "pointer",
+  display: "inline-flex",
+  position: "relative",
+  verticalAlign: "middle",
+});
+
+export const MenuOverlayStyled = styled("div", {
   alignItems: "center",
-  backdropFilter: "blur(2px)",
   backgroundColor: "$overlay",
   display: "flex",
   dynamicViewport: { property: "height", unit: "vh", value: "100" },
   inset: 0,
   justifyContent: "center",
-  overflow: "hidden",
   pointerEvents: "auto",
   position: "fixed",
-  transition: "$default",
   variants: {
     animation: {
-      false: {
-        animation: `${fadeOut} 200ms ease-in-out`,
-        animationFillMode: "forwards",
-      },
-      true: {
-        animation: `${fadeIn} 200ms ease-in-out`,
-        animationFillMode: "forwards",
-      },
+      false: {},
+      true: {},
     },
   },
-} as const;
+  zIndex: "$menu",
+});
 
-const dialogContainerBase = {
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
-  backgroundColor: "$background",
+export const MenuGroupStyled = styled("div", {
+  backgroundColor: "$glass",
+  border: "1px solid $border",
+  display: "flex",
   dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
-  maxWidth: "90%",
+  flexDirection: "column",
+  isolation: "isolate",
+  maxWidth: "420px",
   minHeight: "auto",
   overflow: "hidden",
-  overflowX: "hidden",
-  overflowY: "auto",
+  padding: 0,
   phone: {
     dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
     maxWidth: "95%",
@@ -55,30 +60,6 @@ const dialogContainerBase = {
     },
   },
   width: "100%",
-} as const;
-
-export const MenuStyled = styled("div", {
-  display: "inline-flex",
-  height: "100%",
-  verticalAlign: "middle",
-});
-
-export const MenuTriggerStyled = styled("div", {
-  cursor: "pointer",
-  display: "inline-flex",
-  position: "relative",
-  verticalAlign: "middle",
-});
-
-export const MenuOverlayStyled = styled("div", {
-  ...overlayBase,
-  zIndex: "$menu",
-});
-
-export const MenuGroupStyled = styled("div", {
-  ...dialogContainerBase,
-  maxWidth: "420px",
-  padding: "$small",
 });
 
 export const MenuItemStyled = styled("div", {
@@ -143,20 +124,38 @@ export const MenuItemIconStyled = styled("div", {
 });
 
 export const MenuContentStyled = styled("div", {
-  display: "block",
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+  backgroundColor: "$background",
+  flex: 1,
+  overflowX: "hidden",
+  overflowY: "auto",
+  padding: "$medium $small",
+});
+
+export const MenuFooterStyled = styled("div", {
+  alignItems: "center",
+  backgroundColor: "$background",
+  borderTop: "1px solid $borderLight",
+  display: "flex",
+  flexShrink: 0,
+  justifyContent: "flex-end",
   padding: "$medium $small",
 });
 
 export const MenuHeaderStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$background",
-  borderBottom: "1px solid $border",
+  backdropFilter: "blur(16px)",
+  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  borderBottom: "1px solid $borderLight",
+  darkOnly: {
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+  },
   display: "flex",
-  fontFamily: "$default",
-  fontWeight: 600,
+  flexShrink: 0,
   justifyContent: "space-between",
-  margin: "-$small -$small $small -$small",
-  padding: "$medium",
+  padding: "$small $medium",
 });
 
 export default MenuStyled;

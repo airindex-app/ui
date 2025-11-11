@@ -1,56 +1,10 @@
-import { fadeIn, fadeOut, slideInScale, slideOutScale, styled } from "../../stitches.config";
-
-const overlayBase = {
-  alignItems: "center",
-  backdropFilter: "blur(2px)",
-  backgroundColor: "$overlay",
-  display: "flex",
-  dynamicViewport: { property: "height", unit: "vh", value: "100" },
-  inset: 0,
-  justifyContent: "center",
-  overflow: "hidden",
-  pointerEvents: "auto",
-  position: "fixed",
-  transition: "$default",
-  variants: {
-    animation: {
-      false: {
-        animation: `${fadeOut} 200ms ease-in-out`,
-        animationFillMode: "forwards",
-      },
-      true: {
-        animation: `${fadeIn} 200ms ease-in-out`,
-        animationFillMode: "forwards",
-      },
-    },
-  },
-} as const;
-
-const dialogContainerBase = {
-  backgroundColor: "$background",
-  dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
-  maxWidth: "90%",
-  minHeight: "auto",
-  overflow: "hidden",
-  phone: {
-    dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
-    maxWidth: "95%",
-  },
-  position: "relative",
-  variants: {
-    animation: {
-      false: {
-        animation: `${slideOutScale} 200ms ease-out`,
-        animationFillMode: "forwards",
-      },
-      true: {
-        animation: `${slideInScale} 200ms ease-out`,
-        animationFillMode: "forwards",
-      },
-    },
-  },
-  width: "100%",
-} as const;
+import {
+  slideInRight,
+  slideInUp,
+  slideOutDown,
+  slideOutRight,
+  styled,
+} from "../../stitches.config";
 
 export const ModalStyled = styled("div", {
   display: "inline-flex",
@@ -66,30 +20,112 @@ export const ModalTriggerStyled = styled("div", {
 });
 
 export const ModalOverlayStyled = styled("div", {
-  ...overlayBase,
+  alignItems: "flex-start",
+  backgroundColor: "$overlay",
+  display: "flex",
+  dynamicViewport: { property: "height", unit: "vh", value: "100" },
+  inset: 0,
+  justifyContent: "flex-end",
+  // Mobile: align to bottom
+  phone: {
+    alignItems: "flex-end",
+    justifyContent: "center",
+  },
+  pointerEvents: "auto",
+  position: "fixed",
+  tablet: {
+    alignItems: "flex-end",
+    justifyContent: "center",
+  },
+  variants: {
+    animation: {
+      false: {},
+      true: {},
+    },
+  },
   zIndex: "$modal",
 });
 
 export const ModalGroupStyled = styled("div", {
-  ...dialogContainerBase,
+  backgroundColor: "$glass",
+  borderLeft: "1px solid $border",
   display: "flex",
+  // Desktop: sidebar behavior - full height, positioned from right
+  dynamicViewport: { property: "height", unit: "vh", value: "100" },
   flexDirection: "column",
-  maxWidth: "600px",
+  overflow: "hidden",
   padding: 0,
+  position: "relative",
   variants: {
-    ...dialogContainerBase.variants,
-    small: {
+    animation: {
+      false: {
+        animation: `${slideOutRight} 300ms ease-out`,
+        animationFillMode: "forwards",
+        // Mobile: override with slide down animation
+        phone: {
+          animation: `${slideOutDown} 300ms ease-in-out`,
+          animationFillMode: "forwards",
+        },
+        tablet: {
+          animation: `${slideOutDown} 300ms ease-in-out`,
+          animationFillMode: "forwards",
+        },
+      },
       true: {
-        maxWidth: "280px",
+        animation: `${slideInRight} 300ms ease-out`,
+        animationFillMode: "forwards",
+        // Mobile: override with slide up animation
+        phone: {
+          animation: `${slideInUp} 300ms ease-in-out`,
+          animationFillMode: "forwards",
+        },
+        tablet: {
+          animation: `${slideInUp} 300ms ease-in-out`,
+          animationFillMode: "forwards",
+        },
+      },
+    },
+    small: {
+      false: {
+        phone: {
+          dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
+          height: "auto",
+          width: "100%",
+        },
+        // Mobile: full width, max height from bottom
+        tablet: {
+          dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
+          height: "auto",
+          width: "100%",
+        },
+      },
+      true: {
+        phone: {
+          dynamicViewport: { property: "maxHeight", unit: "vh", value: "40" },
+          height: "auto",
+          width: "100%",
+        },
+        // Mobile: full width, smaller max height
+        tablet: {
+          dynamicViewport: { property: "maxHeight", unit: "vh", value: "40" },
+          height: "auto",
+          width: "100%",
+        },
+        width: "30vw",
       },
     },
   },
+  width: "60vw",
 });
 
 export const ModalHeaderStyled = styled("div", {
   alignItems: "center",
-  backgroundColor: "$background",
+  backdropFilter: "blur(16px)",
+  backgroundColor: "rgba(255, 255, 255, 0.1)",
   borderBottom: "1px solid $borderLight",
+  darkOnly: {
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+  },
   display: "flex",
   flexShrink: 0,
   justifyContent: "space-between",
@@ -100,8 +136,34 @@ export const ModalContentStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
+  backgroundColor: "$background",
   flex: 1,
   overflowX: "hidden",
   overflowY: "auto",
+  padding: "$medium",
+  phone: {
+    margin: "0 auto",
+    maxWidth: "600px",
+    padding: "$large $medium",
+    paddingBottom: "calc($medium + env(safe-area-inset-bottom))",
+    width: "100%",
+  },
+  // Mobile: match content styling
+  tablet: {
+    margin: "0 auto",
+    maxWidth: "600px",
+    padding: "$large $medium",
+    paddingBottom: "calc($medium + env(safe-area-inset-bottom))",
+    width: "100%",
+  },
+});
+
+export const ModalFooterStyled = styled("div", {
+  alignItems: "center",
+  backgroundColor: "$background",
+  borderTop: "1px solid $borderLight",
+  display: "flex",
+  flexShrink: 0,
+  justifyContent: "flex-end",
   padding: "$medium",
 });

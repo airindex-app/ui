@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { IUseModal } from "../types/hooks";
 
 export default function useModal({
-  animationDuration = 200,
+  animationDuration = 300,
   onClose,
   preventBodyScroll = true,
 }: {

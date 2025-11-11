@@ -6,10 +6,10 @@ import * as C from "../../src/index";
 
 export default function ModalDemo(): JSX.Element {
   return (
-    <C.Stack css={{ 
+    <C.Stack css={{
       display: "grid",
       gap: "$large",
-      gridTemplateColumns: "repeat(3, 1fr)" 
+      gridTemplateColumns: "repeat(3, 1fr)"
     }}>
       {/* Basic Usage */}
       <C.Box header={
@@ -40,7 +40,7 @@ export default function ModalDemo(): JSX.Element {
           <C.Modal
             title="Icon Trigger"
             trigger={
-              <C.Button 
+              <C.Button
                 icon={<C.Icon radix={<ExitIcon />} />}
                 small
                 theme="minimal"
@@ -113,32 +113,32 @@ export default function ModalDemo(): JSX.Element {
               <C.Text>Additional content that demonstrates the scrolling behavior when the modal height is constrained.</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
-              <C.Text>More content to show scrolling...</C.Text>      
-              <C.Text>More content to show scrolling...</C.Text>
-              <C.Text>More content to show scrolling...</C.Text>  
-              <C.Text>More content to show scrolling...</C.Text>
-              <C.Text>More content to show scrolling...</C.Text>  
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
-              <C.Text>More content to show scrolling...</C.Text>  
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
-              <C.Text>More content to show scrolling...</C.Text>  
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
               <C.Text>More content to show scrolling...</C.Text>
-              <C.Text>More content to show scrolling...</C.Text>  
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
+              <C.Text>More content to show scrolling...</C.Text>
             </C.Stack>
           </C.Modal>
         </C.Stack>
@@ -193,8 +193,8 @@ export default function ModalDemo(): JSX.Element {
               <C.Stack>
                 <C.Text>This modal demonstrates closing from buttons inside the content.</C.Text>
                 <C.Stack direction="row" gap="small">
-                  <C.Button 
-                    theme="minimal" 
+                  <C.Button
+                    theme="minimal"
                     onClick={() => {
                       console.log("Cancel button clicked");
                       close(); // This will close the modal
@@ -202,7 +202,7 @@ export default function ModalDemo(): JSX.Element {
                   >
                     Cancel
                   </C.Button>
-                  <C.Button 
+                  <C.Button
                     theme="solid"
                     onClick={() => {
                       console.log("Save button clicked");
@@ -218,6 +218,56 @@ export default function ModalDemo(): JSX.Element {
           </C.Modal>
         </C.Stack>
       </C.Box>
+
+      {/* Footer */}
+      <C.Box header={
+        <C.Text as="h4">Footer</C.Text>
+      }>
+        <C.Stack>
+          <C.Modal
+            title="Modal with Footer"
+            trigger={<C.Button theme="solid">Open with Footer</C.Button>}
+            footer={
+              <C.Stack direction="row" gap="small">
+                <C.Button
+                  theme="minimal"
+                  onClick={() => {
+                    console.log("Cancel button clicked");
+                  }}
+                >
+                  Cancel
+                </C.Button>
+                <C.Button
+                  theme="solid"
+                  onClick={() => {
+                    console.log("Confirm button clicked");
+                  }}
+                >
+                  Confirm
+                </C.Button>
+              </C.Stack>
+            }
+          >
+            <C.Stack>
+              <C.Text>This modal has a footer that stays visible at the bottom.</C.Text>
+              <C.Text>The footer is perfect for action buttons that should always be accessible.</C.Text>
+            </C.Stack>
+          </C.Modal>
+          <C.Modal
+            small
+            title="Confirmation with Footer"
+            trigger={<C.Button theme="solid">Delete Item</C.Button>}
+            footer={
+              <C.Stack direction="row" gap="small">
+                <C.Button theme="minimal">Cancel</C.Button>
+                <C.Button theme="solid">Delete</C.Button>
+              </C.Stack>
+            }
+          >
+            <C.Text>Are you sure you want to delete this item? This action cannot be undone.</C.Text>
+          </C.Modal>
+        </C.Stack>
+      </C.Box>
     </C.Stack>
   );
-} 
+}

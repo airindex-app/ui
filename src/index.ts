@@ -13,7 +13,6 @@ export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";
 export { default as Button } from "./components/Button";
 export { default as Divider } from "./components/Divider";
-export { default as Drawer } from "./components/Drawer";
 export { default as Field } from "./components/Field";
 export { default as Form } from "./components/Form";
 export { default as Icon } from "./components/Icon";

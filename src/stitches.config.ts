@@ -42,13 +42,14 @@ export const spacings: TSpacingConfig = {
 
 const defaultTheme: TThemeConfig = {
   colors: {
-    background: "#f6f6f4",
-    border: "rgba(160, 160, 155, 0.35)",
-    borderLight: "rgba(160, 160, 155, 0.15)",
-    overlay: "rgba(15, 8, 18, 0.2)",
+    background: "#f3f3f1",
+    border: "rgba(160, 160, 155, 0.4)",
+    borderLight: "rgba(160, 160, 155, 0.2)",
+    glass: "rgba(255, 255, 255, 0.8)",
+    overlay: "rgba(0, 0, 0, 0.25)",
     surface: "#FFFFFF",
-    surfaceHover: "rgba(160, 160, 155, 0.16)",
-    surfaceLight: "rgba(160, 160, 155, 0.08)",
+    surfaceHover: "rgba(160, 160, 155, 0.2)",
+    surfaceLight: "rgba(160, 160, 155, 0.1)",
     text: "#141415",
     yellow: "#ffcd1a",
     yellowLight: "#FFE792",
@@ -98,7 +99,8 @@ const darkThemeConfig: Partial<TThemeConfig> = {
     background: "#0f0f0f",
     border: "rgba(255, 255, 255, 0.2)",
     borderLight: "rgba(255, 255, 255, 0.1)",
-    overlay: "rgba(146, 146, 146, 0.2)",
+    glass: "rgba(0, 0, 0, 0.6)",
+    overlay: "rgba(255, 255, 255, 0.1b)",
     surface: "#222222",
     surfaceHover: "rgba(255, 255, 255, 0.2)",
     surfaceLight: "rgba(255, 255, 255, 0.1)",
@@ -264,7 +266,7 @@ export const slideOutScale = keyframes({
   },
 });
 
-// Drawer slide animations
+// Bottom slide animations (for mobile modal)
 export const slideInUp = keyframes({
   from: {
     transform: "translateY(100%)",
@@ -280,6 +282,25 @@ export const slideOutDown = keyframes({
   },
   to: {
     transform: "translateY(100%)",
+  },
+});
+
+// Sidebar slide animations (from right)
+export const slideInRight = keyframes({
+  from: {
+    transform: "translateX(100%)",
+  },
+  to: {
+    transform: "translateX(0)",
+  },
+});
+
+export const slideOutRight = keyframes({
+  from: {
+    transform: "translateX(0)",
+  },
+  to: {
+    transform: "translateX(100%)",
   },
 });
 

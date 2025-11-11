@@ -10,7 +10,8 @@ export const PlacesDropdownStyled = styled("div", {
   "&::-webkit-scrollbar": {
     display: "none",
   },
-  backgroundColor: "$surface",
+  backdropFilter: "blur(8px)",
+  backgroundColor: "$glass",
   border: "1px solid $border",
   lineBreak: "auto",
   overflowY: "auto",

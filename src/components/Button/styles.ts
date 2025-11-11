@@ -69,12 +69,14 @@ export const ButtonStyled = styled("button", {
       default: {
         "&:not(:disabled):hover": {
           backgroundColor: "$surfaceHover",
+          transform: "translateY(-2px)",
         },
       },
       minimal: {
         "&:not(:disabled):hover": {
           backgroundColor: "$surfaceHover",
           borderColor: "$border",
+          transform: "translateY(-2px)",
         },
         backgroundColor: "transparent",
         borderColor: "transparent",
@@ -82,6 +84,7 @@ export const ButtonStyled = styled("button", {
       solid: {
         "&:not(:disabled):hover": {
           opacity: "$default",
+          transform: "translateY(-2px)",
         },
         backgroundColor: "$text",
         borderColor: "$text",
@@ -90,6 +93,7 @@ export const ButtonStyled = styled("button", {
       yellow: {
         "&:not(:disabled):hover": {
           opacity: "$default",
+          transform: "translateY(-2px)",
         },
         backgroundColor: "$yellow",
         borderColor: "$yellow",

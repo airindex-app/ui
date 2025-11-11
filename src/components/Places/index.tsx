@@ -1,4 +1,4 @@
-import { Loader } from "@googlemaps/js-api-loader";
+import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import {
   ChangeEvent,
   KeyboardEvent,
@@ -83,15 +83,18 @@ export default function Places({
     if (!apiKey || isReady) return;
 
     const initGoogleMaps = async (): Promise<void> => {
-      const loader = new Loader({
-        apiKey,
+      setOptions({
+        key: apiKey,
         libraries: ["places", "maps"],
-        version: "weekly",
+        v: "weekly",
       });
 
-      const google = await loader.load();
+      await importLibrary("places");
 
-      if (google.maps?.places) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { google } = window as any;
+
+      if (google?.maps?.places) {
         serviceRef.current = new google.maps.places.AutocompleteService();
         setIsReady(true);
       }

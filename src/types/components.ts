@@ -179,39 +179,6 @@ export interface IButton extends ComponentPropsWithoutRef<"button"> {
 }
 
 /**
- * Drawer component props - slide-out panel that overlays content
- *
- * @example
- * ```tsx
- * <Drawer
- *   title="Settings"
- *   trigger={<Button>Open Drawer</Button>}
- *   small
- * >
- *   <Text>Drawer content here</Text>
- * </Drawer>
- * ```
- */
-export interface IDrawer {
-  /** Content to display inside the drawer - can be ReactNode or a function that receives the close function */
-  children: ReactNode | ((close: () => void) => ReactNode);
-  /** Custom CSS styles for the drawer */
-  css?: CSS;
-  /** Whether the drawer trigger is disabled */
-  disabled?: boolean;
-  /** Whether to render a smaller version of the drawer */
-  small?: boolean;
-  /** Title text displayed in the drawer header */
-  title: string;
-  /** Element that triggers the drawer to open */
-  trigger?: ReactNode;
-  /** Custom CSS styles for the trigger element */
-  triggerCSS?: CSS;
-  /** Custom CSS styles for the drawer wrapper */
-  wrapperCSS?: CSS;
-}
-
-/**
  * Modal component props - centered overlay dialog
  *
  * @example
@@ -232,6 +199,8 @@ export interface IModal {
   css?: CSS;
   /** Whether the modal trigger is disabled */
   disabled?: boolean;
+  /** Footer content displayed at the bottom of the modal (e.g., action buttons) */
+  footer?: ReactNode;
   /** Whether to render a smaller version of the modal */
   small?: boolean;
   /** Title text displayed in the modal header */
@@ -374,21 +343,6 @@ export interface IForm extends ComponentPropsWithRef<"form"> {
    */
   submitValid?: boolean | ((data: Record<string, FormDataEntryValue>) => boolean);
 }
-
-/**
- * Image component props - enhanced Next.js Image with additional styling options
- *
- * @example
- * ```tsx
- * <Image
- *   src="/hero.jpg"
- *   alt="Hero image"
- *   fill
- *   fillFit="cover"
- * />
- * ```
- */
-// Image component removed; use native <img> with props on containers instead
 
 /**
  * Input component props - form input field with validation and actions
@@ -1002,23 +956,6 @@ export interface IIcon extends ComponentPropsWithoutRef<"span"> {
   /** The icon element to render (required) */
   radix: ReactElement;
 }
-
-/**
- * Tabs component props - tabbed interface for switching between content panels
- *
- * @example
- * ```tsx
- * <Tabs
- *   options={[
- *     { label: "Home", value: "home", icon: <HomeIcon /> },
- *     { label: "Profile", value: "profile", icon: <UserIcon /> }
- *   ]}
- *   initial="home"
- *   onSelection={(value) => console.log('Selected tab:', value)}
- * />
- * ```
- */
-// Tabs component removed
 
 /**
  * Accordion component props - collapsible content sections with optional multiple expansion

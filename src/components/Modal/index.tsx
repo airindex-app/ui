@@ -16,6 +16,7 @@ import {
   ModalGroupStyled,
   ModalHeaderStyled,
   ModalContentStyled,
+  ModalFooterStyled,
   ModalStyled,
   ModalTriggerStyled,
 } from "./styles";
@@ -24,6 +25,7 @@ export default function Modal({
   children,
   css,
   disabled,
+  footer,
   small,
   title,
   trigger,
@@ -49,14 +51,18 @@ export default function Modal({
 
   return (
     <ModalStyled css={wrapperCSS}>
-      <ModalTriggerStyled
-        css={triggerCSS}
-        onClick={(e: MouseEvent): void => {
-          e.stopPropagation();
-          handleClick();
-        }}>
-        {trigger}
-      </ModalTriggerStyled>
+      {trigger ? (
+        <ModalTriggerStyled
+          css={triggerCSS}
+          onClick={(e: MouseEvent): void => {
+            e.stopPropagation();
+            handleClick();
+          }}>
+          {trigger}
+        </ModalTriggerStyled>
+      ) : (
+        "Missing trigger"
+      )}
 
       {modal.isMounted &&
         createPortal(
@@ -68,7 +74,7 @@ export default function Modal({
               aria-modal="true"
               css={css}
               role="dialog"
-              small={small}>
+              small={small ?? false}>
               <ModalHeaderStyled>
                 <Text as="h6" bottom="none" id={titleId}>
                   {title}
@@ -76,7 +82,6 @@ export default function Modal({
                 <Button
                   icon={<Icon radix={<CrossCircledIcon />} />}
                   small
-                  theme="minimal"
                   onClick={() => modal.handleClose()}>
                   Close
                 </Button>
@@ -85,6 +90,8 @@ export default function Modal({
               <ModalContentStyled>
                 {typeof children === "function" ? children(modal.handleClose) : children}
               </ModalContentStyled>
+
+              {footer && <ModalFooterStyled>{footer}</ModalFooterStyled>}
             </ModalGroupStyled>
           </ModalOverlayStyled>,
           document.body,
