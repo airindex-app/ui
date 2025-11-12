@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IDivider
+[@hoststack/ui](../../README.md) / [components](../README.md) / IDivider
 
 # Interface: IDivider
 
-Defined in: [components.ts:263](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L263)
+Defined in: [components.ts:263](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L263)
 
 Divider component props - visual separator line
 
@@ -22,7 +22,7 @@ Divider component props - visual separator line
 
 > `optional` **bottom**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:265](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L265)
+Defined in: [components.ts:265](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L265)
 
 Bottom margin/spacing
 
@@ -32,7 +32,7 @@ Bottom margin/spacing
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:267](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L267)
+Defined in: [components.ts:267](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L267)
 
 Custom CSS styles
 
@@ -42,6 +42,6 @@ Custom CSS styles
 
 > `optional` **top**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:269](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L269)
+Defined in: [components.ts:269](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L269)
 
 Top margin/spacing

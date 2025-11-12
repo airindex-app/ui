@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IProvider
+[@hoststack/ui](../../README.md) / [components](../README.md) / IProvider
 
 # Interface: IProvider
 
-Defined in: [components.ts:660](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L660)
+Defined in: [components.ts:660](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L660)
 
 Provider component props - theme and context provider for the UI library
 
@@ -24,7 +24,7 @@ Provider component props - theme and context provider for the UI library
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:662](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L662)
+Defined in: [components.ts:662](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L662)
 
 Application content
 
@@ -34,7 +34,7 @@ Application content
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:664](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L664)
+Defined in: [components.ts:664](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L664)
 
 Custom CSS styles
 
@@ -44,6 +44,6 @@ Custom CSS styles
 
 > `optional` **dark**: `boolean`
 
-Defined in: [components.ts:666](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L666)
+Defined in: [components.ts:666](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L666)
 
 Whether to use dark theme

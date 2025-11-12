@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / ISelectMulti
+[@hoststack/ui](../../README.md) / [components](../README.md) / ISelectMulti
 
 # Interface: ISelectMulti
 
-Defined in: [components.ts:744](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L744)
+Defined in: [components.ts:744](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L744)
 
 SelectMulti component props - multi-selection dropdown with limit and reset options
 
@@ -36,7 +36,7 @@ SelectMulti component props - multi-selection dropdown with limit and reset opti
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:688](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L688)
+Defined in: [components.ts:688](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L688)
 
 Custom CSS styles
 
@@ -50,7 +50,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [components.ts:690](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L690)
+Defined in: [components.ts:690](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L690)
 
 Whether the select is disabled
 
@@ -64,7 +64,7 @@ Whether the select is disabled
 
 > `optional` **filter**: `boolean`
 
-Defined in: [components.ts:692](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L692)
+Defined in: [components.ts:692](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L692)
 
 Whether to show a filter/search input
 
@@ -78,7 +78,7 @@ Whether to show a filter/search input
 
 > `optional` **height**: `string` \| `number`
 
-Defined in: [components.ts:694](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L694)
+Defined in: [components.ts:694](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L694)
 
 Height of the dropdown
 
@@ -92,7 +92,7 @@ Height of the dropdown
 
 > `optional` **horizontal**: `"left"` \| `"right"` \| `"center"`
 
-Defined in: [components.ts:696](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L696)
+Defined in: [components.ts:696](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L696)
 
 Horizontal alignment of the dropdown
 
@@ -106,7 +106,7 @@ Horizontal alignment of the dropdown
 
 > `optional` **label**: `string`
 
-Defined in: [components.ts:700](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L700)
+Defined in: [components.ts:700](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L700)
 
 Label for the select component
 
@@ -120,7 +120,7 @@ Label for the select component
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:704](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L704)
+Defined in: [components.ts:704](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L704)
 
 Whether to show a loading state
 
@@ -134,7 +134,7 @@ Whether to show a loading state
 
 > **options**: `object`[]
 
-Defined in: [components.ts:708](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L708)
+Defined in: [components.ts:708](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L708)
 
 Array of selectable options
 
@@ -164,7 +164,7 @@ Array of selectable options
 
 > **trigger**: `ReactNode`
 
-Defined in: [components.ts:715](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L715)
+Defined in: [components.ts:715](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L715)
 
 Element that triggers the dropdown
 
@@ -178,7 +178,7 @@ Element that triggers the dropdown
 
 > `optional` **triggerCSS**: `CSS`
 
-Defined in: [components.ts:717](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L717)
+Defined in: [components.ts:717](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L717)
 
 Custom CSS styles for the trigger
 
@@ -192,7 +192,7 @@ Custom CSS styles for the trigger
 
 > `optional` **vertical**: `"bottom"` \| `"top"`
 
-Defined in: [components.ts:719](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L719)
+Defined in: [components.ts:719](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L719)
 
 Vertical positioning of the dropdown
 
@@ -206,7 +206,7 @@ Vertical positioning of the dropdown
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [components.ts:721](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L721)
+Defined in: [components.ts:721](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L721)
 
 Width of the dropdown
 
@@ -220,7 +220,7 @@ Width of the dropdown
 
 > `optional` **wrapperCSS**: `CSS`
 
-Defined in: [components.ts:723](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L723)
+Defined in: [components.ts:723](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L723)
 
 Custom CSS styles for the dropdown wrapper
 
@@ -234,7 +234,7 @@ Custom CSS styles for the dropdown wrapper
 
 > `optional` **initial**: `object`[]
 
-Defined in: [components.ts:746](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L746)
+Defined in: [components.ts:746](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L746)
 
 Initially selected options
 
@@ -252,7 +252,7 @@ Initially selected options
 
 > `optional` **limit**: `number`
 
-Defined in: [components.ts:748](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L748)
+Defined in: [components.ts:748](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L748)
 
 Maximum number of selections allowed
 
@@ -262,7 +262,7 @@ Maximum number of selections allowed
 
 > `optional` **onSelection**: (`value`) => `void`
 
-Defined in: [components.ts:750](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L750)
+Defined in: [components.ts:750](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L750)
 
 Callback when selections change
 
@@ -282,6 +282,6 @@ Callback when selections change
 
 > `optional` **reset**: `boolean`
 
-Defined in: [components.ts:752](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L752)
+Defined in: [components.ts:752](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L752)
 
 Whether to show a reset/clear all button

@@ -1,8 +1,8 @@
-[**@airindex-app/ui v0.2.0**](../README.md)
+[**@hoststack/ui v0.2.0**](../README.md)
 
 ***
 
-[@airindex-app/ui](../README.md) / stitches
+[@hoststack/ui](../README.md) / stitches
 
 # stitches
 

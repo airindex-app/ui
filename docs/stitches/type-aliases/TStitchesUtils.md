@@ -1,14 +1,14 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [stitches](../README.md) / TStitchesUtils
+[@hoststack/ui](../../README.md) / [stitches](../README.md) / TStitchesUtils
 
 # Type Alias: TStitchesUtils
 
 > **TStitchesUtils** = `object`
 
-Defined in: [stitches.ts:166](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L166)
+Defined in: [stitches.ts:166](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L166)
 
 Utility functions available in Stitches CSS-in-JS
 
@@ -37,7 +37,7 @@ const Component = styled('div', {
 
 > **darkOnly**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:171](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L171)
+Defined in: [stitches.ts:171](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L171)
 
 Apply styles only in dark theme
 
@@ -59,7 +59,7 @@ CSS styles to apply in dark mode
 
 > **lightOnly**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:177](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L177)
+Defined in: [stitches.ts:177](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L177)
 
 Apply styles only in light theme
 
@@ -81,7 +81,7 @@ CSS styles to apply in light mode
 
 > **wide**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:183](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L183)
+Defined in: [stitches.ts:183](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L183)
 
 Apply styles at wide breakpoint (2201px+)
 
@@ -103,7 +103,7 @@ CSS styles to apply
 
 > **desktop**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:189](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L189)
+Defined in: [stitches.ts:189](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L189)
 
 Apply styles at desktop breakpoint (max 2200px)
 
@@ -125,7 +125,7 @@ CSS styles to apply
 
 > **laptop**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:195](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L195)
+Defined in: [stitches.ts:195](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L195)
 
 Apply styles at laptop breakpoint (max 1400px)
 
@@ -147,7 +147,7 @@ CSS styles to apply
 
 > **tablet**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:201](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L201)
+Defined in: [stitches.ts:201](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L201)
 
 Apply styles at tablet breakpoint (max 1100px)
 
@@ -169,7 +169,7 @@ CSS styles to apply
 
 > **phone**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:207](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L207)
+Defined in: [stitches.ts:207](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L207)
 
 Apply styles at phone breakpoint (max 800px)
 
@@ -191,7 +191,7 @@ CSS styles to apply
 
 > **phoneX**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:213](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L213)
+Defined in: [stitches.ts:213](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L213)
 
 Apply styles at phoneX breakpoint (376px-800px)
 
@@ -213,7 +213,7 @@ CSS styles to apply
 
 > **tabletX**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:219](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L219)
+Defined in: [stitches.ts:219](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L219)
 
 Apply styles at tabletX breakpoint (801px-1100px)
 
@@ -235,7 +235,7 @@ CSS styles to apply
 
 > **laptopX**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:225](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L225)
+Defined in: [stitches.ts:225](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L225)
 
 Apply styles at laptopX breakpoint (1101px-1400px)
 
@@ -257,7 +257,7 @@ CSS styles to apply
 
 > **desktopX**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:231](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L231)
+Defined in: [stitches.ts:231](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L231)
 
 Apply styles at desktopX breakpoint (1401px-2200px)
 
@@ -279,7 +279,7 @@ CSS styles to apply
 
 > **micro**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:237](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L237)
+Defined in: [stitches.ts:237](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L237)
 
 Apply styles at micro breakpoint (max 375px)
 
@@ -301,7 +301,7 @@ CSS styles to apply
 
 > **retina**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:243](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L243)
+Defined in: [stitches.ts:243](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L243)
 
 Apply styles for retina/high-DPI displays
 
@@ -323,7 +323,7 @@ CSS styles to apply
 
 > **print**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:249](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L249)
+Defined in: [stitches.ts:249](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L249)
 
 Apply styles for print media
 
@@ -345,7 +345,7 @@ CSS styles to apply
 
 > **reduceMotion**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:255](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L255)
+Defined in: [stitches.ts:255](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L255)
 
 Apply styles when user prefers reduced motion
 
@@ -367,7 +367,7 @@ CSS styles to apply
 
 > **hidden**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:261](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L261)
+Defined in: [stitches.ts:261](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L261)
 
 Hide element at specific breakpoint
 
@@ -389,7 +389,7 @@ Breakpoint name where element should be hidden
 
 > **hiddenInline**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:267](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L267)
+Defined in: [stitches.ts:267](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L267)
 
 Hide element inline at specific breakpoint
 
@@ -411,7 +411,7 @@ Breakpoint name where element should be hidden inline
 
 > **hiddenSpecial**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:273](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L273)
+Defined in: [stitches.ts:273](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L273)
 
 Hide element at special breakpoint (micro, retina, print)
 
@@ -433,7 +433,7 @@ Special breakpoint name where element should be hidden
 
 > **visible**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:279](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L279)
+Defined in: [stitches.ts:279](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L279)
 
 Show element only at specific breakpoint
 
@@ -455,7 +455,7 @@ Breakpoint name where element should be visible
 
 > **visibleInline**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:285](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L285)
+Defined in: [stitches.ts:285](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L285)
 
 Show element inline only at specific breakpoint
 
@@ -477,7 +477,7 @@ Breakpoint name where element should be visible inline
 
 > **visibleSpecial**: (`value`) => `unknown`
 
-Defined in: [stitches.ts:291](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L291)
+Defined in: [stitches.ts:291](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L291)
 
 Show element only at special breakpoint (micro, retina, print)
 
@@ -499,7 +499,7 @@ Special breakpoint name where element should be visible
 
 > **dynamicViewport**: (`config`) => `unknown`
 
-Defined in: [stitches.ts:297](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L297)
+Defined in: [stitches.ts:297](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/stitches.ts#L297)
 
 Apply dynamic viewport units with fallback support
 

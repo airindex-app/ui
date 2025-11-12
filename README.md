@@ -1,15 +1,15 @@
-# @airindex-app/ui
+# @hoststack/ui
 
-> A React component library styled with Stitches, designed specifically for AirIndex's internal projects and design system.
+> A React component library styled with Stitches, designed specifically for HostStack's internal projects and design system.
 
-[![npm version](https://img.shields.io/npm/v/@airindex-app/ui.svg)](https://www.npmjs.com/package/@airindex-app/ui)
+[![npm version](https://img.shields.io/npm/v/@hoststack/ui.svg)](https://www.npmjs.com/package/@hoststack/ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ⚠️ Important Notice
 
-**This library is built specifically for AirIndex's design system and internal use cases.** While it's open-sourced for transparency and potential inspiration, it's **not intended as a general-purpose component library** for public consumption.
+**This library is built specifically for HostStack's design system and internal use cases.** While it's open-sourced for transparency and potential inspiration, it's **not intended as a general-purpose component library** for public consumption.
 
-- ✅ **Use if**: You're working on AirIndex projects or want to study the implementation
+- ✅ **Use if**: You're working on HostStack projects or want to study the implementation
 - ❌ **Consider alternatives if**: You need a general-purpose UI library for your own projects
 
 For general-purpose React component libraries, consider [Chakra UI](https://chakra-ui.com/), [Mantine](https://mantine.dev/), [Ant Design](https://ant.design/), or [Material-UI](https://mui.com/) instead.
@@ -28,13 +28,13 @@ For general-purpose React component libraries, consider [Chakra UI](https://chak
 
 ```bash
 # Using pnpm (recommended)
-pnpm add @airindex-app/ui
+pnpm add @hoststack/ui
 
 # Using npm
-npm install @airindex-app/ui
+npm install @hoststack/ui
 
 # Using yarn
-yarn add @airindex-app/ui
+yarn add @hoststack/ui
 ```
 
 ### Peer Dependencies
@@ -47,13 +47,13 @@ pnpm add react react-dom next
 ## Quick Start
 
 ```tsx
-import { Provider, Button, Text, Stack } from '@airindex-app/ui';
+import { Provider, Button, Text, Stack } from '@hoststack/ui';
 
 function App() {
   return (
     <Provider>
       <Stack direction="column" align="center" css={{ padding: '$large' }}>
-        <Text as="h1">Welcome to AirIndex UI</Text>
+        <Text as="h1">Welcome to HostStack UI</Text>
         <Button theme="solid" onClick={() => alert('Hello!')}>
           Get Started
         </Button>
@@ -107,7 +107,7 @@ Detailed TypeScript interfaces, props, and examples are available in the [`docs/
 The library uses Stitches for styling with a comprehensive design system:
 
 ```tsx
-import { Provider } from '@airindex-app/ui';
+import { Provider } from '@hoststack/ui';
 
 // Enable dark mode
 <Provider dark>
@@ -205,8 +205,8 @@ This library includes the following components with full TypeScript support and 
 
 ## License
 
-[MIT](./LICENSE.md) © [AirIndex](https://github.com/airindex-app)
+[MIT](./LICENSE.md) © [HostStack](https://github.com/hoststack)
 
 ---
 
-Built with love by [dolmios](https://github.com/dolmios) for [AirIndex](https://github.com/airindex-app)
+Built with love by [dolmios](https://github.com/dolmios) for [HostStack](https://github.com/hoststack)

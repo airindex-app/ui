@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IPopover
+[@hoststack/ui](../../README.md) / [components](../README.md) / IPopover
 
 # Interface: IPopover
 
-Defined in: [components.ts:629](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L629)
+Defined in: [components.ts:629](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L629)
 
 Popover component props - floating content overlay
 
@@ -27,7 +27,7 @@ Popover component props - floating content overlay
 
 > `optional` **ariaLabel**: `string`
 
-Defined in: [components.ts:631](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L631)
+Defined in: [components.ts:631](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L631)
 
 Accessible label for the popover content region
 
@@ -37,7 +37,7 @@ Accessible label for the popover content region
 
 > **children**: `ReactNode` \| (`close`) => `ReactNode`
 
-Defined in: [components.ts:633](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L633)
+Defined in: [components.ts:633](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L633)
 
 Content to display in the popover - can be ReactNode or a function that receives the close function
 
@@ -47,7 +47,7 @@ Content to display in the popover - can be ReactNode or a function that receives
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:635](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L635)
+Defined in: [components.ts:635](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L635)
 
 Custom CSS styles
 
@@ -57,7 +57,7 @@ Custom CSS styles
 
 > `optional` **disabled**: `boolean`
 
-Defined in: [components.ts:637](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L637)
+Defined in: [components.ts:637](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L637)
 
 Whether the popover trigger is disabled
 
@@ -67,7 +67,7 @@ Whether the popover trigger is disabled
 
 > `optional` **minimal**: `boolean`
 
-Defined in: [components.ts:639](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L639)
+Defined in: [components.ts:639](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L639)
 
 Whether to use minimal styling
 
@@ -77,7 +77,7 @@ Whether to use minimal styling
 
 > `optional` **small**: `boolean`
 
-Defined in: [components.ts:641](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L641)
+Defined in: [components.ts:641](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L641)
 
 Whether to render a smaller popover
 
@@ -87,7 +87,7 @@ Whether to render a smaller popover
 
 > **trigger**: `ReactNode`
 
-Defined in: [components.ts:643](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L643)
+Defined in: [components.ts:643](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L643)
 
 Element that triggers the popover
 
@@ -97,7 +97,7 @@ Element that triggers the popover
 
 > `optional` **triggerCSS**: `CSS`
 
-Defined in: [components.ts:645](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L645)
+Defined in: [components.ts:645](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L645)
 
 Custom CSS styles for the trigger
 
@@ -107,6 +107,6 @@ Custom CSS styles for the trigger
 
 > `optional` **wrapperCSS**: `CSS`
 
-Defined in: [components.ts:647](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L647)
+Defined in: [components.ts:647](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L647)
 
 Custom CSS styles for the popover wrapper

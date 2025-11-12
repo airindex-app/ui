@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IToast
+[@hoststack/ui](../../README.md) / [components](../README.md) / IToast
 
 # Interface: IToast
 
-Defined in: [components.ts:940](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L940)
+Defined in: [components.ts:940](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L940)
 
 Toast notification controller props - configuration for the ToastController component
 
@@ -34,7 +34,7 @@ Additional props passed to the underlying Toaster component
 
 > `optional` **position**: `"top-left"` \| `"top-center"` \| `"top-right"` \| `"bottom-left"` \| `"bottom-center"` \| `"bottom-right"`
 
-Defined in: [components.ts:942](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L942)
+Defined in: [components.ts:942](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L942)
 
 Position where toasts appear on screen
 
@@ -44,7 +44,7 @@ Position where toasts appear on screen
 
 > `optional` **toastOptions**: `object`
 
-Defined in: [components.ts:950](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L950)
+Defined in: [components.ts:950](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L950)
 
 Configuration options for individual toasts
 

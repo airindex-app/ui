@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IView
+[@hoststack/ui](../../README.md) / [components](../README.md) / IView
 
 # Interface: IView
 
-Defined in: [components.ts:972](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L972)
+Defined in: [components.ts:972](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L972)
 
 View component props - main layout container
 
@@ -24,7 +24,7 @@ View component props - main layout container
 
 > `optional` **app**: `boolean`
 
-Defined in: [components.ts:974](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L974)
+Defined in: [components.ts:974](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L974)
 
 Whether this is an app-level view
 
@@ -34,7 +34,7 @@ Whether this is an app-level view
 
 > `optional` **as**: keyof IntrinsicElements
 
-Defined in: [components.ts:976](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L976)
+Defined in: [components.ts:976](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L976)
 
 HTML element type to render as
 
@@ -44,7 +44,7 @@ HTML element type to render as
 
 > `optional` **bottom**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:978](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L978)
+Defined in: [components.ts:978](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L978)
 
 Bottom margin/spacing
 
@@ -54,7 +54,7 @@ Bottom margin/spacing
 
 > **children**: `ReactNode`
 
-Defined in: [components.ts:980](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L980)
+Defined in: [components.ts:980](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L980)
 
 Content to display in the view
 
@@ -64,7 +64,7 @@ Content to display in the view
 
 > `optional` **container**: `boolean`
 
-Defined in: [components.ts:982](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L982)
+Defined in: [components.ts:982](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L982)
 
 Whether to use container width constraints
 
@@ -74,7 +74,7 @@ Whether to use container width constraints
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:984](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L984)
+Defined in: [components.ts:984](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L984)
 
 Custom CSS styles
 
@@ -84,7 +84,7 @@ Custom CSS styles
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:986](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L986)
+Defined in: [components.ts:986](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L986)
 
 HTML id attribute
 
@@ -94,7 +94,7 @@ HTML id attribute
 
 > `optional` **inverted**: `boolean`
 
-Defined in: [components.ts:988](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L988)
+Defined in: [components.ts:988](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L988)
 
 Whether to invert colors
 
@@ -104,6 +104,6 @@ Whether to invert colors
 
 > `optional` **top**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:990](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L990)
+Defined in: [components.ts:990](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L990)
 
 Top margin/spacing

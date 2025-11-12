@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IInput
+[@hoststack/ui](../../README.md) / [components](../README.md) / IInput
 
 # Interface: IInput
 
-Defined in: [components.ts:416](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L416)
+Defined in: [components.ts:416](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L416)
 
 Input component props - form input field with validation and actions
 
@@ -33,7 +33,7 @@ Input component props - form input field with validation and actions
 
 > `optional` **copy**: `boolean`
 
-Defined in: [components.ts:418](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L418)
+Defined in: [components.ts:418](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L418)
 
 Whether to show a copy button for the input value
 
@@ -43,7 +43,7 @@ Whether to show a copy button for the input value
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:420](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L420)
+Defined in: [components.ts:420](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L420)
 
 Custom CSS styles
 
@@ -53,7 +53,7 @@ Custom CSS styles
 
 > `optional` **error**: `boolean`
 
-Defined in: [components.ts:422](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L422)
+Defined in: [components.ts:422](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L422)
 
 Whether the input is in an error state
 
@@ -63,7 +63,7 @@ Whether the input is in an error state
 
 > `optional` **errorMessage**: `string`
 
-Defined in: [components.ts:424](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L424)
+Defined in: [components.ts:424](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L424)
 
 Error message to display below the input
 
@@ -73,7 +73,7 @@ Error message to display below the input
 
 > `optional` **id**: `string`
 
-Defined in: [components.ts:426](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L426)
+Defined in: [components.ts:426](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L426)
 
 HTML id attribute for the input
 
@@ -87,7 +87,7 @@ HTML id attribute for the input
 
 > `optional` **listen**: `boolean`
 
-Defined in: [components.ts:428](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L428)
+Defined in: [components.ts:428](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L428)
 
 Whether to listen for form validation events
 
@@ -97,7 +97,7 @@ Whether to listen for form validation events
 
 > `optional` **loading**: `boolean`
 
-Defined in: [components.ts:430](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L430)
+Defined in: [components.ts:430](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L430)
 
 Whether to show a loading state
 
@@ -107,7 +107,7 @@ Whether to show a loading state
 
 > **name**: `string`
 
-Defined in: [components.ts:432](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L432)
+Defined in: [components.ts:432](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L432)
 
 Name attribute for the input (required)
 
@@ -121,7 +121,7 @@ Name attribute for the input (required)
 
 > `optional` **reset**: `boolean`
 
-Defined in: [components.ts:434](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L434)
+Defined in: [components.ts:434](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L434)
 
 Whether to show a reset button
 
@@ -131,7 +131,7 @@ Whether to show a reset button
 
 > `optional` **resetFunction**: () => `void`
 
-Defined in: [components.ts:436](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L436)
+Defined in: [components.ts:436](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L436)
 
 Function to call when reset button is clicked
 
@@ -145,7 +145,7 @@ Function to call when reset button is clicked
 
 > `optional` **reveal**: `boolean`
 
-Defined in: [components.ts:438](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L438)
+Defined in: [components.ts:438](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L438)
 
 Whether to show/hide toggle for password inputs
 
@@ -155,7 +155,7 @@ Whether to show/hide toggle for password inputs
 
 > `optional` **submit**: `string`
 
-Defined in: [components.ts:440](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L440)
+Defined in: [components.ts:440](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L440)
 
 Text for the submit button
 
@@ -165,7 +165,7 @@ Text for the submit button
 
 > `optional` **submitFunction**: (`value`) => `unknown`
 
-Defined in: [components.ts:442](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L442)
+Defined in: [components.ts:442](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L442)
 
 Function to call when submit action is triggered
 
@@ -185,7 +185,7 @@ Function to call when submit action is triggered
 
 > `optional` **submitValid**: (`value`) => `boolean`
 
-Defined in: [components.ts:444](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L444)
+Defined in: [components.ts:444](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L444)
 
 Function to validate input value before submit
 
@@ -205,7 +205,7 @@ Function to validate input value before submit
 
 > `optional` **success**: `boolean`
 
-Defined in: [components.ts:446](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L446)
+Defined in: [components.ts:446](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L446)
 
 Whether the input is in a success state
 
@@ -215,7 +215,7 @@ Whether the input is in a success state
 
 > `optional` **successMessage**: `string`
 
-Defined in: [components.ts:448](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L448)
+Defined in: [components.ts:448](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L448)
 
 Success message to display below the input
 
@@ -225,7 +225,7 @@ Success message to display below the input
 
 > `optional` **warning**: `boolean`
 
-Defined in: [components.ts:450](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L450)
+Defined in: [components.ts:450](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L450)
 
 Whether the input is in a warning state
 
@@ -235,7 +235,7 @@ Whether the input is in a warning state
 
 > `optional` **warningMessage**: `string`
 
-Defined in: [components.ts:452](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L452)
+Defined in: [components.ts:452](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L452)
 
 Warning message to display below the input
 
@@ -245,7 +245,7 @@ Warning message to display below the input
 
 > `optional` **width**: `string` \| `number`
 
-Defined in: [components.ts:454](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L454)
+Defined in: [components.ts:454](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L454)
 
 Width of the input field
 

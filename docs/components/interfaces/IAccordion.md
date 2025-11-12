@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IAccordion
+[@hoststack/ui](../../README.md) / [components](../README.md) / IAccordion
 
 # Interface: IAccordion
 
-Defined in: [components.ts:1072](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1072)
+Defined in: [components.ts:1072](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1072)
 
 Accordion component props - collapsible content sections with optional multiple expansion
 
@@ -38,7 +38,7 @@ Accordion component props - collapsible content sections with optional multiple 
 
 > `optional` **allowMultiple**: `boolean`
 
-Defined in: [components.ts:1074](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1074)
+Defined in: [components.ts:1074](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1074)
 
 Whether multiple sections can be open simultaneously
 
@@ -48,7 +48,7 @@ Whether multiple sections can be open simultaneously
 
 > `optional` **initial**: `string`
 
-Defined in: [components.ts:1076](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1076)
+Defined in: [components.ts:1076](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1076)
 
 Initially opened section value
 
@@ -58,7 +58,7 @@ Initially opened section value
 
 > `optional` **onToggle**: (`value`, `isOpen`) => `void`
 
-Defined in: [components.ts:1078](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1078)
+Defined in: [components.ts:1078](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1078)
 
 Callback when section is toggled
 
@@ -82,7 +82,7 @@ Callback when section is toggled
 
 > **options**: `object`[]
 
-Defined in: [components.ts:1080](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1080)
+Defined in: [components.ts:1080](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1080)
 
 Array of accordion sections
 

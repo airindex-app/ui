@@ -1,5 +1,5 @@
 /**
- * Hook types for the AirIndex UI library
+ * Hook types for the HostStack UI library
  *
  * Note: Simple return types like boolean, void, or T are used directly
  * in hooks rather than creating unnecessary type aliases.

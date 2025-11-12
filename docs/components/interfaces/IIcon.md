@@ -1,12 +1,12 @@
-[**@airindex-app/ui v0.2.0**](../../README.md)
+[**@hoststack/ui v0.2.0**](../../README.md)
 
 ***
 
-[@airindex-app/ui](../../README.md) / [components](../README.md) / IIcon
+[@hoststack/ui](../../README.md) / [components](../README.md) / IIcon
 
 # Interface: IIcon
 
-Defined in: [components.ts:1018](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1018)
+Defined in: [components.ts:1018](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1018)
 
 Icon component props - wrapper for Radix icons with consistent styling
 
@@ -26,7 +26,7 @@ Icon component props - wrapper for Radix icons with consistent styling
 
 > `optional` **css**: `CSS`
 
-Defined in: [components.ts:1020](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1020)
+Defined in: [components.ts:1020](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1020)
 
 Custom CSS styles
 
@@ -36,7 +36,7 @@ Custom CSS styles
 
 > `optional` **forceColor**: `string`
 
-Defined in: [components.ts:1022](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1022)
+Defined in: [components.ts:1022](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1022)
 
 Force a specific color from theme
 
@@ -46,7 +46,7 @@ Force a specific color from theme
 
 > `optional` **forceSize**: `number`
 
-Defined in: [components.ts:1024](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1024)
+Defined in: [components.ts:1024](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1024)
 
 Force a specific size in pixels
 
@@ -56,7 +56,7 @@ Force a specific size in pixels
 
 > `optional` **inline**: `"small"` \| `"none"` \| `"smallest"` \| `"smaller"` \| `"medium"` \| `"large"` \| `"larger"` \| `"largest"` \| `"auto"`
 
-Defined in: [components.ts:1026](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1026)
+Defined in: [components.ts:1026](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1026)
 
 Inline spacing around the icon
 
@@ -66,6 +66,6 @@ Inline spacing around the icon
 
 > **radix**: `ReactElement`
 
-Defined in: [components.ts:1028](https://github.com/airindex-app/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1028)
+Defined in: [components.ts:1028](https://github.com/hoststack/ui/blob/d4937753d6b61e212bc6c6c85f1f66df7da59eda/src/types/components.ts#L1028)
 
 The icon element to render (required)

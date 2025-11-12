@@ -10,22 +10,22 @@ console.log('🔍 Generating component documentation...');
 try {
   // Generate TypeDoc documentation
   execSync('npx typedoc', { stdio: 'inherit' });
-  
+
   // Read the generated interfaces documentation
   const docsPath = path.join(__dirname, '..', 'docs');
   const interfacesPath = path.join(docsPath, 'components', 'interfaces');
-  
+
   if (!fs.existsSync(interfacesPath)) {
     console.log('❌ No interfaces documentation found');
 
     return;
   }
-  
+
   // Get all interface files
   const interfaceFiles = fs.readdirSync(interfacesPath)
     .filter(file => file.endsWith('.md'))
     .sort();
-  
+
   // Generate component list for README with better descriptions
   const componentDescriptions = {
     'Accordion': 'Collapsible content sections with multiple expansion support',
@@ -41,7 +41,7 @@ try {
     'Input': 'Single-line form input with validation and actions',
     'Loading': 'Animated loading spinner with customizable appearance',
     'LoadingOverlay': 'Full-screen loading overlay with message display',
-    'Logo': 'AirIndex brand logo in various formats and styles',
+    'Logo': 'HostStack brand logo in various formats and styles',
     'Menu': 'Dropdown menu with nested options and keyboard navigation',
     'Modal': 'Centered overlay dialog for important interactions',
     'Popover': 'Floating content overlay triggered by user interaction',
@@ -60,13 +60,13 @@ try {
     .filter(name => name.startsWith('I') && name.length > 1)
     .map(name => name.substring(1)) // Remove 'I' prefix
     .sort();
-  
+
   console.log(`📚 Found ${components.length} components:`, components.join(', '));
-  
+
   // Update README.md with component documentation links
   const readmePath = path.join(__dirname, '..', 'README.md');
   let readmeContent = fs.readFileSync(readmePath, 'utf8');
-  
+
   // Find and replace the components section
   const componentsSection = `
 ## Components
@@ -86,35 +86,35 @@ ${components.map(component => {
   // Check if components section exists, if not add it before License
   const licenseIndex = readmeContent.indexOf('## License');
   const componentsIndex = readmeContent.indexOf('## Components');
-  
+
   if (componentsIndex !== -1) {
     // Replace existing components section
     const nextSectionIndex = readmeContent.indexOf('## ', componentsIndex + 1);
 
     if (nextSectionIndex !== -1) {
-      readmeContent = readmeContent.substring(0, componentsIndex) + 
-                    componentsSection + 
+      readmeContent = readmeContent.substring(0, componentsIndex) +
+                    componentsSection +
                     readmeContent.substring(nextSectionIndex);
     } else {
       readmeContent = readmeContent.substring(0, componentsIndex) + componentsSection;
     }
   } else if (licenseIndex !== -1) {
     // Add before License section
-    readmeContent = readmeContent.substring(0, licenseIndex) + 
+    readmeContent = readmeContent.substring(0, licenseIndex) +
                     componentsSection + '\n' +
                     readmeContent.substring(licenseIndex);
   } else {
     // Add at the end
     readmeContent += '\n' + componentsSection;
   }
-  
+
   fs.writeFileSync(readmePath, readmeContent);
-  
+
   console.log('✅ Documentation generated successfully!');
   console.log('📝 README.md updated with component links');
   console.log('🌐 View full documentation in the ./docs directory');
-  
+
 } catch (error) {
   console.error('❌ Error generating documentation:', error.message);
   process.exit(1);
-} 
+}

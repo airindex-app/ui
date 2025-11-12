@@ -1,6 +1,6 @@
 {
-  "name": "@airindex-app/ui",
-  "description": "AirIndex's internal component library, built with React, and Stitches.",
+  "name": "@hoststack/ui",
+  "description": "HostStack's internal component library, built with React, and Stitches.",
   "version": "0.2.10",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
@@ -15,7 +15,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/airindex-app/ui/issues"
+    "url": "https://github.com/hoststack/ui/issues"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.7.4",
@@ -51,7 +51,7 @@
     "README.md",
     "LICENSE.md"
   ],
-  "homepage": "https://github.com/airindex-app/ui",
+  "homepage": "https://github.com/hoststack/ui",
   "keywords": [
     "component",
     "components",
@@ -77,7 +77,7 @@
   "prettier": "eslint-config-dolmios/configs/prettier",
   "repository": {
     "type": "git",
-    "url": "git://github.com/airindex-app/ui.git"
+    "url": "git://github.com/hoststack/ui.git"
   },
   "scripts": {
     "build": "bun run clean && bun run tidy && bun run compile",
