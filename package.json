@@ -1,7 +1,7 @@
 {
   "name": "@hoststack/ui",
   "description": "HostStack's internal component library, built with React, and Stitches.",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
@@ -73,6 +73,9 @@
     "@stitches/react": "^1.2.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "prettier": "eslint-config-dolmios/configs/prettier",
   "repository": {
