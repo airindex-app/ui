@@ -100,7 +100,7 @@ const darkThemeConfig: Partial<TThemeConfig> = {
     border: "rgba(255, 255, 255, 0.2)",
     borderLight: "rgba(255, 255, 255, 0.1)",
     glass: "rgba(0, 0, 0, 0.6)",
-    overlay: "rgba(255, 255, 255, 0.1b)",
+    overlay: "rgba(255, 255, 255, 0.1)",
     surface: "#222222",
     surfaceHover: "rgba(255, 255, 255, 0.2)",
     surfaceLight: "rgba(255, 255, 255, 0.1)",

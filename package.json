@@ -1,7 +1,7 @@
 {
   "name": "@hoststack/ui",
   "description": "HostStack's internal component library, built with React, and Stitches.",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "author": "Jackson Dolman <mail@dolmios.com>",
   "browserslist": {
     "production": [
