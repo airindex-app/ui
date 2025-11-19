@@ -1,7 +1,11 @@
-import { styled } from "../../stitches.config";
+import { styled } from "../../stoop.config";
 
-export const FormStyled = styled("form", {
-  variants: {
+export const FormStyled = styled(
+  "form",
+  {
+    width: "100%",
+  },
+  {
     disabled: {
       true: {
         cursor: "not-allowed",
@@ -9,5 +13,4 @@ export const FormStyled = styled("form", {
       },
     },
   },
-  width: "100%",
-});
+);

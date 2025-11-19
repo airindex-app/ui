@@ -1,4 +1,4 @@
-import { fadeInUp, fadeOutDown, styled } from "../../stitches.config";
+import { fadeInUp, fadeOutDown, styled } from "../../stoop.config";
 
 export const PopoverStyled = styled("div", {
   display: "inline-flex",
@@ -13,19 +13,25 @@ export const PopoverTriggerStyled = styled("div", {
   verticalAlign: "middle",
 });
 
-export const PopoverContentStyled = styled("div", {
-  "&::-webkit-scrollbar": {
-    display: "none",
+export const PopoverContentStyled = styled(
+  "div",
+  {
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
+    backdropFilter: "blur(16px)",
+    backgroundColor: "$glass",
+    border: "1px solid $border",
+    overflowY: "auto",
+    padding: "$small $medium",
+    pointerEvents: "auto",
+    textAlign: "left !important",
+    transformOrigin: "top center",
+    width: "100%",
+    willChange: "transform, opacity",
+    zIndex: "$popover",
   },
-  backdropFilter: "blur(16px)",
-  backgroundColor: "$glass",
-  border: "1px solid $border",
-  overflowY: "auto",
-  padding: "$small $medium",
-  pointerEvents: "auto",
-  textAlign: "left !important",
-  transformOrigin: "top center",
-  variants: {
+  {
     animation: {
       false: {
         animation: `${fadeOutDown} 180ms ease-out`,
@@ -64,9 +70,6 @@ export const PopoverContentStyled = styled("div", {
       },
     },
   },
-  width: "100%",
-  willChange: "transform, opacity",
-  zIndex: "$popover",
-});
+);
 
 export default PopoverStyled;

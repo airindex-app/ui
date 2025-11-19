@@ -1,77 +1,27 @@
-import { styled, fadeOut, pulse } from "../../stitches.config";
+import { styled, fadeOut, pulse } from "../../stoop.config";
 
-export const BadgeStyled = styled("span", {
-  alignContent: "center !important",
-  alignItems: "center !important",
-  backdropFilter: "blur(4px)",
-  backgroundColor: "$surface",
-  border: "1px solid $border",
-  color: "$text",
-  compoundVariants: [
-    {
-      css: {
-        backgroundColor: "$surface",
-        borderColor: "$border",
-      },
-      theme: "default",
-      variant: "border",
-    },
-    {
-      css: {
-        backgroundColor: "$text",
-        borderColor: "$text",
-        color: "$background",
-      },
-      theme: "solid",
-      variant: "border",
-    },
-    {
-      css: {
-        backgroundColor: "$surface",
-        borderColor: "$yellow",
-        borderLeftWidth: "5px",
-      },
-      theme: "yellow",
-      variant: "border",
-    },
-    {
-      css: {
-        backgroundColor: "$surface",
-        borderColor: "$border",
-        color: "$text",
-      },
-      theme: "default",
-      variant: "theme",
-    },
-    {
-      css: {
-        backgroundColor: "$text",
-        borderColor: "$text",
-        color: "$background",
-      },
-      theme: "solid",
-      variant: "theme",
-    },
-    {
-      css: {
-        backgroundColor: "$yellow",
-        borderColor: "$yellow",
-        color: "$text",
-      },
-      theme: "yellow",
-      variant: "theme",
-    },
-  ],
-  display: "inline-flex",
-  fontFamily: "$default",
-  fontSize: "$small",
-  fontWeight: 600,
-  justifyContent: "center",
-  lineHeight: "$default",
-  marginBottom: "0 !important",
-  padding: "$smallest $small",
-  position: "relative",
-  variants: {
+export const BadgeStyled = styled(
+  "span",
+  {
+    alignContent: "center !important",
+    alignItems: "center !important",
+    backdropFilter: "blur(4px)",
+    backgroundColor: "$surface",
+    border: "1px solid $border",
+    color: "$text",
+    display: "inline-flex",
+    fontFamily: "$default",
+    fontSize: "$small",
+    fontWeight: 600,
+    justifyContent: "center",
+    lineHeight: "$lineHeights.default",
+    marginBottom: "0 !important",
+    padding: "$smallest $small",
+    position: "relative",
+
+    verticalAlign: "middle",
+  },
+  {
     animation: {
       true: {
         animation: `${fadeOut} 0.15s linear`,
@@ -127,14 +77,17 @@ export const BadgeStyled = styled("span", {
       theme: {},
     },
   },
+);
 
-  verticalAlign: "middle",
-});
+export const BadgeIconStyled = styled(
+  "span",
+  {
+    color: "inherit",
+    display: "inline-flex",
 
-export const BadgeIconStyled = styled("span", {
-  color: "inherit",
-  display: "inline-flex",
-  variants: {
+    verticalAlign: "middle",
+  },
+  {
     align: {
       left: {
         marginRight: "$small",
@@ -159,9 +112,7 @@ export const BadgeIconStyled = styled("span", {
       },
     },
   },
-
-  verticalAlign: "middle",
-});
+);
 
 export const BadgeLoadingStyled = styled("div", {
   alignItems: "center",
@@ -172,14 +123,19 @@ export const BadgeLoadingStyled = styled("div", {
   position: "absolute",
 });
 
-export const NewDotStyled = styled("span", {
-  animation: `${pulse} 3s infinite`,
-  borderRadius: "50%",
-  height: "8px",
-  position: "absolute",
-  right: "-3px",
-  top: "-3px",
-  variants: {
+export const NewDotStyled = styled(
+  "span",
+  {
+    animation: `${pulse} 3s infinite`,
+    borderRadius: "50%",
+    height: "8px",
+    position: "absolute",
+    right: "-3px",
+    top: "-3px",
+    width: "8px",
+    zIndex: 2,
+  },
+  {
     theme: {
       default: {
         backgroundColor: "$yellow",
@@ -192,6 +148,4 @@ export const NewDotStyled = styled("span", {
       },
     },
   },
-  width: "8px",
-  zIndex: 2,
-});
+);

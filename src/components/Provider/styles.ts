@@ -1,4 +1,4 @@
-import { darkTheme, globalCss, styled, theme } from "../../stitches.config";
+import { globalCss, styled } from "../../stoop.config";
 
 export const ProviderStyled = styled("main", {
   position: "relative",
@@ -27,25 +27,22 @@ export const ToastStyled = styled("div", {
   width: "fit-content",
 });
 
-const disabledStyles = {
-  cursor: "not-allowed",
-  opacity: theme.opacities.light,
-} as const;
-
 export const providerReset = globalCss({
   "*": {
     boxSizing: "border-box",
     margin: 0,
+    marginBlock: 0,
     padding: 0,
+    paddingBlock: 0,
   },
 
   "*:focus": {
-    outline: theme.colors.yellow,
+    outline: "$yellow",
   },
 
   "::selection": {
-    backgroundColor: theme.colors.text,
-    color: theme.colors.background,
+    backgroundColor: "$text",
+    color: "$background",
   },
 
   "@import":
@@ -58,21 +55,22 @@ export const providerReset = globalCss({
   },
 
   body: {
-    [`.${darkTheme}`]: {
-      backgroundColor: "$background",
-      color: "$text",
+    "[data-theme='dark'] &": {
       colorScheme: "dark",
     },
-    backgroundColor: theme.colors.background,
-    color: theme.colors.text,
-    fontFamily: theme.fonts.default,
+
+    backgroundColor: "$background",
+    color: "$text",
+    fontFamily: "$default",
     fontFeatureSettings: '"zero" 1, "tnum" 1, "calt" 1, "liga" 1, "case" 1',
     fontOpticalSizing: "auto",
-    fontSize: theme.fontSizes.default,
+    fontSize: "$default",
     fontWeight: 400,
+    height: "100%",
     letterSpacing: "0.015em",
-    lineHeight: theme.lineHeights.default,
+    lineHeight: "$default",
     margin: 0,
+    minHeight: "100vh",
     MozOsxFontSmoothing: "grayscale",
     overflowX: "hidden",
     padding: 0,
@@ -81,7 +79,10 @@ export const providerReset = globalCss({
   },
 
   "button, input, textarea, select": {
-    "&:disabled": disabledStyles,
+    "&:disabled": {
+      cursor: "not-allowed",
+      opacity: "$light",
+    },
     cursor: "pointer",
     fontFamily: "inherit",
     fontSize: "inherit",
@@ -90,13 +91,19 @@ export const providerReset = globalCss({
   "h1, h2, h3, h4, h5, h6": {
     fontFeatureSettings: '"zero" 1, "tnum" 1, "calt" 1, "liga" 1, "case" 1',
     fontWeight: 600,
-    lineHeight: theme.lineHeights.small,
+    lineHeight: "$small",
     margin: 0,
     textRendering: "optimizeLegibility",
   },
 
   html: {
+    boxSizing: "border-box",
     fontSize: "100%",
+    height: "100%",
+    margin: 0,
+    marginBlock: 0,
+    padding: 0,
+    paddingBlock: 0,
     scrollBehavior: "smooth",
   },
 
@@ -110,7 +117,7 @@ export const providerReset = globalCss({
   },
 
   p: {
-    lineHeight: theme.lineHeights.default,
+    lineHeight: "$default",
     margin: 0,
   },
 
@@ -133,5 +140,8 @@ export const providerReset = globalCss({
     padding: 0,
   },
 });
+
+// Export the globalCss function, but DON'T call it here
+// It will be called in Provider/index.tsx before React renders
 
 export default ProviderStyled;

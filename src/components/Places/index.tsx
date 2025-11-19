@@ -1,4 +1,4 @@
-import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
+import { Loader } from "@googlemaps/js-api-loader";
 import {
   ChangeEvent,
   KeyboardEvent,
@@ -83,13 +83,13 @@ export default function Places({
     if (!apiKey || isReady) return;
 
     const initGoogleMaps = async (): Promise<void> => {
-      setOptions({
-        key: apiKey,
+      const loader = new Loader({
+        apiKey,
         libraries: ["places", "maps"],
-        v: "weekly",
+        version: "weekly",
       });
 
-      await importLibrary("places");
+      await (loader as any).importLibrary("places");
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const { google } = window as any;

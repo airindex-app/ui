@@ -1,12 +1,17 @@
-import { styled } from "../../stitches.config";
+import { styled } from "../../stoop.config";
 
 const interactiveStyles = {
   borderColor: "$text",
 };
 
-export const InputStyled = styled("div", {
-  position: "relative",
-  variants: {
+export const InputStyled = styled(
+  "div",
+  {
+    position: "relative",
+
+    width: "100%",
+  },
+  {
     disabled: {
       true: {
         cursor: "not-allowed",
@@ -14,9 +19,7 @@ export const InputStyled = styled("div", {
       },
     },
   },
-
-  width: "100%",
-});
+);
 
 export const InputCoreStyled = styled("div", {
   "&:focus-within": {
@@ -48,7 +51,7 @@ export const InputAreaStyled = styled("input", {
   color: "$text",
   display: "block",
   flex: "1 1 auto",
-  fontFamily: "$default",
+  fontFamily: "$fonts.default",
   fontSize: "$default",
   height: "$large",
   minWidth: 0,

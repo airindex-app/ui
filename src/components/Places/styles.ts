@@ -1,4 +1,4 @@
-import { fadeInUp, fadeOutDown, styled } from "../../stitches.config";
+import { fadeInUp, fadeOutDown, styled } from "../../stoop.config";
 
 export const PlacesStyled = styled("div", {
   display: "block",
@@ -6,20 +6,26 @@ export const PlacesStyled = styled("div", {
   width: "100%",
 });
 
-export const PlacesDropdownStyled = styled("div", {
-  "&::-webkit-scrollbar": {
-    display: "none",
+export const PlacesDropdownStyled = styled(
+  "div",
+  {
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
+    backdropFilter: "blur(8px)",
+    backgroundColor: "$glass",
+    border: "1px solid $border",
+    lineBreak: "auto",
+    overflowY: "auto",
+    padding: "$smallest $smaller",
+    pointerEvents: "auto",
+    textAlign: "left !important",
+    transformOrigin: "top center",
+    width: "100%",
+    willChange: "transform, opacity",
+    zIndex: "$select",
   },
-  backdropFilter: "blur(8px)",
-  backgroundColor: "$glass",
-  border: "1px solid $border",
-  lineBreak: "auto",
-  overflowY: "auto",
-  padding: "$smallest $smaller",
-  pointerEvents: "auto",
-  textAlign: "left !important",
-  transformOrigin: "top center",
-  variants: {
+  {
     animation: {
       false: {
         animation: `${fadeOutDown} 200ms ease-out`,
@@ -31,10 +37,7 @@ export const PlacesDropdownStyled = styled("div", {
       },
     },
   },
-  width: "100%",
-  willChange: "transform, opacity",
-  zIndex: "$select",
-});
+);
 
 export const PlacesItemStyled = styled("div", {
   "&:active": {

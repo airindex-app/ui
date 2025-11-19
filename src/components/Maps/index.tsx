@@ -1,4 +1,4 @@
-import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
+import { Loader } from "@googlemaps/js-api-loader";
 import { useEffect, useRef, useState, type JSX } from "react";
 
 import { Loading, type IMaps } from "../../index";
@@ -44,13 +44,13 @@ export default function Maps({
       }
 
       if (typeof center === "string") {
-        setOptions({
-          key: apiKey,
+        const loader = new Loader({
+          apiKey,
           libraries: ["places", "maps", "geocoding"],
-          v: "weekly",
+          version: "weekly",
         });
 
-        await importLibrary("geocoding");
+        await (loader as any).importLibrary("geocoding");
 
         if (!isActive) return;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -92,13 +92,13 @@ export default function Maps({
 
     let isActive = true;
     const initMap = async (): Promise<void> => {
-      setOptions({
-        key: apiKey,
+      const loader = new Loader({
+        apiKey,
         libraries: ["places", "maps", "geocoding"],
-        v: "weekly",
+        version: "weekly",
       });
 
-      await importLibrary("maps");
+      await (loader as any).importLibrary("maps");
 
       if (!isActive) return;
 

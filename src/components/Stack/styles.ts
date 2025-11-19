@@ -1,9 +1,12 @@
-import { styled } from "../../stitches.config";
+import { styled } from "../../stoop.config";
 import { TextStyled } from "../Text/styles";
 
-export const StackStyled = styled("div", {
-  margin: 0,
-  variants: {
+export const StackStyled = styled(
+  "div",
+  {
+    margin: 0,
+  },
+  {
     direction: {
       column: {
         display: "flex",
@@ -41,6 +44,6 @@ export const StackStyled = styled("div", {
       },
     },
   },
-});
+);
 
 export default StackStyled;

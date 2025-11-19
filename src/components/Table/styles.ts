@@ -1,4 +1,4 @@
-import { fadeIn, styled } from "../../stitches.config";
+import { fadeIn, styled } from "../../stoop.config";
 
 const cellPaddingBase = {
   "&:first-child": {
@@ -26,7 +26,7 @@ const rowHoverBase = {
   transition: "$default",
 };
 
-export const TableStitches = styled("div", {
+export const TableStyles = styled("div", {
   backgroundColor: "$background",
   border: "1px solid $border",
   overflow: "hidden",
@@ -39,7 +39,7 @@ export const TableStitches = styled("div", {
   width: "100%",
 });
 
-export const TableCoreStitches = styled("table", {
+export const TableCoreStyles = styled("table", {
   borderCollapse: "separate",
   borderSpacing: 0,
   fontSize: "$default",
@@ -59,7 +59,7 @@ export const TableMobileView = styled("div", {
   },
 });
 
-export const TableRowStitches = styled("tr", {
+export const TableRowStyles = styled("tr", {
   ...rowHoverBase,
   "tbody &": {
     "&:hover": {
@@ -68,18 +68,21 @@ export const TableRowStitches = styled("tr", {
   },
 });
 
-export const TableMobileRow = styled("div", {
-  "&:not(:last-child)": {
-    borderBottom: "1px solid $borderLight",
-    marginBottom: "$smaller",
-    paddingBottom: "$smaller",
+export const TableMobileRow = styled(
+  "div",
+  {
+    "&:not(:last-child)": {
+      borderBottom: "1px solid $borderLight",
+      marginBottom: "$smaller",
+      paddingBottom: "$smaller",
+    },
+    alignItems: "flex-start",
+    display: "flex",
+    gap: "$small",
+    justifyContent: "space-between",
+    padding: "$smaller 0",
   },
-  alignItems: "flex-start",
-  display: "flex",
-  gap: "$small",
-  justifyContent: "space-between",
-  padding: "$smaller 0",
-  variants: {
+  {
     isActions: {
       true: {
         alignItems: "center",
@@ -92,7 +95,7 @@ export const TableMobileRow = styled("div", {
       },
     },
   },
-});
+);
 
 export const TableMobileLabel = styled("span", {
   color: "$text",
@@ -102,16 +105,19 @@ export const TableMobileLabel = styled("span", {
   opacity: "$light",
 });
 
-export const TableMobileValue = styled("div", {
-  alignItems: "center",
-  color: "$text",
-  display: "flex",
-  flex: 1,
-  fontSize: "$default",
-  gap: "$smaller",
-  justifyContent: "flex-end",
-  textAlign: "right",
-  variants: {
+export const TableMobileValue = styled(
+  "div",
+  {
+    alignItems: "center",
+    color: "$text",
+    display: "flex",
+    flex: 1,
+    fontSize: "$default",
+    gap: "$smaller",
+    justifyContent: "flex-end",
+    textAlign: "right",
+  },
+  {
     isActions: {
       true: {
         flex: "0 0 auto",
@@ -119,16 +125,20 @@ export const TableMobileValue = styled("div", {
       },
     },
   },
-});
+);
 
-export const TableCellStitches = styled("td", {
-  ...cellPaddingBase,
-  color: "$text",
-  fontSize: "$default",
-  fontWeight: 400,
-  lineHeight: 1.4,
-  padding: "$small $medium",
-  variants: {
+export const TableCellStyles = styled(
+  "td",
+  {
+    ...cellPaddingBase,
+    color: "$text",
+    fontSize: "$default",
+    fontWeight: 400,
+    lineHeight: 1.4,
+    padding: "$small $medium",
+    verticalAlign: "middle",
+  },
+  {
     align: alignVariants,
     isAction: {
       true: {
@@ -142,36 +152,38 @@ export const TableCellStitches = styled("td", {
       },
     },
   },
-  verticalAlign: "middle",
-});
+);
 
-export const TableHeaderCellStitches = styled("th", {
-  ...cellPaddingBase,
-  "&:first-child": {
-    ...cellPaddingBase["&:first-child"],
+export const TableHeaderCellStyles = styled(
+  "th",
+  {
+    ...cellPaddingBase,
+    "&:first-child": {
+      ...cellPaddingBase["&:first-child"],
+    },
+    "&:last-child": {
+      ...cellPaddingBase["&:last-child"],
+    },
+    "& > div": {
+      alignItems: "center",
+      display: "inline-flex",
+      gap: "$smaller",
+    },
+    backgroundColor: "$background",
+    borderBottom: "1px solid $borderLight",
+    color: "$text",
+    fontSize: "$small",
+    fontWeight: 600,
+    padding: "$small $medium",
+    textAlign: "left",
+    verticalAlign: "middle",
   },
-  "&:last-child": {
-    ...cellPaddingBase["&:last-child"],
-  },
-  "& > div": {
-    alignItems: "center",
-    display: "inline-flex",
-    gap: "$smaller",
-  },
-  backgroundColor: "$background",
-  borderBottom: "1px solid $borderLight",
-  color: "$text",
-  fontSize: "$small",
-  fontWeight: 600,
-  padding: "$small $medium",
-  textAlign: "left",
-  variants: {
+  {
     align: alignVariants,
   },
-  verticalAlign: "middle",
-});
+);
 
-export const AnimatedTableRow = styled(TableRowStitches, {
+export const AnimatedTableRow = styled(TableRowStyles, {
   animation: `${fadeIn} 200ms ease-in-out`,
 });
 
@@ -208,19 +220,23 @@ export const TableEmptyStateCell = styled("td", {
   textAlign: "center",
 });
 
-export const TableSubRowStitches = styled("tr", {
+export const TableSubRowStyles = styled("tr", {
   ...rowHoverBase,
   backgroundColor: "$surfaceLight",
 });
 
-export const TableSubCellStitches = styled("td", {
-  ...cellPaddingBase,
-  backgroundColor: "transparent",
-  color: "$text",
-  fontSize: "$small",
-  fontWeight: 400,
-  padding: "$smaller $medium",
-  variants: {
+export const TableSubCellStyles = styled(
+  "td",
+  {
+    ...cellPaddingBase,
+    backgroundColor: "transparent",
+    color: "$text",
+    fontSize: "$small",
+    fontWeight: 400,
+    padding: "$smaller $medium",
+    verticalAlign: "middle",
+  },
+  {
     align: alignVariants,
     isAction: {
       true: {
@@ -234,7 +250,6 @@ export const TableSubCellStitches = styled("td", {
       },
     },
   },
-  verticalAlign: "middle",
-});
+);
 
-export default TableStitches;
+export default TableStyles;

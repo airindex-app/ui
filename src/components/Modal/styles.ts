@@ -1,10 +1,4 @@
-import {
-  slideInRight,
-  slideInUp,
-  slideOutDown,
-  slideOutRight,
-  styled,
-} from "../../stitches.config";
+import { slideInRight, slideInUp, slideOutDown, slideOutRight, styled } from "../../stoop.config";
 
 export const ModalStyled = styled("div", {
   display: "inline-flex",
@@ -19,44 +13,51 @@ export const ModalTriggerStyled = styled("div", {
   verticalAlign: "middle",
 });
 
-export const ModalOverlayStyled = styled("div", {
-  alignItems: "flex-start",
-  backgroundColor: "$overlay",
-  display: "flex",
-  dynamicViewport: { property: "height", unit: "vh", value: "100" },
-  inset: 0,
-  justifyContent: "flex-end",
-  // Mobile: align to bottom
-  phone: {
-    alignItems: "flex-end",
-    justifyContent: "center",
+export const ModalOverlayStyled = styled(
+  "div",
+  {
+    alignItems: "flex-start",
+    backgroundColor: "$overlay",
+    display: "flex",
+    dynamicViewport: { property: "height", unit: "vh", value: "100" },
+    inset: 0,
+    justifyContent: "flex-end",
+    // Mobile: align to bottom
+    phone: {
+      alignItems: "flex-end",
+      justifyContent: "center",
+    },
+    pointerEvents: "auto",
+    position: "fixed",
+    tablet: {
+      alignItems: "flex-end",
+      justifyContent: "center",
+    },
+    zIndex: "$modal",
   },
-  pointerEvents: "auto",
-  position: "fixed",
-  tablet: {
-    alignItems: "flex-end",
-    justifyContent: "center",
-  },
-  variants: {
+  {
     animation: {
       false: {},
       true: {},
     },
   },
-  zIndex: "$modal",
-});
+);
 
-export const ModalGroupStyled = styled("div", {
-  backgroundColor: "$glass",
-  borderLeft: "1px solid $border",
-  display: "flex",
-  // Desktop: sidebar behavior - full height, positioned from right
-  dynamicViewport: { property: "height", unit: "vh", value: "100" },
-  flexDirection: "column",
-  overflow: "hidden",
-  padding: 0,
-  position: "relative",
-  variants: {
+export const ModalGroupStyled = styled(
+  "div",
+  {
+    backgroundColor: "$glass",
+    borderLeft: "1px solid $border",
+    display: "flex",
+    // Desktop: sidebar behavior - full height, positioned from right
+    dynamicViewport: { property: "height", unit: "vh", value: "100" },
+    flexDirection: "column",
+    overflow: "hidden",
+    padding: 0,
+    position: "relative",
+    width: "60vw",
+  },
+  {
     animation: {
       false: {
         animation: `${slideOutRight} 300ms ease-out`,
@@ -115,8 +116,7 @@ export const ModalGroupStyled = styled("div", {
       },
     },
   },
-  width: "60vw",
-});
+);
 
 export const ModalHeaderStyled = styled("div", {
   alignItems: "center",

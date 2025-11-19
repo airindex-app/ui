@@ -1,16 +1,19 @@
-import { styled } from "../../stitches.config";
+import { styled } from "../../stoop.config";
 
-export const ViewStyled = styled("section", {
-  backgroundColor: "$background",
-  color: "$text",
-  paddingLeft: "$medium",
-  paddingRight: "$medium",
-  phone: {
-    paddingLeft: "$small",
-    paddingRight: "$small",
+export const ViewStyled = styled(
+  "section",
+  {
+    backgroundColor: "$background",
+    color: "$text",
+    paddingLeft: "$medium",
+    paddingRight: "$medium",
+    phone: {
+      paddingLeft: "$small",
+      paddingRight: "$small",
+    },
+    position: "relative",
   },
-  position: "relative",
-  variants: {
+  {
     inverted: {
       true: {
         backgroundColor: "$background",
@@ -18,14 +21,16 @@ export const ViewStyled = styled("section", {
       },
     },
   },
+);
 
-  width: "100%",
-});
+export const ViewContainerStyled = styled(
+  "div",
+  {
+    position: "relative",
 
-export const ViewContainerStyled = styled("div", {
-  position: "relative",
-
-  variants: {
+    zIndex: 2,
+  },
+  {
     app: {
       false: {
         width: "100%",
@@ -57,8 +62,6 @@ export const ViewContainerStyled = styled("div", {
       },
     },
   },
-
-  zIndex: 2,
-});
+);
 
 export default ViewStyled;

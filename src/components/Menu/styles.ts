@@ -1,4 +1,4 @@
-import { slideInScale, slideOutScale, styled } from "../../stitches.config";
+import { slideInScale, slideOutScale, styled } from "../../stoop.config";
 
 export const MenuStyled = styled("div", {
   display: "inline-flex",
@@ -13,41 +13,48 @@ export const MenuTriggerStyled = styled("div", {
   verticalAlign: "middle",
 });
 
-export const MenuOverlayStyled = styled("div", {
-  alignItems: "center",
-  backgroundColor: "$overlay",
-  display: "flex",
-  dynamicViewport: { property: "height", unit: "vh", value: "100" },
-  inset: 0,
-  justifyContent: "center",
-  pointerEvents: "auto",
-  position: "fixed",
-  variants: {
+export const MenuOverlayStyled = styled(
+  "div",
+  {
+    alignItems: "center",
+    backgroundColor: "$overlay",
+    display: "flex",
+    dynamicViewport: { property: "height", unit: "vh", value: "100" },
+    inset: 0,
+    justifyContent: "center",
+    pointerEvents: "auto",
+    position: "fixed",
+    zIndex: "$menu",
+  },
+  {
     animation: {
       false: {},
       true: {},
     },
   },
-  zIndex: "$menu",
-});
+);
 
-export const MenuGroupStyled = styled("div", {
-  backgroundColor: "$glass",
-  border: "1px solid $border",
-  display: "flex",
-  dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
-  flexDirection: "column",
-  isolation: "isolate",
-  maxWidth: "420px",
-  minHeight: "auto",
-  overflow: "hidden",
-  padding: 0,
-  phone: {
-    dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
-    maxWidth: "95%",
+export const MenuGroupStyled = styled(
+  "div",
+  {
+    backgroundColor: "$glass",
+    border: "1px solid $border",
+    display: "flex",
+    dynamicViewport: { property: "maxHeight", unit: "vh", value: "80" },
+    flexDirection: "column",
+    isolation: "isolate",
+    maxWidth: "420px",
+    minHeight: "auto",
+    overflow: "hidden",
+    padding: 0,
+    phone: {
+      dynamicViewport: { property: "maxHeight", unit: "vh", value: "90" },
+      maxWidth: "95%",
+    },
+    position: "relative",
+    width: "100%",
   },
-  position: "relative",
-  variants: {
+  {
     animation: {
       false: {
         animation: `${slideOutScale} 200ms ease-out`,
@@ -59,30 +66,32 @@ export const MenuGroupStyled = styled("div", {
       },
     },
   },
-  width: "100%",
-});
+);
 
-export const MenuItemStyled = styled("div", {
-  "&:active": {
-    transform: "translateY(1px)",
+export const MenuItemStyled = styled(
+  "div",
+  {
+    "&:active": {
+      transform: "translateY(1px)",
+    },
+    "&:hover": {
+      backgroundColor: "$surfaceHover",
+    },
+    alignItems: "center",
+    backgroundColor: "$surface",
+    borderLeft: "2px solid transparent",
+    color: "$text",
+    cursor: "pointer",
+    display: "flex",
+    fontSize: "$default",
+    justifyContent: "space-between",
+    margin: "$smaller",
+    padding: "$smaller $small",
+    textAlign: "left",
+    transition: "$default",
+    userSelect: "none",
   },
-  "&:hover": {
-    backgroundColor: "$surfaceHover",
-  },
-  alignItems: "center",
-  backgroundColor: "$surface",
-  borderLeft: "2px solid transparent",
-  color: "$text",
-  cursor: "pointer",
-  display: "flex",
-  fontSize: "$default",
-  justifyContent: "space-between",
-  margin: "$smaller",
-  padding: "$smaller $small",
-  textAlign: "left",
-  transition: "$default",
-  userSelect: "none",
-  variants: {
+  {
     focused: {
       true: {
         backgroundColor: "$surfaceHover",
@@ -92,12 +101,12 @@ export const MenuItemStyled = styled("div", {
       true: {
         backgroundColor: "$surfaceLight",
         borderLeft: "2px solid $yellow",
-        fontFamily: "$default",
+        fontFamily: "$fonts.default",
         fontWeight: 400,
       },
     },
   },
-});
+);
 
 export const MenuItemContentStyled = styled("div", {
   alignItems: "center",
@@ -107,11 +116,14 @@ export const MenuItemContentStyled = styled("div", {
   width: "100%",
 });
 
-export const MenuItemIconStyled = styled("div", {
-  alignItems: "center",
-  display: "flex",
-  justifyContent: "center",
-  variants: {
+export const MenuItemIconStyled = styled(
+  "div",
+  {
+    alignItems: "center",
+    display: "flex",
+    justifyContent: "center",
+  },
+  {
     align: {
       left: {
         order: -1,
@@ -121,7 +133,7 @@ export const MenuItemIconStyled = styled("div", {
       },
     },
   },
-});
+);
 
 export const MenuContentStyled = styled("div", {
   "&::-webkit-scrollbar": {

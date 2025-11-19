@@ -1,12 +1,17 @@
-import { styled } from "../../stitches.config";
+import { styled } from "../../stoop.config";
 
 const interactiveStyles = {
   borderColor: "$text",
 };
 
-export const FieldStyled = styled("div", {
-  position: "relative",
-  variants: {
+export const FieldStyled = styled(
+  "div",
+  {
+    position: "relative",
+
+    width: "100%",
+  },
+  {
     disabled: {
       true: {
         cursor: "not-allowed",
@@ -14,9 +19,7 @@ export const FieldStyled = styled("div", {
       },
     },
   },
-
-  width: "100%",
-});
+);
 
 export const FieldCoreStyled = styled("div", {
   "&:focus-within": {
@@ -48,7 +51,7 @@ export const FieldAreaStyled = styled("textarea", {
   border: "none",
   color: "$text",
   display: "block",
-  fontFamily: "$default",
+  fontFamily: "$fonts.default",
   fontSize: "$default",
   minHeight: "$largest",
   padding: "$small",
